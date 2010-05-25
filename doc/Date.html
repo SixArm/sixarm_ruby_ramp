@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+<title>Class: Date</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (D)</a> &raquo; 
+    
+    
+    <span class="title">Date</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Date 
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><a href="Object.html" title="Object (class)">Object</a></span>
+      
+        <ul class="fullTree">
+          <li><a href="Object.html" title="Object (class)">Object</a></li>
+          
+            <li class="next">Date</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/sixarm_ruby_ramp/date.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Date extensions
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+
+
+  <h2>Class Method Summary</h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#between-class_method" title="between (class method)">+ (Date) <strong>between</strong>(min, max) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+A random date between min &amp; max.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+  <h2>Instance Method Summary</h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#age_days-instance_method" title="#age_days (instance method)">- (Integer) <strong>age_days</strong>(compare_date = Date.today) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The age in days for a given date.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#age_years-instance_method" title="#age_years (instance method)">- (Integer) <strong>age_years</strong>(compare_date = Date.today) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The age in years for a given date.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_sql-instance_method" title="#to_sql (instance method)">- (String) <strong>to_sql</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Date in a sql format: YYYY-MM-DD.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#weekday%3F-instance_method" title="#weekday? (instance method)">- (Boolean) <strong>weekday?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+True if the date is a weekday: Mon, Tue, Wed, Thu, Fri.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#weekend%3F-instance_method" title="#weekend? (instance method)">- (Boolean) <strong>weekend?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+True if the date is a weekend: Sat, Sun.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="between-class_method">
+  
+    + (<tt><a href="" title="Date (class)">Date</a></tt>) <strong>between</strong>(min, max) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A random date between min &amp; max
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='d1 identifier id'>d1</span><span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-01'</span><span class='rparen token'>)</span>
+  <span class='d2 identifier id'>d2</span><span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2009-01-01'</span><span class='rparen token'>)</span>
+  <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='between identifier id'>between</span><span class='lparen token'>(</span><span class='d1 identifier id'>d1</span><span class='comma token'>,</span><span class='d3 identifier id'>d3</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='Date constant id'>Date</span> <span class='integer val'>2008</span><span class='minus op'>-</span><span class='integer val'>11</span><span class='minus op'>-</span><span class='integer val'>22</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Date (class)">Date</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a random date between min &amp; max
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 40</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='between identifier id'>between</span><span class='lparen token'>(</span><span class='min identifier id'>min</span><span class='comma token'>,</span><span class='max identifier id'>max</span><span class='rparen token'>)</span>
+  <span class='min identifier id'>min</span><span class='plus op'>+</span><span class='rand identifier id'>rand</span><span class='lparen token'>(</span><span class='max identifier id'>max</span><span class='minus op'>-</span><span class='min identifier id'>min</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="age_days-instance_method">
+  
+    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>age_days</strong>(compare_date = Date.today) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The age in days for a given date.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the age in days for a given date.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 87</span>
+
+<span class='def def kw'>def</span> <span class='age_days identifier id'>age_days</span><span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Date constant id'>Date</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;compare_date must be a date&quot;</span>
+  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='minus op'>-</span><span class='self self kw'>self</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="age_years-instance_method">
+  
+    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>age_years</strong>(compare_date = Date.today) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The age in years for a given date.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">
+  <span class='birthdate identifier id'>birthdate</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>1980</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
+  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span> <span class='lparen token'>(</span><span class='where identifier id'>where</span> <span class='integer val'>28</span> <span class='is identifier id'>is</span> <span class='the identifier id'>the</span> <span class='correct identifier id'>correct</span> <span class='age identifier id'>age</span> <span class='for for kw'>for</span> <span class='today identifier id'>today</span><span class='rparen token'>)</span>
+</pre>
+    
+      <h4>
+of custom dates
+
+</h4>
+      <pre class="example code">
+  <span class='birthdate identifier id'>birthdate</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>1980</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
+
+  <span class='valentines identifier id'>valentines</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>02</span><span class='comma token'>,</span><span class='integer val'>14</span><span class='rparen token'>)</span>
+  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='valentines identifier id'>valentines</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>27</span>  <span class='comment val'># before the birthday</span>
+
+  <span class='halloween identifier id'>halloween</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
+  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='halloween identifier id'>halloween</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span>   <span class='comment val'># on the birthday</span>
+
+  <span class='new_years_eve identifier id'>new_years_eve</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>12</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
+  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='new_years_eve identifier id'>new_years_eve</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span>  <span class='comment val'># after the birthday</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the age in years for a given date.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 76</span>
+
+<span class='def def kw'>def</span> <span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Date constant id'>Date</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;compare_date must be a date&quot;</span>
+  <span class='age identifier id'>age</span><span class='assign token'>=</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='year identifier id'>year</span><span class='minus op'>-</span><span class='year identifier id'>year</span>
+  <span class='compare_month identifier id'>compare_month</span> <span class='assign token'>=</span> <span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='month identifier id'>month</span>
+  <span class='age identifier id'>age</span><span class='opasgn op'>-=</span><span class='integer val'>1</span> <span class='if if_mod kw'>if</span> <span class='compare_month identifier id'>compare_month</span> <span class='lt op'>&lt;</span> <span class='month identifier id'>month</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='compare_month identifier id'>compare_month</span><span class='eq op'>==</span><span class='month identifier id'>month</span> <span class='and and kw'>and</span> <span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='day identifier id'>day</span> <span class='lt op'>&lt;</span> <span class='day identifier id'>day</span><span class='rparen token'>)</span>
+  <span class='age identifier id'>age</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_sql-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>to_sql</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Date in a sql format: YYYY-MM-DD
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='d identifier id'>d</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='to_sql identifier id'>to_sql</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2007-12-31&quot;</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+date in a sql format: YYYY-MM-DD
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 51</span>
+
+<span class='def def kw'>def</span> <span class='to_sql identifier id'>to_sql</span>
+  <span class='return return kw'>return</span> <span class='sprintf identifier id'>sprintf</span><span class='lparen token'>(</span><span class='string val'>&quot;%04d-%02d-%02d&quot;</span><span class='comma token'>,</span><span class='year identifier id'>year</span><span class='comma token'>,</span><span class='month identifier id'>month</span><span class='comma token'>,</span><span class='mday identifier id'>mday</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="weekday?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>weekday?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+True if the date is a weekday: Mon, Tue, Wed, Thu, Fri
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='d identifier id'>d</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-01'</span><span class='rparen token'>)</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='wday identifier id'>wday</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>2</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='weekday? fid id'>weekday?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 16</span>
+
+<span class='def def kw'>def</span> <span class='weekday? fid id'>weekday?</span>
+  <span class='wday identifier id'>wday</span><span class='gt op'>&gt;</span><span class='integer val'>0</span> <span class='and and kw'>and</span> <span class='wday identifier id'>wday</span><span class='lt op'>&lt;</span><span class='integer val'>6</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="weekend?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>weekend?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+True if the date is a weekend: Sat, Sun
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='d identifier id'>d</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-05'</span><span class='rparen token'>)</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='wday identifier id'>wday</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>6</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='weekend? fid id'>weekend?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+true if the date is a weekend: Sat, Sun
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 28</span>
+
+<span class='def def kw'>def</span> <span class='weekend? fid id'>weekend?</span>
+  <span class='wday identifier id'>wday</span><span class='eq op'>==</span><span class='integer val'>0</span> <span class='or or kw'>or</span> <span class='wday identifier id'>wday</span><span class='eq op'>==</span><span class='integer val'>6</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sat Mar 20 17:19:02 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.3 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
