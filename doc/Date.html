@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Date</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Date 
+    <div id="content"><h1>Class: Date
+  
   
   
 </h1>
@@ -52,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><a href="Object.html" title="Object (class)">Object</a></span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li><a href="Object.html" title="Object (class)">Object</a></li>
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Date</li>
           
@@ -69,6 +70,7 @@
     
   
     
+  
   
   
     <dt class="r2 last">Defined in:</dt>
@@ -91,11 +93,15 @@ Date extensions
 </div>
 
 
-  <h2>Class Method Summary</h2>
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#between-class_method" title="between (class method)">+ (Date) <strong>between</strong>(min, max) </a>
@@ -108,23 +114,27 @@ Date extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 A random date between min &amp; max.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <h2>Instance Method Summary</h2>
-
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#age_days-instance_method" title="#age_days (instance method)">- (Integer) <strong>age_days</strong>(compare_date = Date.today) </a>
@@ -137,17 +147,18 @@ A random date between min &amp; max.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 The age in days for a given date.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#age_years-instance_method" title="#age_years (instance method)">- (Integer) <strong>age_years</strong>(compare_date = Date.today) </a>
@@ -160,17 +171,18 @@ The age in days for a given date.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 The age in years for a given date.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#to_sql-instance_method" title="#to_sql (instance method)">- (String) <strong>to_sql</strong> </a>
@@ -183,17 +195,18 @@ The age in years for a given date.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Date in a sql format: YYYY-MM-DD.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#weekday%3F-instance_method" title="#weekday? (instance method)">- (Boolean) <strong>weekday?</strong> </a>
@@ -206,17 +219,18 @@ Date in a sql format: YYYY-MM-DD.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 True if the date is a weekday: Mon, Tue, Wed, Thu, Fri.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#weekend%3F-instance_method" title="#weekend? (instance method)">- (Boolean) <strong>weekend?</strong> </a>
@@ -229,17 +243,20 @@ True if the date is a weekday: Mon, Tue, Wed, Thu, Fri.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 True if the date is a weekend: Sat, Sun.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="class_method_details" class="method_details_list">
@@ -249,7 +266,7 @@ True if the date is a weekend: Sat, Sun.
       <div class="method_details first">
   <p class="signature first" id="between-class_method">
   
-    + (<tt><a href="" title="Date (class)">Date</a></tt>) <strong>between</strong>(min, max) 
+    + (<tt><span class='object_link'><a href="" title="Date (class)">Date</a></span></tt>) <strong>between</strong>(min, max) 
   
 
   
@@ -267,11 +284,10 @@ A random date between min &amp; max
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='d1 identifier id'>d1</span><span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-01'</span><span class='rparen token'>)</span>
-  <span class='d2 identifier id'>d2</span><span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2009-01-01'</span><span class='rparen token'>)</span>
-  <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='between identifier id'>between</span><span class='lparen token'>(</span><span class='d1 identifier id'>d1</span><span class='comma token'>,</span><span class='d3 identifier id'>d3</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='Date constant id'>Date</span> <span class='integer val'>2008</span><span class='minus op'>-</span><span class='integer val'>11</span><span class='minus op'>-</span><span class='integer val'>22</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">d1= Date.parse('2008-01-01')
+d2= Date.parse('2009-01-01')
+Date.between(d1,d3) =&gt; Date 2008-11-22</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -279,16 +295,16 @@ A random date between min &amp; max
   
     <li>
       
-        <span class='type'>(<tt><a href="" title="Date (class)">Date</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Date (class)">Date</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a random date between min &amp; max
-
-
+</p>
+</div>
       
     </li>
   
@@ -307,10 +323,9 @@ a random date between min &amp; max
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 40</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='between identifier id'>between</span><span class='lparen token'>(</span><span class='min identifier id'>min</span><span class='comma token'>,</span><span class='max identifier id'>max</span><span class='rparen token'>)</span>
-  <span class='min identifier id'>min</span><span class='plus op'>+</span><span class='rand identifier id'>rand</span><span class='lparen token'>(</span><span class='max identifier id'>max</span><span class='minus op'>-</span><span class='min identifier id'>min</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id between'>between</span><span class='lparen'>(</span><span class='id min'>min</span><span class='comma'>,</span><span class='id max'>max</span><span class='rparen'>)</span>
+  <span class='id min'>min</span><span class='op'>+</span><span class='id rand'>rand</span><span class='lparen'>(</span><span class='id max'>max</span><span class='op'>-</span><span class='id min'>min</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -325,7 +340,7 @@ a random date between min &amp; max
       <div class="method_details first">
   <p class="signature first" id="age_days-instance_method">
   
-    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>age_days</strong>(compare_date = Date.today) 
+    - (<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>) <strong>age_days</strong>(compare_date = Date.today) 
   
 
   
@@ -344,16 +359,16 @@ The age in days for a given date.
   
     <li>
       
-        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the age in days for a given date.
-
-
+</p>
+</div>
       
     </li>
   
@@ -373,11 +388,10 @@ the age in days for a given date.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 87</span>
 
-<span class='def def kw'>def</span> <span class='age_days identifier id'>age_days</span><span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span><span class='rparen token'>)</span>
-  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Date constant id'>Date</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;compare_date must be a date&quot;</span>
-  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='minus op'>-</span><span class='self self kw'>self</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id age_days'>age_days</span><span class='lparen'>(</span><span class='id compare_date'>compare_date</span><span class='op'>=</span><span class='const'>Date</span><span class='period'>.</span><span class='id today'>today</span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id compare_date'>compare_date</span><span class='period'>.</span><span class='id is_a?'>is_a?</span> <span class='const'>Date</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='id raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>compare_date must be a date</span><span class='tstring_end'>&quot;</span></span>
+  <span class='lparen'>(</span><span class='id compare_date'>compare_date</span><span class='op'>-</span><span class='kw'>self</span><span class='rparen'>)</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -386,7 +400,7 @@ the age in days for a given date.
       <div class="method_details ">
   <p class="signature " id="age_years-instance_method">
   
-    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>age_years</strong>(compare_date = Date.today) 
+    - (<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>) <strong>age_years</strong>(compare_date = Date.today) 
   
 
   
@@ -404,28 +418,26 @@ The age in years for a given date.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
+      <h4><div class='inline'></div></h4>
       <pre class="example code">
-  <span class='birthdate identifier id'>birthdate</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>1980</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
-  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span> <span class='lparen token'>(</span><span class='where identifier id'>where</span> <span class='integer val'>28</span> <span class='is identifier id'>is</span> <span class='the identifier id'>the</span> <span class='correct identifier id'>correct</span> <span class='age identifier id'>age</span> <span class='for for kw'>for</span> <span class='today identifier id'>today</span><span class='rparen token'>)</span>
-</pre>
+birthdate=Date.new(1980,10,31)
+birthdate.age_years =&gt; 28 (where 28 is the correct age for today)</pre>
     
-      <h4>
+      <h4><div class='inline'><p>
 of custom dates
-
-</h4>
+</p>
+</div></h4>
       <pre class="example code">
-  <span class='birthdate identifier id'>birthdate</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>1980</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
+birthdate=Date.new(1980,10,31)
 
-  <span class='valentines identifier id'>valentines</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>02</span><span class='comma token'>,</span><span class='integer val'>14</span><span class='rparen token'>)</span>
-  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='valentines identifier id'>valentines</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>27</span>  <span class='comment val'># before the birthday</span>
+valentines = Date.new(2008,02,14)
+birthdate.age_years(valentines) =&gt; 27  # before the birthday
 
-  <span class='halloween identifier id'>halloween</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
-  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='halloween identifier id'>halloween</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span>   <span class='comment val'># on the birthday</span>
+halloween = Date.new(2008,10,31)
+birthdate.age_years(halloween) =&gt; 28   # on the birthday
 
-  <span class='new_years_eve identifier id'>new_years_eve</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>12</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
-  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='new_years_eve identifier id'>new_years_eve</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span>  <span class='comment val'># after the birthday</span>
-</pre>
+new_years_eve = Date.new(2008,12,31)
+birthdate.age_years(new_years_eve) =&gt; 28  # after the birthday</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -433,16 +445,16 @@ of custom dates
   
     <li>
       
-        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the age in years for a given date.
-
-
+</p>
+</div>
       
     </li>
   
@@ -465,14 +477,13 @@ the age in years for a given date.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 76</span>
 
-<span class='def def kw'>def</span> <span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span><span class='rparen token'>)</span>
-  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Date constant id'>Date</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;compare_date must be a date&quot;</span>
-  <span class='age identifier id'>age</span><span class='assign token'>=</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='year identifier id'>year</span><span class='minus op'>-</span><span class='year identifier id'>year</span>
-  <span class='compare_month identifier id'>compare_month</span> <span class='assign token'>=</span> <span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='month identifier id'>month</span>
-  <span class='age identifier id'>age</span><span class='opasgn op'>-=</span><span class='integer val'>1</span> <span class='if if_mod kw'>if</span> <span class='compare_month identifier id'>compare_month</span> <span class='lt op'>&lt;</span> <span class='month identifier id'>month</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='compare_month identifier id'>compare_month</span><span class='eq op'>==</span><span class='month identifier id'>month</span> <span class='and and kw'>and</span> <span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='day identifier id'>day</span> <span class='lt op'>&lt;</span> <span class='day identifier id'>day</span><span class='rparen token'>)</span>
-  <span class='age identifier id'>age</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id age_years'>age_years</span><span class='lparen'>(</span><span class='id compare_date'>compare_date</span><span class='op'>=</span><span class='const'>Date</span><span class='period'>.</span><span class='id today'>today</span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id compare_date'>compare_date</span><span class='period'>.</span><span class='id is_a?'>is_a?</span> <span class='const'>Date</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='id raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>compare_date must be a date</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id age'>age</span><span class='op'>=</span><span class='id compare_date'>compare_date</span><span class='period'>.</span><span class='id year'>year</span><span class='op'>-</span><span class='id year'>year</span>
+  <span class='id compare_month'>compare_month</span> <span class='op'>=</span> <span class='id compare_date'>compare_date</span><span class='period'>.</span><span class='id month'>month</span>
+  <span class='id age'>age</span><span class='op'>-=</span><span class='int'>1</span> <span class='kw'>if</span> <span class='id compare_month'>compare_month</span> <span class='op'>&lt;</span> <span class='id month'>month</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id compare_month'>compare_month</span><span class='op'>==</span><span class='id month'>month</span> <span class='kw'>and</span> <span class='id compare_date'>compare_date</span><span class='period'>.</span><span class='id day'>day</span> <span class='op'>&lt;</span> <span class='id day'>day</span><span class='rparen'>)</span>
+  <span class='id age'>age</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -481,7 +492,7 @@ the age in years for a given date.
       <div class="method_details ">
   <p class="signature " id="to_sql-instance_method">
   
-    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>to_sql</strong> 
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_sql</strong> 
   
 
   
@@ -499,10 +510,9 @@ Date in a sql format: YYYY-MM-DD
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='d identifier id'>d</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span>
-  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='to_sql identifier id'>to_sql</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2007-12-31&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">d=Date.today
+d.to_sql =&gt; &quot;2007-12-31&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -510,16 +520,16 @@ Date in a sql format: YYYY-MM-DD
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 date in a sql format: YYYY-MM-DD
-
-
+</p>
+</div>
       
     </li>
   
@@ -538,10 +548,9 @@ date in a sql format: YYYY-MM-DD
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 51</span>
 
-<span class='def def kw'>def</span> <span class='to_sql identifier id'>to_sql</span>
-  <span class='return return kw'>return</span> <span class='sprintf identifier id'>sprintf</span><span class='lparen token'>(</span><span class='string val'>&quot;%04d-%02d-%02d&quot;</span><span class='comma token'>,</span><span class='year identifier id'>year</span><span class='comma token'>,</span><span class='month identifier id'>month</span><span class='comma token'>,</span><span class='mday identifier id'>mday</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id to_sql'>to_sql</span>
+  <span class='kw'>return</span> <span class='id sprintf'>sprintf</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%04d-%02d-%02d</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id year'>year</span><span class='comma'>,</span><span class='id month'>month</span><span class='comma'>,</span><span class='id mday'>mday</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -568,11 +577,10 @@ True if the date is a weekday: Mon, Tue, Wed, Thu, Fri
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='d identifier id'>d</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-01'</span><span class='rparen token'>)</span>
-  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='wday identifier id'>wday</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>2</span>
-  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='weekday? fid id'>weekday?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">d = Date.parse('2008-01-01')
+d.wday =&gt; 2
+d.weekday? =&gt; true</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -586,10 +594,10 @@ True if the date is a weekday: Mon, Tue, Wed, Thu, Fri
       
       
         &mdash;
-        
+        <div class='inline'><p>
 true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
-
-
+</p>
+</div>
       
     </li>
   
@@ -608,10 +616,9 @@ true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 16</span>
 
-<span class='def def kw'>def</span> <span class='weekday? fid id'>weekday?</span>
-  <span class='wday identifier id'>wday</span><span class='gt op'>&gt;</span><span class='integer val'>0</span> <span class='and and kw'>and</span> <span class='wday identifier id'>wday</span><span class='lt op'>&lt;</span><span class='integer val'>6</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id weekday?'>weekday?</span>
+  <span class='id wday'>wday</span><span class='op'>&gt;</span><span class='int'>0</span> <span class='kw'>and</span> <span class='id wday'>wday</span><span class='op'>&lt;</span><span class='int'>6</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -638,11 +645,10 @@ True if the date is a weekend: Sat, Sun
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='d identifier id'>d</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-05'</span><span class='rparen token'>)</span>
-  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='wday identifier id'>wday</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>6</span>
-  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='weekend? fid id'>weekend?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">d = Date.parse('2008-01-05')
+d.wday =&gt; 6
+d.weekend? =&gt; true</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -656,10 +662,10 @@ True if the date is a weekend: Sat, Sun
       
       
         &mdash;
-        
+        <div class='inline'><p>
 true if the date is a weekend: Sat, Sun
-
-
+</p>
+</div>
       
     </li>
   
@@ -678,10 +684,9 @@ true if the date is a weekend: Sat, Sun
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/date.rb', line 28</span>
 
-<span class='def def kw'>def</span> <span class='weekend? fid id'>weekend?</span>
-  <span class='wday identifier id'>wday</span><span class='eq op'>==</span><span class='integer val'>0</span> <span class='or or kw'>or</span> <span class='wday identifier id'>wday</span><span class='eq op'>==</span><span class='integer val'>6</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id weekend?'>weekend?</span>
+  <span class='id wday'>wday</span><span class='op'>==</span><span class='int'>0</span> <span class='kw'>or</span> <span class='id wday'>wday</span><span class='op'>==</span><span class='int'>6</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -692,9 +697,9 @@ true if the date is a weekend: Sat, Sun
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:19:02 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:15 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>

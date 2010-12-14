@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Integer</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Integer 
+    <div id="content"><h1>Class: Integer
+  
   
   
 </h1>
@@ -52,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><a href="Object.html" title="Object (class)">Object</a></span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li><a href="Object.html" title="Object (class)">Object</a></li>
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Integer</li>
           
@@ -69,6 +70,7 @@
     
   
     
+  
   
   
     <dt class="r2 last">Defined in:</dt>
@@ -91,11 +93,15 @@ Integer extensions
 </div>
 
 
-  <h2>Instance Method Summary</h2>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#maps-instance_method" title="#maps (instance method)">- (Object) <strong>maps</strong> </a>
@@ -108,17 +114,20 @@ Integer extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Syntactic sugar to yield n times to a block.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -128,7 +137,7 @@ Syntactic sugar to yield n times to a block.
       <div class="method_details first">
   <p class="signature first" id="maps-instance_method">
   
-    - (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>maps</strong> 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>maps</strong> 
   
 
   
@@ -138,7 +147,7 @@ Syntactic sugar to yield n times to a block.
 Syntactic sugar to yield n times to a block.
 </p>
 <p>
-Comparison to Integer#times: Integer#maps is similar to Integer#times
+Comparison to Integer#times:  Integer#maps is similar to Integer#times
 except that the output from each call to the block is captured in an array
 element and that array is returned to the calling code.
 </p>
@@ -151,13 +160,12 @@ element and that array is returned to the calling code.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4>
+      <h4><div class='inline'><p>
 Generate an array of three random numbers
-
-</h4>
-      <pre class="example code">  <span class='float val'>3</span><span class='dot token'>.</span><span class='maps identifier id'>maps</span><span class='lbrace token'>{</span><span class='rand identifier id'>rand</span><span class='rbrace token'>}</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>0</span><span class='integer val'>.0248131784304143</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='integer val'>.814666170190905</span><span class='comma token'>,</span> <span class='integer val'>0</span><span class='integer val'>.15812816258206</span><span class='rbrack token'>]</span>
-</pre>
+</p>
+</div></h4>
+      <pre class="example code">3.maps{rand}
+=&gt; [0.0248131784304143, 0.814666170190905, 0.15812816258206]</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -171,10 +179,10 @@ Generate an array of three random numbers
       
       
         
-        
+        <div class='inline'><p>
 an array of any results
-
-
+</p>
+</div>
       
     </li>
   
@@ -193,10 +201,9 @@ an array of any results
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/integer.rb', line 21</span>
 
-<span class='def def kw'>def</span> <span class='maps identifier id'>maps</span>
-  <span class='return return kw'>return</span> <span class='lparen token'>(</span><span class='integer val'>0</span><span class='dot3 op'>...</span><span class='self self kw'>self</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span> <span class='item identifier id'>item</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id maps'>maps</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='int'>0</span><span class='op'>...</span><span class='kw'>self</span><span class='rparen'>)</span><span class='period'>.</span><span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='kw'>yield</span> <span class='id item'>item</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -207,9 +214,9 @@ an array of any results
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:18:59 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:15 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>

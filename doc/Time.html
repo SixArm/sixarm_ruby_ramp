@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Time</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Time 
+    <div id="content"><h1>Class: Time
+  
   
   
 </h1>
@@ -52,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><a href="Object.html" title="Object (class)">Object</a></span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li><a href="Object.html" title="Object (class)">Object</a></li>
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Time</li>
           
@@ -69,6 +70,7 @@
     
   
     
+  
   
   
     <dt class="r2 last">Defined in:</dt>
@@ -91,11 +93,15 @@ Time extensions
 </div>
 
 
-  <h2>Class Method Summary</h2>
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#pack-class_method" title="pack (class method)">+ (String) <strong>pack</strong> </a>
@@ -108,17 +114,18 @@ Time extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Shorthand for Time.now.pack.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#stamp-class_method" title="stamp (class method)">+ (String) <strong>stamp</strong> </a>
@@ -131,23 +138,27 @@ Shorthand for Time.now.pack.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Shorthand for Time.now.stamp.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <h2>Instance Method Summary</h2>
-
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#pack-instance_method" title="#pack (instance method)">- (String) <strong>pack</strong> </a>
@@ -160,17 +171,18 @@ Shorthand for Time.now.stamp.
   
   
   
+  
 
   
-    <span class="summary_desc">
-Time packed into a short string: &#8220;YYYYMMDDHHMMSS&#8221;.
-
-</span>
+    <span class="summary_desc"><div class='inline'><p>
+The time is converted to UTC.
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#stamp-instance_method" title="#stamp (instance method)">- (String) <strong>stamp</strong> </a>
@@ -183,17 +195,20 @@ Time packed into a short string: &#8220;YYYYMMDDHHMMSS&#8221;.
   
   
   
+  
 
   
-    <span class="summary_desc">
-A time stamp string in standard format: &#8220;YYYY-MM-DD HH:MM:SSZ&#8221;.
-
-</span>
+    <span class="summary_desc"><div class='inline'><p>
+This standard format is specified in IETF RFC 3339 and ISO 8601.
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="class_method_details" class="method_details_list">
@@ -203,7 +218,7 @@ A time stamp string in standard format: &#8220;YYYY-MM-DD HH:MM:SSZ&#8221;.
       <div class="method_details first">
   <p class="signature first" id="pack-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>pack</strong> 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>pack</strong> 
   
 
   
@@ -221,10 +236,9 @@ Shorthand for Time.now.pack
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Time constant id'>Time</span><span class='dot token'>.</span><span class='pack identifier id'>pack</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;20101231125959&quot;</span> 
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Time.pack
+=&gt; &quot;20101231125959&quot; </pre>
     
   </div>
 <h3>Returns:</h3>
@@ -232,16 +246,16 @@ Shorthand for Time.now.pack
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 Time.now.pack
-
-
+</p>
+</div>
       
     </li>
   
@@ -260,10 +274,9 @@ Time.now.pack
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/time.rb', line 57</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='pack identifier id'>pack</span>
-  <span class='now identifier id'>now</span><span class='dot token'>.</span><span class='pack identifier id'>pack</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id pack'>pack</span>
+  <span class='id now'>now</span><span class='period'>.</span><span class='id pack'>pack</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -272,7 +285,7 @@ Time.now.pack
       <div class="method_details ">
   <p class="signature " id="stamp-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>stamp</strong> 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>stamp</strong> 
   
 
   
@@ -290,10 +303,9 @@ Shorthand for Time.now.stamp
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Time constant id'>Time</span><span class='dot token'>.</span><span class='stamp identifier id'>stamp</span>
-   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2010-12-31 12:59:59Z&quot;</span> 
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Time.stamp
+ =&gt; &quot;2010-12-31 12:59:59Z&quot; </pre>
     
   </div>
 <h3>Returns:</h3>
@@ -301,16 +313,16 @@ Shorthand for Time.now.stamp
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 Time.now.stamp
-
-
+</p>
+</div>
       
     </li>
   
@@ -329,10 +341,9 @@ Time.now.stamp
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/time.rb', line 31</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='stamp identifier id'>stamp</span>
-  <span class='now identifier id'>now</span><span class='dot token'>.</span><span class='stamp identifier id'>stamp</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id stamp'>stamp</span>
+  <span class='id now'>now</span><span class='period'>.</span><span class='id stamp'>stamp</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -347,16 +358,13 @@ Time.now.stamp
       <div class="method_details first">
   <p class="signature first" id="pack-instance_method">
   
-    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>pack</strong> 
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>pack</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-Time packed into a short string: &#8220;YYYYMMDDHHMMSS&#8220;
-</p>
-<p>
 The time is converted to UTC.
 </p>
 
@@ -368,10 +376,9 @@ The time is converted to UTC.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Time constant id'>Time</span><span class='dot token'>.</span><span class='now identifier id'>now</span><span class='dot token'>.</span><span class='pack identifier id'>pack</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;20101231125959&quot;</span> 
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Time.now.pack
+=&gt; &quot;20101231125959&quot; </pre>
     
   </div>
 <h3>Returns:</h3>
@@ -379,19 +386,16 @@ The time is converted to UTC.
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 time packed into a short string: &#8220;YYYYMMDDHHMMSS&#8220;
-
-
-The time is converted to UTC.
-
-
+</p>
+</div>
       
     </li>
   
@@ -410,10 +414,9 @@ The time is converted to UTC.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/time.rb', line 44</span>
 
-<span class='def def kw'>def</span> <span class='pack identifier id'>pack</span>
-  <span class='getutc identifier id'>getutc</span><span class='dot token'>.</span><span class='strftime identifier id'>strftime</span><span class='lparen token'>(</span><span class='string val'>'%Y%m%d%H%M%S'</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id pack'>pack</span>
+  <span class='id getutc'>getutc</span><span class='period'>.</span><span class='id strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%Y%m%d%H%M%S</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -422,16 +425,13 @@ The time is converted to UTC.
       <div class="method_details ">
   <p class="signature " id="stamp-instance_method">
   
-    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>stamp</strong> 
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>stamp</strong> 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-A time stamp string in standard format: &#8220;YYYY-MM-DD HH:MM:SSZ&#8220;
-</p>
-<p>
 This standard format is specified in IETF RFC 3339 and ISO 8601.
 </p>
 
@@ -443,10 +443,9 @@ This standard format is specified in IETF RFC 3339 and ISO 8601.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Time constant id'>Time</span><span class='dot token'>.</span><span class='now identifier id'>now</span><span class='dot token'>.</span><span class='stamp identifier id'>stamp</span> 
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2010-12-31 12:59:59Z&quot;</span> 
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Time.now.stamp 
+=&gt; &quot;2010-12-31 12:59:59Z&quot; </pre>
     
   </div>
 <h3>Returns:</h3>
@@ -454,19 +453,16 @@ This standard format is specified in IETF RFC 3339 and ISO 8601.
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a time stamp string in standard format: &#8220;YYYY-MM-DD HH:MM:SSZ&#8220;
-
-
-This standard format is specified in IETF RFC 3339 and ISO 8601.
-
-
+</p>
+</div>
       
     </li>
   
@@ -475,7 +471,7 @@ This standard format is specified in IETF RFC 3339 and ISO 8601.
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><a href="http://www.ietf.org/rfc/rfc3339.txt" title="http://www.ietf.org/rfc/rfc3339.txt">http://www.ietf.org/rfc/rfc3339.txt</a></li>
+      <li><a href="http://www.ietf.org/rfc/rfc3339.txt" target="_parent" title="http://www.ietf.org/rfc/rfc3339.txt">http://www.ietf.org/rfc/rfc3339.txt</a></li>
     
   </ul>
 
@@ -492,10 +488,9 @@ This standard format is specified in IETF RFC 3339 and ISO 8601.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/time.rb', line 18</span>
 
-<span class='def def kw'>def</span> <span class='stamp identifier id'>stamp</span>
-  <span class='getutc identifier id'>getutc</span><span class='dot token'>.</span><span class='strftime identifier id'>strftime</span><span class='lparen token'>(</span><span class='string val'>'%Y-%m-%d %H:%M:%SZ'</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id stamp'>stamp</span>
+  <span class='id getutc'>getutc</span><span class='period'>.</span><span class='id strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%Y-%m-%d %H:%M:%SZ</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -506,9 +501,9 @@ This standard format is specified in IETF RFC 3339 and ISO 8601.
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:18:59 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:15 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>

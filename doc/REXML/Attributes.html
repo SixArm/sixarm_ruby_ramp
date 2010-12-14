@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: REXML::Attributes</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: REXML::Attributes 
+    <div id="content"><h1>Class: REXML::Attributes
+  
   
   
 </h1>
@@ -52,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li><a href="../Object.html" title="Object (class)">Object</a></li>
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">REXML::Attributes</li>
           
@@ -69,6 +70,7 @@
     
   
     
+  
   
   
     <dt class="r2 last">Defined in:</dt>
@@ -91,11 +93,15 @@ REXML::Attributes extensions
 </div>
 
 
-  <h2>Instance Method Summary</h2>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#to_hash-instance_method" title="#to_hash (instance method)">- (Object) <strong>to_hash</strong> </a>
@@ -108,17 +114,20 @@ REXML::Attributes extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 A new hash of the attribute keys and values.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -128,7 +137,7 @@ A new hash of the attribute keys and values.
       <div class="method_details first">
   <p class="signature first" id="to_hash-instance_method">
   
-    - (<tt><a href="../Object.html" title="Object (class)">Object</a></tt>) <strong>to_hash</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_hash</strong> 
   
 
   
@@ -146,9 +155,8 @@ A new hash of the attribute keys and values.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='attributes identifier id'>attributes</span><span class='dot token'>.</span><span class='to_hash identifier id'>to_hash</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='string val'>&quot;src&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;pic.jpg&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;height&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;100&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;width&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;200&quot;</span><span class='rbrace token'>}</span> 
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">attributes.to_hash =&gt; {&quot;src&quot;=&gt;&quot;pic.jpg&quot;, &quot;height&quot; =&gt; &quot;100&quot;, &quot;width&quot; =&gt; &quot;200&quot;} </pre>
     
   </div>
 <h3>Returns:</h3>
@@ -162,10 +170,10 @@ A new hash of the attribute keys and values.
       
       
         
-        
+        <div class='inline'><p>
 a new hash of the attribute keys and values.
-
-
+</p>
+</div>
       
     </li>
   
@@ -186,12 +194,11 @@ a new hash of the attribute keys and values.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 160</span>
 
-<span class='def def kw'>def</span> <span class='to_hash identifier id'>to_hash</span>
-  <span class='h identifier id'>h</span><span class='assign token'>=</span><span class='Hash constant id'>Hash</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
-  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='keys identifier id'>keys</span><span class='dot token'>.</span><span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='k identifier id'>k</span><span class='bitor op'>|</span> <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='k identifier id'>k</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='self self kw'>self</span><span class='lbrack token'>[</span><span class='k identifier id'>k</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
-  <span class='h identifier id'>h</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id to_hash'>to_hash</span>
+  <span class='id h'>h</span><span class='op'>=</span><span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id keys'>keys</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id k'>k</span><span class='op'>|</span> <span class='id h'>h</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span><span class='op'>=</span><span class='kw'>self</span><span class='lbracket'>[</span><span class='id k'>k</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='id h'>h</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -202,9 +209,9 @@ a new hash of the attribute keys and values.
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:19:00 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:14 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>

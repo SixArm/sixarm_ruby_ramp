@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Object</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Object 
+    <div id="content"><h1>Class: Object
+  
   
   
 </h1>
@@ -61,6 +62,7 @@
     
   
     
+  
   
   
     <dt class="r2 last">Defined in:</dt>
@@ -83,11 +85,15 @@ Object extensions
 </div>
 
 
-  <h2>Instance Method Summary</h2>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#in%3F-instance_method" title="#in? (instance method)">- (Boolean) <strong>in?</strong>(array) </a>
@@ -100,17 +106,20 @@ Object extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Syntactic sugar for arrays.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -133,8 +142,7 @@ Syntactic sugar for arrays.
 Definition:
 </p>
 <pre class="code">
-  <span class='object identifier id'>object</span><span class='dot token'>.</span><span class='in? fid id'>in?</span> <span class='array identifier id'>array</span> <span class='eqq op'>===</span> <span class='array identifier id'>array</span><span class='dot token'>.</span><span class='include? fid id'>include?</span> <span class='object identifier id'>object</span>
-</pre>
+  object.in? array === array.include? object</pre>
 
 
   </div>
@@ -144,12 +152,11 @@ Definition:
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='array identifier id'>array</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
-  <span class='object identifier id'>object</span><span class='assign token'>=</span><span class='string val'>'b'</span>
-  <span class='object identifier id'>object</span><span class='dot token'>.</span><span class='in? fid id'>in?</span> <span class='array identifier id'>array</span> 
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">array=['a','b','c']
+object='b'
+object.in? array 
+=&gt; true</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -163,10 +170,10 @@ Definition:
       
       
         &mdash;
-        
+        <div class='inline'><p>
 true iff this object is included in the array.
-
-
+</p>
+</div>
       
     </li>
   
@@ -185,10 +192,9 @@ true iff this object is included in the array.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/object.rb', line 19</span>
 
-<span class='def def kw'>def</span> <span class='in? fid id'>in?</span><span class='lparen token'>(</span><span class='array identifier id'>array</span><span class='rparen token'>)</span>
-  <span class='array identifier id'>array</span><span class='dot token'>.</span><span class='include? fid id'>include?</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id in?'>in?</span><span class='lparen'>(</span><span class='id array'>array</span><span class='rparen'>)</span>
+  <span class='id array'>array</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -199,9 +205,9 @@ true iff this object is included in the array.
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:19:00 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:15 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>

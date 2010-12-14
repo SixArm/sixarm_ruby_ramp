@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Numeric</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Numeric 
+    <div id="content"><h1>Class: Numeric
+  
   
   
 </h1>
@@ -52,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><a href="Object.html" title="Object (class)">Object</a></span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li><a href="Object.html" title="Object (class)">Object</a></li>
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Numeric</li>
           
@@ -69,6 +70,7 @@
     
   
     
+  
   
   
     <dt class="r2 last">Defined in:</dt>
@@ -91,11 +93,15 @@ Numeric extensions
 </div>
 
 
-  <h2>Instance Method Summary</h2>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#if-instance_method" title="#if (instance method)">- (Object) <strong>if</strong>(flag) </a>
@@ -108,17 +114,18 @@ Numeric extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 0 if the given flag is any of: nil, false, 0, [], {}.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#unless-instance_method" title="#unless (instance method)">- (Object) <strong>unless</strong>(flag) </a>
@@ -131,17 +138,20 @@ Numeric extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Self if flag is nil, false, 0, [], {}; otherwise return 0.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -151,7 +161,7 @@ Self if flag is nil, false, 0, [], {}; otherwise return 0.
       <div class="method_details first">
   <p class="signature first" id="if-instance_method">
   
-    - (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>if</strong>(flag) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>if</strong>(flag) 
   
 
   
@@ -169,10 +179,9 @@ Self if flag is nil, false, 0, [], {}; otherwise return 0.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='float val'>3</span><span class='dot token'>.</span><span class='if identifier id'>if</span><span class='lparen token'>(</span><span class='true true kw'>true</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>3</span>
-  <span class='float val'>3</span><span class='dot token'>.</span><span class='if identifier id'>if</span><span class='lparen token'>(</span><span class='false false kw'>false</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">3.if(true) =&gt; 3
+3.if(false) =&gt; 0</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -186,10 +195,10 @@ Self if flag is nil, false, 0, [], {}; otherwise return 0.
       
       
         
-        
+        <div class='inline'><p>
 0 if the given flag is any of: nil, false, 0, [], {}
-
-
+</p>
+</div>
       
     </li>
   
@@ -208,10 +217,9 @@ Self if flag is nil, false, 0, [], {}; otherwise return 0.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/numeric.rb', line 15</span>
 
-<span class='def def kw'>def</span> <span class='if if kw'>if</span><span class='lparen token'>(</span><span class='flag identifier id'>flag</span><span class='rparen token'>)</span>
-  <span class='if if kw'>if</span> <span class='lbrack token'>[</span><span class='nil nil kw'>nil</span><span class='comma token'>,</span><span class='false false kw'>false</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='include? fid id'>include?</span><span class='lparen token'>(</span><span class='flag identifier id'>flag</span><span class='rparen token'>)</span> <span class='then then kw'>then</span> <span class='integer val'>0</span> <span class='else else kw'>else</span> <span class='self self kw'>self</span> <span class='end end kw'>end</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id flag'>flag</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lbracket'>[</span><span class='kw'>nil</span><span class='comma'>,</span><span class='kw'>false</span><span class='comma'>,</span><span class='int'>0</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span><span class='id flag'>flag</span><span class='rparen'>)</span> <span class='kw'>then</span> <span class='int'>0</span> <span class='kw'>else</span> <span class='kw'>self</span> <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -220,7 +228,7 @@ Self if flag is nil, false, 0, [], {}; otherwise return 0.
       <div class="method_details ">
   <p class="signature " id="unless-instance_method">
   
-    - (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>unless</strong>(flag) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>unless</strong>(flag) 
   
 
   
@@ -238,10 +246,9 @@ Self if flag is nil, false, 0, [], {}; otherwise return 0.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='float val'>3</span><span class='dot token'>.</span><span class='unless identifier id'>unless</span><span class='lparen token'>(</span><span class='true true kw'>true</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>0</span>
-  <span class='float val'>3</span><span class='dot token'>.</span><span class='unless identifier id'>unless</span><span class='lparen token'>(</span><span class='false false kw'>false</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>3</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">3.unless(true) =&gt; 0
+3.unless(false) =&gt; 3</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -255,10 +262,10 @@ Self if flag is nil, false, 0, [], {}; otherwise return 0.
       
       
         
-        
+        <div class='inline'><p>
 self if flag is nil, false, 0, [], {}; otherwise return 0.
-
-
+</p>
+</div>
       
     </li>
   
@@ -277,10 +284,9 @@ self if flag is nil, false, 0, [], {}; otherwise return 0.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/numeric.rb', line 26</span>
 
-<span class='def def kw'>def</span> <span class='unless unless kw'>unless</span><span class='lparen token'>(</span><span class='flag identifier id'>flag</span><span class='rparen token'>)</span>
-  <span class='if if kw'>if</span> <span class='lbrack token'>[</span><span class='nil nil kw'>nil</span><span class='comma token'>,</span><span class='false false kw'>false</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='include? fid id'>include?</span><span class='lparen token'>(</span><span class='flag identifier id'>flag</span><span class='rparen token'>)</span> <span class='then then kw'>then</span> <span class='self self kw'>self</span> <span class='else else kw'>else</span> <span class='integer val'>0</span> <span class='end end kw'>end</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>unless</span><span class='lparen'>(</span><span class='id flag'>flag</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lbracket'>[</span><span class='kw'>nil</span><span class='comma'>,</span><span class='kw'>false</span><span class='comma'>,</span><span class='int'>0</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span><span class='id flag'>flag</span><span class='rparen'>)</span> <span class='kw'>then</span> <span class='kw'>self</span> <span class='kw'>else</span> <span class='int'>0</span> <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -291,9 +297,9 @@ self if flag is nil, false, 0, [], {}; otherwise return 0.
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:19:03 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:15 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>

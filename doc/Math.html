@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Module: Math</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Module: Math 
+    <div id="content"><h1>Module: Math
+  
   
   
 </h1>
@@ -54,6 +55,7 @@
     
   
     
+  
   
   
     <dt class="r1 last">Defined in:</dt>
@@ -76,11 +78,15 @@ Math extensions
 </div>
 
 
-  <h2>Class Method Summary</h2>
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#ln-class_method" title="ln (class method)">+ (Float) <strong>ln</strong>(num) </a>
@@ -93,17 +99,18 @@ Math extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 The natural log of <em>num</em>.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#logn-class_method" title="logn (class method)">+ (Float) <strong>logn</strong>(num, base) </a>
@@ -116,17 +123,20 @@ The natural log of <em>num</em>.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 The log of <em>num</em> in base <em>base</em>.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="class_method_details" class="method_details_list">
@@ -154,10 +164,9 @@ The natural log of <em>num</em>
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Math constant id'>Math</span><span class='dot token'>.</span><span class='ln identifier id'>ln</span><span class='lparen token'>(</span><span class='float val'>2.719</span><span class='rparen token'>)</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>1.00</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Math.ln(2.719)
+=&gt; 1.00</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -171,10 +180,10 @@ The natural log of <em>num</em>
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the natural log of <em>num</em>
-
-
+</p>
+</div>
       
     </li>
   
@@ -193,10 +202,9 @@ the natural log of <em>num</em>
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/math.rb', line 14</span>
 
-<span class='def def kw'>def</span> <span class='Math constant id'>Math</span><span class='dot token'>.</span><span class='ln identifier id'>ln</span><span class='lparen token'>(</span><span class='num identifier id'>num</span><span class='rparen token'>)</span>
- <span class='Math constant id'>Math</span><span class='dot token'>.</span><span class='log identifier id'>log</span><span class='lparen token'>(</span><span class='num identifier id'>num</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>Math</span><span class='period'>.</span><span class='id ln'>ln</span><span class='lparen'>(</span><span class='id num'>num</span><span class='rparen'>)</span>
+ <span class='const'>Math</span><span class='period'>.</span><span class='id log'>log</span><span class='lparen'>(</span><span class='id num'>num</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -223,10 +231,9 @@ The log of <em>num</em> in base <em>base</em>
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Math constant id'>Math</span><span class='dot token'>.</span><span class='logn identifier id'>logn</span><span class='lparen token'>(</span><span class='integer val'>10000</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='rparen token'>)</span> 
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='float val'>4.00</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Math.logn(10000,10) 
+=&gt; 4.00</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -240,10 +247,10 @@ The log of <em>num</em> in base <em>base</em>
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the log of <em>num</em> in base <em>base</em>
-
-
+</p>
+</div>
       
     </li>
   
@@ -262,10 +269,9 @@ the log of <em>num</em> in base <em>base</em>
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/math.rb', line 25</span>
 
-<span class='def def kw'>def</span> <span class='Math constant id'>Math</span><span class='dot token'>.</span><span class='logn identifier id'>logn</span><span class='lparen token'>(</span><span class='num identifier id'>num</span><span class='comma token'>,</span><span class='base identifier id'>base</span><span class='rparen token'>)</span>
-  <span class='Math constant id'>Math</span><span class='dot token'>.</span><span class='ln identifier id'>ln</span><span class='lparen token'>(</span><span class='num identifier id'>num</span><span class='rparen token'>)</span><span class='div op'>/</span><span class='Math constant id'>Math</span><span class='dot token'>.</span><span class='ln identifier id'>ln</span><span class='lparen token'>(</span><span class='base identifier id'>base</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>Math</span><span class='period'>.</span><span class='id logn'>logn</span><span class='lparen'>(</span><span class='id num'>num</span><span class='comma'>,</span><span class='id base'>base</span><span class='rparen'>)</span>
+  <span class='const'>Math</span><span class='period'>.</span><span class='id ln'>ln</span><span class='lparen'>(</span><span class='id num'>num</span><span class='rparen'>)</span><span class='op'>/</span><span class='const'>Math</span><span class='period'>.</span><span class='id ln'>ln</span><span class='lparen'>(</span><span class='id base'>base</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -276,9 +282,9 @@ the log of <em>num</em> in base <em>base</em>
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:18:59 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:15 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>

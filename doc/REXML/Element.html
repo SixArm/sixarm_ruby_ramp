@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: REXML::Element</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: REXML::Element 
+    <div id="content"><h1>Class: REXML::Element
+  
   
   
 </h1>
@@ -52,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Object</span>
+      <span class="inheritName"><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li><a href="../Object.html" title="Object (class)">Object</a></li>
+          <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">REXML::Element</li>
           
@@ -69,6 +70,7 @@
     
   
     
+  
   
   
     <dt class="r2 last">Defined in:</dt>
@@ -91,11 +93,15 @@ REXML::Element extensions
 </div>
 
 
-  <h2>Instance Method Summary</h2>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#remove_attributes-instance_method" title="#remove_attributes (instance method)">- (Object) <strong>remove_attributes</strong> </a>
@@ -108,17 +114,20 @@ REXML::Element extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Remove all attributes from the element.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -128,7 +137,7 @@ Remove all attributes from the element.
       <div class="method_details first">
   <p class="signature first" id="remove_attributes-instance_method">
   
-    - (<tt><a href="../Object.html" title="Object (class)">Object</a></tt>) <strong>remove_attributes</strong> 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>remove_attributes</strong> 
   
 
   
@@ -153,10 +162,10 @@ Remove all attributes from the element.
       
       
         
-        
+        <div class='inline'><p>
 the element.
-
-
+</p>
+</div>
       
     </li>
   
@@ -183,11 +192,10 @@ the element.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 197</span>
 
-<span class='def def kw'>def</span> <span class='remove_attributes identifier id'>remove_attributes</span>
-  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='attributes identifier id'>attributes</span><span class='dot token'>.</span><span class='each_attribute identifier id'>each_attribute</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='attribute identifier id'>attribute</span><span class='bitor op'>|</span> <span class='attribute identifier id'>attribute</span><span class='dot token'>.</span><span class='remove identifier id'>remove</span> <span class='rbrace token'>}</span>
-  <span class='self self kw'>self</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id remove_attributes'>remove_attributes</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='period'>.</span><span class='id each_attribute'>each_attribute</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id attribute'>attribute</span><span class='op'>|</span> <span class='id attribute'>attribute</span><span class='period'>.</span><span class='id remove'>remove</span> <span class='rbrace'>}</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -198,9 +206,9 @@ the element.
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:19:00 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:15 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>

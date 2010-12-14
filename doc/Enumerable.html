@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Module: Enumerable</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Module: Enumerable 
+    <div id="content"><h1>Module: Enumerable
+  
   
   
 </h1>
@@ -54,6 +55,7 @@
     
   
     
+  
   
   
     <dt class="r1 last">Defined in:</dt>
@@ -76,11 +78,15 @@ Enumberable extensions
 </div>
 
 
-  <h2>Class Method Summary</h2>
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#cartesian_product-class_method" title="cartesian_product (class method)">+ (Array) <strong>cartesian_product</strong>(*enums) </a>
@@ -93,26 +99,31 @@ Enumberable extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
-The cartesian product of the enumerations.
-
-</span>
+    <span class="summary_desc"><div class='inline'><p>
+This is the fastest implementation we have found.
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <h2>Instance Method Summary</h2>
-
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
-      <a href="#bisect-instance_method" title="#bisect (instance method)">- (Array&lt;Array&lt;Object&gt;] an array of two arrays: the first array is the elements for which block is true, the second array is the elements for which block is false or nil.) <strong>bisect</strong> </a>
+      <a href="#bisect-instance_method" title="#bisect (instance method)">- (Array&lt;Array&lt;Object&gt;] an array of two arrays:
+the first array is the elements for which block is true, the second array is the elements for which block is false or nil.) <strong>bisect</strong> </a>
     
 
     
@@ -122,19 +133,20 @@ The cartesian product of the enumerations.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Array<Array<Object>] an array of two arrays: the first array is the
 elements for which block is true, the second array is the elements for
 which block is false or nil..
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#cartesian_product-instance_method" title="#cartesian_product (instance method)">- (Object) <strong>cartesian_product</strong>(*enums) </a>
@@ -147,14 +159,15 @@ which block is false or nil..
   
   
   
+  
 
   
-    <span class="summary_desc"></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#hash_by-instance_method" title="#hash_by (instance method)">- (Hash&lt;Object,Object&gt;) <strong>hash_by</strong> </a>
@@ -167,18 +180,19 @@ which block is false or nil..
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Convert the enumerable to a hash by mapping each item to a pair [item, new
 item].
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#index_by-instance_method" title="#index_by (instance method)">- (Hash&lt;Integer,Object&gt;) <strong>index_by</strong> </a>
@@ -191,18 +205,19 @@ item].
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Convert the enumerable to a hash by mapping each item to a pair [index
 ,item].
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#intersect%3F-instance_method" title="#intersect? (instance method)">- (Boolean) <strong>intersect?</strong>(enum) </a>
@@ -215,17 +230,18 @@ Convert the enumerable to a hash by mapping each item to a pair [index
   
   
   
+  
 
   
-    <span class="summary_desc">
-True if this <em>enum</em> intersects another <em>enum</em>.
-
-</span>
+    <span class="summary_desc"><div class='inline'><p>
+This implementation uses #to_a and array intersection.
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#join-instance_method" title="#join (instance method)">- (String) <strong>join</strong>(*op) </a>
@@ -238,17 +254,18 @@ True if this <em>enum</em> intersects another <em>enum</em>.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Shortcut to Array#join to concatenate the items into a string.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#map_id-instance_method" title="#map_id (instance method)">- (Enumerable&lt;Object&gt;) <strong>map_id</strong> </a>
@@ -261,17 +278,18 @@ Shortcut to Array#join to concatenate the items into a string.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Map each item => item.id.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#map_to_a-instance_method" title="#map_to_a (instance method)">- (Enumberable&lt;Array&lt;Object&gt;&gt;) <strong>map_to_a</strong> </a>
@@ -284,17 +302,18 @@ Map each item => item.id.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Map each item => item.to_a.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#map_to_f-instance_method" title="#map_to_f (instance method)">- (Enumerable&lt;Float&gt;) <strong>map_to_f</strong> </a>
@@ -307,17 +326,18 @@ Map each item => item.to_a.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Map each item => item.to_f.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#map_to_i-instance_method" title="#map_to_i (instance method)">- (Enumerable&lt;Integer&gt;) <strong>map_to_i</strong> </a>
@@ -330,17 +350,18 @@ Map each item => item.to_f.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Map each item => item.to_i.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#map_to_s-instance_method" title="#map_to_s (instance method)">- (Enumerable&lt;String&gt;) <strong>map_to_s</strong> </a>
@@ -353,17 +374,18 @@ Map each item => item.to_i.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Map each item => item.to_s.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#map_to_sym-instance_method" title="#map_to_sym (instance method)">- (Enumerable&lt;Symbol&gt;) <strong>map_to_sym</strong> </a>
@@ -376,17 +398,18 @@ Map each item => item.to_s.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Map each item => item.to_sym.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#map_with_index-instance_method" title="#map_with_index (instance method)">- (Enumerable&lt;Object&gt;) <strong>map_with_index</strong> </a>
@@ -399,17 +422,18 @@ Map each item => item.to_sym.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Map each item and its index => a new output.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#nitems_until-instance_method" title="#nitems_until (instance method)">- (Integer) <strong>nitems_until</strong> </a>
@@ -422,17 +446,18 @@ Map each item and its index => a new output.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 The number of leading elements for which block is false.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#nitems_while-instance_method" title="#nitems_while (instance method)">- (Integer) <strong>nitems_while</strong> </a>
@@ -445,17 +470,18 @@ The number of leading elements for which block is false.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 The number of leading elements for which block is not false or nil.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#nitems_with_index-instance_method" title="#nitems_with_index (instance method)">- (Integer) <strong>nitems_with_index</strong> </a>
@@ -468,18 +494,19 @@ The number of leading elements for which block is not false or nil.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Calls block with two arguments, the item and its index, for each item in
 enum.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#power_set-instance_method" title="#power_set (instance method)">- (Array&lt;Array&lt;Object&gt;&gt;) <strong>power_set</strong> </a>
@@ -492,17 +519,18 @@ enum.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Calculate the power set.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#select_until-instance_method" title="#select_until (instance method)">- (Array&lt;Object&gt;) <strong>select_until</strong> </a>
@@ -515,17 +543,18 @@ Calculate the power set.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 The leading elements for which block is false or nil.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#select_while-instance_method" title="#select_while (instance method)">- (Array&lt;Object&gt;) <strong>select_while</strong> </a>
@@ -538,17 +567,18 @@ The leading elements for which block is false or nil.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 The leading elements for which block is not false or nil.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#select_with_index-instance_method" title="#select_with_index (instance method)">- (Array&lt;Object&gt; the leading elements for which block is not false or nil.) <strong>select_with_index</strong> </a>
@@ -561,18 +591,19 @@ The leading elements for which block is not false or nil.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Calls block with two arguments, the item and its index, for each item in
 enum.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#to_h-instance_method" title="#to_h (instance method)">- (Hash&lt;Object,Object&gt;) <strong>to_h</strong> </a>
@@ -585,17 +616,20 @@ enum.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Convert an enumerable to a hash.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="class_method_details" class="method_details_list">
@@ -605,15 +639,31 @@ Convert an enumerable to a hash.
       <div class="method_details first">
   <p class="signature first" id="cartesian_product-class_method">
   
-    + (<tt><a href="Array.html" title="Array (class)">Array</a></tt>) <strong>cartesian_product</strong>(*enums) 
+    + (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt>) <strong>cartesian_product</strong>(*enums) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     <p>
-The cartesian product of the enumerations.
+This is the fastest implementation we have found. It returns results in
+typical order.
 </p>
+<p>
+For our benchmarks, we also compared these:
+</p>
+<ul>
+<li><p>
+By William James, <a
+href="http://www.ruby-forum.com/topic/95519">www.ruby-forum.com/topic/95519</a>
+</p>
+</li>
+<li><p>
+By Brian Schröäer, <a
+href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857</a>
+</p>
+</li>
+</ul>
 
 
   </div>
@@ -624,16 +674,16 @@ The cartesian product of the enumerations.
   
     <li>
       
-        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the cartesian product of the enumerations.
-
-
+</p>
+</div>
       
     </li>
   
@@ -642,9 +692,9 @@ the cartesian product of the enumerations.
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><a href="http://en.wikipedia.org/wiki/Cartesian_product" title="This is the fastest implementation we have found. It returns results in typical order.">This is the fastest implementation we have found. It returns results in typical order.</a></li>
+      <li><a href="http://en.wikipedia.org/wiki/Cartesian_product" target="_parent" title="http://en.wikipedia.org/wiki/Cartesian_product">http://en.wikipedia.org/wiki/Cartesian_product</a></li>
     
-      <li><a href="http://www.ruby-forum.com/topic/95519" title="For our benchmarks, we also compared these: - By William James, http://www.ruby-forum.com/topic/95519 - By Brian Schr\303\266\303\244er, http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">For our benchmarks, we also compared these: - By William James, http://www.ruby-forum.com/topic/95519 - By Brian Schröäer, http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857</a></li>
+      <li><a href="http://www.ruby-forum.com/topic/95519" target="_parent" title="http://www.ruby-forum.com/topic/95519">http://www.ruby-forum.com/topic/95519</a></li>
     
   </ul>
 <h3>Author:</h3>
@@ -656,10 +706,10 @@ the cartesian product of the enumerations.
       
       
         
-        
+        <div class='inline'><p>
 Thomas Hafner
-
-
+</p>
+</div>
       
     </li>
   
@@ -688,20 +738,19 @@ Thomas Hafner
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 406</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='cartesian_product identifier id'>cartesian_product</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='enums identifier id'>enums</span><span class='rparen token'>)</span>
-  <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
-  <span class='while while kw'>while</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span> <span class='neq op'>!=</span> <span class='enums identifier id'>enums</span>
-    <span class='t identifier id'>t</span><span class='comma token'>,</span> <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='result identifier id'>result</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
-    <span class='b identifier id'>b</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='enums identifier id'>enums</span> <span class='assign token'>=</span> <span class='enums identifier id'>enums</span>
-    <span class='t identifier id'>t</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='a identifier id'>a</span><span class='bitor op'>|</span>
-      <span class='b identifier id'>b</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='n identifier id'>n</span><span class='bitor op'>|</span>
-        <span class='result identifier id'>result</span> <span class='lshft op'>&lt;&lt;</span> <span class='a identifier id'>a</span> <span class='plus op'>+</span> <span class='lbrack token'>[</span><span class='n identifier id'>n</span><span class='rbrack token'>]</span>
-      <span class='end end kw'>end</span>
-    <span class='end end kw'>end</span>
-  <span class='end end kw'>end</span>
-  <span class='result identifier id'>result</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id cartesian_product'>cartesian_product</span><span class='lparen'>(</span><span class='op'>*</span><span class='id enums'>enums</span><span class='rparen'>)</span>
+  <span class='id result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+  <span class='kw'>while</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='id enums'>enums</span>
+    <span class='id t'>t</span><span class='comma'>,</span> <span class='id result'>result</span> <span class='op'>=</span> <span class='id result'>result</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id b'>b</span><span class='comma'>,</span> <span class='op'>*</span><span class='id enums'>enums</span> <span class='op'>=</span> <span class='id enums'>enums</span>
+    <span class='id t'>t</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id a'>a</span><span class='op'>|</span>
+      <span class='id b'>b</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id n'>n</span><span class='op'>|</span>
+        <span class='id result'>result</span> <span class='op'>&lt;&lt;</span> <span class='id a'>a</span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='id n'>n</span><span class='rbracket'>]</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id result'>result</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -716,7 +765,8 @@ Thomas Hafner
       <div class="method_details first">
   <p class="signature first" id="bisect-instance_method">
   
-    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;] an array of two arrays: the first array is the elements for which block is true</tt>, <tt>the second array is the elements for which block is false or nil.</tt>) <strong>bisect</strong> 
+    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;] an array of two arrays:
+the first array is the elements for which block is true</tt>, <tt>the second array is the elements for which block is false or nil.</tt>) <strong>bisect</strong> 
   
 
   
@@ -736,10 +786,9 @@ which block is false or nil.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='bisect identifier id'>bisect</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span><span class='rbrace token'>}</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='array identifier id'>array</span> <span class='of identifier id'>of</span> <span class='positives identifier id'>positives</span><span class='comma token'>,</span> <span class='array identifier id'>array</span> <span class='of identifier id'>of</span> <span class='negatives identifier id'>negatives</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">enum.bisect {|obj| block}
+=&gt; array of positives, array of negatives</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -747,18 +796,19 @@ which block is false or nil.
   
     <li>
       
-        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;] an array of two arrays: the first array is the elements for which block is true</tt>, <tt>the second array is the elements for which block is false or nil.</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;] an array of two arrays:
+the first array is the elements for which block is true</tt>, <tt>the second array is the elements for which block is false or nil.</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 Array<Array<Object>] an array of two arrays: the first array is the
 elements for which block is true, the second array is the elements for
 which block is false or nil.
-
-
+</p>
+</div>
       
     </li>
   
@@ -786,19 +836,18 @@ which block is false or nil.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 286</span>
 
-<span class='def def kw'>def</span> <span class='bisect identifier id'>bisect</span>
-  <span class='accept identifier id'>accept</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
-  <span class='reject identifier id'>reject</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
-  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> 
-   <span class='if if kw'>if</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
-    <span class='accept identifier id'>accept</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span>
-   <span class='else else kw'>else</span>
-    <span class='reject identifier id'>reject</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span>
-   <span class='end end kw'>end</span>
-  <span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='accept identifier id'>accept</span><span class='comma token'>,</span><span class='reject identifier id'>reject</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id bisect'>bisect</span>
+  <span class='id accept'>accept</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id reject'>reject</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> 
+   <span class='kw'>if</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='rparen'>)</span>
+    <span class='id accept'>accept</span> <span class='op'>&lt;&lt;</span> <span class='id item'>item</span>
+   <span class='kw'>else</span>
+    <span class='id reject'>reject</span> <span class='op'>&lt;&lt;</span> <span class='id item'>item</span>
+   <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id accept'>accept</span><span class='comma'>,</span><span class='id reject'>reject</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -807,7 +856,7 @@ which block is false or nil.
       <div class="method_details ">
   <p class="signature " id="cartesian_product-instance_method">
   
-    - (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>cartesian_product</strong>(*enums) 
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>cartesian_product</strong>(*enums) 
   
 
   
@@ -824,10 +873,9 @@ which block is false or nil.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 421</span>
 
-<span class='def def kw'>def</span> <span class='cartesian_product identifier id'>cartesian_product</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='enums identifier id'>enums</span><span class='rparen token'>)</span>
-  <span class='Enumerable constant id'>Enumerable</span><span class='dot token'>.</span><span class='cartesian_product identifier id'>cartesian_product</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='comma token'>,</span><span class='mult op'>*</span><span class='enums identifier id'>enums</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id cartesian_product'>cartesian_product</span><span class='lparen'>(</span><span class='op'>*</span><span class='id enums'>enums</span><span class='rparen'>)</span>
+  <span class='const'>Enumerable</span><span class='period'>.</span><span class='id cartesian_product'>cartesian_product</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span><span class='op'>*</span><span class='id enums'>enums</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -836,7 +884,7 @@ which block is false or nil.
       <div class="method_details ">
   <p class="signature " id="hash_by-instance_method">
   
-    - (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Object.html" title="Object (class)">Object</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>hash_by</strong> 
+    - (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>,<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>) <strong>hash_by</strong> 
   
 
   
@@ -855,11 +903,10 @@ item]
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;red&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;blue&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;green&quot;</span><span class='rbrack token'>]</span>
-  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='hash_by identifier id'>hash_by</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='a identifier id'>a</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='a identifier id'>a</span><span class='dot token'>.</span><span class='size identifier id'>size</span><span class='comma token'>,</span> <span class='a identifier id'>a</span><span class='dot token'>.</span><span class='upcase identifier id'>upcase</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='integer val'>3</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;RED&quot;</span><span class='comma token'>,</span> <span class='integer val'>4</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;BLUE&quot;</span><span class='comma token'>,</span> <span class='integer val'>5</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;GREEN&quot;</span><span class='rbrace token'>}</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">strings = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;]
+strings.hash_by{|a| [a.size, a.upcase]}
+=&gt; {3 =&gt; &quot;RED&quot;, 4 =&gt; &quot;BLUE&quot;, 5 =&gt; &quot;GREEN&quot;}</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -867,16 +914,16 @@ item]
   
     <li>
       
-        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Object.html" title="Object (class)">Object</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>,<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a hash of the enumerable&#8217;s items
-
-
+</p>
+</div>
       
     </li>
   
@@ -885,7 +932,7 @@ a hash of the enumerable&#8217;s items
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><a href="#index_by-instance_method" title="Enumerable#index_by (method)">#index_by</a></li>
+      <li><span class='object_link'><a href="#index_by-instance_method" title="Enumerable#index_by (method)">#index_by</a></span></li>
     
   </ul>
 
@@ -902,10 +949,9 @@ a hash of the enumerable&#8217;s items
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 80</span>
 
-<span class='def def kw'>def</span> <span class='hash_by identifier id'>hash_by</span>
-  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='to_h identifier id'>to_h</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id hash_by'>hash_by</span>
+  <span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id to_h'>to_h</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -914,7 +960,7 @@ a hash of the enumerable&#8217;s items
       <div class="method_details ">
   <p class="signature " id="index_by-instance_method">
   
-    - (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Integer.html" title="Integer (class)">Integer</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>index_by</strong> 
+    - (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span>,<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>) <strong>index_by</strong> 
   
 
   
@@ -923,6 +969,13 @@ a hash of the enumerable&#8217;s items
     <p>
 Convert the enumerable to a hash by mapping each item to a pair [index
 ,item]
+</p>
+<p>
+Rails has this method.
+</p>
+<p>
+From <a
+href="http://stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array">stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array</a>
 </p>
 
 
@@ -933,15 +986,10 @@ Convert the enumerable to a hash by mapping each item to a pair [index
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;red&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;blue&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;green&quot;</span><span class='rbrack token'>]</span>
-  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='index_by identifier id'>index_by</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='a identifier id'>a</span><span class='bitor op'>|</span> <span class='a identifier id'>a</span><span class='dot token'>.</span><span class='size identifier id'>size</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='integer val'>3</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;red&quot;</span><span class='comma token'>,</span> <span class='integer val'>4</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;blue&quot;</span><span class='comma token'>,</span> <span class='integer val'>5</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;green&quot;</span><span class='rbrace token'>}</span>
-
-<span class='Rails constant id'>Rails</span> <span class='has identifier id'>has</span> <span class='this identifier id'>this</span> <span class='method identifier id'>method</span><span class='dot token'>.</span>
-
-<span class='From constant id'>From</span> <span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/stackoverflow.com/</span><span class='questions identifier id'>questions</span><span class='div op'>/</span><span class='integer val'>412771</span><span class='div op'>/</span><span class='cleanest identifier id'>cleanest</span><span class='minus op'>-</span><span class='way identifier id'>way</span><span class='minus op'>-</span><span class='to identifier id'>to</span><span class='minus op'>-</span><span class='create identifier id'>create</span><span class='minus op'>-</span><span class='a identifier id'>a</span><span class='minus op'>-</span><span class='hash identifier id'>hash</span><span class='minus op'>-</span><span class='from identifier id'>from</span><span class='minus op'>-</span><span class='an identifier id'>an</span><span class='minus op'>-</span><span class='array identifier id'>array</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">strings = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;]
+strings.index_by{|a| a.size]}
+=&gt; {3 =&gt; &quot;red&quot;, 4 =&gt; &quot;blue&quot;, 5 =&gt; &quot;green&quot;}</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -949,16 +997,16 @@ Convert the enumerable to a hash by mapping each item to a pair [index
   
     <li>
       
-        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Integer.html" title="Integer (class)">Integer</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span>,<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a hash of the enumerable&#8217;s items
-
-
+</p>
+</div>
       
     </li>
   
@@ -967,7 +1015,7 @@ a hash of the enumerable&#8217;s items
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><a href="#hash_by-instance_method" title="Enumerable#hash_by (method)">#hash_by</a></li>
+      <li><span class='object_link'><a href="#hash_by-instance_method" title="Enumerable#hash_by (method)">#hash_by</a></span></li>
     
   </ul>
 
@@ -984,10 +1032,9 @@ a hash of the enumerable&#8217;s items
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 64</span>
 
-<span class='def def kw'>def</span> <span class='index_by identifier id'>index_by</span>
-  <span class='inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='hash identifier id'>hash</span><span class='comma token'>,</span> <span class='elem identifier id'>elem</span><span class='bitor op'>|</span> <span class='hash identifier id'>hash</span><span class='dot token'>.</span><span class='merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='elem identifier id'>elem</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='elem identifier id'>elem</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id index_by'>index_by</span>
+  <span class='id inject'>inject</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id hash'>hash</span><span class='comma'>,</span> <span class='id elem'>elem</span><span class='op'>|</span> <span class='id hash'>hash</span><span class='period'>.</span><span class='id merge!'>merge!</span><span class='lparen'>(</span><span class='kw'>yield</span><span class='lparen'>(</span><span class='id elem'>elem</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='id elem'>elem</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1003,9 +1050,6 @@ a hash of the enumerable&#8217;s items
 </p><div class="docstring">
   <div class="discussion">
     <p>
-True if this <em>enum</em> intersects another <em>enum</em>.
-</p>
-<p>
 This implementation uses #to_a and array intersection. A developer may want
 to optimize this implementation for other classes, such as detecting
 whether a range intersects another range simply by comparing the
@@ -1020,10 +1064,9 @@ ranges&#8217; min/max values.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='intersect? fid id'>intersect?</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='string val'>'c'</span><span class='comma token'>,</span><span class='string val'>'d'</span><span class='comma token'>,</span><span class='string val'>'e'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
-  <span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='intersect? fid id'>intersect?</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='string val'>'d'</span><span class='comma token'>,</span><span class='string val'>'e'</span><span class='comma token'>,</span><span class='string val'>'f'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">['a','b','c'].intersect?(['c','d','e'] =&gt; true
+['a','b','c'].intersect?(['d','e','f'] =&gt; false</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1037,16 +1080,10 @@ ranges&#8217; min/max values.
       
       
         &mdash;
-        
-true if this <em>enum</em> intersects another <em>enum</em>.
-
-
-This implementation uses #to_a and array intersection. A developer may want
-to optimize this implementation for other classes, such as detecting
-whether a range intersects another range simply by comparing the
-ranges&#8217; min/max values.
-
-
+        <div class='inline'><p>
+true if this  <em>enum</em> intersects another <em>enum</em>.
+</p>
+</div>
       
     </li>
   
@@ -1065,10 +1102,9 @@ ranges&#8217; min/max values.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 387</span>
 
-<span class='def def kw'>def</span> <span class='intersect? fid id'>intersect?</span><span class='lparen token'>(</span><span class='enum identifier id'>enum</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='eqq op'>===</span><span class='enum identifier id'>enum</span> <span class='and and kw'>and</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='to_a identifier id'>to_a</span><span class='dot token'>.</span><span class='size identifier id'>size</span><span class='gt op'>&gt;</span><span class='integer val'>0</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='to_a identifier id'>to_a</span> <span class='bitand op'>&amp;</span> <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='to_a identifier id'>to_a</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='size identifier id'>size</span><span class='gt op'>&gt;</span><span class='integer val'>0</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id intersect?'>intersect?</span><span class='lparen'>(</span><span class='id enum'>enum</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='kw'>self</span><span class='op'>===</span><span class='id enum'>enum</span> <span class='kw'>and</span> <span class='kw'>self</span><span class='period'>.</span><span class='id to_a'>to_a</span><span class='period'>.</span><span class='id size'>size</span><span class='op'>&gt;</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id to_a'>to_a</span> <span class='op'>&amp;</span> <span class='id enum'>enum</span><span class='period'>.</span><span class='id to_a'>to_a</span><span class='rparen'>)</span><span class='period'>.</span><span class='id size'>size</span><span class='op'>&gt;</span><span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1077,7 +1113,7 @@ ranges&#8217; min/max values.
       <div class="method_details ">
   <p class="signature " id="join-instance_method">
   
-    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>join</strong>(*op) 
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>join</strong>(*op) 
   
 
   
@@ -1095,10 +1131,9 @@ Shortcut to Array#join to concatenate the items into a string
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='lbrack token'>[</span><span class='string val'>&quot;foo&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;goo&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;hoo&quot;</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='join identifier id'>join</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;foogoohoo&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[&quot;foo&quot;, &quot;goo&quot;, &quot;hoo&quot;].join
+=&gt; &quot;foogoohoo&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1106,16 +1141,16 @@ Shortcut to Array#join to concatenate the items into a string
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 concatenated string
-
-
+</p>
+</div>
       
     </li>
   
@@ -1124,7 +1159,7 @@ concatenated string
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><a href="Array.html#join-instance_method" title="Array#join (method)">Array#join</a></li>
+      <li><span class='object_link'><a href="Array.html#join-instance_method" title="Array#join (method)">Array#join</a></span></li>
     
   </ul>
 
@@ -1141,10 +1176,9 @@ concatenated string
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 364</span>
 
-<span class='def def kw'>def</span> <span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='op identifier id'>op</span><span class='rparen token'>)</span>
- <span class='to_a identifier id'>to_a</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='op identifier id'>op</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id join'>join</span><span class='lparen'>(</span><span class='op'>*</span><span class='id op'>op</span><span class='rparen'>)</span>
+ <span class='id to_a'>to_a</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='op'>*</span><span class='id op'>op</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1153,7 +1187,7 @@ concatenated string
       <div class="method_details ">
   <p class="signature " id="map_id-instance_method">
   
-    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>map_id</strong> 
+    - (<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>) <strong>map_id</strong> 
   
 
   
@@ -1161,6 +1195,13 @@ concatenated string
   <div class="discussion">
     <p>
 Map each item => item.id
+</p>
+<p>
+A typical use is to convert a list of ActiveRecord items to a list of id
+items.
+</p>
+<p>
+This method is a fast way to get the same results as items.map(&amp;:id)
 </p>
 
 
@@ -1171,14 +1212,9 @@ Map each item => item.id
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='users identifier id'>users</span> <span class='assign token'>=</span> <span class='User constant id'>User</span><span class='dot token'>.</span><span class='find identifier id'>find</span><span class='lparen token'>(</span><span class='symbol val'>:all</span><span class='rparen token'>)</span>
-  <span class='users identifier id'>users</span><span class='dot token'>.</span><span class='map_id identifier id'>map_id</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='dot3 op'>...</span><span class='rbrack token'>]</span>
-
-<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='ActiveRecord constant id'>ActiveRecord</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='id identifier id'>id</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
-
-<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:id</span><span class='rparen token'>)</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">users = User.find(:all)
+users.map_id =&gt; [1,2,3,4,...]</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1186,16 +1222,16 @@ Map each item => item.id
   
     <li>
       
-        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 an list of each item.id
-
-
+</p>
+</div>
       
     </li>
   
@@ -1214,10 +1250,9 @@ an list of each item.id
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 105</span>
 
-<span class='def def kw'>def</span> <span class='map_id identifier id'>map_id</span>
-  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='id identifier id'>id</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id map_id'>map_id</span>
+  <span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='id item'>item</span><span class='period'>.</span><span class='id id'>id</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1226,7 +1261,7 @@ an list of each item.id
       <div class="method_details ">
   <p class="signature " id="map_to_a-instance_method">
   
-    - (<tt>Enumberable&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>) <strong>map_to_a</strong> 
+    - (<tt>Enumberable&lt;<span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;&gt;</tt>) <strong>map_to_a</strong> 
   
 
   
@@ -1234,6 +1269,14 @@ an list of each item.id
   <div class="discussion">
     <p>
 Map each item => item.to_a
+</p>
+<p>
+A typical use is to convert a list with Set items to a list of Array items,
+so you can more easily iterate over the the Array items.
+</p>
+<p>
+See <a
+href="http://www.ruby-doc.org/core/classes/Enumerable.html#M003148">www.ruby-doc.org/core/classes/Enumerable.html#M003148</a>
 </p>
 
 
@@ -1244,18 +1287,12 @@ Map each item => item.to_a
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='set1 identifier id'>set1</span> <span class='assign token'>=</span> <span class='Set constant id'>Set</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:b</span><span class='comma token'>,</span><span class='symbol val'>:c</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-  <span class='set2 identifier id'>set2</span> <span class='assign token'>=</span> <span class='Set constant id'>Set</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:d</span><span class='comma token'>,</span><span class='symbol val'>:e</span><span class='comma token'>,</span><span class='symbol val'>:f</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-  <span class='set3 identifier id'>set3</span> <span class='assign token'>=</span> <span class='Set constant id'>Set</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:g</span><span class='comma token'>,</span><span class='symbol val'>:h</span><span class='comma token'>,</span><span class='symbol val'>:i</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-  <span class='sets identifier id'>sets</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='set1 identifier id'>set1</span><span class='comma token'>,</span> <span class='set2 identifier id'>set2</span><span class='comma token'>,</span> <span class='set3 identifier id'>set3</span><span class='rbrack token'>]</span>
-  <span class='sets identifier id'>sets</span><span class='dot token'>.</span><span class='map_to_a identifier id'>map_to_a</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span> <span class='symbol val'>:b</span><span class='comma token'>,</span> <span class='symbol val'>:c</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='symbol val'>:d</span><span class='comma token'>,</span> <span class='symbol val'>:e</span><span class='comma token'>,</span> <span class='symbol val'>:f</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='symbol val'>:g</span><span class='comma token'>,</span> <span class='symbol val'>:h</span><span class='comma token'>,</span> <span class='symbol val'>:i</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
-
-<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='with identifier id'>with</span> <span class='Set constant id'>Set</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='Array constant id'>Array</span> <span class='items identifier id'>items</span><span class='comma token'>,</span>
-<span class='so identifier id'>so</span> <span class='you identifier id'>you</span> <span class='can identifier id'>can</span> <span class='more identifier id'>more</span> <span class='easily identifier id'>easily</span> <span class='iterate identifier id'>iterate</span> <span class='over identifier id'>over</span> <span class='the identifier id'>the</span> <span class='the identifier id'>the</span> <span class='Array constant id'>Array</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
-
-<span class='See constant id'>See</span> <span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/www.ruby-doc.org/</span><span class='core identifier id'>core</span><span class='div op'>/</span><span class='classes identifier id'>classes</span><span class='div op'>/</span><span class='Enumerable constant id'>Enumerable</span><span class='dot token'>.</span><span class='html identifier id'>html</span><span class='comment val'>#M003148</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">set1 = Set.new([:a,:b,:c])
+set2 = Set.new([:d,:e,:f])
+set3 = Set.new([:g,:h,:i])
+sets = [set1, set2, set3]
+sets.map_to_a =&gt; [[:a, :b, :c], [:d, :e, :f], [:g, :h, :i]]</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1263,16 +1300,16 @@ Map each item => item.to_a
   
     <li>
       
-        <span class='type'>(<tt>Enumberable&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>)</span>
+        <span class='type'>(<tt>Enumberable&lt;<span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a list of each item.to_a
-
-
+</p>
+</div>
       
     </li>
   
@@ -1291,10 +1328,9 @@ a list of each item.to_a
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 126</span>
 
-<span class='def def kw'>def</span> <span class='map_to_a identifier id'>map_to_a</span>
-  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='item identifier id'>item</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id map_to_a'>map_to_a</span>
+  <span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='id item'>item</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1303,7 +1339,7 @@ a list of each item.to_a
       <div class="method_details ">
   <p class="signature " id="map_to_f-instance_method">
   
-    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;Float&gt;</tt>) <strong>map_to_f</strong> 
+    - (<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;Float&gt;</tt>) <strong>map_to_f</strong> 
   
 
   
@@ -1311,6 +1347,13 @@ a list of each item.to_a
   <div class="discussion">
     <p>
 Map each item => item.to_f
+</p>
+<p>
+A typical use is to convert a list of String items to a list of float
+items.
+</p>
+<p>
+This method is a fast way to get the same results as items.map(&amp;:to_f)
 </p>
 
 
@@ -1321,14 +1364,9 @@ Map each item => item.to_f
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;2&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;3&quot;</span><span class='rbrack token'>]</span>
-  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='map_to_f identifier id'>map_to_f</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='float val'>1.0</span><span class='comma token'>,</span> <span class='float val'>2.0</span><span class='comma token'>,</span> <span class='float val'>3.0</span><span class='rbrack token'>]</span>
-
-<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='String constant id'>String</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='float identifier id'>float</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
-
-<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_f</span><span class='rparen token'>)</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">strings = [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]
+strings.map_to_f =&gt; [1.0, 2.0, 3.0]</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1336,16 +1374,16 @@ Map each item => item.to_f
   
     <li>
       
-        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;Float&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;Float&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a list of each item.to_f
-
-
+</p>
+</div>
       
     </li>
   
@@ -1364,10 +1402,9 @@ a list of each item.to_f
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 143</span>
 
-<span class='def def kw'>def</span> <span class='map_to_f identifier id'>map_to_f</span>
-  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_f identifier id'>to_f</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id map_to_f'>map_to_f</span>
+  <span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='id item'>item</span><span class='period'>.</span><span class='id to_f'>to_f</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1376,7 +1413,7 @@ a list of each item.to_f
       <div class="method_details ">
   <p class="signature " id="map_to_i-instance_method">
   
-    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Integer.html" title="Integer (class)">Integer</a>&gt;</tt>) <strong>map_to_i</strong> 
+    - (<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span>&gt;</tt>) <strong>map_to_i</strong> 
   
 
   
@@ -1384,6 +1421,13 @@ a list of each item.to_f
   <div class="discussion">
     <p>
 Map each item => item.to_i
+</p>
+<p>
+A typical use is to convert a list of String items to a list of integer
+items.
+</p>
+<p>
+This method is a fast way to get the same results as items.map(&amp;:to_i)
 </p>
 
 
@@ -1394,14 +1438,9 @@ Map each item => item.to_i
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;2&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;3&quot;</span><span class='rbrack token'>]</span>
-  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='map_to_i identifier id'>map_to_i</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span>  
-
-<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='String constant id'>String</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='integer identifier id'>integer</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
-
-<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_i</span><span class='rparen token'>)</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">strings = [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]
+strings.map_to_i =&gt; [1, 2, 3]  </pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1409,16 +1448,16 @@ Map each item => item.to_i
   
     <li>
       
-        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Integer.html" title="Integer (class)">Integer</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a list of each item.to_i
-
-
+</p>
+</div>
       
     </li>
   
@@ -1437,10 +1476,9 @@ a list of each item.to_i
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 160</span>
 
-<span class='def def kw'>def</span> <span class='map_to_i identifier id'>map_to_i</span>
-  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id map_to_i'>map_to_i</span>
+  <span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='id item'>item</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1449,7 +1487,7 @@ a list of each item.to_i
       <div class="method_details ">
   <p class="signature " id="map_to_s-instance_method">
   
-    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="String.html" title="String (class)">String</a>&gt;</tt>) <strong>map_to_s</strong> 
+    - (<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>map_to_s</strong> 
   
 
   
@@ -1457,6 +1495,13 @@ a list of each item.to_i
   <div class="discussion">
     <p>
 Map each item => item.to_s
+</p>
+<p>
+A typical use is to convert a list of Numeric items to a list of String
+items.
+</p>
+<p>
+This method is a fast way to get the same results as items.map(&amp;:to_s)
 </p>
 
 
@@ -1467,14 +1512,9 @@ Map each item => item.to_s
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='numbers identifier id'>numbers</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span>
-  <span class='numbers identifier id'>numbers</span><span class='dot token'>.</span><span class='map_to_s identifier id'>map_to_s</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;2&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;3&quot;</span><span class='rbrack token'>]</span>  
-
-<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='Numeric constant id'>Numeric</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='String constant id'>String</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
-
-<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_s</span><span class='rparen token'>)</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">numbers = [1, 2, 3]
+numbers.map_to_s =&gt; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]  </pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1482,16 +1522,16 @@ Map each item => item.to_s
   
     <li>
       
-        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="String.html" title="String (class)">String</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a list of each item.to_s
-
-
+</p>
+</div>
       
     </li>
   
@@ -1510,10 +1550,9 @@ a list of each item.to_s
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 177</span>
 
-<span class='def def kw'>def</span> <span class='map_to_s identifier id'>map_to_s</span>
-  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id map_to_s'>map_to_s</span>
+  <span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='id item'>item</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1522,7 +1561,7 @@ a list of each item.to_s
       <div class="method_details ">
   <p class="signature " id="map_to_sym-instance_method">
   
-    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Symbol.html" title="Symbol (class)">Symbol</a>&gt;</tt>) <strong>map_to_sym</strong> 
+    - (<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="Symbol.html" title="Symbol (class)">Symbol</a></span>&gt;</tt>) <strong>map_to_sym</strong> 
   
 
   
@@ -1530,6 +1569,14 @@ a list of each item.to_s
   <div class="discussion">
     <p>
 Map each item => item.to_sym
+</p>
+<p>
+A typical use is to convert a list of Object items to a list of Symbol
+items.
+</p>
+<p>
+This method is a fast way to get the same results as
+items.map(&amp;:to_sym)
 </p>
 
 
@@ -1540,14 +1587,9 @@ Map each item => item.to_sym
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;foo&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;goo&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;hoo&quot;</span><span class='rbrack token'>]</span>
-  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='map_to_sym identifier id'>map_to_sym</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:foo</span><span class='comma token'>,</span> <span class='symbol val'>:goo</span><span class='comma token'>,</span> <span class='symbol val'>:hoo</span><span class='rbrack token'>]</span>
-
-<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='Object constant id'>Object</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='Symbol constant id'>Symbol</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
-
-<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_sym</span><span class='rparen token'>)</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">strings = [&quot;foo&quot;, &quot;goo&quot;, &quot;hoo&quot;]
+strings.map_to_sym =&gt; [:foo, :goo, :hoo]</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1555,16 +1597,16 @@ Map each item => item.to_sym
   
     <li>
       
-        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Symbol.html" title="Symbol (class)">Symbol</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="Symbol.html" title="Symbol (class)">Symbol</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a list of each item.to_sym
-
-
+</p>
+</div>
       
     </li>
   
@@ -1583,10 +1625,9 @@ a list of each item.to_sym
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 194</span>
 
-<span class='def def kw'>def</span> <span class='map_to_sym identifier id'>map_to_sym</span>
-  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_sym identifier id'>to_sym</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id map_to_sym'>map_to_sym</span>
+  <span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='id item'>item</span><span class='period'>.</span><span class='id to_sym'>to_sym</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1595,7 +1636,7 @@ a list of each item.to_sym
       <div class="method_details ">
   <p class="signature " id="map_with_index-instance_method">
   
-    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>map_with_index</strong> 
+    - (<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>) <strong>map_with_index</strong> 
   
 
   
@@ -1613,11 +1654,10 @@ Map each item and its index => a new output
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;a&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;b&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;c&quot;</span><span class='rbrack token'>]</span>
-  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='map_with_index identifier id'>map_with_index</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='string identifier id'>string</span><span class='comma token'>,</span><span class='index identifier id'>index</span><span class='bitor op'>|</span> <span class='dstring node'>&quot;#{string}#{index}&quot;</span><span class='rbrace token'>}</span>
-   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;a0, &quot;</span><span class='b1 identifier id'>b1</span><span class='string val'>&quot;, &quot;</span><span class='c3 identifier id'>c3</span><span class='string val'>&quot;]
-</span></pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">strings = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
+strings.map_with_index{|string,index| &quot;#{string}#{index}&quot;}
+ =&gt; [&quot;a0, &quot;b1&quot;, &quot;c3&quot;]</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1625,16 +1665,16 @@ Map each item and its index => a new output
   
     <li>
       
-        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 an list of each item transformed by the block
-
-
+</p>
+</div>
       
     </li>
   
@@ -1643,9 +1683,9 @@ an list of each item transformed by the block
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li>Enumerable#map</li>
+      <li>#map</li>
     
-      <li>Enumerable#each_with_index</li>
+      <li>#each_with_index</li>
     
   </ul>
 
@@ -1663,11 +1703,10 @@ an list of each item transformed by the block
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 210</span>
 
-<span class='def def kw'>def</span> <span class='map_with_index identifier id'>map_with_index</span>
-  <span class='index identifier id'>index</span><span class='assign token'>=</span><span class='integer val'>-1</span>
-  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='index identifier id'>index</span><span class='opasgn op'>+=</span><span class='integer val'>1</span><span class='semicolon token'>;</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='comma token'>,</span><span class='index identifier id'>index</span><span class='rparen token'>)</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id map_with_index'>map_with_index</span>
+  <span class='id index'>index</span><span class='op'>=</span><span class='op'>-</span><span class='int'>1</span>
+  <span class='id map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='id index'>index</span><span class='op'>+=</span><span class='int'>1</span><span class='semicolon'>;</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='comma'>,</span><span class='id index'>index</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1676,7 +1715,7 @@ an list of each item transformed by the block
       <div class="method_details ">
   <p class="signature " id="nitems_until-instance_method">
   
-    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>nitems_until</strong> 
+    - (<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>) <strong>nitems_until</strong> 
   
 
   
@@ -1694,10 +1733,9 @@ The number of leading elements for which block is false.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='nitems_until identifier id'>nitems_until</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span> <span class='obj identifier id'>obj</span> <span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='number identifier id'>number</span> <span class='of identifier id'>of</span> <span class='items identifier id'>items</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">enum.nitems_until {| obj | block }
+=&gt; number of items</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1705,16 +1743,16 @@ The number of leading elements for which block is false.
   
     <li>
       
-        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the number of leading elements for which block is false.
-
-
+</p>
+</div>
       
     </li>
   
@@ -1741,18 +1779,17 @@ the number of leading elements for which block is false.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 326</span>
 
-<span class='def def kw'>def</span> <span class='nitems_until identifier id'>nitems_until</span>
-  <span class='num identifier id'>num</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
-  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span>
-    <span class='if if kw'>if</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span> 
-      <span class='break break kw'>break</span>
-    <span class='else else kw'>else</span>
-      <span class='num identifier id'>num</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
-    <span class='end end kw'>end</span>
-  <span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='num identifier id'>num</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id nitems_until'>nitems_until</span>
+  <span class='id num'>num</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='rparen'>)</span> 
+      <span class='kw'>break</span>
+    <span class='kw'>else</span>
+      <span class='id num'>num</span><span class='op'>+=</span><span class='int'>1</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id num'>num</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1761,7 +1798,7 @@ the number of leading elements for which block is false.
       <div class="method_details ">
   <p class="signature " id="nitems_while-instance_method">
   
-    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>nitems_while</strong> 
+    - (<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>) <strong>nitems_while</strong> 
   
 
   
@@ -1779,10 +1816,9 @@ The number of leading elements for which block is not false or nil.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='nitems_while identifier id'>nitems_while</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span> <span class='obj identifier id'>obj</span> <span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
-   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='number identifier id'>number</span> <span class='of identifier id'>of</span> <span class='items identifier id'>items</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">enum.nitems_while {| obj | block }
+ =&gt; number of items</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1790,16 +1826,16 @@ The number of leading elements for which block is not false or nil.
   
     <li>
       
-        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the number of leading elements for which block is not false or nil.
-
-
+</p>
+</div>
       
     </li>
   
@@ -1820,12 +1856,11 @@ the number of leading elements for which block is not false or nil.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 313</span>
 
-<span class='def def kw'>def</span> <span class='nitems_while identifier id'>nitems_while</span>
-  <span class='num identifier id'>num</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
-  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='lparen token'>(</span><span class='num identifier id'>num</span><span class='opasgn op'>+=</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='break break kw'>break</span><span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='num identifier id'>num</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id nitems_while'>nitems_while</span>
+  <span class='id num'>num</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id num'>num</span><span class='op'>+=</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>break</span><span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id num'>num</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1834,7 +1869,7 @@ the number of leading elements for which block is not false or nil.
       <div class="method_details ">
   <p class="signature " id="nitems_with_index-instance_method">
   
-    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>nitems_with_index</strong> 
+    - (<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>) <strong>nitems_with_index</strong> 
   
 
   
@@ -1853,10 +1888,9 @@ enum.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='nitems_with_index identifier id'>nitems_with_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='comma token'>,</span><span class='i identifier id'>i</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
-   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='number identifier id'>number</span> <span class='of identifier id'>of</span> <span class='items identifier id'>items</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">enum.nitems_with_index {|obj,i| block }
+ =&gt; number of items</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1864,16 +1898,16 @@ enum.
   
     <li>
       
-        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the number of leading elements for which block is true.
-
-
+</p>
+</div>
       
     </li>
   
@@ -1894,12 +1928,11 @@ the number of leading elements for which block is true.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 347</span>
 
-<span class='def def kw'>def</span> <span class='nitems_with_index identifier id'>nitems_with_index</span>
-  <span class='index identifier id'>index</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
-  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='comma token'>,</span><span class='index identifier id'>index</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='lparen token'>(</span><span class='index identifier id'>index</span><span class='opasgn op'>+=</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='break break kw'>break</span><span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='index identifier id'>index</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id nitems_with_index'>nitems_with_index</span>
+  <span class='id index'>index</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='comma'>,</span><span class='id index'>index</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id index'>index</span><span class='op'>+=</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>break</span><span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id index'>index</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1908,7 +1941,7 @@ the number of leading elements for which block is true.
       <div class="method_details ">
   <p class="signature " id="power_set-instance_method">
   
-    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>) <strong>power_set</strong> 
+    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;&gt;</tt>) <strong>power_set</strong> 
   
 
   
@@ -1916,6 +1949,9 @@ the number of leading elements for which block is true.
   <div class="discussion">
     <p>
 Calculate the power set.
+</p>
+<p>
+This implementation is from the blog post below:
 </p>
 
 
@@ -1926,10 +1962,9 @@ Calculate the power set.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='power_set identifier id'>power_set</span><span class='dot token'>.</span><span class='sort identifier id'>sort</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span>  <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3].power_set.sort
+=&gt;  [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -1937,16 +1972,16 @@ Calculate the power set.
   
     <li>
       
-        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the power set: an array with all subsets of the enum&#8217;s elements.
-
-
+</p>
+</div>
       
     </li>
   
@@ -1955,9 +1990,9 @@ the power set: an array with all subsets of the enum&#8217;s elements.
   <h3>See Also:</h3>
   <ul class="see">
     
-      <li><a href="http://en.wikipedia.org/wiki/Power_set" title="This implementation is from the blog post below:">This implementation is from the blog post below:</a></li>
+      <li><a href="http://en.wikipedia.org/wiki/Power_set" target="_parent" title="http://en.wikipedia.org/wiki/Power_set">http://en.wikipedia.org/wiki/Power_set</a></li>
     
-      <li><a href="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/" title="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/">http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/</a></li>
+      <li><a href="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/" target="_parent" title="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/">http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/</a></li>
     
   </ul>
 
@@ -1974,10 +2009,9 @@ the power set: an array with all subsets of the enum&#8217;s elements.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 438</span>
 
-<span class='def def kw'>def</span> <span class='power_set identifier id'>power_set</span>
-  <span class='inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='comma token'>,</span><span class='y identifier id'>y</span><span class='bitor op'>|</span><span class='r identifier id'>r</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='semicolon token'>;</span><span class='c identifier id'>c</span><span class='dot token'>.</span><span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='i identifier id'>i</span><span class='bitor op'>|</span><span class='r identifier id'>r</span><span class='lshft op'>&lt;&lt;</span><span class='i identifier id'>i</span><span class='semicolon token'>;</span><span class='r identifier id'>r</span><span class='lshft op'>&lt;&lt;</span><span class='i identifier id'>i</span><span class='plus op'>+</span><span class='lbrack token'>[</span><span class='y identifier id'>y</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span><span class='semicolon token'>;</span><span class='r identifier id'>r</span><span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id power_set'>power_set</span>
+  <span class='id inject'>inject</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id c'>c</span><span class='comma'>,</span><span class='id y'>y</span><span class='op'>|</span><span class='id r'>r</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='semicolon'>;</span><span class='id c'>c</span><span class='period'>.</span><span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id i'>i</span><span class='op'>|</span><span class='id r'>r</span><span class='op'>&lt;&lt;</span><span class='id i'>i</span><span class='semicolon'>;</span><span class='id r'>r</span><span class='op'>&lt;&lt;</span><span class='id i'>i</span><span class='op'>+</span><span class='lbracket'>[</span><span class='id y'>y</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='semicolon'>;</span><span class='id r'>r</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1986,7 +2020,7 @@ the power set: an array with all subsets of the enum&#8217;s elements.
       <div class="method_details ">
   <p class="signature " id="select_until-instance_method">
   
-    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>select_until</strong> 
+    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>) <strong>select_until</strong> 
   
 
   
@@ -2004,10 +2038,9 @@ The leading elements for which block is false or nil.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='select_until identifier id'>select_until</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
-   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='array identifier id'>array</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">enum.select_until {|obj| block }
+ =&gt; array</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -2015,16 +2048,16 @@ The leading elements for which block is false or nil.
   
     <li>
       
-        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the leading elements for which block is false or nil.
-
-
+</p>
+</div>
       
     </li>
   
@@ -2045,12 +2078,11 @@ the leading elements for which block is false or nil.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 242</span>
 
-<span class='def def kw'>def</span> <span class='select_until identifier id'>select_until</span>
-  <span class='arr identifier id'>arr</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
-  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='break break kw'>break</span> <span class='colon op'>:</span> <span class='lparen token'>(</span><span class='arr identifier id'>arr</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span><span class='rparen token'>)</span><span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='arr identifier id'>arr</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id select_until'>select_until</span>
+  <span class='id arr'>arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>break</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id arr'>arr</span> <span class='op'>&lt;&lt;</span> <span class='id item'>item</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id arr'>arr</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2059,7 +2091,7 @@ the leading elements for which block is false or nil.
       <div class="method_details ">
   <p class="signature " id="select_while-instance_method">
   
-    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>select_while</strong> 
+    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>) <strong>select_while</strong> 
   
 
   
@@ -2077,10 +2109,9 @@ The leading elements for which block is not false or nil.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='select_while identifier id'>select_while</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
-   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='array identifier id'>array</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">enum.select_while {|obj| block }
+ =&gt; array</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -2088,16 +2119,16 @@ The leading elements for which block is not false or nil.
   
     <li>
       
-        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the leading elements for which block is not false or nil.
-
-
+</p>
+</div>
       
     </li>
   
@@ -2118,12 +2149,11 @@ the leading elements for which block is not false or nil.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 229</span>
 
-<span class='def def kw'>def</span> <span class='select_while identifier id'>select_while</span>
-  <span class='arr identifier id'>arr</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
-  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='lparen token'>(</span><span class='arr identifier id'>arr</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='break break kw'>break</span><span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='arr identifier id'>arr</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id select_while'>select_while</span>
+  <span class='id arr'>arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id arr'>arr</span> <span class='op'>&lt;&lt;</span> <span class='id item'>item</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>break</span><span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id arr'>arr</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2132,7 +2162,7 @@ the leading elements for which block is not false or nil.
       <div class="method_details ">
   <p class="signature " id="select_with_index-instance_method">
   
-    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt; the leading elements for which block is not false or nil.</tt>) <strong>select_with_index</strong> 
+    - (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt; the leading elements for which block is not false or nil.</tt>) <strong>select_with_index</strong> 
   
 
   
@@ -2151,10 +2181,9 @@ enum.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='select_with_index identifier id'>select_with_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='comma token'>,</span><span class='i identifier id'>i</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span> 
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='array identifier id'>array</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">enum.select_with_index {|obj,i| block } 
+=&gt; array</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -2162,16 +2191,16 @@ enum.
   
     <li>
       
-        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt; the leading elements for which block is not false or nil.</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt; the leading elements for which block is not false or nil.</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 Array<Object> the leading elements for which block is not false or nil.
-
-
+</p>
+</div>
       
     </li>
   
@@ -2200,20 +2229,19 @@ Array<Object> the leading elements for which block is not false or nil.
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 257</span>
 
-<span class='def def kw'>def</span> <span class='select_with_index identifier id'>select_with_index</span>
-  <span class='index identifier id'>index</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
-  <span class='arr identifier id'>arr</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
-  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> 
-    <span class='if if kw'>if</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='comma token'>,</span><span class='index identifier id'>index</span><span class='rparen token'>)</span>
-      <span class='arr identifier id'>arr</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span>
-      <span class='index identifier id'>index</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
-    <span class='else else kw'>else</span>
-      <span class='break break kw'>break</span>
-    <span class='end end kw'>end</span>
-  <span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='arr identifier id'>arr</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id select_with_index'>select_with_index</span>
+  <span class='id index'>index</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id arr'>arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id item'>item</span><span class='op'>|</span> 
+    <span class='kw'>if</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id item'>item</span><span class='comma'>,</span><span class='id index'>index</span><span class='rparen'>)</span>
+      <span class='id arr'>arr</span> <span class='op'>&lt;&lt;</span> <span class='id item'>item</span>
+      <span class='id index'>index</span><span class='op'>+=</span><span class='int'>1</span>
+    <span class='kw'>else</span>
+      <span class='kw'>break</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id arr'>arr</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2222,7 +2250,7 @@ Array<Object> the leading elements for which block is not false or nil.
       <div class="method_details ">
   <p class="signature " id="to_h-instance_method">
   
-    - (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Object.html" title="Object (class)">Object</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>to_h</strong> 
+    - (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>,<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>) <strong>to_h</strong> 
   
 
   
@@ -2230,6 +2258,10 @@ Array<Object> the leading elements for which block is not false or nil.
   <div class="discussion">
     <p>
 Convert an enumerable to a hash.
+</p>
+<p>
+If a key occurs more than once, then this will automatically  convert the
+value to an array of the keys&#8217; values.
 </p>
 
 
@@ -2240,18 +2272,13 @@ Convert an enumerable to a hash.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='array identifier id'>array</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span> <span class='symbol val'>:b</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='symbol val'>:c</span><span class='comma token'>,</span> <span class='symbol val'>:d</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='symbol val'>:e</span><span class='comma token'>,</span> <span class='symbol val'>:f</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
-  <span class='array identifier id'>array</span><span class='dot token'>.</span><span class='to_h identifier id'>to_h</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:a=</span><span class='gt op'>&gt;</span><span class='symbol val'>:b</span><span class='comma token'>,</span> <span class='symbol val'>:c=</span><span class='gt op'>&gt;</span><span class='symbol val'>:d</span><span class='comma token'>,</span> <span class='symbol val'>:e=</span><span class='gt op'>&gt;</span><span class='symbol val'>:f</span><span class='rbrace token'>}</span>
-
-<span class='If constant id'>If</span> <span class='a identifier id'>a</span> <span class='key identifier id'>key</span> <span class='occurs identifier id'>occurs</span> <span class='more identifier id'>more</span> <span class='than identifier id'>than</span> <span class='once identifier id'>once</span><span class='comma token'>,</span> <span class='then then kw'>then</span> <span class='this identifier id'>this</span> <span class='will identifier id'>will</span> <span class='automatically identifier id'>automatically</span> 
-<span class='convert identifier id'>convert</span> <span class='the identifier id'>the</span> <span class='value identifier id'>value</span> <span class='to identifier id'>to</span> <span class='an identifier id'>an</span> <span class='array identifier id'>array</span> <span class='of identifier id'>of</span> <span class='the identifier id'>the</span> <span class='keys identifier id'>keys</span><span class='string val'>' values.
-</span></pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">array=[[:a, :b],[:c, :d],[:e, :f]]
+array.to_h =&gt; {:a=&gt;:b, :c=&gt;:d, :e=&gt;:f}</pre>
     
-      <h4></h4>
-      <pre class="example code">  <span class='array identifier id'>array</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:b</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:c</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:d</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
-  <span class='array identifier id'>array</span><span class='dot token'>.</span><span class='to_h identifier id'>to_h</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:a=</span><span class='gt op'>&gt;</span><span class='lbrack token'>[</span><span class='symbol val'>:b</span><span class='comma token'>,</span> <span class='symbol val'>:c</span><span class='comma token'>,</span> <span class='symbol val'>:d</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">array=[[:a,:b],[:a,:c],[:a,:d]]
+array.to_h =&gt; {:a=&gt;[:b, :c, :d]}</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -2259,16 +2286,16 @@ Convert an enumerable to a hash.
   
     <li>
       
-        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Object.html" title="Object (class)">Object</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>,<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 a hash of the enumerable&#8217;s items
-
-
+</p>
+</div>
       
     </li>
   
@@ -2302,25 +2329,24 @@ a hash of the enumerable&#8217;s items
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 29</span>
 
-<span class='def def kw'>def</span> <span class='to_h identifier id'>to_h</span>
-  <span class='hash identifier id'>hash</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='dupe identifier id'>dupe</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span>
-  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span><span class='val identifier id'>val</span><span class='bitor op'>|</span>
-    <span class='if if kw'>if</span> <span class='hash identifier id'>hash</span><span class='dot token'>.</span><span class='key? fid id'>key?</span> <span class='key identifier id'>key</span>
-      <span class='if if kw'>if</span> <span class='dupe identifier id'>dupe</span><span class='dot token'>.</span><span class='key? fid id'>key?</span> <span class='key identifier id'>key</span>
-        <span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='val identifier id'>val</span>
-      <span class='else else kw'>else</span>
-        <span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
-        <span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='val identifier id'>val</span>
-        <span class='dupe identifier id'>dupe</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='true true kw'>true</span>
-      <span class='end end kw'>end</span>
-    <span class='else else kw'>else</span>
-      <span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='val identifier id'>val</span>
-    <span class='end end kw'>end</span>
-  <span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='hash identifier id'>hash</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id to_h'>to_h</span>
+  <span class='id hash'>hash</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id dupe'>dupe</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span><span class='id val'>val</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id hash'>hash</span><span class='period'>.</span><span class='id key?'>key?</span> <span class='id key'>key</span>
+      <span class='kw'>if</span> <span class='id dupe'>dupe</span><span class='period'>.</span><span class='id key?'>key?</span> <span class='id key'>key</span>
+        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id val'>val</span>
+      <span class='kw'>else</span>
+        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='op'>=</span><span class='lbracket'>[</span><span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+        <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id val'>val</span>
+        <span class='id dupe'>dupe</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='op'>=</span><span class='kw'>true</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='id hash'>hash</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id val'>val</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id hash'>hash</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -2331,9 +2357,9 @@ a hash of the enumerable&#8217;s items
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:19:04 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Mon Dec 13 17:57:15 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.3 (ruby-1.9.2).
 </div>
 
   </body>
