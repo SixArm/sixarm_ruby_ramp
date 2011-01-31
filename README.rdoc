@@ -1,5 +1,4 @@
-
-= SixArm Ruby Gem: Ramp is a toolkit of Ruby base class extensions
+= SixArm.com » Ruby » Ramp gem is a toolkit of Ruby base class extensions
 
 Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
 Copyright:: Copyright (c) 2006-2010 Joel Parker Henderson
