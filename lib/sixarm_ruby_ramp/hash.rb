@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 require 'yaml'
 
@@ -40,7 +40,8 @@ class Hash
   # @return self
 
   def each_key!
-    each_pair{|key,value|
+    keys.each{|key|
+      value=self[key]
       key2=yield(key)
       if key===key2
         #nop
@@ -51,7 +52,6 @@ class Hash
     }
     return self
   end
-
 
 
   # Calls block once for each key in hsh,
@@ -66,7 +66,8 @@ class Hash
   # @return self.
 
   def each_pair!
-    each_pair{|key,value|
+    keys.each{|key|
+      value=self[key]
       key2,value2=yield(key,value)
       if key===key2
         if value===value2
@@ -95,7 +96,8 @@ class Hash
   # @return self.
 
   def each_value!
-    each_pair{|key,value| 
+    keys.each{|key|
+      value=self[key]
       value2=yield(value)
       if value===value2
         #nop

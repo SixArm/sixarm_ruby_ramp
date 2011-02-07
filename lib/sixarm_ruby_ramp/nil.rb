@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 # NilClass provides an instantiatable object
 # suitable for more careful thorough programming.

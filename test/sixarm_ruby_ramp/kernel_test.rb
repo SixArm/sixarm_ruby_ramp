@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'sixarm_ruby_ramp'
 
@@ -16,7 +17,7 @@ class KernelTest < Test::Unit::TestCase
   end
 
   def test_caller_method_name_with_index_1
-    assert_equal('__send__', caller_method_name(1))
+    assert_equal(RUBY_VERSION < '1.9' ? '__send__' : 'run', caller_method_name(1))
   end
 
   def test_pp_s

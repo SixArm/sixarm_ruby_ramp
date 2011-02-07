@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'sixarm_ruby_ramp'
 
@@ -29,19 +30,26 @@ class XMLTest < Test::Unit::TestCase
    assert_equal(expect,actual,'XML.load_elements')
  end
 
+require 'pp'
  def test_load_attributes
    dirpath=File.join(MYDIR,'xml_test_*.xml')
-   expect="xaxbxcxdxexf"
-   actual=''
-   XML.load_attributes(dirpath,'foo/bar'){|attributes| actual+=attributes.sort.to_s }
+   expect=[['x','a'],['x','b'],['x','c'],['x','d'],['x','e'],['x','f']]
+   actual=[]
+   XML.load_attributes(dirpath,'foo/bar'){|attributes|
+     attributes.each{|attribute|
+       actual << [attribute[0], attribute[1]]
+     }
+   }  
    assert_equal(expect,actual,'XML.load_attributes')
  end
 
  def test_load_attributes_hash
    dirpath=File.join(MYDIR,'xml_test_*.xml')
-   expect="xaxbxcxdxexf"
-   actual=''
-   XML.load_attributes_hash(dirpath,'foo/bar'){|attributes_hash| actual+=attributes_hash.to_s }
+   expect=[{'x'=>'a'},{'x'=>'b'},{'x'=>'c'},{'x'=>'d'},{'x'=>'e'},{'x'=>'f'}]
+   actual=[]
+   XML.load_attributes_hash(dirpath,'foo/bar'){|attributes_hash|
+     actual << attributes_hash
+   }
    assert_equal(expect,actual,'XML.load_attributes_hash')
  end
 

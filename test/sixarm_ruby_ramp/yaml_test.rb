@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'sixarm_ruby_ramp'
 
@@ -48,11 +49,11 @@ class YAMLTest < Test::Unit::TestCase
       ["o", {"o1"=>"o10", "o2"=>"o20", "o3"=>"o30"}],
       ["p", {"p1"=>"p10", "p2"=>"p20", "p3"=>"p30"}], 
       ["q", {"q1"=>"q10", "q2"=>"q20", "q3"=>"q30"}],
-      ["r", {"r1"=>"r10", "r2"=>"r20", "r3"=>"r30"}]]
+      ["r", {"r1"=>"r10", "r2"=>"r20", "r3"=>"r30"}]
     ]
     actual=[]
     YAML.load_dir_pairs(dirpath){|k,v| actual << [k,v] }
-    assert_equal(expect,actual,'YAML.load_dir_files')
+    assert_equal(expect,actual.sort,'YAML.load_dir_files')
   end
 
 end
