@@ -198,6 +198,7 @@ To load documents in files beginning in &#8220;foo&#8221; or
       <pre class="lines">
 
 
+23
 24
 25
 26
@@ -208,11 +209,10 @@ To load documents in files beginning in &#8220;foo&#8221; or
 31
 32
 33
-34
-35</pre>
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/yaml.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/yaml.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id load_dir'>load_dir</span><span class='lparen'>(</span><span class='op'>*</span><span class='id dirpaths'>dirpaths</span><span class='rparen'>)</span>
   <span class='id dirpaths'>dirpaths</span><span class='op'>=</span><span class='lbracket'>[</span><span class='op'>*</span><span class='id dirpaths'>dirpaths</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='rbracket'>]</span>
@@ -276,16 +276,16 @@ To load documents in files ending in *yaml and process key/value pairs
       <pre class="lines">
 
 
+50
 51
 52
 53
 54
 55
-56
-57</pre>
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/yaml.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/yaml.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='const'>YAML</span><span class='period'>.</span><span class='id load_dir_pairs'>load_dir_pairs</span><span class='lparen'>(</span><span class='op'>*</span><span class='id dirpaths'>dirpaths</span><span class='rparen'>)</span>
   <span class='const'>YAML</span><span class='period'>.</span><span class='id load_dir'>load_dir</span><span class='lparen'>(</span><span class='id dirpaths'>dirpaths</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id doc'>doc</span><span class='op'>|</span>
@@ -304,9 +304,9 @@ To load documents in files ending in *yaml and process key/value pairs
 </div>
     
     <div id="footer">
-  Generated on Mon Dec 13 17:57:15 2010 by 
+  Generated on Sat Feb 12 16:22:23 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.3 (ruby-1.9.2).
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>
