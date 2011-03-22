@@ -40,14 +40,18 @@ class Hash
   # @return self
 
   def each_key!
+    replacements=[]
     each_pair{|key,value|
       key2=yield(key)
       if key===key2
         #nop
       else
-        self.delete(key)
-        self[key2]=value
+        replacements << [key,key2,value]
       end
+    }
+    replacements.each{|key,key2,value|
+      self.delete(key)
+      self[key2]=value
     }
     return self
   end
@@ -66,6 +70,7 @@ class Hash
   # @return self.
 
   def each_pair!
+    replacements=[]
     each_pair{|key,value|
       key2,value2=yield(key,value)
       if key===key2
@@ -75,9 +80,12 @@ class Hash
           self[key]=value2
         end
       else
-        self.delete(key)
-        self[key2]=value2
+        replacements << [key,key2,value2]
       end
+    }
+    replacements.each{|key,key2,value2|
+      self.delete(key)
+      self[key2]=value2
     }
     return self
   end
