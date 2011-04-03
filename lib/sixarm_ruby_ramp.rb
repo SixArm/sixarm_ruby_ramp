@@ -1,13 +1,15 @@
+# -*- coding: utf-8 -*-
 =begin rdoc
 
-= SixArm Ruby Gem: Ramp is a toolkit of Ruby base class extensions
+= SixArm.com » Ruby » Ramp gem is a toolkit of Ruby base class extensions
 
 Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
-Copyright:: Copyright (c) 2006-2010 Joel Parker Henderson
-License:: CreativeCommons License, Non-commercial Share Alike
-License:: LGPL, GNU Lesser General Public License
+Copyright:: Copyright (c) 2006-2011 Joel Parker Henderson
+License:: See LICENSE.txt file
 
-Ramp is a library of extensions to Ruby base classes, including Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
+Ramp is a toolkit of simple methods to extend many Ruby language classes.
+
+It adds methods to Ruby's Array, Hash, Numeric, Object, YAML, and more.
 
 Testing: 
 <ul>
@@ -195,8 +197,8 @@ Extensions that help debug Ruby programs.
 
 == YAML
 
-* (class) load_dir: specify a one or more directory patterns, load each file, and yield each YAML document to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
-* (class) load_dir: specify a one or more directory patterns, load each file, and yield each YAML key and its values to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
+* (class) load_dir: specify directory patterns, load each file, and yield each YAML document to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
+* (class) load_dir_key_values: specify directory patterns, load each file, and yield each YAML key and its values to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
 
 
 == Changes

@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 require 'test/unit'
 require 'csv'
 require 'sixarm_ruby_ramp'
+
 
 class ArrayTest < Test::Unit::TestCase
 

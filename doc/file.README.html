@@ -2,8 +2,8 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
-<title>Documentation by YARD 0.5.3</title>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Documentation by YARD 0.6.4</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
@@ -41,273 +41,328 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><h1>SixArm Ruby Gem: Ramp is a toolkit of Ruby base class extensions</h1>
+    <div id="content"><div id='filecontents'><h1>SixArm.com » Ruby » Ramp gem is a toolkit of Ruby base class extensions</h1>
 <table>
-<tr><td valign="top">Author:</td><td>Joel Parker Henderson, joelparkerhenderson@gmail.com
-
+<tr><td valign="top">Author</td><td><p>
+Joel Parker Henderson, joelparkerhenderson@gmail.com
+</p>
 </td></tr>
-<tr><td valign="top">Copyright:</td><td>Copyright &#169; 2006-2010 Joel Parker Henderson
-
+<tr><td valign="top">Copyright</td><td><p>
+Copyright &#169; 2006-2011 Joel Parker Henderson
+</p>
 </td></tr>
-<tr><td valign="top">License:</td><td>CreativeCommons License, Non-commercial Share Alike
-
-</td></tr>
-<tr><td valign="top">License:</td><td>LGPL, GNU Lesser General Public License
-
+<tr><td valign="top">License</td><td><p>
+See LICENSE.txt file
+</p>
 </td></tr>
 </table>
 <p>
 Ramp is a library of extensions to Ruby base classes, including Array,
 Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and
-YAML.
+YAML. 
 </p>
 <p>
-Testing: <ul> <li>Each has an associated test class, e.g., ArrayTest,
+Testing:  <ul> <li>Each has an associated test class, e.g., ArrayTest,
 DateTest, etc. <li>The easy way to run the tests: gem install
 sixarm_ruby_ramp --test </ul>
 </p>
 <h2>Array</h2>
 <ul>
-<li>car, cdr: aka first, rest (see shifted)
-
+<li><p>
+car, cdr: aka first, rest (see shifted)
+</p>
 </li>
-<li>choice, choices: one or more random elements from an array
-
+<li><p>
+choice, choices: one or more random elements from an array
+</p>
 </li>
-<li>cross: return the cross pairings of an array with another array
-
+<li><p>
+cross: return the cross pairings of an array with another array
+</p>
 </li>
-<li>divvy: divides an array, like a pie, into a specified number of slices
-
+<li><p>
+divvy: divides an array, like a pie, into a specified number of slices
+</p>
 </li>
-<li>join: same as Array#join with some improvments
-
+<li><p>
+join: same as Array#join with some improvments
+</p>
 </li>
-<li>onto: return a hash that maps an array&#8217;s keys on to another
+<li><p>
+onto: return a hash that maps an array&#8217;s keys on to another
 array&#8217;s values
-
+</p>
 </li>
-<li>rotate: moves the first element of an array to the end
-
+<li><p>
+rotate: moves the first element of an array to the end
+</p>
 </li>
-<li>rest: return the rest of the items of the array (aka cdr, aka shifted)
-
+<li><p>
+rest: return the rest of the items of the array (aka cdr, aka shifted)
+</p>
 </li>
-<li>shifted, shifted!: return an array with the first n items shifted (aka cdr,
+<li><p>
+shifted, shifted!: return an array with the first n items shifted (aka cdr,
 aka rest)
-
+</p>
 </li>
-<li>shuffle, shuffle!: randomly sort an array efficiently; each of these
+<li><p>
+shuffle, shuffle!: randomly sort an array efficiently; each of these
 methods are loaded only if needed (Ruby 1.8.7+ already defines shuffle)
-
+</p>
 </li>
-<li>slices: divide an array into specified number of equal size sub-arrays
+<li><p>
+slices: divide an array into specified number of equal size sub-arrays
 ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
-
+</p>
 </li>
-<li>to_csv: join a multidimensional array into a string in CSV (Comma Separated
+<li><p>
+to_csv: join a multidimensional array into a string in CSV (Comma Separated
 Values), with each subarray becoming one &#8216;line&#8217; in the output;
 typically for viewing in a spreadsheet such as Excel.
-
+</p>
 </li>
-<li>to_tdf: join a multidimensional array into a string in TDF (Tab Delimited
+<li><p>
+to_tdf: join a multidimensional array into a string in TDF (Tab Delimited
 Format); this is an alias for #to_tsv
-
+</p>
 </li>
-<li>to_tsv: join a multidimensional array into a string in TSV (Tab Separated
+<li><p>
+to_tsv: join a multidimensional array into a string in TSV (Tab Separated
 Values), with each subarray becoming one &#8216;line&#8217; in the output;
 typically for viewing in a spreadsheet such as Excel.
-
+</p>
 </li>
-<li>union: builds an array containing each of the unique elements of sub-arrays
+<li><p>
+union: builds an array containing each of the unique elements of sub-arrays
 ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
-
+</p>
 </li>
 </ul>
 <h2>Class</h2>
 <ul>
-<li>publicize_methods: make all methods public for a block, e.g. to unit test
+<li><p>
+publicize_methods: make all methods public for a block, e.g. to unit test
 private methods
-
+</p>
 </li>
 </ul>
 <h2>CSV</h2>
 <ul>
-<li>http_headers: provides web file download headers for text/csv content type
+<li><p>
+http_headers: provides web file download headers for text/csv content type
 and disposition.
-
+</p>
 </li>
 </ul>
 <h2>Date</h2>
 <ul>
-<li>age_days, age_years
-
+<li><p>
+age_days, age_years
+</p>
 </li>
-<li>between: a random date between two specified dates
-
+<li><p>
+between: a random date between two specified dates
+</p>
 </li>
-<li>to_sql: date as a string formatted as expected for MySQL
-
+<li><p>
+to_sql: date as a string formatted as expected for MySQL
+</p>
 </li>
-<li>weekday?, weekend?: is date a weekday or on the weekend
-
+<li><p>
+weekday?, weekend?: is date a weekday or on the weekend
+</p>
 </li>
 </ul>
 <h2>Enumerable</h2>
 <ul>
-<li>cartesian_product: return an array of all possible ordered tuples from
+<li><p>
+cartesian_product: return an array of all possible ordered tuples from
 arrays.
-
+</p>
 </li>
-<li>hash_by: convert the array to a hash by mapping each item to a key=>value
+<li><p>
+hash_by: convert the array to a hash by mapping each item to a key=>value
 pair.
-
+</p>
 </li>
-<li>index_by: convert the array to a hash by mapping each ite to a key=>item
+<li><p>
+index_by: convert the array to a hash by mapping each ite to a key=>item
 pair.
-
+</p>
 </li>
-<li>join: forwards to self.to_a.join
-
+<li><p>
+join: forwards to self.to_a.join
+</p>
 </li>
-<li>map_id: returns the id of an Enumerable object; <b>requires</b> that the
+<li><p>
+map_id: returns the id of an Enumerable object; <b>requires</b> that the
 object respond to an &#8216;id&#8217; message
-
+</p>
 </li>
-<li>map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym: convert each object to
+<li><p>
+map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym: convert each object to
 a specific type by calling its respective method to_a, to_i, to_f, to_s,
 to_sym
-
+</p>
 </li>
-<li>map_with_index: for each item, yield to a block with the item and its
+<li><p>
+map_with_index: for each item, yield to a block with the item and its
 incrementing index
-
+</p>
 </li>
-<li>nitems_until, select_until: returns the number of, or an array containing,
+<li><p>
+nitems_until, select_until: returns the number of, or an array containing,
 the leading elements for which block is false or nil.
-
+</p>
 </li>
-<li>nitems_while, select_while: returns the number of items, or an array
+<li><p>
+nitems_while, select_while: returns the number of items, or an array
 containing the leading elements, for which block is not false or nil.
-
+</p>
 </li>
-<li>nitems_with_index, select_with_index: calls block with two arguments, the
+<li><p>
+nitems_with_index, select_with_index: calls block with two arguments, the
 item and its index, for each item in enum. Returns the number of, or an
 array containing, the leading elements for which block is not false or nil.
-
+</p>
 </li>
-<li>power_set: return an array with all subsets of the enum&#8217;s elements
-
+<li><p>
+power_set: return an array with all subsets of the enum&#8217;s elements
+</p>
 </li>
 </ul>
 <h2>File</h2>
 <ul>
-<li>File.joindir: wrapper for File.join(File.dirname(&#8230;),string,&#8230;)
-
+<li><p>
+File.joindir: wrapper for File.join(File.dirname(&#8230;),string,&#8230;)
+</p>
 </li>
 </ul>
 <h2>Fixnum</h2>
 <ul>
-<li>even?: is the number even?
-
+<li><p>
+even?: is the number even?
+</p>
 </li>
-<li>odd?: is the number odd?
-
+<li><p>
+odd?: is the number odd?
+</p>
 </li>
 </ul>
 <h2>Hash</h2>
 <ul>
-<li>size?: return true if hash has any keys
-
+<li><p>
+size?: return true if hash has any keys
+</p>
 </li>
-<li>each_sort: sort the keys then call each
-
+<li><p>
+each_sort: sort the keys then call each
+</p>
 </li>
-<li>each_key!: passes each key to a specified block and updates hash in place
+<li><p>
+each_key!: passes each key to a specified block and updates hash in place
 if the key changes
-
+</p>
 </li>
-<li>each_pair!: passes each key value pair to a specified block and updates the
+<li><p>
+each_pair!: passes each key value pair to a specified block and updates the
 hash in place if the key or value change.
-
+</p>
 </li>
-<li>each_value!: passes each value to a specified block and updates the hash in
+<li><p>
+each_value!: passes each value to a specified block and updates the hash in
 place if the value changes.
-
+</p>
 </li>
-<li>map_pair: map each key-value pair by calling a a block
-
+<li><p>
+map_pair: map each key-value pair by calling a a block
+</p>
 </li>
-<li>pivot: aggregates subtotals by keys and values, such as a rollup and
-rolldown
-
+<li><p>
+pivot: aggregates subtotals by keys and values, such as a rollup and
+rolldown 
+</p>
 </li>
-<li>to_yaml_sort: returns a YAML object, sorted by field name
-
+<li><p>
+to_yaml_sort: returns a YAML object, sorted by field name
+</p>
 </li>
 </ul>
 <h2>Integer</h2>
 <ul>
-<li>maps: syntactic sugar to yield n times to a block, returning an array of
+<li><p>
+maps: syntactic sugar to yield n times to a block, returning an array of
 any results
-
+</p>
 </li>
-<li>odd?: is the number odd?
-
+<li><p>
+odd?: is the number odd?
+</p>
 </li>
 </ul>
 <h2>IO</h2>
 <ul>
-<li>readrow: reads a row line as with IO#readline, and return the row split it
-into fields
-
+<li><p>
+readrow: reads a row line as with IO#readline, and return the row split it
+into fields 
+</p>
 </li>
-<li>IO.readrows: reads the entire file specified by name as individual row
+<li><p>
+IO.readrows: reads the entire file specified by name as individual row
 lines, and returns those rows split into fields, in an array of arrays.
-
+</p>
 </li>
 </ul>
 <h2>Kernel</h2>
 <ul>
-<li>my_method_name: returns the name of the current method
-
+<li><p>
+my_method_name: returns the name of the current method
+</p>
 </li>
-<li>caller_method_name: returns the name of the caller method, or the Nth
+<li><p>
+caller_method_name: returns the name of the caller method, or the Nth
 parent up the call stack if the optional caller_index parameter is passed.
-
+</p>
 </li>
 </ul>
 <h2>Math</h2>
 <ul>
-<li>ln(x): natural log of x
-
+<li><p>
+ln(x): natural log of x
+</p>
 </li>
-<li>logn(x,b): log of x in base b
-
+<li><p>
+logn(x,b): log of x in base b
+</p>
 </li>
 </ul>
 <h2>NilClass</h2>
 <ul>
-<li>blank?: return true (same as Rails)
-
+<li><p>
+blank?: return true (same as Rails)
+</p>
 </li>
 </ul>
 <h2>Numeric</h2>
 <ul>
-<li>if: returns 0 if the passed flag is any of: nil, false, 0, [], {} and
+<li><p>
+if: returns 0 if the passed flag is any of: nil, false, 0, [], {} and
 otherwise returns self
-
+</p>
 </li>
-<li>unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {}
+<li><p>
+unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {}
 and otherwise returns self
-
+</p>
 </li>
 </ul>
 <h2>Object</h2>
 <ul>
-<li>in?: returns boolean indicating whether the object is a member of the
+<li><p>
+in?: returns boolean indicating whether the object is a member of the
 specified array parameter
-
+</p>
 </li>
 </ul>
 <h2>Process</h2>
@@ -315,273 +370,346 @@ specified array parameter
 Extensions that help debug Ruby programs.
 </p>
 <ul>
-<li>(class) ps: output of the system &#8216;ps&#8217; command, also including
+<li><p>
+(class) ps: output of the system &#8216;ps&#8217; command, also including
 aliases, as raw plain text.
-
+</p>
 </li>
-<li>(class) pss: output of the system &#8216;ps&#8217; command as a hash with
+<li><p>
+(class) pss: output of the system &#8216;ps&#8217; command as a hash with
 each value set to the right type, e.g., integer, float, etc..
-
+</p>
 </li>
 </ul>
 <h2>REXML::Attributes</h2>
 <ul>
-<li>hash: flattens the attributes hash set into a more useful ruby hash, e.g.
+<li><p>
+hash: flattens the attributes hash set into a more useful ruby hash, e.g.
 {:height => 100, :width => 400 }
-
+</p>
 </li>
 </ul>
 <h2>REXML::Document</h2>
 <ul>
-<li>remove_attributes: remove all the attributes from the document&#8217;s
+<li><p>
+remove_attributes: remove all the attributes from the document&#8217;s
 elements
-
+</p>
 </li>
 </ul>
 <h2>REXML::Element</h2>
 <ul>
-<li>remove_attributes: remove all the attributes from the element
-
+<li><p>
+remove_attributes: remove all the attributes from the element
+</p>
 </li>
 </ul>
 <h2>String</h2>
 <ul>
-<li>capitalize_words (alias to titleize/titlecase): ensures the first character
+<li><p>
+capitalize_words (alias to titleize/titlecase): ensures the first character
 of each word is uppercase.
-
+</p>
 </li>
-<li>decrement: decrease the rightmost natural number, defaults to one value
+<li><p>
+decrement: decrease the rightmost natural number, defaults to one value
 lower or by the optional step parameter value.
-
+</p>
 </li>
-<li>increment: increase the rightmost natural number, defaults to one value
+<li><p>
+increment: increase the rightmost natural number, defaults to one value
 higher or by the optional step parameter value.
-
+</p>
 </li>
-<li>lorem: return a short random string, good for use in &#8220;lorem
+<li><p>
+lorem: return a short random string, good for use in &#8220;lorem
 ipsum&#8221; sample text.
-
+</p>
 </li>
-<li>lowcase: translate a string to lowercase, digits and single underscores
+<li><p>
+lowcase: translate a string to lowercase, digits and single underscores
 (e.g. to a method name)
-
+</p>
 </li>
-<li>prev/pred: previous string (&#8220;b&#8221; => &#8220;a&#8221;,
+<li><p>
+prev/pred: previous string (&#8220;b&#8221; => &#8220;a&#8221;,
 &#8220;bbc&#8221; => &#8220;bbb&#8221;, &#8220;a&#8221; => &#8220;z&#8221;,
 &#8220;880&#8221; => &#8220;879&#8221;)
-
+</p>
 </li>
-<li>prev!/pred!: updates variable to the previous string in place (astring =
+<li><p>
+prev!/pred!: updates variable to the previous string in place (astring =
 &#8220;bbc&#8221;, astring.prev!, puts astring => &#8220;bbb&#8221;)
-
+</p>
 </li>
-<li>(class) prev_char/pred_char: returns the previous character, with a changed
+<li><p>
+(class) prev_char/pred_char: returns the previous character, with a changed
 flag and carry flag; that is, there are three returned values, a string and
 two booleans.
-
+</p>
 </li>
-<li>split_tab: split the string into an array at each embedded tab
+<li><p>
+split_tab: split the string into an array at each embedded tab
 (&#8220;Last\tFirst\tMiddle&#8221; =>
 [&#8220;last&#8221;,&#8220;first&#8221;,&#8220;middle&#8221;])
-
+</p>
 </li>
-<li>split_tsv: split the string into an array at each embedded newline and
+<li><p>
+split_tsv: split the string into an array at each embedded newline and
 embedded tab (&#8220;A\tB\t\C\nD\tE\tF&#8221; =>
 [[&#8220;A&#8221;,&#8220;B&#8221;,&#8220;C&#8221;],[&#8220;D&#8221;,&#8220;E&#8221;,&#8220;F&#8221;]])
-
+</p>
 </li>
-<li>to_class: the global class reference of a given string
-
+<li><p>
+to_class: the global class reference of a given string
+</p>
 </li>
-<li>words: split the string into an array of words
-
+<li><p>
+words: split the string into an array of words
+</p>
 </li>
 </ul>
 <h2>Symbol</h2>
 <ul>
-<li><=> and include the comparable mixin to compare symbols as strings
-
+<li><p>
+<=> and include the comparable mixin to compare symbols as strings
+</p>
 </li>
 </ul>
 <h2>Time</h2>
 <ul>
-<li>(class) stamp: current time in UTC as a timestamp string
+<li><p>
+(class) stamp: current time in UTC as a timestamp string
 (&#8220;YYYYMMDDHHMMSS&#8221;)
-
+</p>
 </li>
-<li>to_sql: time as a string formatted as expected for MySQL
-
+<li><p>
+to_sql: time as a string formatted as expected for MySQL
+</p>
 </li>
 </ul>
 <h2>XML</h2>
 <ul>
-<li>(class) load_dir: specify a one or more directory patterns and pass each
+<li><p>
+(class) load_dir: specify a one or more directory patterns and pass each
 XML file in the matching directories to a block; see [Dir#glob](<a
 href="http://www.ruby-doc.org/core/classes/Dir.html#M002347">www.ruby-doc.org/core/classes/Dir.html#M002347</a>)
 for pattern details.
-
+</p>
 </li>
-<li>(class) strip_all: delete exraneous junk from an XML text string, typically
+<li><p>
+(class) strip_all: delete exraneous junk from an XML text string, typically
 for sanitizing input
-
+</p>
 </li>
-<li>(class) strip_attributes: delete all attributes from an XML text string
-
+<li><p>
+(class) strip_attributes: delete all attributes from an XML text string
+</p>
 </li>
-<li>(class) strip_comments: delete all comments from an XML text string
-
+<li><p>
+(class) strip_comments: delete all comments from an XML text string
+</p>
 </li>
-<li>(class) strip_microsoft: delete all proprietary Microsoft code from an XML
+<li><p>
+(class) strip_microsoft: delete all proprietary Microsoft code from an XML
 text string
-
+</p>
 </li>
-<li>(class) strip_unprintables: delete all unprintable characters from an XML
+<li><p>
+(class) strip_unprintables: delete all unprintable characters from an XML
 text string
-
+</p>
 </li>
 </ul>
 <h2>YAML</h2>
 <ul>
-<li>(class) load_dir: specify a one or more directory patterns and pass each
-YAML file in the matching directories to a block; see [Dir#glob](<a
+<li><p>
+(class) load_dir: specify directory patterns and pass each YAML file in the
+matching directories to a block; see [Dir#glob](<a
 href="http://www.ruby-doc.org/core/classes/Dir.html#M002347">www.ruby-doc.org/core/classes/Dir.html#M002347</a>)
 for pattern details.
-
+</p>
+</li>
+<li><p>
+(class) load_dir_pairs: specify directory patterns and pass each YAML file
+in the matching directories to a block to process key/value pairs.
+</p>
 </li>
 </ul>
 <h2>Changes</h2>
 <ul>
-<li>1.8.2 Refactored Numeric metric names into their own methods
-
+<li><p>
+1.8.2 Refactored Numeric metric names into their own methods
+</p>
 </li>
-<li>1.8.0 100% rcov coverage
-
+<li><p>
+1.8.0 100% rcov coverage
+</p>
 </li>
-<li>1.7.8 Add rcov testing
-
+<li><p>
+1.7.8 Add rcov testing
+</p>
 </li>
-<li>1.7.4 Add Class#publicize_methods, Integer#even?, Integer#odd?
-
+<li><p>
+1.7.4 Add Class#publicize_methods, Integer#even?, Integer#odd?
+</p>
 </li>
-<li>1.7.3 Refactor Rails classes to their own gem, add README, LICENSE
-
+<li><p>
+1.7.3 Refactor Rails classes to their own gem, add README, LICENSE
+</p>
 </li>
-<li>1.7.2 Gemcutter update
-
+<li><p>
+1.7.2 Gemcutter update
+</p>
 </li>
-<li>1.7.1.8 Add Enumerable#map_with_index
-
+<li><p>
+1.7.1.8 Add Enumerable#map_with_index
+</p>
 </li>
-<li>1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
-
+<li><p>
+1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
+</p>
 </li>
-<li>1.7.1.3 Add XML#strip_xxx
-
+<li><p>
+1.7.1.3 Add XML#strip_xxx 
+</p>
 </li>
-<li>1.7.1.2 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
-
+<li><p>
+1.7.1.2 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
+</p>
 </li>
-<li>1.7.1.0 Add XML attributes methods #
-
+<li><p>
+1.7.1.0 Add XML attributes methods #
+</p>
 </li>
-<li>1.7.0.9 Add Enumerable #hash_by, #index_by
-
+<li><p>
+1.7.0.9 Add Enumerable #hash_by, #index_by
+</p>
 </li>
-<li>1.7.0.7 Add Array#to_tsv, String#split_tsv, improve Array#to_csv
-
+<li><p>
+1.7.0.7 Add Array#to_tsv, String#split_tsv, improve Array#to_csv
+</p>
 </li>
-<li>1.7.0.6 Add Array#shuffle, Array#shuffle!
-
+<li><p>
+1.7.0.6 Add Array#shuffle, Array#shuffle! 
+</p>
 </li>
-<li>1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
-
+<li><p>
+1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
+</p>
 </li>
-<li>1.7.0.4 Upgrade IO#readrows and #readrow to use options
-
+<li><p>
+1.7.0.4 Upgrade IO#readrows and #readrow to use options
+</p>
 </li>
-<li>1.7.0.2 Add Array#to_tdf
-
+<li><p>
+1.7.0.2 Add Array#to_tdf
+</p>
 </li>
-<li>1.7.0.1 Remove sqlite3 testing dependency
-
+<li><p>
+1.7.0.1 Remove sqlite3 testing dependency
+</p>
 </li>
-<li>1.6.9.6 Add Symbol with comparable and <=>
-
+<li><p>
+1.6.9.6 Add Symbol with comparable and <=>
+</p>
 </li>
-<li>1.6.9.5 Add ActiveRecord testing with sqlite3
-
+<li><p>
+1.6.9.5 Add ActiveRecord testing with sqlite3
+</p>
 </li>
-<li>1.6.9.4 JRuby install and test successful
-
+<li><p>
+1.6.9.4 JRuby install and test successful
+</p>
 </li>
-<li>1.6.9.3 Array#join add infix, prefix, suffix
-
+<li><p>
+1.6.9.3 Array#join add infix, prefix, suffix
+</p>
 </li>
-<li>1.6.9.2 Improve ri docs
-
+<li><p>
+1.6.9.2 Improve ri docs
+</p>
 </li>
-<li>1.6.9.1 Add Array#onto, Enumerable#intersect?
-
+<li><p>
+1.6.9.1 Add Array#onto, Enumerable#intersect?
+</p>
 </li>
-<li>1.6.9.0 Add IO, File, ActiveRecord#seed
-
+<li><p>
+1.6.9.0 Add IO, File, ActiveRecord#seed
+</p>
 </li>
-<li>1.6.8.9 Add Enumerable#to_h, Array#hash, Hash#each_key!, Hash#each_pair,
+<li><p>
+1.6.8.9 Add Enumerable#to_h, Array#hash, Hash#each_key!, Hash#each_pair,
 Hash#each_value!
-
+</p>
 </li>
-<li>1.6.8.8 Add Hash#map_pair, Hash#size?, Hash#pivot
-
+<li><p>
+1.6.8.8 Add Hash#map_pair, Hash#size?, Hash#pivot
+</p>
 </li>
-<li>1.6.8.7 Add Math
-
+<li><p>
+1.6.8.7 Add Math
+</p>
 </li>
-<li>1.6.8.6 Add ActiveRecord SchemaStatements
-
+<li><p>
+1.6.8.6 Add ActiveRecord SchemaStatements
+</p>
 </li>
-<li>1.6.8.5 Add Integer#maps, String#ACCENTS
-
+<li><p>
+1.6.8.5 Add Integer#maps, String#ACCENTS
+</p>
 </li>
-<li>1.6.8.4 Add XML
-
+<li><p>
+1.6.8.4 Add XML
+</p>
 </li>
-<li>1.6.8.3 Add ActiveRecord
-
+<li><p>
+1.6.8.3 Add ActiveRecord
+</p>
 </li>
-<li>1.6.8.2 Add String#lowcase
-
+<li><p>
+1.6.8.2 Add String#lowcase
+</p>
 </li>
-<li>1.6.8 Add map_to_xxx methods
-
+<li><p>
+1.6.8 Add map_to_xxx methods
+</p>
 </li>
-<li>1.6.7 Add CSV
-
+<li><p>
+1.6.7 Add CSV
+</p>
 </li>
-<li>1.6.6 Add Array#to_csv, Integer, String#lorem, etc., improve tests
-
+<li><p>
+1.6.6 Add Array#to_csv, Integer, String#lorem, etc., improve tests
+</p>
 </li>
-<li>1.6.4 Bug fixes: String characters and YAML test files
-
+<li><p>
+1.6.4 Bug fixes: String characters and YAML test files
+</p>
 </li>
-<li>1.6.2 Improve organizaiton of class files to lib/ramp
-
+<li><p>
+1.6.2 Improve organizaiton of class files to lib/ramp
+</p>
 </li>
-<li>1.6.0 Upgraded to work with Ruby 1.9.1
-
+<li><p>
+1.6.0 Upgraded to work with Ruby 1.9.1
+</p>
 </li>
-<li>1.5.0 Combined all Ruby extension files into one gem
-
+<li><p>
+1.5.0 Combined all Ruby extension files into one gem
+</p>
 </li>
-<li>1.0.0 Original
-
+<li><p>
+1.0.0 Original 
+</p>
 </li>
 </ul>
 </div></div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:18:58 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Sat Feb 12 16:22:22 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

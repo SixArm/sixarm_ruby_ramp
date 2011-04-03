@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Class: Fixnum</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Fixnum 
+    <div id="content"><h1>Class: Fixnum
+  
   
   
 </h1>
@@ -52,10 +53,10 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName"><a href="Object.html" title="Object (class)">Object</a></span>
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
       
         <ul class="fullTree">
-          <li><a href="Object.html" title="Object (class)">Object</a></li>
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
           
             <li class="next">Fixnum</li>
           
@@ -69,6 +70,7 @@
     
   
     
+  
   
   
     <dt class="r2 last">Defined in:</dt>
@@ -91,11 +93,15 @@ Fixnum extensions
 </div>
 
 
-  <h2>Instance Method Summary</h2>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#even%3F-instance_method" title="#even? (instance method)">- (Boolean) <strong>even?</strong> </a>
@@ -108,17 +114,19 @@ Fixnum extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
-True if the number is even.
-
-</span>
+    <span class="summary_desc"><div class='inline'><p>
+From <a
+href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516</a>.
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#odd%3F-instance_method" title="#odd? (instance method)">- (Boolean) <strong>odd?</strong> </a>
@@ -131,17 +139,21 @@ True if the number is even.
   
   
   
+  
 
   
-    <span class="summary_desc">
-True if the number is odd.
-
-</span>
+    <span class="summary_desc"><div class='inline'><p>
+From <a
+href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516</a>.
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -158,7 +170,8 @@ True if the number is odd.
 </p><div class="docstring">
   <div class="discussion">
     <p>
-True if the number is even
+From <a
+href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516</a>
 </p>
 
 
@@ -169,12 +182,9 @@ True if the number is even
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='float val'>2</span><span class='dot token'>.</span><span class='even? fid id'>even?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
-  <span class='float val'>3</span><span class='dot token'>.</span><span class='even? fid id'>even?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span>
-
-<span class='From constant id'>From</span> <span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/blade.nagaokaut.ac.jp/</span><span class='cgi identifier id'>cgi</span><span class='minus op'>-</span><span class='bin identifier id'>bin</span><span class='div op'>/</span><span class='scat identifier id'>scat</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span><span class='div op'>/</span><span class='ruby identifier id'>ruby</span><span class='div op'>/</span><span class='ruby identifier id'>ruby</span><span class='minus op'>-</span><span class='core identifier id'>core</span><span class='div op'>/</span><span class='integer val'>4516</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">2.even? =&gt; true
+3.even? =&gt; false</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -188,10 +198,10 @@ True if the number is even
       
       
         &mdash;
-        
+        <div class='inline'><p>
 true if the number is even
-
-
+</p>
+</div>
       
     </li>
   
@@ -210,10 +220,9 @@ true if the number is even
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/fixnum.rb', line 16</span>
 
-<span class='def def kw'>def</span> <span class='even? fid id'>even?</span>
-  <span class='return return kw'>return</span> <span class='self self kw'>self</span> <span class='bitand op'>&amp;</span> <span class='integer val'>1</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id even?'>even?</span>
+  <span class='kw'>return</span> <span class='kw'>self</span> <span class='op'>&amp;</span> <span class='int'>1</span> <span class='op'>==</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -229,7 +238,8 @@ true if the number is even
 </p><div class="docstring">
   <div class="discussion">
     <p>
-True if the number is odd
+From <a
+href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516</a>
 </p>
 
 
@@ -240,12 +250,9 @@ True if the number is odd
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='float val'>2</span><span class='dot token'>.</span><span class='odd? fid id'>odd?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span>
-  <span class='float val'>3</span><span class='dot token'>.</span><span class='odd? fid id'>odd?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
-
-<span class='From constant id'>From</span> <span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/blade.nagaokaut.ac.jp/</span><span class='cgi identifier id'>cgi</span><span class='minus op'>-</span><span class='bin identifier id'>bin</span><span class='div op'>/</span><span class='scat identifier id'>scat</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span><span class='div op'>/</span><span class='ruby identifier id'>ruby</span><span class='div op'>/</span><span class='ruby identifier id'>ruby</span><span class='minus op'>-</span><span class='core identifier id'>core</span><span class='div op'>/</span><span class='integer val'>4516</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">2.odd? =&gt; false
+3.odd? =&gt; true</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -259,10 +266,10 @@ True if the number is odd
       
       
         &mdash;
-        
+        <div class='inline'><p>
 true if the number is odd
-
-
+</p>
+</div>
       
     </li>
   
@@ -281,10 +288,9 @@ true if the number is odd
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/fixnum.rb', line 29</span>
 
-<span class='def def kw'>def</span> <span class='odd? fid id'>odd?</span>
-  <span class='return return kw'>return</span> <span class='self self kw'>self</span> <span class='bitand op'>&amp;</span> <span class='integer val'>1</span> <span class='neq op'>!=</span> <span class='integer val'>0</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id odd?'>odd?</span>
+  <span class='kw'>return</span> <span class='kw'>self</span> <span class='op'>&amp;</span> <span class='int'>1</span> <span class='op'>!=</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -295,9 +301,9 @@ true if the number is odd
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:18:58 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Sat Feb 12 16:22:23 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

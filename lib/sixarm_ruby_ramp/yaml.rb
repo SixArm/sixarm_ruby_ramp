@@ -1,5 +1,4 @@
-# -*- encoding: utf-8 -*-
-
+# -*- coding: utf-8 -*-
 require 'yaml'
 
 # YAML extensions
@@ -49,9 +48,9 @@ module YAML
   #     #...whatever you want to do with each yaml key and its values
   #   }
   def YAML.load_dir_key_values(*dirpaths)
-    YAML.load_dir(dirpaths){|yaml|
-      yaml.keys.each{|key|
-        yield(key, yaml[key])
+    YAML.load_dir(dirpaths){|doc|
+      doc.keys.each{|key|
+        yield key, doc[key]
       }
     }
   end

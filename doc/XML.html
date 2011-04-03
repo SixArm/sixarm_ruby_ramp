@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Module: XML</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Module: XML 
+    <div id="content"><h1>Module: XML
+  
   
   
 </h1>
@@ -54,6 +55,7 @@
     
   
     
+  
   
   
     <dt class="r1 last">Defined in:</dt>
@@ -76,11 +78,15 @@ XML extensions
 </div>
 
 
-  <h2>Class Method Summary</h2>
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#load_attributes-class_method" title="load_attributes (class method)">+ (Object) <strong>load_attributes</strong>(dirpath, xpath) </a>
@@ -93,17 +99,18 @@ XML extensions
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Sugar to load attributes from a file.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#load_attributes_hash-class_method" title="load_attributes_hash (class method)">+ (Object) <strong>load_attributes_hash</strong>(dirpath, xpath) </a>
@@ -116,17 +123,18 @@ Sugar to load attributes from a file.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Sugar to load attributes hash from a file.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#load_dir-class_method" title="load_dir (class method)">+ (Object) <strong>load_dir</strong>(*dirpaths) </a>
@@ -139,18 +147,19 @@ Sugar to load attributes hash from a file.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Specify one or more directory patterns and pass each XML file in the
 matching directories to a block.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#load_elements-class_method" title="load_elements (class method)">+ (Object) <strong>load_elements</strong>(dirpath, xpath) </a>
@@ -163,17 +172,18 @@ matching directories to a block.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Sugar to load elements from a file.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#strip_all-class_method" title="strip_all (class method)">+ (String) <strong>strip_all</strong>(xml_text) </a>
@@ -186,19 +196,20 @@ Sugar to load elements from a file.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Santize dirty xml by removing unprintables, bad tags, comments, and
 generally anything else we might need to enable the XML parser to handle a
 dirty document.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#strip_attributes-class_method" title="strip_attributes (class method)">+ (String) <strong>strip_attributes</strong>(xml_text) </a>
@@ -211,17 +222,18 @@ dirty document.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Strip out all attributes from the xml text&#8217;s tags.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#strip_comments-class_method" title="strip_comments (class method)">+ (String) <strong>strip_comments</strong>(xml_text) </a>
@@ -234,17 +246,18 @@ Strip out all attributes from the xml text&#8217;s tags.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Strip out all comments from the xml text.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#strip_microsoft-class_method" title="strip_microsoft (class method)">+ (String) <strong>strip_microsoft</strong>(xml_text) </a>
@@ -257,17 +270,18 @@ Strip out all comments from the xml text.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Strip out all microsoft proprietary codes.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#strip_unprintables-class_method" title="strip_unprintables (class method)">+ (String) <strong>strip_unprintables</strong>(xml_text) </a>
@@ -280,17 +294,20 @@ Strip out all microsoft proprietary codes.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Strip out all unprintable characters from the input string.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="class_method_details" class="method_details_list">
@@ -300,7 +317,7 @@ Strip out all unprintable characters from the input string.
       <div class="method_details first">
   <p class="signature first" id="load_attributes-class_method">
   
-    + (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>load_attributes</strong>(dirpath, xpath) 
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>load_attributes</strong>(dirpath, xpath) 
   
 
   
@@ -318,9 +335,8 @@ Sugar to load attributes from a file.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_attributes identifier id'>load_attributes</span><span class='lparen token'>(</span><span class='string val'>'config.xml'</span><span class='comma token'>,</span><span class='string val'>'userlist/user'</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='attributes identifier id'>attributes</span><span class='bitor op'>|</span> <span class='pp identifier id'>pp</span> <span class='attributes identifier id'>attributes</span><span class='lbrack token'>[</span><span class='string val'>'first_name'</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='const'>XML</span><span class='period'>.</span><span class='id load_attributes'>load_attributes</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>config.xml</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>userlist/user</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id attributes'>attributes</span><span class='op'>|</span> <span class='id pp'>pp</span> <span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>first_name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span></pre>
     
   </div>
 
@@ -330,21 +346,20 @@ Sugar to load attributes from a file.
       <pre class="lines">
 
 
+55
 56
 57
 58
-59
-60</pre>
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 55</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_attributes identifier id'>load_attributes</span><span class='lparen token'>(</span><span class='dirpath identifier id'>dirpath</span><span class='comma token'>,</span><span class='xpath identifier id'>xpath</span><span class='rparen token'>)</span>
-  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_elements identifier id'>load_elements</span><span class='lparen token'>(</span><span class='dirpath identifier id'>dirpath</span><span class='comma token'>,</span><span class='xpath identifier id'>xpath</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='elem identifier id'>elem</span><span class='bitor op'>|</span>
-    <span class='yield yield kw'>yield</span> <span class='elem identifier id'>elem</span><span class='dot token'>.</span><span class='attributes identifier id'>attributes</span>
-  <span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id load_attributes'>load_attributes</span><span class='lparen'>(</span><span class='id dirpath'>dirpath</span><span class='comma'>,</span><span class='id xpath'>xpath</span><span class='rparen'>)</span>
+  <span class='const'>XML</span><span class='period'>.</span><span class='id load_elements'>load_elements</span><span class='lparen'>(</span><span class='id dirpath'>dirpath</span><span class='comma'>,</span><span class='id xpath'>xpath</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id elem'>elem</span><span class='op'>|</span>
+    <span class='kw'>yield</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id attributes'>attributes</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -353,7 +368,7 @@ Sugar to load attributes from a file.
       <div class="method_details ">
   <p class="signature " id="load_attributes_hash-class_method">
   
-    + (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>load_attributes_hash</strong>(dirpath, xpath) 
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>load_attributes_hash</strong>(dirpath, xpath) 
   
 
   
@@ -371,9 +386,8 @@ Sugar to load attributes hash from a file.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_attributes identifier id'>load_attributes</span><span class='lparen token'>(</span><span class='string val'>'config.xml'</span><span class='comma token'>,</span><span class='string val'>'userlist/user'</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='attributes identifier id'>attributes</span><span class='bitor op'>|</span> <span class='pp identifier id'>pp</span> <span class='attributes identifier id'>attributes</span><span class='lbrack token'>[</span><span class='string val'>'first_name'</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='const'>XML</span><span class='period'>.</span><span class='id load_attributes'>load_attributes</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>config.xml</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>userlist/user</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id attributes'>attributes</span><span class='op'>|</span> <span class='id pp'>pp</span> <span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>first_name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span></pre>
     
   </div>
 
@@ -383,21 +397,20 @@ Sugar to load attributes hash from a file.
       <pre class="lines">
 
 
+66
 67
 68
 69
-70
-71</pre>
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 66</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_attributes_hash identifier id'>load_attributes_hash</span><span class='lparen token'>(</span><span class='dirpath identifier id'>dirpath</span><span class='comma token'>,</span><span class='xpath identifier id'>xpath</span><span class='rparen token'>)</span>
-  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_elements identifier id'>load_elements</span><span class='lparen token'>(</span><span class='dirpath identifier id'>dirpath</span><span class='comma token'>,</span><span class='xpath identifier id'>xpath</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='elem identifier id'>elem</span><span class='bitor op'>|</span>
-    <span class='yield yield kw'>yield</span> <span class='elem identifier id'>elem</span><span class='dot token'>.</span><span class='attributes identifier id'>attributes</span><span class='dot token'>.</span><span class='to_hash identifier id'>to_hash</span>
-  <span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id load_attributes_hash'>load_attributes_hash</span><span class='lparen'>(</span><span class='id dirpath'>dirpath</span><span class='comma'>,</span><span class='id xpath'>xpath</span><span class='rparen'>)</span>
+  <span class='const'>XML</span><span class='period'>.</span><span class='id load_elements'>load_elements</span><span class='lparen'>(</span><span class='id dirpath'>dirpath</span><span class='comma'>,</span><span class='id xpath'>xpath</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id elem'>elem</span><span class='op'>|</span>
+    <span class='kw'>yield</span> <span class='id elem'>elem</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='period'>.</span><span class='id to_hash'>to_hash</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -406,7 +419,7 @@ Sugar to load attributes hash from a file.
       <div class="method_details ">
   <p class="signature " id="load_dir-class_method">
   
-    + (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>load_dir</strong>(*dirpaths) 
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>load_dir</strong>(*dirpaths) 
   
 
   
@@ -430,24 +443,22 @@ for pattern details.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4>
+      <h4><div class='inline'><p>
 To load xml documents
-
-</h4>
-      <pre class="example code">  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_dir identifier id'>load_dir</span><span class='lparen token'>(</span><span class='string val'>'/tmp/*.xml'</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='xml_document identifier id'>xml_document</span><span class='bitor op'>|</span>
-    <span class='comment val'>#...whatever you want to do with each xml document</span>
-  <span class='rbrace token'>}</span>
-</pre>
+</p>
+</div></h4>
+      <pre class="example code"><span class='const'>XML</span><span class='period'>.</span><span class='id load_dir'>load_dir</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>/tmp/*.xml</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id xml_document'>xml_document</span><span class='op'>|</span>
+  <span class='comment'>#...whatever you want to do with each xml document
+</span><span class='rbrace'>}</span></pre>
     
-      <h4>
+      <h4><div class='inline'><p>
 To load xml documents in files beginning in &#8220;foo&#8221; or
 &#8220;bar&#8220;
-
-</h4>
-      <pre class="example code">  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_dir identifier id'>load_dir</span><span class='lparen token'>(</span><span class='string val'>'/tmp/foo*.yaml'</span><span class='comma token'>,</span><span class='string val'>'/tmp/bar*.xml'</span><span class='comma token'>,</span><span class='string val'>'){|xml_document|
-    #...whatever you want to do with the xml document
-  }
-</span></pre>
+</p>
+</div></h4>
+      <pre class="example code">XML.load_dir('/tmp/foo*.yaml','/tmp/bar*.xml','){|xml_document|
+  #...whatever you want to do with the xml document
+}</pre>
     
   </div>
 
@@ -457,6 +468,7 @@ To load xml documents in files beginning in &#8220;foo&#8221; or
       <pre class="lines">
 
 
+23
 24
 25
 26
@@ -466,24 +478,22 @@ To load xml documents in files beginning in &#8220;foo&#8221; or
 30
 31
 32
-33
-34</pre>
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 23</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_dir identifier id'>load_dir</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='dirpaths identifier id'>dirpaths</span><span class='rparen token'>)</span>
-  <span class='dirpaths identifier id'>dirpaths</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='mult op'>*</span><span class='dirpaths identifier id'>dirpaths</span><span class='dot token'>.</span><span class='flatten identifier id'>flatten</span><span class='rbrack token'>]</span>
-  <span class='dirpaths identifier id'>dirpaths</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='dirpath identifier id'>dirpath</span><span class='bitor op'>|</span>
-    <span class='Dir constant id'>Dir</span><span class='lbrack token'>[</span><span class='dirpath identifier id'>dirpath</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='sort identifier id'>sort</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='filename identifier id'>filename</span><span class='bitor op'>|</span>
-      <span class='File constant id'>File</span><span class='dot token'>.</span><span class='open identifier id'>open</span><span class='lparen token'>(</span><span class='filename identifier id'>filename</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='file identifier id'>file</span><span class='bitor op'>|</span>
-        <span class='doc identifier id'>doc</span> <span class='assign token'>=</span> <span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='Document constant id'>Document</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='file identifier id'>file</span>
-        <span class='yield yield kw'>yield</span> <span class='doc identifier id'>doc</span>
-      <span class='end end kw'>end</span> <span class='comment val'>#file</span>
-    <span class='end end kw'>end</span> <span class='comment val'>#dir</span>
-  <span class='end end kw'>end</span> <span class='comment val'>#each</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id load_dir'>load_dir</span><span class='lparen'>(</span><span class='op'>*</span><span class='id dirpaths'>dirpaths</span><span class='rparen'>)</span>
+  <span class='id dirpaths'>dirpaths</span><span class='op'>=</span><span class='lbracket'>[</span><span class='op'>*</span><span class='id dirpaths'>dirpaths</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='rbracket'>]</span>
+  <span class='id dirpaths'>dirpaths</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id dirpath'>dirpath</span><span class='op'>|</span>
+    <span class='const'>Dir</span><span class='lbracket'>[</span><span class='id dirpath'>dirpath</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id sort'>sort</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id filename'>filename</span><span class='op'>|</span>
+      <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span><span class='id filename'>filename</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id file'>file</span><span class='op'>|</span>
+        <span class='id doc'>doc</span> <span class='op'>=</span> <span class='const'>REXML</span><span class='op'>::</span><span class='const'>Document</span><span class='period'>.</span><span class='id new'>new</span> <span class='id file'>file</span>
+        <span class='kw'>yield</span> <span class='id doc'>doc</span>
+      <span class='kw'>end</span> <span class='comment'>#file
+</span>    <span class='kw'>end</span> <span class='comment'>#dir
+</span>  <span class='kw'>end</span> <span class='comment'>#each
+</span><span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -492,7 +502,7 @@ To load xml documents in files beginning in &#8220;foo&#8221; or
       <div class="method_details ">
   <p class="signature " id="load_elements-class_method">
   
-    + (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>load_elements</strong>(dirpath, xpath) 
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>load_elements</strong>(dirpath, xpath) 
   
 
   
@@ -510,9 +520,8 @@ Sugar to load elements from a file.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_attributes identifier id'>load_attributes</span><span class='lparen token'>(</span><span class='string val'>'config.xml'</span><span class='comma token'>,</span><span class='string val'>'userlist/user'</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='element identifier id'>element</span><span class='bitor op'>|</span> <span class='pp identifier id'>pp</span> <span class='element identifier id'>element</span><span class='dot token'>.</span><span class='attributes identifier id'>attributes</span><span class='lbrack token'>[</span><span class='string val'>'first_name'</span><span class='rbrack token'>]</span> <span class='rbrace token'>}</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='const'>XML</span><span class='period'>.</span><span class='id load_attributes'>load_attributes</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>config.xml</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>userlist/user</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id element'>element</span><span class='op'>|</span> <span class='id pp'>pp</span> <span class='id element'>element</span><span class='period'>.</span><span class='id attributes'>attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>first_name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span></pre>
     
   </div>
 
@@ -522,25 +531,24 @@ Sugar to load elements from a file.
       <pre class="lines">
 
 
+41
 42
 43
 44
 45
 46
-47
-48</pre>
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 41</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_elements identifier id'>load_elements</span><span class='lparen token'>(</span><span class='dirpath identifier id'>dirpath</span><span class='comma token'>,</span><span class='xpath identifier id'>xpath</span><span class='rparen token'>)</span>
-  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='load_dir identifier id'>load_dir</span><span class='lparen token'>(</span><span class='dirpath identifier id'>dirpath</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='doc identifier id'>doc</span><span class='bitor op'>|</span>
-    <span class='doc identifier id'>doc</span><span class='dot token'>.</span><span class='elements identifier id'>elements</span><span class='dot token'>.</span><span class='each identifier id'>each</span><span class='lparen token'>(</span><span class='xpath identifier id'>xpath</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='elem identifier id'>elem</span><span class='bitor op'>|</span>
-      <span class='yield yield kw'>yield</span> <span class='elem identifier id'>elem</span>
-    <span class='rbrace token'>}</span>
-  <span class='rbrace token'>}</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id load_elements'>load_elements</span><span class='lparen'>(</span><span class='id dirpath'>dirpath</span><span class='comma'>,</span><span class='id xpath'>xpath</span><span class='rparen'>)</span>
+  <span class='const'>XML</span><span class='period'>.</span><span class='id load_dir'>load_dir</span><span class='lparen'>(</span><span class='id dirpath'>dirpath</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id doc'>doc</span><span class='op'>|</span>
+    <span class='id doc'>doc</span><span class='period'>.</span><span class='id elements'>elements</span><span class='period'>.</span><span class='id each'>each</span><span class='lparen'>(</span><span class='id xpath'>xpath</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id elem'>elem</span><span class='op'>|</span>
+      <span class='kw'>yield</span> <span class='id elem'>elem</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -549,7 +557,7 @@ Sugar to load elements from a file.
       <div class="method_details ">
   <p class="signature " id="strip_all-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>strip_all</strong>(xml_text) 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>strip_all</strong>(xml_text) 
   
 
   
@@ -564,11 +572,10 @@ dirty document.
 This method calls these in order:
 </p>
 <pre class="code">
-  <span class='minus op'>-</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_unprintables identifier id'>strip_unprintables</span>
-  <span class='minus op'>-</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_microsoft identifier id'>strip_microsoft</span>
-  <span class='minus op'>-</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_comments identifier id'>strip_comments</span>
-  <span class='minus op'>-</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_attributes identifier id'>strip_attributes</span>
-</pre>
+  * XML.strip_unprintables
+  * XML.strip_microsoft
+  * XML.strip_comments
+  * XML.strip_attributes</pre>
 
 
   </div>
@@ -578,11 +585,10 @@ This method calls these in order:
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='comment val'># This example shows curly braces instead of angle braces because of HTML formatting</span>
-  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;{foo a=b c=d}{!--comment--}Hello{!-[if bar]}Microsoft{![endif]}World{/foo}&quot;</span>
-  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_all identifier id'>strip_all</span><span class='lparen token'>(</span><span class='s identifier id'>s</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;{foo}HelloWorld{/foo}&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"># This example shows curly braces instead of angle braces because of HTML formatting
+s=&quot;{foo a=b c=d}{!--comment--}Hello{!-[if bar]}Microsoft{![endif]}World{/foo}&quot;
+XML.strip_all(s) =&gt; &quot;{foo}HelloWorld{/foo}&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -590,17 +596,17 @@ This method calls these in order:
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the text, stripped of unprintables, Microsoft markup, comments, and
 attributes
-
-
+</p>
+</div>
       
     </li>
   
@@ -612,17 +618,16 @@ attributes
       <pre class="lines">
 
 
+90
 91
-92
-93</pre>
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 90</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_all identifier id'>strip_all</span><span class='lparen token'>(</span><span class='xml_text identifier id'>xml_text</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_attributes identifier id'>strip_attributes</span><span class='lparen token'>(</span><span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_comments identifier id'>strip_comments</span><span class='lparen token'>(</span><span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_microsoft identifier id'>strip_microsoft</span><span class='lparen token'>(</span><span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_unprintables identifier id'>strip_unprintables</span><span class='lparen token'>(</span><span class='xml_text identifier id'>xml_text</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id strip_all'>strip_all</span><span class='lparen'>(</span><span class='id xml_text'>xml_text</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'>XML</span><span class='period'>.</span><span class='id strip_attributes'>strip_attributes</span><span class='lparen'>(</span><span class='const'>XML</span><span class='period'>.</span><span class='id strip_comments'>strip_comments</span><span class='lparen'>(</span><span class='const'>XML</span><span class='period'>.</span><span class='id strip_microsoft'>strip_microsoft</span><span class='lparen'>(</span><span class='const'>XML</span><span class='period'>.</span><span class='id strip_unprintables'>strip_unprintables</span><span class='lparen'>(</span><span class='id xml_text'>xml_text</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -631,7 +636,7 @@ attributes
       <div class="method_details ">
   <p class="signature " id="strip_attributes-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>strip_attributes</strong>(xml_text) 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>strip_attributes</strong>(xml_text) 
   
 
   
@@ -649,10 +654,9 @@ Strip out all attributes from the xml text&#8217;s tags.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;&lt;foo a=b c=d e=f&gt;Hello&lt;/foo&gt;&quot;</span>
-  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_attributes identifier id'>strip_attributes</span><span class='lparen token'>(</span><span class='s identifier id'>s</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&lt;foo&gt;Hello&lt;/foo&gt;&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">s=&quot;&lt;foo a=b c=d e=f&gt;Hello&lt;/foo&gt;&quot;
+XML.strip_attributes(s) =&gt; &quot;&lt;foo&gt;Hello&lt;/foo&gt;&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -660,16 +664,16 @@ Strip out all attributes from the xml text&#8217;s tags.
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the text, stripped of attributes
-
-
+</p>
+</div>
       
     </li>
   
@@ -681,17 +685,16 @@ the text, stripped of attributes
       <pre class="lines">
 
 
+103
 104
-105
-106</pre>
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 103</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_attributes identifier id'>strip_attributes</span><span class='lparen token'>(</span><span class='xml_text identifier id'>xml_text</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='xml_text identifier id'>xml_text</span><span class='dot token'>.</span><span class='gsub identifier id'>gsub</span><span class='lparen token'>(</span><span class='regexp val'>/&lt;(\/?\w+).*?&gt;/i</span><span class='m identifier id'>m</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='dstring node'>&quot;&lt;#{$1}&gt;&quot;</span><span class='rbrace token'>}</span>  <span class='comment val'># delete attributes</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id strip_attributes'>strip_attributes</span><span class='lparen'>(</span><span class='id xml_text'>xml_text</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id xml_text'>xml_text</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;(\/?\w+).*?&gt;</span><span class='regexp_end'>/im</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;</span><span class='embexpr_beg'>#{</span><span class='backref'>$1</span><span class='rbrace'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>  <span class='comment'># delete attributes
+</span><span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -700,7 +703,7 @@ the text, stripped of attributes
       <div class="method_details ">
   <p class="signature " id="strip_comments-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>strip_comments</strong>(xml_text) 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>strip_comments</strong>(xml_text) 
   
 
   
@@ -718,11 +721,10 @@ Strip out all comments from the xml text.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='comment val'># This example shows curly braces instead of angle braces because of HTML formatting</span>
-  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;Hello{!--comment--}World&quot;</span>
-  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_comments identifier id'>strip_comments</span><span class='lparen token'>(</span><span class='s identifier id'>s</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;HelloWorld&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"># This example shows curly braces instead of angle braces because of HTML formatting
+s=&quot;Hello{!--comment--}World&quot;
+XML.strip_comments(s) =&gt; &quot;HelloWorld&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -730,16 +732,16 @@ Strip out all comments from the xml text.
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the text, stripped of comments
-
-
+</p>
+</div>
       
     </li>
   
@@ -751,17 +753,16 @@ the text, stripped of comments
       <pre class="lines">
 
 
+117
 118
-119
-120</pre>
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 117</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_comments identifier id'>strip_comments</span><span class='lparen token'>(</span><span class='xml_text identifier id'>xml_text</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='xml_text identifier id'>xml_text</span><span class='dot token'>.</span><span class='gsub identifier id'>gsub</span><span class='lparen token'>(</span><span class='regexp val'>/&lt;!.*?&gt;/i</span><span class='m identifier id'>m</span><span class='comma token'>,</span><span class='string val'>''</span><span class='rparen token'>)</span>  
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id strip_comments'>strip_comments</span><span class='lparen'>(</span><span class='id xml_text'>xml_text</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id xml_text'>xml_text</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;!.*?&gt;</span><span class='regexp_end'>/im</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>  
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -770,7 +771,7 @@ the text, stripped of comments
       <div class="method_details ">
   <p class="signature " id="strip_microsoft-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>strip_microsoft</strong>(xml_text) 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>strip_microsoft</strong>(xml_text) 
   
 
   
@@ -788,10 +789,9 @@ Strip out all microsoft proprietary codes.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;Hello&lt;!-[if foo]&gt;Microsoft&lt;![endif]-&gt;World&quot;</span>
-  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_microsoft identifier id'>strip_microsoft</span><span class='lparen token'>(</span><span class='s identifier id'>s</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;HelloWorld&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">s=&quot;Hello&lt;!-[if foo]&gt;Microsoft&lt;![endif]-&gt;World&quot;
+XML.strip_microsoft(s) =&gt; &quot;HelloWorld&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -799,16 +799,16 @@ Strip out all microsoft proprietary codes.
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the text, stripped of Microsoft markup
-
-
+</p>
+</div>
       
     </li>
   
@@ -820,17 +820,16 @@ the text, stripped of Microsoft markup
       <pre class="lines">
 
 
+130
 131
-132
-133</pre>
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 130</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_microsoft identifier id'>strip_microsoft</span><span class='lparen token'>(</span><span class='xml_text identifier id'>xml_text</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='xml_text identifier id'>xml_text</span><span class='dot token'>.</span><span class='gsub identifier id'>gsub</span><span class='lparen token'>(</span><span class='regexp val'>/&lt;!-*\[if\b.*?&lt;!\[endif\]-*&gt;/i</span><span class='m identifier id'>m</span><span class='comma token'>,</span><span class='string val'>''</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id strip_microsoft'>strip_microsoft</span><span class='lparen'>(</span><span class='id xml_text'>xml_text</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id xml_text'>xml_text</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;!-*\[if\b.*?&lt;!\[endif\]-*&gt;</span><span class='regexp_end'>/im</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -839,7 +838,7 @@ the text, stripped of Microsoft markup
       <div class="method_details ">
   <p class="signature " id="strip_unprintables-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>strip_unprintables</strong>(xml_text) 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>strip_unprintables</strong>(xml_text) 
   
 
   
@@ -857,10 +856,9 @@ Strip out all unprintable characters from the input string.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='s identifier id'>s</span><span class='assign token'>=</span><span class='string val'>&quot;Hello\XXXWorld&quot;</span> <span class='comment val'># where XXX is unprintable</span>
-  <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_unprintables identifier id'>strip_unprintables</span><span class='lparen token'>(</span><span class='s identifier id'>s</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;HelloWorld&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">s=&quot;Hello\XXXWorld&quot; # where XXX is unprintable
+XML.strip_unprintables(s) =&gt; &quot;HelloWorld&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -868,16 +866,16 @@ Strip out all unprintable characters from the input string.
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the text, stripped of unprintables
-
-
+</p>
+</div>
       
     </li>
   
@@ -889,17 +887,16 @@ the text, stripped of unprintables
       <pre class="lines">
 
 
+143
 144
-145
-146</pre>
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/xml.rb', line 143</span>
 
-<span class='def def kw'>def</span> <span class='XML constant id'>XML</span><span class='dot token'>.</span><span class='strip_unprintables identifier id'>strip_unprintables</span><span class='lparen token'>(</span><span class='xml_text identifier id'>xml_text</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='xml_text identifier id'>xml_text</span><span class='dot token'>.</span><span class='gsub identifier id'>gsub</span><span class='lparen token'>(</span><span class='regexp val'>/[^[:print:]]/</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='const'>XML</span><span class='period'>.</span><span class='id strip_unprintables'>strip_unprintables</span><span class='lparen'>(</span><span class='id xml_text'>xml_text</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id xml_text'>xml_text</span><span class='period'>.</span><span class='id gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[^[:print:]]</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -910,9 +907,9 @@ the text, stripped of unprintables
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:19:00 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Sat Feb 12 16:22:22 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>

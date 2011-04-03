@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
 <title>Module: Process</title>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
@@ -43,7 +43,8 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Module: Process 
+    <div id="content"><h1>Module: Process
+  
   
   
 </h1>
@@ -56,6 +57,7 @@
     
   
   
+  
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/sixarm_ruby_ramp/process.rb</dd>
   
@@ -64,21 +66,23 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <h1>Process extensions to help debug Ruby programs.</h1>
+    <p>
+-*- coding: utf-8 -*-
+</p>
+<h1>Process extensions to help debug Ruby programs.</h1>
 <h2>Examples</h2>
 <pre class="code">
-  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='ps identifier id'>ps</span>
-  <span class='puts identifier id'>puts</span> <span class='p identifier id'>p</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='the identifier id'>the</span> <span class='results identifier id'>results</span> <span class='of identifier id'>of</span> <span class='the identifier id'>the</span> <span class='string val'>'ps'</span> <span class='command identifier id'>command</span> <span class='for for kw'>for</span> <span class='the identifier id'>the</span> <span class='current identifier id'>current</span> <span class='process identifier id'>process</span> <span class='id identifier id'>id</span>
+  p = Process.ps
+  puts p
+  =&gt; the results of the 'ps' command for the current process id
 
-  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='ps identifier id'>ps</span><span class='lparen token'>(</span><span class='integer val'>1234</span><span class='rparen token'>)</span>
-  <span class='puts identifier id'>puts</span> <span class='p identifier id'>p</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='the identifier id'>the</span> <span class='results identifier id'>results</span> <span class='of identifier id'>of</span> <span class='the identifier id'>the</span> <span class='string val'>'ps'</span> <span class='command identifier id'>command</span> <span class='for for kw'>for</span> <span class='process identifier id'>process</span> <span class='id identifier id'>id</span> <span class='integer val'>1234</span>
+  p = Process.ps(1234)
+  puts p
+  =&gt; the results of the 'ps' command for process id 1234
 
-  <span class='p identifier id'>p</span> <span class='assign token'>=</span> <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='pss identifier id'>pss</span>
-  <span class='p identifier id'>p</span><span class='lbrack token'>[</span><span class='string val'>'%cpu'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='percentage identifier id'>percentage</span> <span class='of identifier id'>of</span> <span class='cpu identifier id'>cpu</span> <span class='use identifier id'>use</span><span class='comma token'>,</span> <span class='as identifier id'>as</span> <span class='a identifier id'>a</span> <span class='float identifier id'>float</span>
-  <span class='p identifier id'>p</span><span class='lbrack token'>[</span><span class='string val'>'%mem'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='percentage identifier id'>percentage</span> <span class='of identifier id'>of</span> <span class='memory identifier id'>memory</span> <span class='use identifier id'>use</span><span class='comma token'>,</span> <span class='as identifier id'>as</span> <span class='a identifier id'>a</span> <span class='float identifier id'>float</span>
-</pre>
+  p = Process.pss
+  p['%cpu'] =&gt; percentage of cpu use, as a float
+  p['%mem'] =&gt; percentage of memory use, as a float</pre>
 
 
   </div>
@@ -91,78 +95,136 @@
     <dl class="constants">
       
         <dt id="PS_ALIASES_DEFAULT-constant" class="">PS_ALIASES_DEFAULT =
-            <span class="summary_desc">
+          <div class="docstring">
+  <div class="discussion">
+    <p>
 Get the list of process alias keywords as typically defined by the shell.
+</p>
+<p>
+For example, a shell may consider &#8220;%cpu&#8221; and &#8220;pcpu&#8221;
+to be identical.
+</p>
 
-</span>
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Process::PS_ALIASES_DEFAULT
+=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;, ... }</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+process keyword aliases
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
         </dt>
-        <dd><pre class="code"><span class='lbrace token'>{</span>
-  <span class='string val'>'%cpu'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'pcpu'</span><span class='comma token'>,</span>
-  <span class='string val'>'%mem'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'pmem'</span><span class='comma token'>,</span>
-  <span class='string val'>'sig_block'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'blocked'</span><span class='comma token'>,</span>
-  <span class='string val'>'sigmask'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'blocked'</span><span class='comma token'>,</span>
-  <span class='string val'>'sig_catch'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'caught'</span><span class='comma token'>,</span>
-  <span class='string val'>'sigcatch'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'caught'</span><span class='comma token'>,</span>
-  <span class='string val'>'cls'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'class'</span><span class='comma token'>,</span>
-  <span class='string val'>'cls'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'policy'</span><span class='comma token'>,</span>
-  <span class='string val'>'cputime'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'time'</span><span class='comma token'>,</span>
-  <span class='string val'>'gid'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'egid'</span><span class='comma token'>,</span>
-  <span class='string val'>'group'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'egroup'</span><span class='comma token'>,</span>
-  <span class='string val'>'uid'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'euid'</span><span class='comma token'>,</span>
-  <span class='string val'>'uname'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'euser'</span><span class='comma token'>,</span>
-  <span class='string val'>'user'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'euser'</span><span class='comma token'>,</span>
-  <span class='string val'>'flag'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'f'</span><span class='comma token'>,</span>
-  <span class='string val'>'flags'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'f'</span><span class='comma token'>,</span>
-  <span class='string val'>'fsuid'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'fuid'</span><span class='comma token'>,</span>
-  <span class='string val'>'sig_ignore'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'ignored'</span><span class='comma token'>,</span>
-  <span class='string val'>'sigignore'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'ignored'</span><span class='comma token'>,</span>
-  <span class='string val'>'spid'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'lwp'</span><span class='comma token'>,</span>
-  <span class='string val'>'tid'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'lwp'</span><span class='comma token'>,</span>
-  <span class='string val'>'nice'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'ni'</span><span class='comma token'>,</span>
-  <span class='string val'>'thcount'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'nlwp'</span><span class='comma token'>,</span>
-  <span class='string val'>'sig'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'pending'</span><span class='comma token'>,</span>
-  <span class='string val'>'sig_pend'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'pending'</span><span class='comma token'>,</span>
-  <span class='string val'>'pgrp'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'pgid'</span><span class='comma token'>,</span>
-  <span class='string val'>'rssize'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'rss'</span><span class='comma token'>,</span>
-  <span class='string val'>'rsz'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'rss'</span><span class='comma token'>,</span>
-  <span class='string val'>'state'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'s'</span><span class='comma token'>,</span>
-  <span class='string val'>'sess'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'sid'</span><span class='comma token'>,</span>
-  <span class='string val'>'session'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'sid'</span><span class='comma token'>,</span>
-  <span class='string val'>'svgid'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'sgid'</span><span class='comma token'>,</span>
-  <span class='string val'>'tt'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'tname'</span><span class='comma token'>,</span>
-  <span class='string val'>'tty'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'tname'</span><span class='comma token'>,</span> 
-  <span class='string val'>'vsz'</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>'vsize'</span>
-<span class='rbrace token'>}</span>
-</pre></dd>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%cpu</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pcpu</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%mem</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pmem</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig_block</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>blocked</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sigmask</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>blocked</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig_catch</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>caught</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sigcatch</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>caught</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cls</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>class</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cls</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>policy</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cputime</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>time</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>gid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>group</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egroup</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>uid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>euid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>uname</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>euser</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>user</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>euser</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>flag</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>f</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>flags</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>f</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fsuid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fuid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig_ignore</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ignored</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sigignore</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ignored</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>spid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lwp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lwp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nice</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ni</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>thcount</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nlwp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pending</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig_pend</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pending</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgrp</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rssize</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rsz</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>state</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>s</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sess</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>session</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>svgid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sgid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tt</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tname</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tty</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tname</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> 
+  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vsz</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vsize</span><span class='tstring_end'>'</span></span>
+<span class='rbrace'>}</span></pre></dd>
       
         <dt id="PS_KEYS_DEFAULT-constant" class="">PS_KEYS_DEFAULT =
-            <span class="summary_desc">
+          <div class="docstring">
+  <div class="discussion">
+    <p>
 The list of process keywords.
+</p>
 
-</span>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
         </dt>
-        <dd><pre class="code"><span class='dstring node'>%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'</span>
-</pre></dd>
+        <dd><pre class="code"><span class='qwords_beg'>%w'</span><span class='tstring_end'>blocked</span></span></pre></dd>
       
         <dt id="PS_COMMAND_DEFAULT-constant" class="">PS_COMMAND_DEFAULT =
-            <span class="summary_desc">
-The process command, i.e.
+          <div class="docstring">
+  <div class="discussion">
+    <p>
+The process command, i.e. what the sytem will call for the &#8220;ps&#8221;
+command.
+</p>
 
-</span>
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
         </dt>
-        <dd><pre class="code"><span class='string val'>'ps h ww -o &quot;'</span><span class='plus op'>+</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_keys identifier id'>ps_keys</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>','</span><span class='rparen token'>)</span><span class='plus op'>+</span><span class='string val'>'&quot;'</span>
-</pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ps h ww -o &quot;</span><span class='tstring_end'>'</span></span><span class='op'>+</span><span class='kw'>self</span><span class='period'>.</span><span class='id ps_keys'>ps_keys</span><span class='period'>.</span><span class='id join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>,</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>'</span></span></pre></dd>
       
     </dl>
   
 
 
 
-  <h2>Class Method Summary</h2>
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
 
-  <ul class="summary">
-    
-      <li class="public ">
+    <ul class="summary">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#ps-class_method" title="ps (class method)">+ (String) <strong>ps</strong>(pid = Process.pid) </a>
@@ -175,17 +237,18 @@ The process command, i.e.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Get the &#8216;ps&#8217; command as one long text string.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#ps_aliases-class_method" title="ps_aliases (class method)">+ (Hash&lt;String,String&gt;) <strong>ps_aliases</strong> </a>
@@ -198,20 +261,21 @@ Get the &#8216;ps&#8217; command as one long text string.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Get the list of process alias keywords as typically defined by the shell.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
-      <a href="#ps_aliases%3D-class_method" title="ps_aliases= (class method)">+ (Hash&lt;String,String&gt;) <strong>ps_aliases</strong>(aliases) </a>
+      <a href="#ps_aliases%3D-class_method" title="ps_aliases= (class method)">+ (Hash&lt;String,String&gt;) <strong>ps_aliases=</strong>(aliases) </a>
     
 
     
@@ -221,17 +285,18 @@ Get the list of process alias keywords as typically defined by the shell.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Set the list of process alias keywords.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#ps_command-class_method" title="ps_command (class method)">+ (String) <strong>ps_command</strong> </a>
@@ -244,20 +309,21 @@ Set the list of process alias keywords.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Get the process command, i.e.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
-      <a href="#ps_command%3D-class_method" title="ps_command= (class method)">+ (String) <strong>ps_command</strong>(command) </a>
+      <a href="#ps_command%3D-class_method" title="ps_command= (class method)">+ (String) <strong>ps_command=</strong>(command) </a>
     
 
     
@@ -267,17 +333,18 @@ Get the process command, i.e.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Set the process command, i.e.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#ps_keys-class_method" title="ps_keys (class method)">+ (Object) <strong>ps_keys</strong> </a>
@@ -290,17 +357,18 @@ Set the process command, i.e.
   
   
   
+  
 
   
-    <span class="summary_desc"></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
-      <a href="#ps_keys%3D-class_method" title="ps_keys= (class method)">+ (Array&lt;String&gt;) <strong>ps_keys</strong>(keys) </a>
+      <a href="#ps_keys%3D-class_method" title="ps_keys= (class method)">+ (Array&lt;String&gt;) <strong>ps_keys=</strong>(keys) </a>
     
 
     
@@ -310,17 +378,18 @@ Set the process command, i.e.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Set the list of process keywords.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-      <li class="public ">
+      
+        <li class="public ">
   <span class="summary_signature">
     
       <a href="#pss-class_method" title="pss (class method)">+ (Hash&lt;String,String&gt;) <strong>pss</strong>(pid = Process.pid) </a>
@@ -333,17 +402,20 @@ Set the list of process keywords.
   
   
   
+  
 
   
-    <span class="summary_desc">
+    <span class="summary_desc"><div class='inline'><p>
 Get the &#8216;ps&#8217; command as a hash of keys and values.
-
-</span>
+</p>
+</div></span>
   
 </li>
 
-    
-  </ul>
+      
+    </ul>
+  
+
 
 
   <div id="class_method_details" class="method_details_list">
@@ -353,7 +425,7 @@ Get the &#8216;ps&#8217; command as a hash of keys and values.
       <div class="method_details first">
   <p class="signature first" id="ps-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>ps</strong>(pid = Process.pid) 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>ps</strong>(pid = Process.pid) 
   
 
   
@@ -374,11 +446,10 @@ This is typically useful for logging to a text file.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='pid identifier id'>pid</span> <span class='assign token'>=</span> <span class='integer val'>100</span>
-  <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='ps identifier id'>ps</span><span class='lparen token'>(</span><span class='pid identifier id'>pid</span><span class='rparen token'>)</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;0.0 bfd86194 21:14:51 ...&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">pid = 100
+Process.ps(pid)
+=&gt; &quot;0.0 bfd86194 21:14:51 ...&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -386,16 +457,16 @@ This is typically useful for logging to a text file.
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 lots of data about the process
-
-
+</p>
+</div>
       
     </li>
   
@@ -414,10 +485,9 @@ lots of data about the process
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 34</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps identifier id'>ps</span><span class='lparen token'>(</span><span class='pid identifier id'>pid</span><span class='assign token'>=</span><span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='pid identifier id'>pid</span><span class='rparen token'>)</span>
-  <span class='dxstring node'>`#{self.ps_command} #{pid.to_i}`</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id ps'>ps</span><span class='lparen'>(</span><span class='id pid'>pid</span><span class='op'>=</span><span class='const'>Process</span><span class='period'>.</span><span class='id pid'>pid</span><span class='rparen'>)</span>
+  <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id ps_command'>ps_command</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id pid'>pid</span><span class='period'>.</span><span class='id to_i'>to_i</span><span class='rbrace'>}</span><span class='tstring_end'>`</span></span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -426,7 +496,7 @@ lots of data about the process
       <div class="method_details ">
   <p class="signature " id="ps_aliases-class_method">
   
-    + (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="String.html" title="String (class)">String</a>,<a href="String.html" title="String (class)">String</a>&gt;</tt>) <strong>ps_aliases</strong> 
+    + (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>ps_aliases</strong> 
   
 
   
@@ -448,10 +518,9 @@ to be identical.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='ps_aliases identifier id'>ps_aliases</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='string val'>&quot;%cpu&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;pcpu&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;sigmask&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;blocked&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;cls&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;policy&quot;</span><span class='comma token'>,</span> <span class='dot3 op'>...</span> <span class='rbrace token'>}</span>                                   
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Process.ps_aliases
+=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;, ... }                                   </pre>
     
   </div>
 <h3>Returns:</h3>
@@ -459,16 +528,16 @@ to be identical.
   
     <li>
       
-        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="String.html" title="String (class)">String</a>,<a href="String.html" title="String (class)">String</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 process keyword aliases
-
-
+</p>
+</div>
       
     </li>
   
@@ -487,10 +556,9 @@ process keyword aliases
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 137</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_aliases identifier id'>ps_aliases</span>
-  <span class='@@ps_aliases ivar id'>@@ps_aliases</span><span class='opasgn op'>||=</span><span class='PS_ALIASES_DEFAULT constant id'>PS_ALIASES_DEFAULT</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id ps_aliases'>ps_aliases</span>
+  <span class='cvar'>@@ps_aliases</span><span class='op'>||=</span><span class='const'>PS_ALIASES_DEFAULT</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -499,7 +567,7 @@ process keyword aliases
       <div class="method_details ">
   <p class="signature " id="ps_aliases=-class_method">
   
-    + (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="String.html" title="String (class)">String</a>,<a href="String.html" title="String (class)">String</a>&gt;</tt>) <strong>ps_aliases=</strong>(aliases) 
+    + (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>ps_aliases=</strong>(aliases) 
   
 
   
@@ -521,10 +589,9 @@ to be identical.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Process constant id'>Process</span><span class='colon2 op'>::</span><span class='ps_aliases identifier id'>ps_aliases</span><span class='assign token'>=</span><span class='lbrace token'>{</span> <span class='lbrace token'>{</span><span class='string val'>&quot;%cpu&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;pcpu&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;sigmask&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;blocked&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;cls&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;policy&quot;</span> <span class='rbrace token'>}</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='string val'>&quot;%cpu&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;pcpu&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;sigmask&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;blocked&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;cls&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;policy&quot;</span><span class='rbrace token'>}</span>     
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Process::ps_aliases={ {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot; }
+=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;}     </pre>
     
   </div>
 <h3>Parameters:</h3>
@@ -532,7 +599,7 @@ to be identical.
   
     <li>
       
-        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="String.html" title="String (class)">String</a>,<a href="String.html" title="String (class)">String</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
       
       
         <span class='name'>aliases</span>
@@ -547,16 +614,16 @@ to be identical.
   
     <li>
       
-        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="String.html" title="String (class)">String</a>,<a href="String.html" title="String (class)">String</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 aliases
-
-
+</p>
+</div>
       
     </li>
   
@@ -575,10 +642,9 @@ aliases
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 153</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_aliases identifier id'>ps_aliases</span><span class='assign token'>=</span><span class='lparen token'>(</span><span class='aliases identifier id'>aliases</span><span class='rparen token'>)</span>
-  <span class='@@ps_aliases ivar id'>@@ps_aliases</span><span class='assign token'>=</span><span class='aliases identifier id'>aliases</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id ps_aliases='>ps_aliases=</span><span class='lparen'>(</span><span class='id aliases'>aliases</span><span class='rparen'>)</span>
+  <span class='cvar'>@@ps_aliases</span><span class='op'>=</span><span class='id aliases'>aliases</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -587,7 +653,7 @@ aliases
       <div class="method_details ">
   <p class="signature " id="ps_command-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>ps_command</strong> 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>ps_command</strong> 
   
 
   
@@ -606,10 +672,9 @@ Get the process command, i.e. what the sytem will call for the
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='ps_command identifier id'>ps_command</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;ps h ww -o blocked,group,pending,size&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">Process.ps_command
+=&gt; &quot;ps h ww -o blocked,group,pending,size&quot;</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -617,16 +682,16 @@ Get the process command, i.e. what the sytem will call for the
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the process command
-
-
+</p>
+</div>
       
     </li>
   
@@ -645,10 +710,9 @@ the process command
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 203</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_command identifier id'>ps_command</span>
-  <span class='@@ps_command ivar id'>@@ps_command</span><span class='opasgn op'>||=</span><span class='PS_COMMAND_DEFAULT constant id'>PS_COMMAND_DEFAULT</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id ps_command'>ps_command</span>
+  <span class='cvar'>@@ps_command</span><span class='op'>||=</span><span class='const'>PS_COMMAND_DEFAULT</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -657,7 +721,7 @@ the process command
       <div class="method_details ">
   <p class="signature " id="ps_command=-class_method">
   
-    + (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>ps_command=</strong>(command) 
+    + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>ps_command=</strong>(command) 
   
 
   
@@ -676,9 +740,8 @@ Set the process command, i.e. what the sytem will call for the
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='ps_command identifier id'>ps_command</span> <span class='assign token'>=</span> <span class='string val'>&quot;ps h ww -o blocked,group,pending,size&quot;</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='const'>Process</span><span class='period'>.</span><span class='id ps_command'>ps_command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ps h ww -o blocked,group,pending,size</span><span class='tstring_end'>&quot;</span></span></pre>
     
   </div>
 <h3>Parameters:</h3>
@@ -686,7 +749,7 @@ Set the process command, i.e. what the sytem will call for the
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
         <span class='name'>the</span>
@@ -694,10 +757,10 @@ Set the process command, i.e. what the sytem will call for the
       
       
         &mdash;
-        
+        <div class='inline'><p>
 process command
-
-
+</p>
+</div>
       
     </li>
   
@@ -707,16 +770,16 @@ process command
   
     <li>
       
-        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the process command
-
-
+</p>
+</div>
       
     </li>
   
@@ -735,10 +798,9 @@ the process command
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 216</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_command identifier id'>ps_command</span><span class='assign token'>=</span><span class='lparen token'>(</span><span class='command identifier id'>command</span><span class='rparen token'>)</span>
-  <span class='@@ps_command ivar id'>@@ps_command</span><span class='assign token'>=</span><span class='command identifier id'>command</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id ps_command='>ps_command=</span><span class='lparen'>(</span><span class='id command'>command</span><span class='rparen'>)</span>
+  <span class='cvar'>@@ps_command</span><span class='op'>=</span><span class='id command'>command</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -747,7 +809,7 @@ the process command
       <div class="method_details ">
   <p class="signature " id="ps_keys-class_method">
   
-    + (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>ps_keys</strong> 
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>ps_keys</strong> 
   
 
   
@@ -764,10 +826,9 @@ the process command
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 172</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_keys identifier id'>ps_keys</span>
-  <span class='@@ps_keys ivar id'>@@ps_keys</span><span class='opasgn op'>||=</span><span class='PS_KEYS_DEFAULT constant id'>PS_KEYS_DEFAULT</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id ps_keys'>ps_keys</span>
+  <span class='cvar'>@@ps_keys</span><span class='op'>||=</span><span class='const'>PS_KEYS_DEFAULT</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -776,7 +837,7 @@ the process command
       <div class="method_details ">
   <p class="signature " id="ps_keys=-class_method">
   
-    + (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="String.html" title="String (class)">String</a>&gt;</tt>) <strong>ps_keys=</strong>(keys) 
+    + (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>ps_keys=</strong>(keys) 
   
 
   
@@ -794,9 +855,8 @@ Set the list of process keywords.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='ps_keys identifier id'>ps_keys</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;blocked&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;group&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;pending&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;size&quot;</span><span class='rbrack token'>]</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='const'>Process</span><span class='period'>.</span><span class='id ps_keys'>ps_keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>blocked</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>group</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>size</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></pre>
     
   </div>
 <h3>Parameters:</h3>
@@ -804,7 +864,7 @@ Set the list of process keywords.
   
     <li>
       
-        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="String.html" title="String (class)">String</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
       
       
         <span class='name'>keywords</span>
@@ -819,16 +879,16 @@ Set the list of process keywords.
   
     <li>
       
-        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="String.html" title="String (class)">String</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 keywords
-
-
+</p>
+</div>
       
     </li>
   
@@ -847,10 +907,9 @@ keywords
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 185</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_keys identifier id'>ps_keys</span><span class='assign token'>=</span><span class='lparen token'>(</span><span class='keys identifier id'>keys</span><span class='rparen token'>)</span>
-  <span class='@@ps_keys ivar id'>@@ps_keys</span><span class='assign token'>=</span><span class='keys identifier id'>keys</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id ps_keys='>ps_keys=</span><span class='lparen'>(</span><span class='id keys'>keys</span><span class='rparen'>)</span>
+  <span class='cvar'>@@ps_keys</span><span class='op'>=</span><span class='id keys'>keys</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -859,7 +918,7 @@ keywords
       <div class="method_details ">
   <p class="signature " id="pss-class_method">
   
-    + (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="String.html" title="String (class)">String</a>,<a href="String.html" title="String (class)">String</a>&gt;</tt>) <strong>pss</strong>(pid = Process.pid) 
+    + (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>pss</strong>(pid = Process.pid) 
   
 
   
@@ -868,6 +927,12 @@ keywords
     <p>
 Get the &#8216;ps&#8217; command as a hash of keys and values.
 </p>
+<ul>
+<li><p>
+OPTIMIZE: add dates, times
+</p>
+</li>
+</ul>
 
 
   </div>
@@ -877,13 +942,10 @@ Get the &#8216;ps&#8217; command as a hash of keys and values.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4></h4>
-      <pre class="example code">  <span class='pid identifier id'>pid</span> <span class='assign token'>=</span> <span class='integer val'>100</span>
-  <span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='pss identifier id'>pss</span><span class='lparen token'>(</span><span class='pid identifier id'>pid</span><span class='rparen token'>)</span>
-  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='string val'>&quot;cp&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='integer val'>0</span><span class='integer val'>.0</span><span class='comma token'>,</span> <span class='string val'>&quot;esp&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;bfd86194&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;etime&quot;</span><span class='assign token'>=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;21:14:51&quot;</span><span class='comma token'>,</span> <span class='dot3 op'>...</span>  <span class='rbrace token'>}</span>
-<span class='minus op'>-</span>
-<span class='OPTIMIZE constant id'>OPTIMIZE</span><span class='colon op'>:</span> <span class='add identifier id'>add</span> <span class='dates identifier id'>dates</span><span class='comma token'>,</span> <span class='times identifier id'>times</span>
-</pre>
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">pid = 100
+Process.pss(pid)
+=&gt; {&quot;cp&quot;=&gt;0.0, &quot;esp&quot;=&gt;&quot;bfd86194&quot;, &quot;etime&quot;=&gt;&quot;21:14:51&quot;, ...  }</pre>
     
   </div>
 <h3>Returns:</h3>
@@ -891,16 +953,16 @@ Get the &#8216;ps&#8217; command as a hash of keys and values.
   
     <li>
       
-        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="String.html" title="String (class)">String</a>,<a href="String.html" title="String (class)">String</a>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
       
       
       
       
         &mdash;
-        
+        <div class='inline'><p>
 the ps command options as keys and values
-
-
+</p>
+</div>
       
     </li>
   
@@ -942,33 +1004,32 @@ the ps command options as keys and values
     <td>
       <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 50</span>
 
-<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='pss identifier id'>pss</span><span class='lparen token'>(</span><span class='pid identifier id'>pid</span><span class='assign token'>=</span><span class='Process constant id'>Process</span><span class='dot token'>.</span><span class='pid identifier id'>pid</span><span class='rparen token'>)</span>
-  <span class='ps identifier id'>ps</span><span class='assign token'>=</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps identifier id'>ps</span><span class='lparen token'>(</span><span class='pid identifier id'>pid</span><span class='rparen token'>)</span>
-  <span class='h identifier id'>h</span><span class='assign token'>=</span><span class='Hash constant id'>Hash</span><span class='lbrack token'>[</span><span class='mult op'>*</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_keys identifier id'>ps_keys</span><span class='dot token'>.</span><span class='zip identifier id'>zip</span><span class='lparen token'>(</span><span class='ps identifier id'>ps</span><span class='dot token'>.</span><span class='split identifier id'>split</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='flatten identifier id'>flatten</span><span class='rbrack token'>]</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>      <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'c'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'cp'</span><span class='rbrack token'>]</span>     <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'cp'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_f identifier id'>to_f</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'egid'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'egid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'egroup'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'egroup'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'uid'</span><span class='rbrack token'>]</span>    <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'uid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'fgid'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'fgid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'lwp'</span><span class='rbrack token'>]</span>    <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'lwp'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'ni'</span><span class='rbrack token'>]</span>     <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'ni'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'nlwp'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'nlwp'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'pcpu'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'pcpu'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_f identifier id'>to_f</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'pgid'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'pgid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'pid'</span><span class='rbrack token'>]</span>    <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'pid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'pmem'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'pmem'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_f identifier id'>to_f</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'ppid'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'ppid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'rgid'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'rgid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'rss'</span><span class='rbrack token'>]</span>    <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'rss'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'ruid'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'ruid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>  
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'sid'</span><span class='rbrack token'>]</span>    <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'sid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>  
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'sgid'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'sgid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>  
-  <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'suid'</span><span class='rbrack token'>]</span>   <span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='string val'>'suid'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>  
-  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ps_aliases identifier id'>ps_aliases</span><span class='dot token'>.</span><span class='each_pair identifier id'>each_pair</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span><span class='val identifier id'>val</span><span class='bitor op'>|</span> <span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='h identifier id'>h</span><span class='lbrack token'>[</span><span class='val identifier id'>val</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
-  <span class='return return kw'>return</span> <span class='h identifier id'>h</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id pss'>pss</span><span class='lparen'>(</span><span class='id pid'>pid</span><span class='op'>=</span><span class='const'>Process</span><span class='period'>.</span><span class='id pid'>pid</span><span class='rparen'>)</span>
+  <span class='id ps'>ps</span><span class='op'>=</span><span class='kw'>self</span><span class='period'>.</span><span class='id ps'>ps</span><span class='lparen'>(</span><span class='id pid'>pid</span><span class='rparen'>)</span>
+  <span class='id h'>h</span><span class='op'>=</span><span class='const'>Hash</span><span class='lbracket'>[</span><span class='op'>*</span><span class='kw'>self</span><span class='period'>.</span><span class='id ps_keys'>ps_keys</span><span class='period'>.</span><span class='id zip'>zip</span><span class='lparen'>(</span><span class='id ps'>ps</span><span class='period'>.</span><span class='id split'>split</span><span class='rparen'>)</span><span class='period'>.</span><span class='id flatten'>flatten</span><span class='rbracket'>]</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>c</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>      <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>c</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>     <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_f'>to_f</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egroup</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egroup</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>uid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>uid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lwp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lwp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ni</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>     <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ni</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nlwp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nlwp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pcpu</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pcpu</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_f'>to_f</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pmem</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pmem</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_f'>to_f</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ppid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ppid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ruid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ruid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>  
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>  
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>  
+  <span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>suid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>suid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id to_i'>to_i</span>  
+  <span class='kw'>self</span><span class='period'>.</span><span class='id ps_aliases'>ps_aliases</span><span class='period'>.</span><span class='id each_pair'>each_pair</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span><span class='id val'>val</span><span class='op'>|</span> <span class='id h'>h</span><span class='lbracket'>[</span><span class='id key'>key</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id h'>h</span><span class='lbracket'>[</span><span class='id val'>val</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id h'>h</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -979,9 +1040,9 @@ the ps command options as keys and values
 </div>
     
     <div id="footer">
-  Generated on Sat Mar 20 17:19:02 2010 by 
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
-  0.5.3 (ruby-1.8.7).
+  Generated on Sat Feb 12 16:22:24 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.4 (ruby-1.9.2).
 </div>
 
   </body>
