@@ -140,9 +140,35 @@ class EnumerableTest < Test::Unit::TestCase
 
   ########################################################################
   #
+  #  mutex?
+  #
+  ########################################################################
+
+  def test_mutex
+    assert_equal(true,  ITEMS.mutex?{|x| x < 'a'})
+    assert_equal(true,  ITEMS.mutex?{|x| x < 'b'})
+    assert_equal(false, ITEMS.mutex?{|x| x < 'c'})
+    assert_equal(false, ITEMS.mutex?{|x| x < 'd'})
+  end
+
+
+  ########################################################################
+  #
   #  nitems
   #
   ########################################################################
+
+  def test_nitems?
+    assert_equal(true,  ITEMS.nitems?(0){|x| x < 'a'})
+    assert_equal(false, ITEMS.nitems?(1){|x| x < 'a'})
+    assert_equal(false, ITEMS.nitems?(2){|x| x < 'a'})
+    assert_equal(false, ITEMS.nitems?(0){|x| x < 'b'})
+    assert_equal(true,  ITEMS.nitems?(1){|x| x < 'b'})
+    assert_equal(false, ITEMS.nitems?(2){|x| x < 'b'})
+    assert_equal(false, ITEMS.nitems?(0){|x| x < 'c'})
+    assert_equal(false, ITEMS.nitems?(1){|x| x < 'c'})
+    assert_equal(true,  ITEMS.nitems?(2){|x| x < 'c'})
+  end
 
 
   def test_nitems_while  

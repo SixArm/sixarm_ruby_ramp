@@ -16,7 +16,8 @@ class KernelTest < Test::Unit::TestCase
   end
 
   def test_caller_method_name_with_index_1
-    assert_equal('__send__', caller_method_name(1))
+    method_name = RUBY_VERSION >= "1.9.0" ? "run" : "__send__"
+    assert_equal(method_name, caller_method_name(1))
   end
 
   def test_pp_s

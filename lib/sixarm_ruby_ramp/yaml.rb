@@ -7,7 +7,7 @@ require 'yaml'
 module YAML
 
 
-  # Specify one or more directory patterns and pass each YAML file in the matching directories to a block.
+  # Specify one or more directory patterns, load each file, and yield each YAML document to a block.
   #
   # @see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
   #
@@ -33,5 +33,27 @@ module YAML
       end #dir
     end #each
   end #def
+
+
+  # Specify one or more directory patterns, load each file, and yield each YAML key and its values to a block.
+  #
+  # @see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
+  #
+  # @example To load each key and its values, in files ending in ".yaml"
+  #   YAML.load_dir_key_values('/tmp/*.yaml'){|yaml_key,yaml_values|
+  #     #...whatever you want to do with each yaml key and its values
+  #   }
+  #
+  # @example To load documents in files beginning in "foo" or "bar" and get each key and its values:
+  #   YAML.load_dir_key_values('/tmp/foo*.yaml','/tmp/bar*.yaml','){|yaml_key,yaml_values|
+  #     #...whatever you want to do with each yaml key and its values
+  #   }
+  def YAML.load_dir_key_values(*dirpaths)
+    YAML.load_dir(dirpaths){|yaml|
+      yaml.keys.each{|key|
+        yield(key, yaml[key])
+      }
+    }
+  end
 
 end

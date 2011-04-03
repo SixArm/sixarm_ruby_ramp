@@ -31,17 +31,17 @@ class XMLTest < Test::Unit::TestCase
 
  def test_load_attributes
    dirpath=File.join(MYDIR,'xml_test_*.xml')
-   expect="xaxbxcxdxexf"
-   actual=''
-   XML.load_attributes(dirpath,'foo/bar'){|attributes| actual+=attributes.sort.to_s }
+   expect=[["x", "a"], ["x", "b"], ["x", "c"], ["x", "d"], ["x", "e"], ["x", "f"]]
+   actual=[]
+   XML.load_attributes(dirpath,'foo/bar'){|attributes| attributes.each_pair{|k,v| actual << [k,v.to_s] }}
    assert_equal(expect,actual,'XML.load_attributes')
  end
 
  def test_load_attributes_hash
    dirpath=File.join(MYDIR,'xml_test_*.xml')
-   expect="xaxbxcxdxexf"
-   actual=''
-   XML.load_attributes_hash(dirpath,'foo/bar'){|attributes_hash| actual+=attributes_hash.to_s }
+   expect=[{"x"=>"a"}, {"x"=>"b"}, {"x"=>"c"}, {"x"=>"d"}, {"x"=>"e"}, {"x"=>"f"}]
+   actual=[]
+   XML.load_attributes_hash(dirpath,'foo/bar'){|attributes_hash| actual << attributes_hash }
    assert_equal(expect,actual,'XML.load_attributes_hash')
  end
 

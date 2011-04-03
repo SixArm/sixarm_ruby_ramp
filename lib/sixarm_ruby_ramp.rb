@@ -62,6 +62,8 @@ Testing:
 * map_id: returns the id of an Enumerable object; *requires* that the object respond to an 'id' message
 * map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym: convert each object to a specific type by calling its respective method to_a, to_i, to_f, to_s, to_sym
 * map_with_index: for each item, yield to a block with the item and its incrementing index
+* mutex?: for each item, yield to a block and return true iff the result is mutually exclusive, i.e. is true exactly once.
+* nitems?: returns true iff the block is not false or nil exactly n times.
 * nitems_until, select_until: returns the number of, or an array containing, the leading elements for which block is false or nil.
 * nitems_while, select_while: returns the number of items, or an array containing the leading elements, for which block is not false or nil.
 * nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil. 
@@ -193,11 +195,15 @@ Extensions that help debug Ruby programs.
 
 == YAML
 
-* (class) load_dir: specify a one or more directory patterns and pass each YAML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
+* (class) load_dir: specify a one or more directory patterns, load each file, and yield each YAML document to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
+* (class) load_dir: specify a one or more directory patterns, load each file, and yield each YAML key and its values to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
 
 
 == Changes
 
+- 2.0.0 Upgrade to Ruby 1.9.2
+- 1.9.0 Add Enumerable#mutex? and #nitems?
+- 1.8.4 Add YAML#load_dir_key_values
 - 1.8.2 Refactored Numeric metric names into their own methods
 - 1.8.0 100% rcov coverage
 - 1.7.8 Add rcov testing

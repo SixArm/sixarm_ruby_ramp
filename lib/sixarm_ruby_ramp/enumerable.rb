@@ -299,11 +299,53 @@ module Enumerable
 
   ########################################################################
   #
+  #  mutually exclusive?
+  #  
+  ########################################################################
+
+  # @example
+  #   enum.mutex? {|obj| block}
+  #   => true iff block is not false or nil, zero or one time
+  #
+  # @return boolean true iff block is not false or nil, zero or one time 
+
+  def mutex?
+    num = 0
+    each{|item|
+      if yield(item)
+        num += 1
+        if num > 1 then return false end
+      end
+    }
+    return true
+  end
+
+
+  ########################################################################
+  #
   #  nitems
   #  
   ########################################################################
   
   
+  # @example
+  #   enum.nitems?(n) {| obj | block }
+  #    => true iff the block is not false or nil num times
+  # 
+  # @return [Boolean] true iff the block is not false or nil num times
+
+  def nitems?(n)
+    num = 0
+    each{|item|
+      if yield(item)
+        num+=1
+        if num > n then return false end
+      end
+    }
+    return num==n
+  end
+
+
   # @example
   #   enum.nitems_while {| obj | block }
   #    => number of items
