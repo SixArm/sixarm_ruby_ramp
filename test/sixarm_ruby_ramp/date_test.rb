@@ -56,33 +56,5 @@ class DateTest < Test::Unit::TestCase
   end
 
 
-  # for test_age_years and test_age_days
-  BIRTHDATE     = Date.new(1980,10,31)
-  VALENTINES    = Date.new(2008,02,14)
-  HALLOWEEN     = Date.new(2008,10,31)
-  NEW_YEARS_EVE = Date.new(2008,12,31)
-
-
-  def test_age_years
-    assert_equal(27,BIRTHDATE.age_years(VALENTINES),    '< birthday')
-    assert_equal(28,BIRTHDATE.age_years(HALLOWEEN),     '= birthday')
-    assert_equal(28,BIRTHDATE.age_years(NEW_YEARS_EVE), '> birthday')
-  end
-
-  def test_age_years_with_non_date
-    assert_raise(ArgumentError){ BIRTHDATE.age_years('') }
-  end
-
-  def test_age_days
-    assert_equal( 9967,BIRTHDATE.age_days(VALENTINES),     '< birthday')
-    assert_equal(10227,BIRTHDATE.age_days(HALLOWEEN),      '= birthday')
-    assert_equal(10288,BIRTHDATE.age_days(NEW_YEARS_EVE),  '> birthday')
-  end
-
-  def test_age_days_with_non_date
-    assert_raise(ArgumentError){ BIRTHDATE.age_days('') }
-  end
-
-
 end
 

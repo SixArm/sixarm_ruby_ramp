@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 =begin rdoc
 
 = SixArm.com » Ruby » Ramp gem is a toolkit of Ruby base class extensions
@@ -11,7 +12,7 @@ Ramp is a toolkit of simple methods to extend many Ruby language classes.
 
 It adds methods to Ruby's Array, Hash, Numeric, Object, YAML, and more.
 
-Testing: 
+Testing:
 <ul>
 <li>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 <li>The easy way to run the tests: gem install sixarm_ruby_ramp --test
@@ -49,7 +50,6 @@ Testing:
 
 == Date
 
-* age_days, age_years
 * between: a random date between two specified dates
 * to_sql: date as a string formatted as expected for MySQL
 * weekday?, weekend?: is date a weekday or on the weekend
@@ -68,7 +68,7 @@ Testing:
 * nitems?: returns true iff the block is not false or nil exactly n times.
 * nitems_until, select_until: returns the number of, or an array containing, the leading elements for which block is false or nil.
 * nitems_while, select_while: returns the number of items, or an array containing the leading elements, for which block is not false or nil.
-* nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil. 
+* nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil.
 * power_set: return an array with all subsets of the enum's elements
 
 
@@ -91,7 +91,7 @@ Testing:
 * each_pair!: passes each key value pair to a specified block and updates the hash in place if the key or value change.
 * each_value!: passes each value to a specified block and updates the hash in place if the value changes.
 * map_pair: map each key-value pair by calling a a block
-* pivot: aggregates subtotals by keys and values, such as a rollup and rolldown 
+* pivot: aggregates subtotals by keys and values, such as a rollup and rolldown
 * to_yaml_sort: returns a YAML object, sorted by field name
 
 
@@ -103,7 +103,7 @@ Testing:
 
 == IO
 
-* readrow: reads a row line as with IO#readline, and return the row split it into fields 
+* readrow: reads a row line as with IO#readline, and return the row split it into fields
 * IO.readrows: reads the entire file specified by name as individual row lines, and returns those rows split into fields, in an array of arrays.
 
 
@@ -203,6 +203,10 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 2.0.7 Move YAML#load_xxx methods to new gem
+- 2.0.6 Move Date#age_xxx methods to new gem
+- 2.0.5 Move String#to_class to new gem
+- 2.0.4 Add lib to path
 - 2.0.0 Upgrade to Ruby 1.9.2
 - 1.9.0 Add Enumerable#mutex? and #nitems?
 - 1.8.4 Add YAML#load_dir_key_values
@@ -214,12 +218,12 @@ Extensions that help debug Ruby programs.
 - 1.7.2 Gemcutter update
 - 1.7.1.8 Add Enumerable#map_with_index
 - 1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
-- 1.7.1.3 Add XML#strip_xxx 
+- 1.7.1.3 Add XML#strip_xxx
 - 1.7.1.2 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
 - 1.7.1.0 Add XML attributes methods #
 - 1.7.0.9 Add Enumerable #hash_by, #index_by
 - 1.7.0.7 Add Array#to_tsv, String#split_tsv, improve Array#to_csv
-- 1.7.0.6 Add Array#shuffle, Array#shuffle! 
+- 1.7.0.6 Add Array#shuffle, Array#shuffle!
 - 1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
 - 1.7.0.4 Upgrade IO#readrows and #readrow to use options
 - 1.7.0.2 Add Array#to_tdf
@@ -246,7 +250,7 @@ Extensions that help debug Ruby programs.
 - 1.6.2 Improve organizaiton of class files to lib/ramp
 - 1.6.0 Upgraded to work with Ruby 1.9.1
 - 1.5.0 Combined all Ruby extension files into one gem
-- 1.0.0 Original 
+- 1.0.0 Original
 
 =end
 

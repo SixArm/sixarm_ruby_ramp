@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.name              = NAME
   s.summary           = "SixArm.com » Ruby » Ramp gem provides base extensions to ruby classes and rails classes."
-  s.version           = "2.0.2"
+  s.version           = "2.0.6"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
   s.homepage          = "http://sixarm.com/"
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_path      = 'lib'
   s.has_rdoc          = true
 
-  s.files             = [".gemtest","Rakefile","README.rdoc","LICENSE.txt"]
+  s.files             = [".gemtest","Rakefile","README.rdoc","LICENSE.txt"] +
                         ["lib/#{NAME}.rb"] + SOURCES.map{|x| "lib/#{NAME}/#{x}.rb"} +
                         ["test/#{NAME}.rb"] + TESTERS.map{|x| "test/#{NAME}/#{x}"}
   s.test_files        = SOURCES.map{|x| "test/#{NAME}/#{x}_test.rb"}
