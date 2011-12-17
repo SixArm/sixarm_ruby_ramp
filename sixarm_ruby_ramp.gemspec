@@ -1,12 +1,11 @@
 Gem::Specification.new do |s|
 
-  NAME                = "sixarm_ruby_ramp"
   SOURCES             = ['array','class','csv','date','enumerable','file','fixnum','hash','integer','io','kernel','math','nil','numeric','object','process','string','symbol','time','xml','yaml']
-  TESTERS             = ['io_test.txt','xml_test_msword_clean.html','xml_test_msword_dirty.html','xml_test_1.xml','xml_test_2.xml','yaml_test_1.yml','yaml_test_2.yml']
+  TESTERS             = ['io_test.txt','xml_test_msword_clean.html','xml_test_msword_dirty.html','xml_test_1.xml','xml_test_2.xml']
 
-  s.name              = NAME
+  s.name              = "sixarm_ruby_ramp"
   s.summary           = "SixArm.com » Ruby » Ramp gem provides base extensions to ruby classes and rails classes."
-  s.version           = "2.0.6"
+  s.version           = "2.1.0"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
   s.homepage          = "http://sixarm.com/"
@@ -17,9 +16,11 @@ Gem::Specification.new do |s|
   s.require_path      = 'lib'
   s.has_rdoc          = true
 
-  s.files             = [".gemtest","Rakefile","README.rdoc","LICENSE.txt"] +
-                        ["lib/#{NAME}.rb"] + SOURCES.map{|x| "lib/#{NAME}/#{x}.rb"} +
-                        ["test/#{NAME}.rb"] + TESTERS.map{|x| "test/#{NAME}/#{x}"}
-  s.test_files        = SOURCES.map{|x| "test/#{NAME}/#{x}_test.rb"}
+  top_files           = [".gemtest", "CHANGELOG.txt", "INSTALL.txt", "LICENSE.txt", "Rakefile", "README.rdoc", "VERSION"]
+  lib_files           = ["lib/#{s.name}.rb"] + SOURCES.map{|x| "lib/#{s.name}/#{x}.rb"}
+  test_files          = ["test/#{s.name}_test.rb"] + TESTERS.map{|x| "test/#{s.name}/#{x}"}
+
+  s.files             = top_files + lib_files + test_files
+  s.test_files        = test_files
 
 end

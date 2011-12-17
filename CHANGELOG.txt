@@ -1,4 +1,4 @@
-2.1.0 Spring cleaning for Ruby 1.9.3 with better README, new CHANGELOG, etc.
+2.1.0 Spring cleaning for Ruby 1.9.3 with better README, new CHANGELOG, less YAML, etc.
 2.0.9 Remove Hash#to_yaml_sort and replace its functionality with Hash#sort_by_keys
 2.0.8 Add Numeric#percent
 2.0.7 Move YAML#load_xxx methods to new gem
