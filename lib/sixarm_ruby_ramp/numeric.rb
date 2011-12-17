@@ -28,4 +28,17 @@ class Numeric
  end
 
 
+ # @return self as a percent, i.e. * 100 then call round.
+ #
+ # @example
+ #   x = 0.12345
+ #   x.percent => 12
+ #   x.percent(1) => 12.3
+ #   x.percent(2) => 12.34
+ #   x.percent(-1) => 10
+
+ def percent(ndigits=0)
+  (self * 100).round(ndigits)
+ end
+
 end

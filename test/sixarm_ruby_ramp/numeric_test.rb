@@ -24,6 +24,26 @@ class NumericTest < Test::Unit::TestCase
     assert_equal(5,5.unless(false))
   end
 
+
+  def test_percent_with_ndigits_default
+    assert_equal(12, (0.1234).percent)
+  end
+
+
+  def test_percent_with_ndigits_zero
+    assert_equal(12, (0.1234).percent(0))
+  end
+
+
+  def test_percent_with_ndigits_positive
+    assert_equal(12.3, (0.1234).percent(1))
+  end
+
+
+  def test_percent_with_ndigits_negative
+    assert_equal(10, (0.1234).percent(-1))
+  end
+
   
 end
 
