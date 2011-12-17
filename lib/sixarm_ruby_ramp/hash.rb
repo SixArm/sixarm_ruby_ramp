@@ -13,7 +13,17 @@ class Hash
     size>0
   end
 
+  # @return [Hash] a new hash sorted by the keys
+  #
+  # @example
+  #    h = {"c" => "cherry", "b" => "banana", "a" =>"apple" }
+  #    h.sort_keys => {"a" => "apple", "b" => "banana", "c" => "cherry"}
 
+  def sort_by_keys
+    Hash[sort]
+  end
+
+  
   # Calls block once for each key in hsh, passing the key and value to the block as a two-element array.
   #
   # The keys are sorted.
@@ -127,26 +137,6 @@ class Hash
 
   def map_pair
     keys.map{|key| yield key, self[key] }
-  end
-
-
-  # Hash#to_yaml with sort 
-  #
-  # From http://snippets.dzone.com/tag/yaml
-  #
-  # @example
-  #   h = {"a"=>"b", "c"=>"d", "e"=>"f" }
-  #   h.to_yaml_sort
-  #   => "--- \na: b\nc: d\ne: f\n"
-
-  def to_yaml_sort( opts = {} )
-    YAML::quick_emit( object_id, opts ) do |out|
-      out.map( taguri, to_yaml_style ) do |map|
-        sort.each do |key, val|   # <-- here's my addition (the 'sort')
-	  map.add(key, val)
-        end
-      end
-    end
   end
 
 

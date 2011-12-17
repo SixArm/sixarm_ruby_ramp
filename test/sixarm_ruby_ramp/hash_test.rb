@@ -17,6 +17,12 @@ class HashTest < Test::Unit::TestCase
   end
 
 
+  def test_sort_by_keys
+    h = {'c' => 'z', 'b' => 'y', 'a' => 'x'}
+    assert_equal({'a' => 'x', 'b' => 'y', 'c' => 'z'}, h.sort_by_keys)
+  end
+
+
   def test_each_sort
     out = []
     h = {'c' => 'z', 'b' => 'y', 'a' => 'x'}
@@ -113,12 +119,6 @@ class HashTest < Test::Unit::TestCase
   end
    
 
-  def test_to_yaml_sort
-    h = {"a"=>"b", "c"=>"d", "e"=>"f" }
-    assert_equal("--- \na: b\nc: d\ne: f\n", h.to_yaml_sort)
-  end
-
-    
   def pivotable
     h=Hash.new
     h['a']=Hash.new
