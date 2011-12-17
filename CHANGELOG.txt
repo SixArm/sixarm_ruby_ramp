@@ -1,0 +1,51 @@
+2.1.0 Spring cleaning for Ruby 1.9.3 with better README, new CHANGELOG, etc.
+2.0.9 Remove Hash#to_yaml_sort and replace its functionality with Hash#sort_by_keys
+2.0.8 Add Numeric#percent
+2.0.7 Move YAML#load_xxx methods to new gem
+2.0.6 Move Date#age_xxx methods to new gem
+2.0.5 Move String#to_class to new gem
+2.0.4 Add lib to path
+2.0.0 Upgrade to Ruby 1.9.2
+1.9.0 Add Enumerable#mutex? and #nitems?
+1.8.4 Add YAML#load_dir_key_values
+1.8.2 Refactored Numeric metric names into their own methods
+1.8.0 100% rcov coverage
+1.7.8 Add rcov testing
+1.7.4 Add Class#publicize_methods, Integer#even?, Integer#odd?
+1.7.3 Refactor Rails classes to their own gem, add README, LICENSE
+1.7.2 Gemcutter update
+1.7.1.8 Add Enumerable#map_with_index
+1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
+1.7.1.3 Add XML#strip_xxx
+1.7.1.2 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
+1.7.1.0 Add XML attributes methods #
+1.7.0.9 Add Enumerable #hash_by, #index_by
+1.7.0.7 Add Array#to_tsv, String#split_tsv, improve Array#to_csv
+1.7.0.6 Add Array#shuffle, Array#shuffle!
+1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
+1.7.0.4 Upgrade IO#readrows and #readrow to use options
+1.7.0.2 Add Array#to_tdf
+1.7.0.1 Remove sqlite3 testing dependency
+1.6.9.6 Add Symbol with comparable and <=>
+1.6.9.5 Add ActiveRecord testing with sqlite3
+1.6.9.4 JRuby install and test successful
+1.6.9.3 Array#join add infix, prefix, suffix
+1.6.9.2 Improve ri docs
+1.6.9.1 Add Array#onto, Enumerable#intersect?
+1.6.9.0 Add IO, File, ActiveRecord#seed
+1.6.8.9 Add Enumerable#to_h, Array#hash, Hash#each_key!, Hash#each_pair, Hash#each_value!
+1.6.8.8 Add Hash#map_pair, Hash#size?, Hash#pivot
+1.6.8.7 Add Math
+1.6.8.6 Add ActiveRecord SchemaStatements
+1.6.8.5 Add Integer#maps, String#ACCENTS
+1.6.8.4 Add XML
+1.6.8.3 Add ActiveRecord
+1.6.8.2 Add String#lowcase
+1.6.8 Add map_to_xxx methods
+1.6.7 Add CSV
+1.6.6 Add Array#to_csv, Integer, String#lorem, etc., improve tests
+1.6.4 Bug fixes: String characters and YAML test files
+1.6.2 Improve organizaiton of class files to lib/ramp
+1.6.0 Upgraded to work with Ruby 1.9.1
+1.5.0 Combined all Ruby extension files into one gem
+1.0.0 Original
