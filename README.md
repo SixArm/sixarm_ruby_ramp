@@ -1,15 +1,16 @@
 = SixArm.com » Ruby » Ramp gem is a toolkit of Ruby base class extensions
 
-Author:: Joel Parker Henderson, joel@joelparkerhenderson.com
+Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
 Copyright:: Copyright (c) 2006-2011 Joel Parker Henderson
 License:: See LICENSE.txt file
 
 Ramp is a library of extensions to Ruby base classes, including Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
 
 Testing: 
-
-* Each has an associated test class, e.g., ArrayTest, DateTest, etc.
-* The easy way to run the tests: gem install sixarm_ruby_ramp --test
+<ul>
+<li>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
+<li>The easy way to run the tests: gem install sixarm_ruby_ramp --test
+</ul>
 
 
 == Array
@@ -55,12 +56,12 @@ Testing:
 * hash_by: convert the array to a hash by mapping each item to a key=>value pair.
 * index_by: convert the array to a hash by mapping each ite to a key=>item pair.
 * join: forwards to self.to_a.join
-* map_id: return the id of an Enumerable object; *requires* that the object respond to an 'id' message
+* map_id: returns the id of an Enumerable object; *requires* that the object respond to an 'id' message
 * map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym: convert each object to a specific type by calling its respective method to_a, to_i, to_f, to_s, to_sym
 * map_with_index: for each item, yield to a block with the item and its incrementing index
-* nitems_until, select_until: return the number of, or an array containing, the leading elements for which block is false or nil.
-* nitems_while, select_while: return the number of items, or an array containing the leading elements, for which block is not false or nil.
-* nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Return the number of, or an array containing, the leading elements for which block is not false or nil. 
+* nitems_until, select_until: returns the number of, or an array containing, the leading elements for which block is false or nil.
+* nitems_while, select_while: returns the number of items, or an array containing the leading elements, for which block is not false or nil.
+* nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil. 
 * power_set: return an array with all subsets of the enum's elements
 
 
@@ -78,13 +79,13 @@ Testing:
 == Hash
 
 * size?: return true if hash has any keys
-* sort_by_keys: return a new Hash sorted by keys
 * each_sort: sort the keys then call each
 * each_key!: passes each key to a specified block and updates hash in place if the key changes
 * each_pair!: passes each key value pair to a specified block and updates the hash in place if the key or value change.
 * each_value!: passes each value to a specified block and updates the hash in place if the value changes.
 * map_pair: map each key-value pair by calling a a block
 * pivot: aggregates subtotals by keys and values, such as a rollup and rolldown 
+* to_yaml_sort: returns a YAML object, sorted by field name
 
 
 == Integer
@@ -96,13 +97,13 @@ Testing:
 == IO
 
 * readrow: reads a row line as with IO#readline, and return the row split it into fields 
-* IO.readrows: reads the entire file specified by name as individual row lines, and return those rows split into fields, in an array of arrays.
+* IO.readrows: reads the entire file specified by name as individual row lines, and returns those rows split into fields, in an array of arrays.
 
 
 == Kernel
 
-* my_method_name: return the name of the current method
-* caller_method_name: return the name of the caller method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
+* my_method_name: returns the name of the current method
+* caller_method_name: returns the name of the caller method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
 
 
 == Math
@@ -118,14 +119,13 @@ Testing:
 
 == Numeric
 
-* if: return 0 if the passed flag is any of: nil, false, 0, [], {} and otherwise return self
-* unless: return 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise return self
-* percent: return the number as a percentage with optional rounding to decimal points
+* if: returns 0 if the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
+* unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
 
 
 == Object
 
-* in?: return boolean indicating whether the object is a member of the specified array parameter
+* in?: returns boolean indicating whether the object is a member of the specified array parameter
 
 
 == Process
@@ -160,7 +160,7 @@ Extensions that help debug Ruby programs.
 * lowcase: translate a string to lowercase, digits and single underscores (e.g. to a method name)
 * prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
 * prev!/pred!: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
-* (class) prev_char/pred_char: return the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
+* (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
 * split_tab: split the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
 * split_tsv: split the string into an array at each embedded newline and embedded tab ("A\tB\t\C\nD\tE\tF" => [["A","B","C"],["D","E","F"]])
 * to_class: the global class reference of a given string
