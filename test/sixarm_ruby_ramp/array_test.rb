@@ -8,7 +8,6 @@ class ArrayTest < Test::Unit::TestCase
 
   A=['a','b','c','d']
   B=['w','x','y','z']
-  SLICEABLE=['a','b','c','d','e','f','g','h']
 
   def test_join_with_blank
     assert_equal('abcd', A.join(''))
@@ -100,60 +99,6 @@ class ArrayTest < Test::Unit::TestCase
 
  def test_onto_with_empty
    assert_raise(ArgumentError){ A.onto([]) }
- end
-
- def test_slices_with_balanced_results
-   assert_equal([['a','b'],['c','d'],['e','f'],['g','h']], SLICEABLE.slices(2))
-   assert_equal([['a','b','c','d'],['e','f','g','h']], SLICEABLE.slices(4))
- end
-
- def test_slices_with_unbalanced_results
-   assert_equal([['a','b','c'],['d','e','f'],['g','h']], SLICEABLE.slices(3))
-   assert_equal([['a','b','c','d','e'],['f','g','h']], SLICEABLE.slices(5))
- end
-
- def test_slices_with_empty
-   assert_equal([],[].slices(1))
- end
- 
- def test_slices_with_negative_count
-   assert_raise(ArgumentError){ [].slices(-1) }
- end
-
- def test_slices_with_non_integer_count
-   assert_raise(ArgumentError){ [].slices(0.123) }
- end
-
- def test_slices_with_non_numeric_count
-   assert_raise(ArgumentError){ [].slices("") }
- end
-
- def test_divvy_with_one_slice
-   assert_equal([[1,2,3,4,5,6]],[1,2,3,4,5,6].divvy(1))
- end
-
- def test_divvy_with_equal_slices
-   assert_equal([[1,2,3],[4,5]],[1,2,3,4,5].divvy(2))
- end
-
- def test_divvy_with_remainer_slice
-   assert_equal([[1,2,3],[4,5,6],[7]],[1,2,3,4,5,6,7].divvy(3))
- end
-
- def test_divvy_with_small_number
-   assert_equal([[1,2],[3,4],[5,6]],[1,2,3,4,5,6].divvy(4))
- end
-
- def test_divvy_with_negative_count
-   assert_raise(ArgumentError){ [].divvy(-1) }
- end
-
- def test_divvy_with_non_integer_count
-   assert_raise(ArgumentError){ [].divvy(0.123) }
- end
-
- def test_divvy_with_non_numeric_count
-   assert_raise(ArgumentError){ [].divvy("") }
  end
 
  def test_union

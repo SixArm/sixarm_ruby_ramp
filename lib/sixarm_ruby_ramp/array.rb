@@ -127,59 +127,11 @@ class Array
   #
   ##############################################################
 
+  # Slice the array. Deprecated-- moved to sixarm_ruby_array_slice gem #Array#slice_by_size.
+  alias :slices :slice_by_size
 
-  # Slice the array.
-  #
-  # @return [Array<Array<Object>>] items in groups of _n_ items (aka slices)
-  #
-  # @example
-  #   [1,2,3,4,5,6,7,8].slices(2) => [[1,2],[3,4],[5,6],[7,8]]
-  #   [1,2,3,4,5,6,7,8].slices(4) => [[1,2,3,4],[5,6,7,8]]
-  #
-  # If the slices don't divide evenly, then the last is smaller.
-  #
-  # @example
-  #   [1,2,3,4,5,6,7,8].slices(3) => [[1,2,3],[4,5,6],[7,8]] 
-  #   [1,2,3,4,5,6,7,8].slices(5) => [[1,2,3,4,5],[6,7,8]] 
-
-  def slices(slice_length)
-    (slice_length.is_a? Integer) or (raise ArgumentError, "slice_length must be an integer")
-    (slice_length > 0) or (raise ArgumentError, "slice_length must be > 0")
-    arr=[]
-    index=0
-    while index<length
-      arr.push self[index...(index+slice_length)]
-      index+=slice_length
-    end
-    return arr
-  end
-
-
-  # Divvy the array, like a pie, into _n_ number of slices.
-  #
-  # @return [Array<Array<Object>>] items grouped into _n_ slices
-  #
-  # If the array divides evenly, then each slice has size/n items.
-  #
-  # Otherwise, divvy makes a best attempt by rounding up to give
-  # earlier slices one more item, which makes the last slice smaller:
-  #
-  # @example
-  #   [1,2,3,4,5].divvy(2) => [[1,2,3],[4,5]]
-  #   [1,2,3,4,5,6,7].divvy(3) => [[1,2,3],[4,5,6],[7]]
-  #
-  # If the array size so small compared to _n_ that there is
-  # no mathematical way to _n_ slices, then divvy will return
-  # as many slices as it can.
-  #
-  # @example
-  #   [1,2,3,4,5,6].divvy(4) => [[1,2],[3,4],[5,6]]
-
-  def divvy(number_of_slices)
-    (number_of_slices.is_a? Integer) or (raise ArgumentError, "number_of_slices must be an integer")
-    (number_of_slices > 0) or (raise ArgumentError, "number_of_slices must be > 0")
-    return slices((length.to_f/number_of_slices.to_f).ceil)
-  end
+  # Divvy the array. Deprecated-- moved to sixarm_ruby_array_slice gem Array#slice_by_share.
+  alias :divvy :slice_by_share
 
 
   ##############################################################

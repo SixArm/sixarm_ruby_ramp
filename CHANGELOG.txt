@@ -1,3 +1,4 @@
+2.1.2 Refactor Array#slices and #divvy to sixarm_ruby_array_slice gem with better method names.
 2.1.0 Spring cleaning for Ruby 1.9.3 with better README, new CHANGELOG, less YAML, etc.
 2.0.9 Remove Hash#to_yaml_sort and replace its functionality with Hash#sort_by_keys
 2.0.8 Add Numeric#percent
