@@ -1,0 +1,1869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Array
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (A)</a> &raquo; 
+    
+    
+    <span class="title">Array</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Array
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Array</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/sixarm_ruby_ramp/array.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Array extensions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#choice-instance_method" title="#choice (instance method)">- (Object) <strong>choice</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Implemented in Ruby 1.9.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#choices-instance_method" title="#choices (instance method)">- (Array) <strong>choices</strong>(count) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new array filled with <em>count</em> calls to choice.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#divvy-instance_method" title="#divvy (instance method)">- (Array&lt;Array&lt;Object&gt;&gt;) <strong>divvy</strong>(number_of_slices) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Divvy the array, like a pie, into <em>n</em> number of slices.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#intersect-instance_method" title="#intersect (instance method)">- (Array) <strong>intersect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>In typical usage, each item is an array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#join-instance_method" title="#join (instance method)">- (String) <strong>join</strong>(*fixes) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Concatenate the items into a string by join.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#onto-instance_method" title="#onto (instance method)">- (Hash) <strong>onto</strong>(values) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This is identical to calling foo.zip(values).to_h.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rotate%21-instance_method" title="#rotate! (instance method)">- (Array) <strong>rotate!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Move the first item to the last by using Array#shift and Array#push.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ruby_join-instance_method" title="#ruby_join (instance method)">- (Object) <strong>ruby_join</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Alias join because we're going to override it.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shifted-instance_method" title="#shifted (instance method)">- (Array) <strong>shifted</strong>(number_of_items = 1) </a>
+    
+
+    
+      (also: #cdr, #rest)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Ruby programmers may prefer this alias wording:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shifted%21-instance_method" title="#shifted! (instance method)">- (Array) <strong>shifted!</strong>(number_of_items = 1) </a>
+    
+
+    
+      (also: #cdr!, #rest!)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete the first <em>number_of_items</em> items.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shuffle-instance_method" title="#shuffle (instance method)">- (Array) <strong>shuffle</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This implementation is optimized for speed, not for memory use.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shuffle%21-instance_method" title="#shuffle! (instance method)">- (Array) <strong>shuffle!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Randomly arrange the array items.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#size%3F-instance_method" title="#size? (instance method)">- (Boolean) <strong>size?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>True if size &gt; 0.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#slices-instance_method" title="#slices (instance method)">- (Array&lt;Array&lt;Object&gt;&gt;) <strong>slices</strong>(slice_length) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Slice the array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_csv-instance_method" title="#to_csv (instance method)">- (String) <strong>to_csv</strong>(ops = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>N.b.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_tsv-instance_method" title="#to_tsv (instance method)">- (String) <strong>to_tsv</strong>(ops = {}) </a>
+    
+
+    
+      (also: #to_tdf)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Each subarray becomes one 'line' in the output.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#union-instance_method" title="#union (instance method)">- (Array) <strong>union</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>In typical use, each item is an array.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="choice-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>choice</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Implemented in Ruby 1.9</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3,4].choice =&gt; 2
+[1,2,3,4].choice =&gt; 4
+[1,2,3,4].choice =&gt; 3</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a random item from the array</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_choice'>choice</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='const'>Kernel</span><span class='period'>.</span><span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="choices-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>) <strong>choices</strong>(count) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>A new array filled with <em>count</em> calls to choice</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3,4].choices(2) =&gt; [3,1]
+[1,2,3,4].choices(3) =&gt; [4,2,3]</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a new array filled with <em>count</em> calls to choice</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 101</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_choices'>choices</span><span class='lparen'>(</span><span class='id identifier rubyid_count'>count</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_arr'>arr</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_count'>count</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_arr'>arr</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_choice'>choice</span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_arr'>arr</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="divvy-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;&gt;</tt>) <strong>divvy</strong>(number_of_slices) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Divvy the array, like a pie, into <em>n</em> number of slices.</p>
+
+<p>If the array divides evenly, then each slice has size/n items.</p>
+
+<p>Otherwise, divvy makes a best attempt by rounding up to give earlier slices
+one more item, which makes the last slice smaller:</p>
+
+<p>If the array size so small compared to <em>n</em> that there is no
+mathematical way to <em>n</em> slices, then divvy will return as many
+slices as it can.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3,4,5].divvy(2) =&gt; [[1,2,3],[4,5]]
+[1,2,3,4,5,6,7].divvy(3) =&gt; [[1,2,3],[4,5,6],[7]]</pre>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3,4,5,6].divvy(4) =&gt; [[1,2],[3,4],[5,6]]</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>items grouped into <em>n</em> slices</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 178</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_divvy'>divvy</span><span class='lparen'>(</span><span class='id identifier rubyid_number_of_slices'>number_of_slices</span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_number_of_slices'>number_of_slices</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Integer</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number_of_slices must be an integer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_number_of_slices'>number_of_slices</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number_of_slices must be &gt; 0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_slices'>slices</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_length'>length</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='op'>/</span><span class='id identifier rubyid_number_of_slices'>number_of_slices</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_ceil'>ceil</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="intersect-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>) <strong>intersect</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>In typical usage, each item is an array.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">arr=[[1,2,3,4],[3,4,5,6]]
+arr.intersect
+=&gt; [3,4]</pre>
+    
+      <h4><div class='inline'>
+<p>with proc</p>
+</div></h4>
+      <pre class="example code">arr.map(&amp;:foo).intersect
+=&gt; foos that are in all of the array items</pre>
+    
+      <h4><div class='inline'>
+<p>with nil</p>
+</div></h4>
+      <pre class="example code">[].intersect =&gt; []</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the intersection of the array’s items.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_intersect'>intersect</span>
+  <span class='id identifier rubyid_inject'>inject</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_inj'>inj</span><span class='comma'>,</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_inj'>inj</span> <span class='op'>&amp;</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='rbrace'>}</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="join-instance_method">
+  
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>join</strong>(*fixes) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Concatenate the items into a string by join.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>Typical Array#join with infix</p>
+</div></h4>
+      <pre class="example code">list=['a','b','c']
+list.join(&quot;*&quot;) =&gt; &quot;a*b*c&quot;</pre>
+    
+      <h4><div class='inline'>
+<p>Improved join with infix, prefix, suffix</p>
+</div></h4>
+      <pre class="example code">list=['a','b','c']
+list.join(&quot;*&quot;,&quot;[&quot;,&quot;]&quot;) =&gt; &quot;[a]*[b]*[c]&quot;</pre>
+    
+      <h4><div class='inline'>
+<p>Improved join with just prefix and suffix</p>
+</div></h4>
+      <pre class="example code">list=['a','b','c']
+list.join(&quot;[&quot;,&quot;]&quot;) =&gt; &quot;[a][b][c]&quot;</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>concatenated string</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_fixes'>fixes</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_fixes'>fixes</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ruby_join'>ruby_join</span><span class='lparen'>(</span><span class='id identifier rubyid_fixes'>fixes</span><span class='rparen'>)</span> <span class='kw'>end</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_fixes'>fixes</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+  <span class='kw'>when</span> <span class='int'>0</span>
+    <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ruby_join'>ruby_join</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>1</span>
+    <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ruby_join'>ruby_join</span><span class='lparen'>(</span><span class='id identifier rubyid_fixes'>fixes</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>2</span>
+    <span class='id identifier rubyid_prefix'>prefix</span><span class='op'>=</span><span class='id identifier rubyid_fixes'>fixes</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_suffix'>suffix</span><span class='op'>=</span><span class='id identifier rubyid_fixes'>fixes</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_prefix'>prefix</span> <span class='op'>+</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='id identifier rubyid_suffix'>suffix</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_ruby_join'>ruby_join</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>3</span>
+    <span class='id identifier rubyid_infix'>infix</span> <span class='op'>=</span><span class='id identifier rubyid_fixes'>fixes</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_prefix'>prefix</span><span class='op'>=</span><span class='id identifier rubyid_fixes'>fixes</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_suffix'>suffix</span><span class='op'>=</span><span class='id identifier rubyid_fixes'>fixes</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_prefix'>prefix</span> <span class='op'>+</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='id identifier rubyid_suffix'>suffix</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_ruby_join'>ruby_join</span><span class='lparen'>(</span><span class='id identifier rubyid_infix'>infix</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>join() takes 0-3 arguments; you gave </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_fixes'>fixes</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="onto-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></tt>) <strong>onto</strong>(values) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>This is identical to calling foo.zip(values).to_h</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">foo=[:a,:b,:c]
+goo=[:x,:y,:z]
+foo.onto(goo) =&gt; {:a=&gt;:x, :b=&gt;:y, :c=&gt;:z}</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a hash of this array’s items as keys, mapped onto another array’s items as
+values.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_onto'>onto</span><span class='lparen'>(</span><span class='id identifier rubyid_values'>values</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_size'>size</span><span class='op'>==</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='kw'>or</span> <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Array size </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_content'> must match values size </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_size'>size</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> 
+  <span class='id identifier rubyid_zip'>zip</span><span class='lparen'>(</span><span class='id identifier rubyid_values'>values</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="rotate!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>) <strong>rotate!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Move the first item to the last by using Array#shift and Array#push</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3,4].rotate! =&gt; [2,3,4,1]
+['a','b','c'].rotate! =&gt; ['b','c','a']
+[].rotate! =&gt; []</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>self</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rotate!'>rotate!</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_size'>size</span><span class='op'>&gt;</span><span class='int'>0</span>
+    <span class='id identifier rubyid_push'>push</span> <span class='id identifier rubyid_item'>item</span><span class='op'>=</span><span class='id identifier rubyid_shift'>shift</span>
+  <span class='kw'>end</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="ruby_join-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>ruby_join</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Alias join because we're going to override it</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 12</span>
+
+<span class='kw'>alias</span> <span class='symbol'>:ruby_join</span> <span class='symbol'>:join</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shifted-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>) <strong>shifted</strong>(number_of_items = 1) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='cdr-instance_method'>cdr</span>, <span id='rest-instance_method'>rest</span></span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Ruby programmers may prefer this alias wording:</p>
+
+<pre class="code">list.first =&gt; 'a'
+list.rest =&gt; ['b','c']</pre>
+
+<p>LISP programmers may prefer this alias wording:</p>
+
+<pre class="code">list.car =&gt; 'a'
+list.cdr =&gt; ['b','c']</pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">list=['a','b','c']
+list.shift =&gt; 'a'
+list.shifted =&gt; ['b','c']</pre>
+    
+      <h4><div class='inline'>
+<p>with length</p>
+</div></h4>
+      <pre class="example code">list.shifted(0) =&gt; ['a','b','c']
+list.shifted(1) =&gt; ['b','c']
+list.shifted(2) =&gt; ['c']
+list.shifted(3) =&gt; []</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the rest of the items of self, after a shift.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+262
+263
+264
+265
+266</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 262</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shifted'>shifted</span><span class='lparen'>(</span><span class='id identifier rubyid_number_of_items'>number_of_items</span><span class='op'>=</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_number_of_items'>number_of_items</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Integer</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number_of_items must be an integer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_number_of_items'>number_of_items</span> <span class='op'>&gt;=</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number_of_items must be &gt;= 0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='id identifier rubyid_number_of_items'>number_of_items</span><span class='comma'>,</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='id identifier rubyid_number_of_items'>number_of_items</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shifted!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>) <strong>shifted!</strong>(number_of_items = 1) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='cdr!-instance_method'>cdr!</span>, <span id='rest!-instance_method'>rest!</span></span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete the first <em>number_of_items</em> items.</p>
+
+<p>If <em>n</em> is greater than the array size, then return []</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">list=['a','b','c']
+list.shifted!
+list =&gt; ['b','c']</pre>
+    
+      <h4><div class='inline'>
+<p>with length:</p>
+</div></h4>
+      <pre class="example code">list=['a','b','c']
+list.shifted!(2)
+list =&gt; ['c']</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the array, minus the deleted items.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+289
+290
+291
+292
+293
+294</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 289</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shifted!'>shifted!</span><span class='lparen'>(</span><span class='id identifier rubyid_number_of_items'>number_of_items</span><span class='op'>=</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_number_of_items'>number_of_items</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Integer</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number_of_items must be an integer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_number_of_items'>number_of_items</span> <span class='op'>&gt;=</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>number_of_items must be &gt;= 0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_slice!'>slice!</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span><span class='id identifier rubyid_number_of_items'>number_of_items</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shuffle-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>) <strong>shuffle</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>This implementation is optimized for speed, not for memory use. See <a
+href="http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array">codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array</a>/</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">list=
+list=['a','b','c']
+list.shuffle!
+list =&gt; ['c','a','b']</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a new array with the items shuffled.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+332
+333
+334</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 332</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shuffle'>shuffle</span>  
+  <span class='id identifier rubyid_dup'>dup</span><span class='period'>.</span><span class='id identifier rubyid_shuffle!'>shuffle!</span>  
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shuffle!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>) <strong>shuffle!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Randomly arrange the array items.</p>
+
+<p>This implementation is optimized for speed, not for memory use. See <a
+href="http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array">codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array</a>/</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">list=
+list=['a','b','c']
+list.shuffle!
+list =&gt; ['c','a','b']</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the array, with its items shuffled.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+313
+314
+315
+316
+317
+318</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 313</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shuffle!'>shuffle!</span>  
+  <span class='id identifier rubyid_each_index'>each_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> 
+    <span class='id identifier rubyid_j'>j</span> <span class='op'>=</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='id identifier rubyid_i'>i</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_i'>i</span>
+    <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_j'>j</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_j'>j</span><span class='rbracket'>]</span>  
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="size?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>size?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>True if size &gt; 0</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3].size? =&gt; true
+[].size? =&gt; false</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true if size &gt; 0</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_size?'>size?</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_size'>size</span><span class='op'>&gt;</span><span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="slices-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;&gt;</tt>) <strong>slices</strong>(slice_length) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Slice the array.</p>
+
+<p>If the slices don't divide evenly, then the last is smaller.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3,4,5,6,7,8].slices(2) =&gt; [[1,2],[3,4],[5,6],[7,8]]
+[1,2,3,4,5,6,7,8].slices(4) =&gt; [[1,2,3,4],[5,6,7,8]]</pre>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code">[1,2,3,4,5,6,7,8].slices(3) =&gt; [[1,2,3],[4,5,6],[7,8]] 
+[1,2,3,4,5,6,7,8].slices(5) =&gt; [[1,2,3,4,5],[6,7,8]] </pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>items in groups of <em>n</em> items (aka slices)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_slices'>slices</span><span class='lparen'>(</span><span class='id identifier rubyid_slice_length'>slice_length</span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_slice_length'>slice_length</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Integer</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>slice_length must be an integer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_slice_length'>slice_length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>slice_length must be &gt; 0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_arr'>arr</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_index'>index</span><span class='op'>=</span><span class='int'>0</span>
+  <span class='kw'>while</span> <span class='id identifier rubyid_index'>index</span><span class='op'>&lt;</span><span class='id identifier rubyid_length'>length</span>
+    <span class='id identifier rubyid_arr'>arr</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='op'>...</span><span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='op'>+</span><span class='id identifier rubyid_slice_length'>slice_length</span><span class='rparen'>)</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_index'>index</span><span class='op'>+=</span><span class='id identifier rubyid_slice_length'>slice_length</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_arr'>arr</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_csv-instance_method">
+  
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_csv</strong>(ops = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>N.b. this method uses the multi-dimensional if the array's first item is
+also an array.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>of a one-dimensional array</p>
+</div></h4>
+      <pre class="example code">
+[1,2,3].to_csv =&gt; &quot;1,2,3\n&quot;</pre>
+    
+      <h4><div class='inline'>
+<p>of a multi-dimensional array</p>
+</div></h4>
+      <pre class="example code">
+[[1,2,3],[4,5,6]] =&gt; &quot;1,2,3\n4,5,6\n&quot;</pre>
+    
+      <h4><div class='inline'>
+<p>of a blank array</p>
+</div></h4>
+      <pre class="example code">
+[].to_csv =&gt; &quot;&quot;</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a CSV (Comma Separated Value) string of this array.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 360</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_csv'>to_csv</span><span class='lparen'>(</span><span class='id identifier rubyid_ops'>ops</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_size'>size</span><span class='op'>==</span><span class='int'>0</span>
+
+  <span class='id identifier rubyid_generator'>generator</span> <span class='op'>=</span> <span class='const'>RUBY_VERSION</span> <span class='op'>&gt;=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.9</span><span class='tstring_end'>&quot;</span></span> <span class='op'>?</span> <span class='const'>CSV</span> <span class='op'>:</span> <span class='const'>CSV</span><span class='op'>::</span><span class='const'>Writer</span>
+
+  <span class='id identifier rubyid_str'>str</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_size'>size</span><span class='op'>&gt;</span><span class='int'>0</span> <span class='kw'>and</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='const'>Array</span>
+    <span class='id identifier rubyid_generator'>generator</span><span class='period'>.</span><span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_csv'>csv</span><span class='op'>|</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_row'>row</span><span class='op'>|</span>
+        <span class='id identifier rubyid_csv'>csv</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_row'>row</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_generator'>generator</span><span class='period'>.</span><span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_csv'>csv</span><span class='op'>|</span>
+      <span class='id identifier rubyid_csv'>csv</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_str'>str</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_tsv-instance_method">
+  
+    - (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>to_tsv</strong>(ops = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='to_tdf-instance_method'>to_tdf</span></span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Each subarray becomes one 'line' in the output.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>of a blank array</p>
+</div></h4>
+      <pre class="example code">
+[].to_csv =&gt; &quot;&quot;</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a TSV (Tab Separated Value) string representation of a multi-dimensional
+array.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+391
+392
+393</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 391</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_tsv'>to_tsv</span><span class='lparen'>(</span><span class='id identifier rubyid_ops'>ops</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_row'>row</span><span class='op'>|</span> <span class='id identifier rubyid_row'>row</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="union-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>) <strong>union</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>In typical use, each item is an array.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'>
+<p>using Ruby Array pipe</p>
+</div></h4>
+      <pre class="example code">arr=[[1,2,3,4],[3,4,5,6]]
+arr.union =&gt; [1,2,3,4,5,6]</pre>
+    
+      <h4><div class='inline'>
+<p>with proc</p>
+</div></h4>
+      <pre class="example code">arr.map(&amp;:foo).union
+=&gt; foos that are in any of the array items</pre>
+    
+      <h4><div class='inline'>
+<p>with nil</p>
+</div></h4>
+      <pre class="example code">[].union =&gt; []</pre>
+    
+  </div>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Array (class)">Array</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the union of the array’s items.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/array.rb', line 207</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_union'>union</span>
+  <span class='id identifier rubyid_inject'>inject</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_inj'>inj</span><span class='comma'>,</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_inj'>inj</span> <span class='op'>|</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='rbrace'>}</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Dec 16 19:30:04 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
