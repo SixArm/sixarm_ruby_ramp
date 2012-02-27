@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 require 'csv'
-require 'sixarm_ruby_array_slice'
  
 # Array extensions
 
@@ -128,11 +127,19 @@ class Array
   #
   ##############################################################
 
-  # Slice the array. Deprecated-- moved to sixarm_ruby_array_slice gem Array#slice_by_size.
-  alias :slices :slice_by_size
+  # Slice the array by size-- REMOVED.
+  # Change to sixarm_ruby_array_slice gem Array#slice_by_size method.
 
-  # Divvy the array. Deprecated-- moved to sixarm_ruby_array_slice gem Array#slice_by_share.
-  alias :divvy :slice_by_share
+  def slices
+    raise "Change to sixarm_ruby_array_slice gem Array#slice_by_size method."
+  end
+
+  # Divvy the array-- REMOVED.
+  # Change to sixarm_ruby_array_slice gem Array#slice_by_share method.
+
+  def divvy
+    raise "Change to sixarm_ruby_array_slice gem Array#slice_by_share method."
+  end
 
 
   ##############################################################

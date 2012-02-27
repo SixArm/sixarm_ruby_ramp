@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_ramp"
   s.summary           = "SixArm.com » Ruby » Ramp gem provides base extensions to ruby classes and rails classes."
-  s.version           = "2.1.2"
+  s.version           = "2.1.3"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
   s.homepage          = "http://sixarm.com/"
@@ -22,7 +22,5 @@ Gem::Specification.new do |s|
 
   s.files             = top_files + lib_files + test_files
   s.test_files        = test_files
-
-  s.add_dependency('sixarm_ruby_array_slice', '>= 2.1.2')
 
 end
