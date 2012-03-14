@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 =begin rdoc
-Please see README.rdoc
+Please see README
 =end
 
 ['array','class','csv','date','enumerable','file','fixnum','hash','integer','io','kernel','math','nil','numeric','object','process','string','symbol','time','xml','yaml'].map{|x|

@@ -1,18 +1,37 @@
-= SixArm.com » Ruby » Ramp gem is a toolkit of Ruby base class extensions
+# SixArm.com » Ruby » <br> Ramp gem is a toolkit of Ruby base class extensions
 
-Author:: Joel Parker Henderson, joel@joelparkerhenderson.com
-Copyright:: Copyright (c) 2006-2012 Joel Parker Henderson
-License:: See LICENSE.txt file
-
-Ramp is a library of extensions to Ruby base classes, including Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
-
-Testing: 
-
-* Each has an associated test class, e.g., ArrayTest, DateTest, etc.
-* The easy way to run the tests: gem install sixarm_ruby_ramp --test
+* Docs: <http://sixarm.com/sixarm_ruby_ramp/doc>
+* Repo: <http://github.com/sixarm/sixarm_ruby_ramp>
+* Email: Joel Parker Henderson, <joel@sixarm.com>
 
 
-== Array
+## Introduction
+
+Ramp is a library of extensions to Ruby base classes.
+
+We extend Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
+
+For docs go to <http://sixarm.com/sixarm_ruby_ramp/doc>
+
+Want to help? We're happy to get pull requests.
+
+
+## Quickstart
+
+Install:
+
+    gem install sixarm_ruby_ramp
+
+Bundler:
+
+    gem "sixarm_ruby_ramp", "=2.1.6"
+
+Require:
+
+    require "sixarm_ruby_ramp"
+
+
+## Array
 
 * car, cdr: aka first, rest (see shifted)
 * choice, choices: one or more random elements from an array
@@ -31,17 +50,17 @@ Testing:
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
 
 
-== Class
+## Class
 
 * publicize_methods: make all methods public for a block, e.g. to unit test private methods
 
 
-== CSV
+## CSV
 
 * http_headers: provides web file download headers for text/csv content type and disposition.
 
 
-== Date
+## Date
 
 * age_days, age_years
 * between: a random date between two specified dates
@@ -49,7 +68,7 @@ Testing:
 * weekday?, weekend?: is date a weekday or on the weekend
 
 
-== Enumerable
+## Enumerable
 
 * cartesian_product: return an array of all possible ordered tuples from arrays.
 * hash_by: convert the array to a hash by mapping each item to a key=>value pair.
@@ -64,18 +83,18 @@ Testing:
 * power_set: return an array with all subsets of the enum's elements
 
 
-== File
+## File
 
 * File.joindir: wrapper for File.join(File.dirname(...),string,...)
 
 
-== Fixnum
+## Fixnum
 
 * even?: is the number even?
 * odd?: is the number odd?
 
 
-== Hash
+## Hash
 
 * size?: return true if hash has any keys
 * sort_by_keys: return a new Hash sorted by keys
@@ -87,48 +106,48 @@ Testing:
 * pivot: aggregates subtotals by keys and values, such as a rollup and rolldown 
 
 
-== Integer
+## Integer
 
 * maps: syntactic sugar to yield n times to a block, returning an array of any results
 * odd?: is the number odd?
 
 
-== IO
+## IO
 
 * readrow: reads a row line as with IO#readline, and return the row split it into fields 
 * IO.readrows: reads the entire file specified by name as individual row lines, and return those rows split into fields, in an array of arrays.
 
 
-== Kernel
+## Kernel
 
 * my_method_name: return the name of the current method
 * caller_method_name: return the name of the caller method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
 
 
-== Math
+## Math
 
 * ln(x): natural log of x
 * logn(x,b): log of x in base b
 
 
-== NilClass
+## NilClass
 
 * blank?: return true (same as Rails)
 
 
-== Numeric
+## Numeric
 
 * if: return 0 if the passed flag is any of: nil, false, 0, [], {} and otherwise return self
 * unless: return 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise return self
 * percent: return the number as a percentage with optional rounding to decimal points
 
 
-== Object
+## Object
 
 * in?: return boolean indicating whether the object is a member of the specified array parameter
 
 
-== Process
+## Process
 
 Extensions that help debug Ruby programs.
 
@@ -136,22 +155,22 @@ Extensions that help debug Ruby programs.
 * (class) pss: output of the system 'ps' command as a hash with each value set to the right type, e.g., integer, float, etc..
 
 
-== REXML::Attributes
+## REXML::Attributes
 
 * hash: flattens the attributes hash set into a more useful ruby hash, e.g. {:height => 100, :width => 400 }
 
 
-== REXML::Document
+## REXML::Document
 
 * remove_attributes: remove all the attributes from the document's elements
 
 
-== REXML::Element
+## REXML::Element
 
 * remove_attributes: remove all the attributes from the element
 
 
-== String
+## String
 
 * capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
 * decrement: decrease the rightmost natural number, defaults to one value lower or by the optional step parameter value.
@@ -167,28 +186,18 @@ Extensions that help debug Ruby programs.
 * words: split the string into an array of words
 
 
-== Symbol
+## Symbol
 
 * <=> and include the comparable mixin to compare symbols as strings
 
 
-== Time
+## Time
 
 * (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
 * to_sql: time as a string formatted as expected for MySQL
 
 
-== XML
-
-* (class) load_dir: specify a one or more directory patterns and pass each XML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
-* (class) strip_all: delete exraneous junk from an XML text string, typically for sanitizing input
-* (class) strip_attributes: delete all attributes from an XML text string
-* (class) strip_comments: delete all comments from an XML text string
-* (class) strip_microsoft: delete all proprietary Microsoft code from an XML text string
-* (class) strip_unprintables: delete all unprintable characters from an XML text string
-
-
-== YAML
+## YAML
 
 * (class) load_dir: specify directory patterns and pass each YAML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
 * (class) load_dir_pairs: specify directory patterns and pass each YAML file in the matching directories to a block to process key/value pairs.
