@@ -23,8 +23,8 @@ Gem::Specification.new do |s|
   s.files             = top_files + lib_files + test_files
   s.test_files        = test_files
 
-  s.add_dependency('sixarm_ruby_rexml', '>= 2.0.4')
+  s.add_dependency('sixarm_ruby_rexml', '>= 2.0.6')
   s.add_dependency('sixarm_ruby_xml_load', '>= 2.0.0')
-  s.add_dependency('sixarm_ruby_xml_strip', '>= 2.0.0')
+  s.add_dependency('sixarm_ruby_xml_strip', '>= 2.0.4')
 
 end
