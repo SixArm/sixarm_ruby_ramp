@@ -16,7 +16,7 @@ For docs go to <http://sixarm.com/sixarm_ruby_ramp/doc>
 Want to help? We're happy to get pull requests.
 
 
-## Quickstart
+## Install quickstart
 
 Install:
 
@@ -24,11 +24,24 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_ramp", "=2.1.6"
+    gem "sixarm_ruby_ramp", "~>2.1.6"
 
 Require:
 
     require "sixarm_ruby_ramp"
+
+
+## Install with security (optional)
+
+To enable high security for all our gems:
+
+    wget http://sixarm.com/sixarm.pem
+    gem cert --add sixarm.pem
+    gem sources --add http://sixarm.com
+
+To install with high security:
+
+    gem install sixarm_ruby_ramp --test --trust-policy HighSecurity
 
 
 ## Array
@@ -203,3 +216,45 @@ Extensions that help debug Ruby programs.
 * (class) load_dir_pairs: specify directory patterns and pass each YAML file in the matching directories to a block to process key/value pairs.
 
 
+## Changes
+
+* 2012-03-14 2.1.6 Update docs, tests
+* 2.1.6 Refactor XML#strip* methods to new sixarm_ruby_xml_strip gem.
+* 2.1.5 Refactor XML#load* methods to new sixarm_ruby_xml_load gem.
+* 2.1.4 Refactor REXML extensions to new sixarm_ruby_rexml gem.
+* 2.1.3 Remove dependency on sixarm_ruby_array_slice
+* 2.1.2 Refactor Array#slices and #divvy to sixarm_ruby_array_slice gem with better method names.
+* 2.1.0 Upgrades for Ruby 1.9.3; better README, new CHANGELOG, less YAML, etc.
+* 2.0.x Upgrades for Ruby 1.9.2; add methods; lift some methods to their own gems
+* 1.8.x 100% rcov coverage; add methods
+* 1.7.x Enable gemcutter; add methods; remove sqlite dependency
+* 1.6.x Upgrades for Ruby 1.9.1; improve structure; add methods
+* 1.5.0 Combined all Ruby extension files into one gem
+* 1.0.0 Original
+## License
+
+You may choose any of these open source licenses:
+
+  * Apache License
+  * BSD License
+  * CreativeCommons License, Non-commercial Share Alike
+  * GNU General Public License Version 2 (GPL 2)
+  * GNU Lesser General Public License (LGPL)
+  * MIT License
+  * Perl Artistic License
+  * Ruby License
+
+The software is provided "as is", without warranty of any kind, 
+express or implied, including but not limited to the warranties of 
+merchantability, fitness for a particular purpose and noninfringement. 
+
+In no event shall the authors or copyright holders be liable for any 
+claim, damages or other liability, whether in an action of contract, 
+tort or otherwise, arising from, out of or in connection with the 
+software or the use or other dealings in the software.
+
+This license is for the included software that is created by SixArm;
+some of the included software may have its own licenses, copyrights, 
+authors, etc. and these do take precedence over the SixArm license.
+
+Copyright (c) 2005-2012 Joel Parker Henderson
