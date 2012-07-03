@@ -169,7 +169,7 @@ class Hash
   #    "Developers"=>198
   #   }
   # 
-  #  Generic xxample:
+  #  Generic example:
   #   h={
   #    "a"=>{"x"=>1,"y"=>2,"z"=>3},
   #    "b"=>{"x"=>4,"y"=>5,"z"=>6},
