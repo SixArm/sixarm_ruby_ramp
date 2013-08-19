@@ -10,11 +10,13 @@ module Kernel
   # - http://www.ruby-forum.com/topic/75258
   # - In 1.9 (Ruby CVS HEAD) there is #__method__ and #__callee__
   # - http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90
-  #-
+  #
+  # See http://stackoverflow.com/questions/5100299/how-to-get-the-name-of-the-calling-method
+  #
   # Make this fast because its often doing logging & reporting.
   # Inline this and use $1 because it's empirically faster than /1
   #
-  # These two methods are always equal:
+  # These two methods must always be equal:
   #   caller_method_name(0) === my_method_name
   #
   # @example
@@ -27,7 +29,9 @@ module Kernel
   # @return [String] my method name
 
   def my_method_name
-    caller[0] =~ /`([^']*)'/ and $1
+    RUBY_VERSION > '2.0' \
+    ? caller_locations(1,1).first.base_label \
+    : caller[0][/`([^']*)'/, 1]
   end
 
 
@@ -39,7 +43,7 @@ module Kernel
   # Make this fast because its often doing logging & reporting.
   # Inline this and use $1 because it's empirically faster than /1
   #
-  # These two methods are always equal:
+  # These two methods must always be equal:
   #   caller_method_name(0) === my_method_name
   #
   # @example
@@ -54,7 +58,9 @@ module Kernel
   # @return [String] the method name of the caller at the index
 
   def caller_method_name(caller_index=0)
-    caller[caller_index] =~ /`([^']*)'/ and $1
+    RUBY_VERSION > '2.0' \
+    ? caller_locations(caller_index + 1,1).first.base_label \
+    : caller[caller_index][/`([^']*)'/, 1]
   end
 
   
