@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class HashTest < Test::Unit::TestCase
+class HashTest < Minitest::Test
 
 
   def test_size_true
@@ -197,7 +197,7 @@ class HashTest < Test::Unit::TestCase
 
   def test_pivot_direction_up_with_invalid
     Hash.publicize_methods do
-      assert_raise(ArgumentError){ {}.pivot_direction_up?('nonsense') }
+      assert_raises(ArgumentError){ {}.pivot_direction_up?('nonsense') }
     end
   end
 

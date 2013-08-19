@@ -4,33 +4,37 @@ require 'csv'
 require 'sixarm_ruby_ramp'
 
 
-class ArrayTest < Test::Unit::TestCase
+class ArrayTest < Minitest::Test
 
   A=['a','b','c','d']
   B=['w','x','y','z']
 
-  def test_join_with_blank
-    assert_equal('abcd', A.join(''))
+  def test_join_with_no_ops
+    assert_equal('abcd',A.join())
   end
-  
-  def test_join_with_infix
+
+  def test_join_with_1_op_does_infix
     assert_equal('a*b*c*d', A.join('*'))
   end
 
-  def test_join_with_infix_and_prefix_and_suffix
-    assert_equal('[a]*[b]*[c]*[d]', A.join('*','[',']'))
-  end
-  
-  def test_join_with_prefix_and_suffix
+  def test_join_with_2_ops_does_prefix_suffix
     assert_equal('[a][b][c][d]', A.join('[',']'))
   end
 
-  def test_join_with_no_ops
-    assert_equal('abcd',A.join)
+  def test_join_with_3_opes_does_prefix_suffix_infix
+    assert_equal('[a]*[b]*[c]*[d]', A.join('[',']','*'))
   end
 
-  def test_join_with_too_many_ops
-    assert_raise(ArgumentError){ A.join('','','','') }
+  def test_join_with_too_many_ops_raises
+    assert_raises(ArgumentError){ A.join('','','','') }
+  end
+  
+  def test_join_prefix_suffix
+    assert_equal('[a][b][c][d]', A.join_prefix_suffix('[',']'))
+  end
+
+  def test_join_prefix_suffix_infix
+    assert_equal('[a]*[b]*[c]*[d]', A.join_prefix_suffix_infix('[',']','*'))
   end
 
   def test_size_with_one_item
@@ -98,7 +102,7 @@ class ArrayTest < Test::Unit::TestCase
  end
 
  def test_onto_with_empty
-   assert_raise(ArgumentError){ A.onto([]) }
+   assert_raises(ArgumentError){ A.onto([]) }
  end
 
  def test_union
@@ -130,15 +134,15 @@ class ArrayTest < Test::Unit::TestCase
   end
 
   def test_shifted_with_negative_count
-    assert_raise(ArgumentError){ [].shifted(-1) }
+    assert_raises(ArgumentError){ [].shifted(-1) }
   end
 
   def test_shifted_with_non_integer_count
-    assert_raise(ArgumentError){ [].shifted(0.123) }
+    assert_raises(ArgumentError){ [].shifted(0.123) }
   end
 
   def test_shifted_with_non_numeric_count
-    assert_raise(ArgumentError){ [].shifted("") }
+    assert_raises(ArgumentError){ [].shifted("") }
   end
 
   # alias: test_cdr must be idential to test_shifted
@@ -154,17 +158,17 @@ class ArrayTest < Test::Unit::TestCase
 
   # alias: test_cdr must be idential to test_shifted
   def test_cdr_with_negative_count    
-    assert_raise(ArgumentError){ [].cdr(-1) }
+    assert_raises(ArgumentError){ [].cdr(-1) }
   end
 
   # alias: test_cdr must be idential to test_shifted
   def test_cdr_with_non_integer_count
-    assert_raise(ArgumentError){ [].cdr(0.123) }
+    assert_raises(ArgumentError){ [].cdr(0.123) }
   end
 
   # alias: test_cdr must be idential to test_shifted
   def test_cdr_with_non_numeric_count
-    assert_raise(ArgumentError){ [].cdr("") }
+    assert_raises(ArgumentError){ [].cdr("") }
   end
 
   # alias: test_rest must be idential to test_shifted
@@ -180,17 +184,17 @@ class ArrayTest < Test::Unit::TestCase
 
   # alias: test_rest must be idential to test_shifted
   def test_rest_with_negative_count
-    assert_raise(ArgumentError){ [].rest(-1) }
+    assert_raises(ArgumentError){ [].rest(-1) }
   end
 
   # alias: test_rest must be idential to test_shifted
   def test_rest_with_non_integer_count
-    assert_raise(ArgumentError){ [].rest(0.123) }
+    assert_raises(ArgumentError){ [].rest(0.123) }
   end
 
   # alias: test_rest must be idential to test_shifted
   def test_rest_with_non_numeric_count
-    assert_raise(ArgumentError){ [].rest("") }
+    assert_raises(ArgumentError){ [].rest("") }
   end
 
   def test_shifted_bang
@@ -203,15 +207,15 @@ class ArrayTest < Test::Unit::TestCase
   end
 
   def test_shifted_bang_with_negative_count    
-    assert_raise(ArgumentError){ [].shifted!(-1) }
+    assert_raises(ArgumentError){ [].shifted!(-1) }
   end
 
   def test_shifted_bang_with_non_integer_count    
-    assert_raise(ArgumentError){ [].shifted!(0.123) }
+    assert_raises(ArgumentError){ [].shifted!(0.123) }
   end
 
   def test_shifted_bang_with_non_numeric_count    
-    assert_raise(ArgumentError){ [].shifted!("") }
+    assert_raises(ArgumentError){ [].shifted!("") }
   end
 
   # alias: test_cdr_bang must be identical to test_shifted_bang
@@ -226,17 +230,17 @@ class ArrayTest < Test::Unit::TestCase
 
   # alias: test_cdr_bang must be identical to test_shifted_bang
   def test_cdr_bang_with_negative_count
-    assert_raise(ArgumentError){ [].cdr!(-1) }
+    assert_raises(ArgumentError){ [].cdr!(-1) }
   end
 
   # alias: test_cdr_bang must be identical to test_shifted_bang
   def test_cdr_bang_with_non_integer_count
-    assert_raise(ArgumentError){ [].cdr!(0.123) }
+    assert_raises(ArgumentError){ [].cdr!(0.123) }
   end
 
   # alias: test_cdr_bang must be identical to test_shifted_bang
   def test_cdr_bang_with_non_numeric_count
-    assert_raise(ArgumentError){ [].cdr!("") }
+    assert_raises(ArgumentError){ [].cdr!("") }
   end
   
   # alias: test_rest_bang must be identical to test_shifted_bang
@@ -251,17 +255,17 @@ class ArrayTest < Test::Unit::TestCase
     
   # alias: test_rest_bang must be identical to test_shifted_bang
   def test_rest_bang_with_negative_count
-    assert_raise(ArgumentError){ [].rest!(-1) }
+    assert_raises(ArgumentError){ [].rest!(-1) }
   end
 
   # alias: test_rest_bang must be identical to test_shifted_bang
   def test_rest_bang_with_non_integer_count
-    assert_raise(ArgumentError){ [].rest!(0.123) }
+    assert_raises(ArgumentError){ [].rest!(0.123) }
   end
 
   # alias: test_rest_bang must be identical to test_shifted_bang
   def test_rest_bang_with_non_numeric_count
-    assert_raise(ArgumentError){ [].rest!("") }
+    assert_raises(ArgumentError){ [].rest!("") }
   end
 
   def test_car
