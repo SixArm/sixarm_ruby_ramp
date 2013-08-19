@@ -111,7 +111,7 @@ class String
  # @see String#increment
 
  def decrement(step=1)
-  self=~/\d+/ ? $`+($&.to_i-step).to_s+$' : self
+  increment(-step)
  end
 
 
@@ -188,9 +188,8 @@ class String
 
  # Helpful constants
 
- LOWERCASE_ENGLISH_CHARS = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
- UPPERCASE_ENGLISH_CHARS = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-
+ LOWERCASE_ENGLISH_CHARS = ('a'..'z').to_a
+ UPPERCASE_ENGLISH_CHARS = ('A'..'Z').to_a
 
  ##
  #
