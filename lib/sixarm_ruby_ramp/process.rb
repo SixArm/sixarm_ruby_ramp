@@ -47,29 +47,14 @@ module Process
   # -
   # OPTIMIZE: add dates, times
 
+  PS_TO_I = %w(c egid egroup uid fgid lwp ni nlwp pgid pid ppid rgid rss ruid sid sgid suid)
+  PS_TO_F = %w(cp pcpu pmem)
+
   def self.pss(pid=Process.pid)
     ps=self.ps(pid)
     h=Hash[*self.ps_keys.zip(ps.split).flatten]
-    h['c']      =h['c'].to_i
-    h['cp']     =h['cp'].to_f
-    h['egid']   =h['egid'].to_i
-    h['egroup'] =h['egroup'].to_i
-    h['uid']    =h['uid'].to_i
-    h['fgid']   =h['fgid'].to_i
-    h['lwp']    =h['lwp'].to_i
-    h['ni']     =h['ni'].to_i
-    h['nlwp']   =h['nlwp'].to_i
-    h['pcpu']   =h['pcpu'].to_f
-    h['pgid']   =h['pgid'].to_i
-    h['pid']    =h['pid'].to_i
-    h['pmem']   =h['pmem'].to_f
-    h['ppid']   =h['ppid'].to_i
-    h['rgid']   =h['rgid'].to_i
-    h['rss']    =h['rss'].to_i
-    h['ruid']   =h['ruid'].to_i  
-    h['sid']    =h['sid'].to_i  
-    h['sgid']   =h['sgid'].to_i  
-    h['suid']   =h['suid'].to_i  
+    PS_TO_I.each{|x| h[x]=h[x].to_i}
+    PS_TO_F.each{|x| h[x]=h[x].to_f}
     self.ps_aliases.each_pair{|key,val| h[key]=h[val]}
     return h
   end
