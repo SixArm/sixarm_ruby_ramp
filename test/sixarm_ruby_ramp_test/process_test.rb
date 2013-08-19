@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class ProcessTest < Test::Unit::TestCase
+class ProcessTest < Minitest::Test
 
  include Process
 

@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class XMLTest < Test::Unit::TestCase
+class XMLTest < Minitest::Test
 
 
 

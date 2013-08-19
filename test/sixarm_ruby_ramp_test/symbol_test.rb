@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
 
-class SymbolTest < Test::Unit::TestCase
+class SymbolTest < Minitest::Test
 
 
   def test_comparable

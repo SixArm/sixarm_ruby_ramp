@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class NilTest < Test::Unit::TestCase
+class NilTest < Minitest::Test
 
  def test_blank
   assert_equal(true,nil.blank?)

@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class MathTest < Test::Unit::TestCase
+class MathTest < Minitest::Test
 
   def test_ln
     assert_equal(0.0,Math.ln(1.0))

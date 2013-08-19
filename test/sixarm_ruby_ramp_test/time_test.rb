@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class TimeTest < Test::Unit::TestCase
+class TimeTest < Minitest::Test
 
  def test_stamp_with_class_method
    t=Time.stamp

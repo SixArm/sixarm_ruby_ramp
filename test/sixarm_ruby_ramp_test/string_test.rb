@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
 
-class StringTest < Test::Unit::TestCase
+class StringTest < Minitest::Test
 
 
   def test_capitalize_words

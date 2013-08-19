@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
 
-class ClassTest < Test::Unit::TestCase
+class ClassTest < Minitest::Test
 
   
   METHOD_REGEXP = /^[abc]\W*$/

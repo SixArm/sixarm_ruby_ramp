@@ -16,39 +16,62 @@ class Array
   #
   # @return [String] concatenated string
   #
-  # @example Typical Array#join with infix
+  # @example Join with infix
   #   list=['a','b','c']
   #   list.join("*") => "a*b*c"
   #
-  # @example Improved join with infix, prefix, suffix
+  # @example Join with prefix and suffix
+  #   list=['a','b','c']
+  #   list.join("[","]") => "[a][b][c]"
+  #
+  # @example Join with prefix, suffix, and infix
   #   list=['a','b','c']
   #   list.join("*","[","]") => "[a]*[b]*[c]"
   #
-  # @example Improved join with just prefix and suffix
-  #   list=['a','b','c']
-  #   list.join("[","]") => "[a][b][c]"
-
   def join(*fixes)
     if fixes.is_a?(String) then return self.ruby_join(fixes) end
-    case fixes.size
+    return case fixes.size
     when 0
-      return self.ruby_join()
+      ruby_join
     when 1
-      return self.ruby_join(fixes[0])
+      ruby_join(fixes[0].to_s)
     when 2
-      prefix=fixes[0].to_s
-      suffix=fixes[1].to_s
-      return self.map{|item| prefix + item.to_s + suffix}.ruby_join()
+      join_prefix_suffix(*fixes)
     when 3
-      infix =fixes[0].to_s
-      prefix=fixes[1].to_s
-      suffix=fixes[2].to_s
-      return self.map{|item| prefix + item.to_s + suffix}.ruby_join(infix)
+      join_prefix_suffix_infix(*fixes)
     else
       raise ArgumentError, "join() takes 0-3 arguments; you gave #{fixes.size}]"
     end
   end
 
+  # Concatenate the items by joining using a prefix string and suffix string.
+  #
+  # @return [String] concatenated string
+  #
+  # @example
+  #   list=['a','b','c']
+  #   list.join("[","]") => "[a][b][c]"
+  #
+  def join_prefix_suffix(prefix, suffix)
+    prefix = prefix.to_s
+    suffix = suffix.to_s
+    return self.map{|item| prefix + item.to_s + suffix}.ruby_join()
+  end
+
+  # Concatenate the items by joining using a prefix string, suffix string, and infix string.
+  #
+  # @return [String] concatenated string
+  #
+  # @example
+  #   list=['a','b','c']
+  #   list.join("*","[","]") => "[a]*[b]*[c]"
+  #
+  def join_prefix_suffix_infix(prefix, suffix, infix)
+    prefix = prefix.to_s
+    suffix = suffix.to_s
+    infix = infix.to_s
+    return self.map{|item| prefix + item.to_s + suffix}.ruby_join(infix)
+  end
 
   # @return [Boolean] true if size > 0
   #

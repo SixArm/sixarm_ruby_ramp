@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
 
-class DateTest < Test::Unit::TestCase
+class DateTest < Minitest::Test
 
 
   def test_weekday

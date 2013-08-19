@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class NumericTest < Test::Unit::TestCase
+class NumericTest < Minitest::Test
 
 
   def test_if_with_true
@@ -44,6 +44,14 @@ class NumericTest < Test::Unit::TestCase
     assert_equal(10, (0.1234).percent(-1))
   end
 
-  
-end
 
+  def test_floor_precision
+    x = 0.12345
+    assert_equal(0.0, x.floor_precision(0))
+    assert_equal(0.1, x.floor_precision(1))
+    assert_equal(0.12, x.floor_precision(2))
+    assert_equal(0.123, x.floor_precision(3))
+  end
+
+
+end

@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
 
-class FileTestCase < Test::Unit::TestCase
+class FileTestCase < Minitest::Test
 
   def test_load_dir_files
     filename='/a/b/c.d'

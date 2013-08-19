@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
 
-class FixnumTest < Test::Unit::TestCase
+class FixnumTest < Minitest::Test
 
   def test_even_with_true
     assert(2.even?)

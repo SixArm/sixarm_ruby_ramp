@@ -4,7 +4,7 @@ require 'sixarm_ruby_ramp'
 require 'set'
 
 
-class EnumerableTest < Test::Unit::TestCase
+class EnumerableTest < Minitest::Test
 
   ITEMS = ['a','b','c']
   MAPTEST = [123,"456"] # to test typecasts-- one is numeric and one is string

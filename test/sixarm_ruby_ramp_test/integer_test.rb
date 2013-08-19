@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
 
-class IntegerTest < Test::Unit::TestCase
+class IntegerTest < Minitest::Test
 
   def test_maps
     expect=['a','a','a']

@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class YAMLTest < Test::Unit::TestCase
+class YAMLTest < Minitest::Test
 
 end
 

@@ -25,7 +25,7 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_ramp", "~>2.1.6"
+    gem "sixarm_ruby_ramp", "~>3.0.0"
 
 Require:
 
@@ -51,7 +51,7 @@ To install with high security:
 * choice, choices: one or more random elements from an array
 * cross: return the cross pairings of an array with another array
 * divvy: divides an array, like a pie, into a specified number of slices (deprecated - see method rdoc)
-* join: same as Array#join with some improvments
+* join, join_prefix_suffix, join_prefix_suffix_infix: like Array#join with improvements
 * onto: return a hash that maps an array's keys on to another array's values
 * rotate: moves the first element of an array to the end
 * rest: return the rest of the items of the array (aka cdr, aka shifted)
@@ -154,6 +154,7 @@ To install with high security:
 * if: return 0 if the passed flag is any of: nil, false, 0, [], {} and otherwise return self
 * unless: return 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise return self
 * percent: return the number as a percentage with optional rounding to decimal points
+* floor_precision: return the number truncated to a given precision, i.e. decimal points
 
 
 ## Object
@@ -219,6 +220,8 @@ Extensions that help debug Ruby programs.
 
 ## Changes
 
+* 2013-08-18 3.0.0 Upgrade to Ruby 2
+* 2012-09-01 2.1.7 Add Numeric#floor_precision
 * 2012-03-14 2.1.6 Update docs, tests
 * 2.1.6 Refactor XML#strip* methods to new sixarm_ruby_xml_strip gem.
 * 2.1.5 Refactor XML#load* methods to new sixarm_ruby_xml_load gem.
@@ -232,6 +235,8 @@ Extensions that help debug Ruby programs.
 * 1.6.x Upgrades for Ruby 1.9.1; improve structure; add methods
 * 1.5.0 Combined all Ruby extension files into one gem
 * 1.0.0 Original
+
+
 ## License
 
 You may choose any of these open source licenses:

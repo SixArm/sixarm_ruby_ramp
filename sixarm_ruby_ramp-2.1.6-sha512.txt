@@ -1,1 +1,0 @@
-cbbb35cbcccd36adbbca4db17c88b879936b879223c7fba7b5f84ac62871fe849aa060c169e5ee83e45f090b4c5acae65f6cb7ceaa107d45e2f54e68f1107de6  sixarm_ruby_ramp-2.1.6.gem

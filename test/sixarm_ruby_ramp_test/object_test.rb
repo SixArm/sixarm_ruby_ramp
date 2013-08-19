@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
-class ObjectTest < Test::Unit::TestCase
+class ObjectTest < Minitest::Test
 
  def test_in_array
   assert_equal(true,'a'.in?(['a','b','c']))

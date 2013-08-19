@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'sixarm_ruby_ramp'
 
 
-class CSVTest < Test::Unit::TestCase
+class CSVTest < Minitest::Test
 
   def test_http_headers
     h=CSV.http_headers
