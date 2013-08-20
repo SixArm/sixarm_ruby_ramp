@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require 'minitest/autorun'
+Minitest::Test ||= MiniTest::Unit::TestCase
 require 'csv'
 require 'sixarm_ruby_ramp'
 
