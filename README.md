@@ -1,5 +1,6 @@
 # SixArm.com » Ruby » <br> Ramp gem is a toolkit of Ruby base class extensions
 
+[![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_ramp.png)](https://travis-ci.org/SixArm/sixarm_ruby_ramp)
 [![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp)
 
 * Doc: <http://sixarm.com/sixarm_ruby_ramp/doc>
