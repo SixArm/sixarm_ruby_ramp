@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    minitest (4.3.2)
+    minitest (4.7.5)
     multi_json (1.5.1)
     rake (10.1.0)
     simplecov (0.7.1)
@@ -18,9 +18,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest (>= 4, <= 5)
-  rake
-  simplecov
+  minitest (~> 4.7)
+  rake (~> 10.1)
+  simplecov (~> 0.7)
   sixarm_ruby_rexml (~> 2.1.0)
   sixarm_ruby_xml_load (~> 2.1.0)
   sixarm_ruby_xml_strip (~> 2.1.0)
