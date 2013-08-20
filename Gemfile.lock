@@ -1,13 +1,24 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     multi_json (1.5.1)
+    rake (10.1.0)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
+    sixarm_ruby_rexml (2.1.0)
+    sixarm_ruby_xml_load (2.1.0)
+      sixarm_ruby_rexml (>= 2.1.0)
+    sixarm_ruby_xml_strip (2.1.0)
+      sixarm_ruby_rexml (>= 2.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  rake
   simplecov
+  sixarm_ruby_rexml (~> 2.1.0)
+  sixarm_ruby_xml_load (~> 2.1.0)
+  sixarm_ruby_xml_strip (~> 2.1.0)

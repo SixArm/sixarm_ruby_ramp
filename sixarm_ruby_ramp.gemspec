@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_ramp"
   s.summary        = "SixArm.com » Ruby » Ramp gem provides base extensions to ruby classes."
   s.description    = "Adds extensions to Array, Date, File, Hash, IO, String, Time, etc."
-  s.version        = "3.0.0"
+  s.version        = "3.0.1"
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
   s.homepage       = "http://sixarm.com/"
@@ -26,8 +26,8 @@ Gem::Specification.new do |s|
   s.files          = top_files + lib_files + test_files
   s.test_files     = test_files
 
-  s.add_dependency('sixarm_ruby_rexml', '>= 2.0.6')
-  s.add_dependency('sixarm_ruby_xml_load', '>= 2.0.0')
-  s.add_dependency('sixarm_ruby_xml_strip', '>= 2.0.4')
+  s.add_dependency('sixarm_ruby_rexml', '~> 2.1.0')
+  s.add_dependency('sixarm_ruby_xml_load', '~> 2.1.0')
+  s.add_dependency('sixarm_ruby_xml_strip', '~> 2.1.0')
 
 end

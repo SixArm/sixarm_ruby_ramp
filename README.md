@@ -222,7 +222,8 @@ Extensions that help debug Ruby programs.
 
 ## Changes
 
-* 2013-08-18 3.0.0 Upgrade to Ruby 2
+* 2013-08-19 3.0.1 Update for Code Climate, Travis CI, gem dependencies
+* 2013-08-18 3.0.0 Update to Ruby 2
 * 2012-09-01 2.1.7 Add Numeric#floor_precision
 * 2012-03-14 2.1.6 Update docs, tests
 * 2.1.6 Refactor XML#strip* methods to new sixarm_ruby_xml_strip gem.
