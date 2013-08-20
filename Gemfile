@@ -1,1 +1,4 @@
-gem 'simplecov'
+group :test do
+  gem "rake"
+  gem "simplecov"
+end
