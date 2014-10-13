@@ -23,7 +23,7 @@ class Hash
     Hash[sort]
   end
 
-  
+
   # Calls block once for each key in hsh, passing the key and value to the block as a two-element array.
   #
   # The keys are sorted.
@@ -38,7 +38,7 @@ class Hash
   end
 
 
-  # Calls block once for each key in hsh, 
+  # Calls block once for each key in hsh,
   # passing the key as a parameter,
   # and updating it in place.
   #
@@ -103,7 +103,7 @@ class Hash
 
 
   # Calls block once for each key in hsh,
-  # passing the value as a parameter, 
+  # passing the value as a parameter,
   # and updating it in place.
   #
   # @example
@@ -120,12 +120,40 @@ class Hash
       if value===value2
         #nop
       else
-        self[key]=yield(value) 
+        self[key]=yield(value)
       end
     }
     return self
   end
 
+
+  # Returns a new hash containing the contents of other_hash and the
+  # contents of hsh.
+  #
+  # If no block is specified, the value for entries with duplicate
+  # keys will be that of other_hash; if the values are both hashes,
+  # then this method recurses.
+  #
+  # Otherwise the  value for each duplicate key is determined by calling
+  # the block with the key, its value in hsh and its value in other_hash.
+  #
+  # @example:
+  #
+  #   h1 = {a: 'b', c: 'd', {e: 'f', g: 'h'}
+  #   h2 = {a: 'B', {e: 'F'}}
+  #   h1.merge_recurse(h2)
+  #   #=> {a: 'B', c: 'd', {e: 'F', g: 'h'}
+  #
+
+  def merge_recurse(other_hash)
+    merge(other_hash){|key, oldval, newval|
+      if oldval.is_a?(Hash) && newval.is_a?(Hash)
+        oldval.merge_recurse(newval)
+      else
+        newval
+      end
+    }
+  end
 
   # Calls block once for each key-value pair in hsh,
   # passing the key and value as paramters to the block.
@@ -150,32 +178,32 @@ class Hash
   #     "Goggle"    => {"Accountants" => 44, "Designers" => 55, "Developers" => 66},
   #     "Microsoft" => {"Accountants" => 77, "Designers" => 88, "Developers" => 99},
   #   }
-  # 
+  #
   # To calculate each company's total headcount, you pivot up, then sum:
-  # 
+  #
   #   data.pivot(:up,&:sum)
   #   => {
-  #    "Apple"=>66, 
-  #    "Goggle"=>165, 
+  #    "Apple"=>66,
+  #    "Goggle"=>165,
   #    "Microsoft"=>264
   #   }
-  # 
+  #
   # To calculate each role's total headcount, you pivot down, then sum:
-  # 
+  #
   #   data.pivot(:down,&:sum)
   #   => {
   #    "Accountants"=>132,
   #    "Designers"=>165,
   #    "Developers"=>198
   #   }
-  # 
+  #
   #  Generic example:
   #   h={
   #    "a"=>{"x"=>1,"y"=>2,"z"=>3},
   #    "b"=>{"x"=>4,"y"=>5,"z"=>6},
   #    "c"=>{"x"=>7,"y"=>8,"z"=>9},
   #   }
-  #   h.pivot(:keys) => {"a"=>[1,2,3],"b"=>[4,5,6],"c"=>[7,8,9]} 
+  #   h.pivot(:keys) => {"a"=>[1,2,3],"b"=>[4,5,6],"c"=>[7,8,9]}
   #   h.pivot(:vals) => {"x"=>[1,4,7],"y"=>[2,5,8],"z"=>[3,6,9]}
   #
   # = Calculating subtotals
@@ -206,7 +234,7 @@ class Hash
   # @example
   #   h.pivot(:vals){|items| items.max } => {"a"=>7,"b"=>8,"c"=>9}
   #   h.pivot(:vals){|items| items.join("-") } => {"a"=>"1-4-7","b"=>"2-5-8","c"=>"3-6-9"}
-  #   h.pivot(:vals){|items| items.inject{|sum,x| sum+=x } } => {"a"=>12,"b"=>15,"c"=>18}   
+  #   h.pivot(:vals){|items| items.inject{|sum,x| sum+=x } } => {"a"=>12,"b"=>15,"c"=>18}
 
   def pivot(direction='keys',&block)
     a=self.class.new
