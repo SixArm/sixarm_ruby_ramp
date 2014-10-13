@@ -105,7 +105,7 @@ class HashTest < Minitest::Test
 
   def test_map_pair
     h = {"a"=>"b", "c"=>"d", "e"=>"f" }
-    expect=["ab","cd","ef"]  
+    expect=["ab","cd","ef"]
     actual=h.map_pair{|key,value| key+value }.sort
     assert_equal(expect,actual,h.inspect)
   end
@@ -117,7 +117,20 @@ class HashTest < Minitest::Test
     actual=h.map_pair{|key,value| key+value }.sort
     assert_equal(expect,actual,h.inspect)
   end
-   
+
+
+  def test_merge_recurse
+    # Test with three kinds of items:
+    #   * same key => same value; this must stay the same
+    #   * same key => other value; this must use the other value
+    #   * different key => any value; the output contains the key and its value
+    h1={ "a" => "b", "c" => "d", "e" => "f", "g" => { "h" => "i", "j" => "k", "l" => "m"}}
+    h2={ "a" => "b", "c" => "D", "E" => "F", "g" => { "h" => "i", "j" => "K", "L" => "M"}}
+    expect={ "a" => "b", "c" => "D", "e" => "f", "g" => { "h" => "i", "j" => "K", "l" => "m", "L" => "M"}, "E" => "F"}
+    actual=h1.merge_recurse(h2)
+    assert_equal(expect,actual,h1.inspect+h2.inspect)
+  end
+
 
   def pivotable
     h=Hash.new
@@ -134,7 +147,7 @@ class HashTest < Minitest::Test
     h['c']['y']='t'
     h['c']['z']='u'
     return h
-  end  
+  end
 
 
   def test_pivot_vals
