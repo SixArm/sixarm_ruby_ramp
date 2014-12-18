@@ -13,7 +13,7 @@
 
 Ramp is a library of extensions to Ruby base classes.
 
-We extend Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
+We extend Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML.
 
 For docs go to <http://sixarm.com/sixarm_ruby_ramp/doc>
 
@@ -28,7 +28,7 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_ramp", "~>3.0.0"
+    gem "sixarm_ruby_ramp", "~>4.0.0"
 
 Require:
 
@@ -96,7 +96,7 @@ To install with high security:
 * map_with_index: for each item, yield to a block with the item and its incrementing index
 * nitems_until, select_until: return the number of, or an array containing, the leading elements for which block is false or nil.
 * nitems_while, select_while: return the number of items, or an array containing the leading elements, for which block is not false or nil.
-* nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Return the number of, or an array containing, the leading elements for which block is not false or nil. 
+* nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Return the number of, or an array containing, the leading elements for which block is not false or nil.
 * power_set: return an array with all subsets of the enum's elements
 
 
@@ -119,8 +119,12 @@ To install with high security:
 * each_key!: passes each key to a specified block and updates hash in place if the key changes
 * each_pair!: passes each key value pair to a specified block and updates the hash in place if the key or value change.
 * each_value!: passes each value to a specified block and updates the hash in place if the value changes.
+* map_key: map each key-value pair's key by calling a a block
 * map_pair: map each key-value pair by calling a a block
-* pivot: aggregates subtotals by keys and values, such as a rollup and rolldown 
+* map_value: map each key-value pair by calling a a block
+* merge_recurse: merge two hashes plus recurse whenever a key is a hash.
+* pivot: aggregates subtotals by keys and values, such as a rollup and rolldown
+* yield_pair: yield each key-value pair by calling a a block
 
 
 ## Integer
@@ -131,7 +135,7 @@ To install with high security:
 
 ## IO
 
-* readrow: reads a row line as with IO#readline, and return the row split it into fields 
+* readrow: reads a row line as with IO#readline, and return the row split it into fields
 * IO.readrows: reads the entire file specified by name as individual row lines, and return those rows split into fields, in an array of arrays.
 
 
@@ -223,6 +227,7 @@ Extensions that help debug Ruby programs.
 
 ## Changes
 
+* 2014-12-17 4.0.0 Add `Pairable` methods; change semantics of `Hash#map_pair`
 * 2013-08-19 3.0.1 Update for Code Climate, Travis CI, gem dependencies
 * 2013-08-18 3.0.0 Update to Ruby 2
 * 2012-09-01 2.1.7 Add Numeric#floor_precision
@@ -254,17 +259,17 @@ You may choose any of these open source licenses:
   * Perl Artistic License
   * Ruby License
 
-The software is provided "as is", without warranty of any kind, 
-express or implied, including but not limited to the warranties of 
-merchantability, fitness for a particular purpose and noninfringement. 
+The software is provided "as is", without warranty of any kind,
+express or implied, including but not limited to the warranties of
+merchantability, fitness for a particular purpose and noninfringement.
 
-In no event shall the authors or copyright holders be liable for any 
-claim, damages or other liability, whether in an action of contract, 
-tort or otherwise, arising from, out of or in connection with the 
+In no event shall the authors or copyright holders be liable for any
+claim, damages or other liability, whether in an action of contract,
+tort or otherwise, arising from, out of or in connection with the
 software or the use or other dealings in the software.
 
 This license is for the included software that is created by SixArm;
-some of the included software may have its own licenses, copyrights, 
+some of the included software may have its own licenses, copyrights,
 authors, etc. and these do take precedence over the SixArm license.
 
 Copyright (c) 2005-2012 Joel Parker Henderson

@@ -1,19 +1,21 @@
+# -*- coding: utf-8 -*-
+
 Gem::Specification.new do |s|
 
-  SOURCES          = ['array','class','csv','date','enumerable','file','fixnum','hash','integer','io','kernel','math','nil','numeric','object','process','string','symbol','time','xml','yaml']
+  SOURCES          = ['array','class','csv','date','enumerable','file','fixnum','hash','integer','io','kernel','math','nil','numeric','object','pairable','process','string','symbol','time','xml','yaml']
   TESTERS          = ['io_test.txt']
 
   s.name           = "sixarm_ruby_ramp"
   s.summary        = "SixArm.com » Ruby » Ramp gem provides base extensions to ruby classes."
   s.description    = "Adds extensions to Array, Date, File, Hash, IO, String, Time, etc."
-  s.version        = "3.0.1"
+  s.version        = "4.0.0"
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
   s.homepage       = "http://sixarm.com/"
   s.licenses       = ["BSD", "GPL", "MIT", "PAL", "Various"]
 
-  s.signing_key    = '/home/sixarm/keys/certs/sixarm-rsa1024-x509-private.pem'
-  s.cert_chain     = ['/home/sixarm/keys/certs/sixarm-rsa1024-x509-public.pem']
+  s.signing_key    = '/opt/keys/sixarm/sixarm-rsa2048-x509-20140312-gem-private-key.pem'
+  s.cert_chain     = ['/opt/keys/sixarm/sixarm-rsa2048-x509-20140312-gem-public-cert.pem']
 
   s.platform       = Gem::Platform::RUBY
   s.require_path   = 'lib'
@@ -26,8 +28,8 @@ Gem::Specification.new do |s|
   s.files          = top_files + lib_files + test_files
   s.test_files     = test_files
 
-  s.add_dependency('sixarm_ruby_rexml', '~> 2.1.0')
-  s.add_dependency('sixarm_ruby_xml_load', '~> 2.1.0')
-  s.add_dependency('sixarm_ruby_xml_strip', '~> 2.1.0')
+  s.add_dependency('sixarm_ruby_rexml', '~> 2.1', '>= 2.1.0')
+  s.add_dependency('sixarm_ruby_xml_load', '~> 2.1', '>= 2.1.0')
+  s.add_dependency('sixarm_ruby_xml_strip', '~> 2.1', '>= 2.1.0')
 
 end

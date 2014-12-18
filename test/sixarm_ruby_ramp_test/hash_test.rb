@@ -4,24 +4,20 @@ require 'sixarm_ruby_ramp'
 
 class HashTest < Minitest::Test
 
-
   def test_size_true
     h = {'a'=>'b'}
     assert(h.size?)
   end
-
 
   def test_size_false
     h = {}
     assert(!h.size?)
   end
 
-
   def test_sort_by_keys
     h = {'c' => 'z', 'b' => 'y', 'a' => 'x'}
     assert_equal({'a' => 'x', 'b' => 'y', 'c' => 'z'}, h.sort_by_keys)
   end
-
 
   def test_each_sort
     out = []
@@ -30,14 +26,12 @@ class HashTest < Minitest::Test
     assert_equal(['A','X','B','Y','C','Z'], out)
   end
 
-
   def test_each_sort_with_empty
     out = []
     h = {}
     h.each_sort{|key,val| out << key.upcase; out << val.upcase}
     assert_equal([], out)
   end
-
 
   def test_each_key_bang
     actual = { "a" => "b", "c" => "d" }
@@ -46,14 +40,12 @@ class HashTest < Minitest::Test
     assert_equal(expect,actual)
   end
 
-
   def test_each_key_bang_with_empty
     actual = {}
     expect = {}
     actual.each_key! {|key| key.upcase }
     assert_equal(expect,actual)
   end
-
 
   def test_each_pair_bang
     actual = { "a" => "b", "c" => "d" }
@@ -62,14 +54,12 @@ class HashTest < Minitest::Test
     assert_equal(expect,actual)
   end
 
-
   def test_each_pair_bang_with_empty
     actual = {}
     expect = {}
     actual.each_pair! {|key,value| [key.upcase, value.upcase] }
     assert_equal(expect,actual)
   end
-
 
   def test_each_pair_bang_with_same_key_different_value
     actual = { "a" => "b", "c" => "d" }
@@ -78,14 +68,12 @@ class HashTest < Minitest::Test
     assert_equal(expect,actual)
   end
 
-
   def test_each_pair_bang_with_same_key_same_value
     actual = { "a" => "b", "c" => "d" }
     expect = { "a" => "b", "c" => "d" }
     actual.each_pair! {|key,value| [key, value] }
     assert_equal(expect,actual)
   end
-
 
   def test_each_value_bang
     actual = { "a" => "b", "c" => "d" }
@@ -94,7 +82,6 @@ class HashTest < Minitest::Test
     assert_equal(expect,actual)
   end
 
-
   def test_each_value_bang_with_empty
     actual = {}
     expect = {}
@@ -102,35 +89,73 @@ class HashTest < Minitest::Test
     assert_equal(expect,actual)
   end
 
+  def test_map_key
+    h = {"a"=>"b"}
+    expect = {"A" => "b"}
+    actual = h.map_key{|key| key.upcase }.sort
+    assert_equal(expect,actual,h.inspect)
+  end
 
-  def test_map_pair
+  def test_map_value
+    h = {"a"=>"b"}
+    expect = {"a" => "B"}
+    actual = h.map_value{|value| value.upcase }.sort
+    assert_equal(expect,actual,h.inspect)
+  end
+
+  def test_map_value
+    h = {"a"=>"b"}
+    expect = {"A" => "B"}
+    actual = h.map_value{|key, value| key.upcase, value.upcase }.sort
+    assert_equal(expect,actual,h.inspect)
+  end
+
+  def test_yield_pair
     h = {"a"=>"b", "c"=>"d", "e"=>"f" }
     expect=["ab","cd","ef"]
-    actual=h.map_pair{|key,value| key+value }.sort
+    actual=h.yield_pair{|key,value| key+value }.sort
     assert_equal(expect,actual,h.inspect)
   end
 
-
-  def test_map_pair_with_empty
+  def test_yield_pair_with_empty
     h = {}
     expect=[]
-    actual=h.map_pair{|key,value| key+value }.sort
+    actual=h.yield_pair{|key,value| key+value }.sort
     assert_equal(expect,actual,h.inspect)
   end
 
+  def test_map_key
+    h={"a"=>"b", "c"=>"d", "e"=>"f" }
+    expect={"a1"=>"b", "c1"=>"d", "e1"=>"f" }
+    actual=h.map_pair{|key,value| "#{key}1" }.sort
+    assert_equal(expect,actual,h.inspect)
+  end
+
+  def test_map_value
+    h={"a"=>"b", "c"=>"d", "e"=>"f" }
+    expect={"a"=>"b2", "c"=>"d2", "e"=>"f2" }
+    actual=h.map_pair{|key,value| "#{value}2" }.sort
+    assert_equal(expect,actual,h.inspect)
+  end
+
+  def test_map_pair
+    h={"a"=>"b", "c"=>"d", "e"=>"f" }
+    expect={"a1"=>"b2", "c1"=>"d2", "e1"=>"f2" }
+    actual=h.map_pair{|key,value| ["#{key}1", "#{value}2" }.sort
+    assert_equal(expect,actual,h.inspect)
+  end
 
   def test_merge_recurse
     # Test with three kinds of items:
-    #   * same key => same value; this must stay the same
-    #   * same key => other value; this must use the other value
-    #   * different key => any value; the output contains the key and its value
+    #   * same key => same value #=> must stay the same
+    #   * same key => other value #=> must use the other value
+    #   * different key => any value #=> output must contain the key and value
     h1={ "a" => "b", "c" => "d", "e" => "f", "g" => { "h" => "i", "j" => "k", "l" => "m"}}
     h2={ "a" => "b", "c" => "D", "E" => "F", "g" => { "h" => "i", "j" => "K", "L" => "M"}}
     expect={ "a" => "b", "c" => "D", "e" => "f", "g" => { "h" => "i", "j" => "K", "l" => "m", "L" => "M"}, "E" => "F"}
     actual=h1.merge_recurse(h2)
     assert_equal(expect,actual,h1.inspect+h2.inspect)
   end
-
 
   def pivotable
     h=Hash.new
@@ -149,7 +174,6 @@ class HashTest < Minitest::Test
     return h
   end
 
-
   def test_pivot_vals
     p=pivotable.pivot(:vals)
     assert_equal(['x','y','z'], p.keys.sort)
@@ -157,7 +181,6 @@ class HashTest < Minitest::Test
     assert_equal(['n','q','t'], p['y'].sort)
     assert_equal(['o','r','u'], p['z'].sort)
   end
-
 
   def test_pivot_vals_with_block
     p=pivotable.pivot(:vals){|items| items.sort.join }
@@ -167,7 +190,6 @@ class HashTest < Minitest::Test
     assert_equal('oru', p['z'])
   end
 
-
   def test_pivot_keys
     p=pivotable.pivot(:keys)
     assert_equal(['a','b','c'], p.keys.sort)
@@ -176,7 +198,6 @@ class HashTest < Minitest::Test
     assert_equal(['s','t','u'], p['c'].sort)
   end
 
-
   def test_pivot_keys_with_block
     p=pivotable.pivot(:keys){|items| items.sort.join }
     assert_equal(['a','b','c'], p.keys.sort)
@@ -184,7 +205,6 @@ class HashTest < Minitest::Test
     assert_equal('pqr', p['b'])
     assert_equal('stu', p['c'])
   end
-
 
   def test_pivot_direction_up_with_true
     Hash.publicize_methods do
@@ -196,7 +216,6 @@ class HashTest < Minitest::Test
     end
   end
 
-
   def test_pivot_direction_up_with_false
     Hash.publicize_methods do
       assert(!{}.pivot_direction_up?('val'))
@@ -207,16 +226,10 @@ class HashTest < Minitest::Test
     end
   end
 
-
   def test_pivot_direction_up_with_invalid
     Hash.publicize_methods do
       assert_raises(ArgumentError){ {}.pivot_direction_up?('nonsense') }
     end
   end
 
-
 end
-
-
-
-

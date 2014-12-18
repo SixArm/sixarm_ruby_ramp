@@ -1,133 +1,34 @@
 # -*- coding: utf-8 -*-
 
 require 'yaml'
+require_relative 'pairable'
 
 # Hash extensions
 
 class Hash
+  include Pairable
 
-
+  # Does the hash contain any items?
+  #
   # @return [Boolean] true if size > 0
-
+  #
   def size?
     size>0
   end
 
+  # Sort the hsh items by the keys.
+  #
   # @return [Hash] a new hash sorted by the keys
   #
   # @example
   #    h = {"c" => "cherry", "b" => "banana", "a" =>"apple" }
   #    h.sort_keys => {"a" => "apple", "b" => "banana", "c" => "cherry"}
-
+  #
   def sort_by_keys
     Hash[sort]
   end
 
-
-  # Calls block once for each key in hsh, passing the key and value to the block as a two-element array.
-  #
-  # The keys are sorted.
-  #
-  # @example
-  #   h = { "xyz" => "123", "abc" => "789" }
-  #   h.each_sort {|key, val| ... }
-  #   => calls the block with "abc" => "789", then with "xyz" => "123"
-
-  def each_sort
-    keys.sort.each{|key| yield key,self[key] }
-  end
-
-
-  # Calls block once for each key in hsh,
-  # passing the key as a parameter,
-  # and updating it in place.
-  #
-  # @example
-  #   h = { "a" => "b", "c" => "d" }
-  #   h.each_key! {|key| key.upcase }
-  #   h => { "A" => "b", "C" => "d" }
-  #
-  # @return self
-
-  def each_key!
-    replacements=[]
-    keys.each{|key|
-      value=self[key]
-      key2=yield(key)
-      if key===key2
-        #nop
-      else
-        replacements << [key,key2,value]
-      end
-    }
-    replacements.each{|key,key2,value|
-      self.delete(key)
-      self[key2]=value
-    }
-    return self
-  end
-
-
-  # Calls block once for each key in hsh,
-  # passing the key and value as parameters,
-  # and updated them in place.
-  #
-  # @example
-  #   h = { "a" => "b", "c" => "d" }
-  #   h.each_pair! {|key,value| key.upcase, value.upcase }
-  #   h => { "A" => "B", "C" => "D" }
-  #
-  # @return self.
-
-  def each_pair!
-    replacements=[]
-    keys.each{|key|
-      value=self[key]
-      key2,value2=yield(key,value)
-      if key===key2
-        if value===value2
-          #nop
-        else
-          self[key]=value2
-        end
-      else
-        replacements << [key,key2,value2]
-      end
-    }
-    replacements.each{|key,key2,value2|
-      self.delete(key)
-      self[key2]=value2
-    }
-    return self
-  end
-
-
-  # Calls block once for each key in hsh,
-  # passing the value as a parameter,
-  # and updating it in place.
-  #
-  # @example
-  #   h = { "a" => "b", "c" => "d" }
-  #   h.each_value! {|value| value.upcase }
-  #   h => { "a" => "B", "c" => "d" }
-  #
-  # @return self.
-
-  def each_value!
-    keys.each{|key|
-      value=self[key]
-      value2=yield(value)
-      if value===value2
-        #nop
-      else
-        self[key]=yield(value)
-      end
-    }
-    return self
-  end
-
-
-  # Returns a new hash containing the contents of other_hash and the
+  # Return a new hash containing the contents of other_hash and the
   # contents of hsh.
   #
   # If no block is specified, the value for entries with duplicate
@@ -139,12 +40,11 @@ class Hash
   #
   # @example:
   #
-  #   h1 = {a: 'b', c: 'd', {e: 'f', g: 'h'}
-  #   h2 = {a: 'B', {e: 'F'}}
+  #   h1 = {a: 'b', c: {d: 'e'}}
+  #   h2 = {a: 'B', c: {d: 'E'}}
   #   h1.merge_recurse(h2)
-  #   #=> {a: 'B', c: 'd', {e: 'F', g: 'h'}
+  #   #=> {a: 'B', c: {d: 'E'}}
   #
-
   def merge_recurse(other_hash)
     merge(other_hash){|key, oldval, newval|
       if oldval.is_a?(Hash) && newval.is_a?(Hash)
@@ -154,19 +54,6 @@ class Hash
       end
     }
   end
-
-  # Calls block once for each key-value pair in hsh,
-  # passing the key and value as paramters to the block.
-  #
-  # @example
-  #   h = {"a"=>"b", "c"=>"d", "e"=>"f" }
-  #   h.map_pair{|key,value| key+value }
-  #   => ["ab","cd","ef"]
-
-  def map_pair
-    keys.map{|key| yield key, self[key] }
-  end
-
 
   # Hash#pivot aggregates values for a hash of hashes,
   # for example to calculate subtotals and groups.
