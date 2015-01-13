@@ -62,6 +62,5 @@ class ProcessTest < Minitest::Test
    assert_equal(['a','b','c'], Process.ps_keys)
    Process.ps_keys=Process::PS_KEYS_DEFAULT
  end
-  
-end
 
+end
