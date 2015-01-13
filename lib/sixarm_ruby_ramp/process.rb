@@ -19,7 +19,6 @@
 
 module Process
 
-
   # Get the 'ps' command as one long text string.
   #
   # This is typically useful for logging to a text file.
@@ -30,11 +29,10 @@ module Process
   #   => "0.0 bfd86194 21:14:51 ..."
   #
   # @return [String] lots of data about the process
-
+  #
   def self.ps(pid=Process.pid)
     `#{self.ps_command} #{pid.to_i}`
   end
-
 
   # Get the 'ps' command as a hash of keys and values.
   #
@@ -46,7 +44,7 @@ module Process
   #   => {"cp"=>0.0, "esp"=>"bfd86194", "etime"=>"21:14:51", ...  }
   # -
   # OPTIMIZE: add dates, times
-
+  #
   PS_TO_I = %w(c egid egroup uid fgid lwp ni nlwp pgid pid ppid rgid rss ruid sid sgid suid)
   PS_TO_F = %w(cp pcpu pmem)
 
@@ -59,17 +57,16 @@ module Process
     return h
   end
 
-
   # Get the list of process alias keywords as typically defined by the shell.
   #
   # For example, a shell may consider "%cpu" and "pcpu" to be identical.
   #
   # @example
   #   Process::PS_ALIASES_DEFAULT
-  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "cls"=>"policy", ... }
+  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "class"=>"cls", ... }
   #
   # @return [Hash<String,String>] process keyword aliases
-
+  #
   PS_ALIASES_DEFAULT={
     '%cpu'=>'pcpu',
     '%mem'=>'pmem',
@@ -77,8 +74,8 @@ module Process
     'sigmask'=>'blocked',
     'sig_catch'=>'caught',
     'sigcatch'=>'caught',
-    'cls'=>'class',
-    'cls'=>'policy',
+    'class'=>'cls',
+    'policy'=>'pol',
     'cputime'=>'time',
     'gid'=>'egid',
     'group'=>'egroup',
@@ -104,46 +101,42 @@ module Process
     'session'=>'sid',
     'svgid'=>'sgid',
     'tt'=>'tname',
-    'tty'=>'tname', 
+    'tty'=>'tname',
     'vsz'=>'vsize'
   }
-
 
   # Get the list of process alias keywords as typically defined by the shell.
   #
   # For example, a shell may consider "%cpu" and "pcpu" to be identical.
   #
-  # @example                                                                          
+  # @example
   #   Process.ps_aliases
-  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "cls"=>"policy", ... }                                   
-  #                                                                                                                
-  # @return [Hash<String,String>] process keyword aliases 
-
+  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "class"=>"cls", ... }
+  #
+  # @return [Hash<String,String>] process keyword aliases
+  #
   def self.ps_aliases
     @@ps_aliases||=PS_ALIASES_DEFAULT
   end
-
 
   # Set the list of process alias keywords.
   #
   # For example, a shell may consider "%cpu" and "pcpu" to be identical.
   #
-  # @example                                                                          
-  #   Process::ps_aliases={ {"%cpu"=>"pcpu", "sigmask"=>"blocked", "cls"=>"policy" }
-  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "cls"=>"policy"}     
-  #        
-  # @param [Hash<String,String>] aliases                                 
+  # @example
+  #   Process::ps_aliases={ {"%cpu"=>"pcpu", "sigmask"=>"blocked", "class"=>"cls" }
+  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "class"=>"cls"}
+  #
+  # @param [Hash<String,String>] aliases
   # @return [Hash<String,String>] aliases
-
+  #
   def self.ps_aliases=(aliases)
     @@ps_aliases=aliases
   end
 
-
   # The list of process keywords.
 
-  PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'
-
+  PS_KEYS_DEFAULT=%w'%cpu %mem acflag acflg args blocked comm command cpu cputime etime f flags gid group inblk inblock jobc ktrace ktracep lim login logname lstart majflt minflt msgrcv msgsnd ni nice nivcsw nsignals nsigs nswap nvcsw nwchan oublk oublock p_ru paddr pagein pcpu pending pgid pid pmem ppid pri pstime putime re rgid rgroup rss ruid ruser sess sig sigmask sl start stat state stime svgid svuid tdev time tpgid tsess tsiz tt tty ucomm uid upr user usrpri utime vsize vsz wchan wq wqb wql wqr xstat'
 
   # Get the list of process keywords.
   #
@@ -152,30 +145,26 @@ module Process
   #   => ["blocked","group","pending","size"]
   #
   # @return [Array<String>] the list of process keywords.
-
-
+  #
   def self.ps_keys
     @@ps_keys||=PS_KEYS_DEFAULT
   end
 
- 
   # Set the list of process keywords.
   #
-  # @example 
+  # @example
   #   Process.ps_keys = ["blocked","group","pending","size"]
   #
   # @param [Array<String>] keywords
   # @return [Array<String>] keywords
-
+  #
   def self.ps_keys=(keys)
     @@ps_keys=keys
   end
 
-
   # The process command, i.e. what the sytem will call for the "ps" command.
 
-  PS_COMMAND_DEFAULT='ps h ww -o "'+self.ps_keys.join(',')+'"'
-
+  PS_COMMAND_DEFAULT="ps hww -o #{ps_keys.join(',')}"
 
   # Get the process command, i.e. what the sytem will call for the "ps" command.
   #
@@ -184,11 +173,10 @@ module Process
   #   => "ps h ww -o blocked,group,pending,size"
   #
   # @return [String] the process command
- 
+  #
   def self.ps_command
     @@ps_command||=PS_COMMAND_DEFAULT
   end
-
 
   # Set the process command, i.e. what the sytem will call for the "ps" command.
   #
@@ -196,11 +184,10 @@ module Process
   #   Process.ps_command = "ps h ww -o blocked,group,pending,size"
   #
   # @param [String] the process command
-  # @return [String] the process command 
-
+  # @return [String] the process command
+  #
   def self.ps_command=(command)
     @@ps_command=command
   end
-
 
 end
