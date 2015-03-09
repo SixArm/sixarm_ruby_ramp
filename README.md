@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> Ramp gem is a toolkit of Ruby base class extensions
+# Ruby » <br> Ramp is a toolkit of Ruby base class extensions
 
 [![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_ramp.png)](https://travis-ci.org/SixArm/sixarm_ruby_ramp)
@@ -28,7 +28,7 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_ramp", "~>4.0.0"
+    gem "sixarm_ruby_ramp", ">=4.1.0", "<5"
 
 Require:
 
@@ -88,9 +88,11 @@ To install with high security:
 ## Enumerable
 
 * cartesian_product: return an array of all possible ordered tuples from arrays.
-* hash_by: convert the array to a hash by mapping each item to a key=>value pair.
-* index_by: convert the array to a hash by mapping each ite to a key=>item pair.
+* hash_by: convert the object to a hash by mapping each item to a key=>value pair.
+* index_by: convert the object to a hash by mapping each item to a key=>item pair.
 * join: forwards to self.to_a.join
+* to_h: convert the object to a hash by mapping each item to a key=>value pair.
+* to_h_merge: convert the object to a hash by mapping each item to a key=>value pair, merging any duplicate keys.
 * map_id: return the id of an Enumerable object; *requires* that the object respond to an 'id' message
 * map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym: convert each object to a specific type by calling its respective method to_a, to_i, to_f, to_s, to_sym
 * map_with_index: for each item, yield to a block with the item and its incrementing index
@@ -227,7 +229,9 @@ Extensions that help debug Ruby programs.
 
 ## Changes
 
-* 2014-12-17 4.0.0 Add `Pairable` methods; change semantics of `Hash#map_pair`
+* 2015-01-13 4.1.0 Fix Enumerable `to_h` and add `to_h_merge`
+* 2015-01-13 4.0.1 Fix for Process.ps keys
+* 2014-12-17 4.0.0 Add `Pairable` methods; change semantics of `Hash#map_pair`; change `to_h` for Ruby 2.2.0
 * 2013-08-19 3.0.1 Update for Code Climate, Travis CI, gem dependencies
 * 2013-08-18 3.0.0 Update to Ruby 2
 * 2012-09-01 2.1.7 Add Numeric#floor_precision
