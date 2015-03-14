@@ -18,4 +18,3 @@ class IntegerTest < Minitest::Test
   end
 
 end
-

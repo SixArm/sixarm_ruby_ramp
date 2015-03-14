@@ -131,6 +131,7 @@ To install with high security:
 
 ## Integer
 
+* rbit: reverse bit
 * maps: syntactic sugar to yield n times to a block, returning an array of any results
 * odd?: is the number odd?
 
@@ -229,6 +230,7 @@ Extensions that help debug Ruby programs.
 
 ## Changes
 
+* 2015-03-14 4.2.0 Add `Integer#rbit`
 * 2015-01-13 4.1.0 Fix Enumerable `to_h` and add `to_h_merge`
 * 2015-01-13 4.0.1 Fix for Process.ps keys
 * 2014-12-17 4.0.0 Add `Pairable` methods; change semantics of `Hash#map_pair`; change `to_h` for Ruby 2.2.0

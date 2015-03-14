@@ -2,13 +2,13 @@
 
 # Enumberable extensions
 
+require 'set'
 module Enumerable
-
 
   ########################################################################
   #
   #  typecast
-  #  
+  #
   ########################################################################
 
   # Convert an enumerable to a hash.
@@ -19,24 +19,42 @@ module Enumerable
   #   array=[[:a, :b],[:c, :d],[:e, :f]]
   #   array.to_h => {:a=>:b, :c=>:d, :e=>:f}
   #
-  # If a key occurs more than once, then this will automatically 
-  # convert the value to an array of the keys' values.
+  if !Enumerable.instance_methods.include?:to_h
+    def to_h
+      hash={}
+      each{|key,val|
+        hash[key]=val
+      }
+      return hash
+    end
+  end
+
+  # Convert an enumerable to a hash and merge values.
+  #
+  # @return [Hash<Object,Object>] a hash of the enumerable's items
+  #
+  # @example
+  #   array=[[:a, :b],[:c, :d],[:e, :f]]
+  #   array.to_h => {:a=>:b, :c=>:d, :e=>:f}
+  #
+  # If a key occurs more than once, then this will automatically
+  # merge the values to an array of the keys' values.
   #
   # @example
   #   array=[[:a,:b],[:a,:c],[:a,:d]]
   #   array.to_h => {:a=>[:b, :c, :d]}
-
-  def to_h
+  #
+  def to_h_merge
     hash={}
-    dupe={}
+    seen=Set.new
     each{|key,val|
       if hash.key? key
-        if dupe.key? key
+        if seen.include? key
           hash[key] << val
         else
           hash[key]=[hash[key]]
           hash[key] << val
-          dupe[key]=true
+          seen << key
         end
       else
         hash[key]=val
@@ -44,7 +62,6 @@ module Enumerable
     }
     return hash
   end
-
 
   # Convert the enumerable to a hash by mapping each item to a pair [index ,item]
   #
@@ -60,35 +77,31 @@ module Enumerable
   # From http://stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array
   #
   # @see #hash_by
-
+  #
   def index_by
     inject({}) {|hash, elem| hash.merge!(yield(elem) => elem) }
   end
 
-
   # Convert the enumerable to a hash by mapping each item to a pair [item, new item]
   #
   # @return [Hash<Object,Object>] a hash of the enumerable's items
-  # 
+  #
   # @example
   #   strings = ["red","blue","green"]
   #   strings.hash_by{|a| [a.size, a.upcase]}
   #   => {3 => "RED", 4 => "BLUE", 5 => "GREEN"}
   #
   # @see #index_by
-
+  #
   def hash_by
     map{|item| yield(item)}.to_h
   end
 
-
-
   ########################################################################
   #
   #  map_to_xxx
-  #  
+  #
   ########################################################################
-
 
   # Map each item => item.id
   #
@@ -101,11 +114,10 @@ module Enumerable
   # A typical use is to convert a list of ActiveRecord items to a list of id items.
   #
   # This method is a fast way to get the same results as items.map(&:id)
-
+  #
   def map_id
     map{|item| item.id}
   end
-
 
   # Map each item => item.to_a
   #
@@ -122,11 +134,10 @@ module Enumerable
   # so you can more easily iterate over the the Array items.
   #
   # See http://www.ruby-doc.org/core/classes/Enumerable.html#M003148
-
+  #
   def map_to_a
     map{|item| [item]}
   end
-
 
   # Map each item => item.to_f
   #
@@ -139,11 +150,10 @@ module Enumerable
   # A typical use is to convert a list of String items to a list of float items.
   #
   # This method is a fast way to get the same results as items.map(&:to_f)
-
+  #
   def map_to_f
     map{|item| item.to_f}
   end
-
 
   # Map each item => item.to_i
   #
@@ -151,16 +161,15 @@ module Enumerable
   #
   # @example
   #   strings = ["1","2","3"]
-  #   strings.map_to_i => [1, 2, 3]  
+  #   strings.map_to_i => [1, 2, 3]
   #
   # A typical use is to convert a list of String items to a list of integer items.
   #
   # This method is a fast way to get the same results as items.map(&:to_i)
-
+  #
   def map_to_i
     map{|item| item.to_i}
   end
-
 
   # Map each item => item.to_s
   #
@@ -168,16 +177,15 @@ module Enumerable
   #
   # @example
   #   numbers = [1, 2, 3]
-  #   numbers.map_to_s => ["1", "2", "3"]  
+  #   numbers.map_to_s => ["1", "2", "3"]
   #
   # A typical use is to convert a list of Numeric items to a list of String items.
   #
   # This method is a fast way to get the same results as items.map(&:to_s)
- 
+  #
   def map_to_s
     map{|item| item.to_s}
   end
-
 
   # Map each item => item.to_sym
   #
@@ -190,11 +198,10 @@ module Enumerable
   # A typical use is to convert a list of Object items to a list of Symbol items.
   #
   # This method is a fast way to get the same results as items.map(&:to_sym)
-
+  #
   def map_to_sym
     map{|item| item.to_sym}
   end
-
 
   # Map each item and its index => a new output
   #
@@ -206,58 +213,54 @@ module Enumerable
   #   strings = ["a", "b", "c"]
   #   strings.map_with_index{|string,index| "#{string}#{index}"}
   #    => ["a0, "b1", "c3"]
-
+  #
   def map_with_index
     index=-1
     map{|item| index+=1; yield(item,index)}
   end
 
-
   ########################################################################
   #
   #  select
-  #  
+  #
   ########################################################################
-  
-  
+
   # @example
   #   enum.select_while {|obj| block }
   #    => array
   #
   # @return [Array<Object>] the leading elements for which block is not false or nil.
-
+  #
   def select_while
     arr = []
     each{|item| yield(item) ? (arr << item) : break}
     return arr
   end
 
-
   # @example
   #   enum.select_until {|obj| block }
   #    => array
   #
   # @return [Array<Object>] the leading elements for which block is false or nil.
-
+  #
   def select_until
     arr = []
     each{|item| yield(item) ? break : (arr << item)}
     return arr
   end
 
-
   # Calls block with two arguments, the item and its index, for each item in enum.
   #
   # @example
-  #   enum.select_with_index {|obj,i| block } 
+  #   enum.select_with_index {|obj,i| block }
   #   => array
   #
   # @return [Array<Object> the leading elements for which block is not false or nil.
-
+  #
   def select_with_index
     index = 0
     arr = []
-    each{|item| 
+    each{|item|
       if yield(item,index)
         arr << item
         index+=1
@@ -268,25 +271,24 @@ module Enumerable
     return arr
   end
 
-
   ########################################################################
   #
   #  bisect
-  #  
+  #
   ########################################################################
 
   # @example
   #   enum.bisect {|obj| block}
   #   => array of positives, array of negatives
-  # 
+  #
   # @return [Array<Array<Object>] an array of two arrays:
   #    the first array is the elements for which block is true,
   #    the second array is the elements for which block is false or nil.
-
+  #
   def bisect
     accept=[]
     reject=[]
-    each{|item| 
+    each{|item|
      if yield(item)
       accept << item
      else
@@ -296,19 +298,18 @@ module Enumerable
     return accept,reject
   end
 
-
   ########################################################################
   #
   #  mutually exclusive?
-  #  
+  #
   ########################################################################
 
   # @example
   #   enum.mutex? {|obj| block}
   #   => true iff block is not false or nil, zero or one time
   #
-  # @return boolean true iff block is not false or nil, zero or one time 
-
+  # @return boolean true iff block is not false or nil, zero or one time
+  #
   def mutex?
     num = 0
     each{|item|
@@ -320,20 +321,18 @@ module Enumerable
     return true
   end
 
-
   ########################################################################
   #
   #  nitems
-  #  
+  #
   ########################################################################
-  
-  
+
   # @example
   #   enum.nitems?(n) {| obj | block }
   #    => true iff the block is not false or nil num times
-  # 
+  #
   # @return [Boolean] true iff the block is not false or nil num times
-
+  #
   def nitems?(n)
     num = 0
     each{|item|
@@ -345,30 +344,28 @@ module Enumerable
     return num==n
   end
 
-
   # @example
   #   enum.nitems_while {| obj | block }
   #    => number of items
-  # 
+  #
   # @return [Integer] the number of leading elements for which block is not false or nil.
-
+  #
   def nitems_while
     num = 0
     each{|item| yield(item) ? (num+=1) : break}
     return num
   end
 
-
   # @example
   #   enum.nitems_until {| obj | block }
   #   => number of items
   #
   # @return [Integer] the number of leading elements for which block is false.
-
+  #
   def nitems_until
     num = 0
     each{|item|
-      if yield(item) 
+      if yield(item)
         break
       else
         num+=1
@@ -385,7 +382,7 @@ module Enumerable
   #    => number of items
   #
   # @return [Integer] the number of leading elements for which block is true.
-
+  #
   def nitems_with_index
     index = 0
     each{|item| yield(item,index) ? (index+=1) : break}
@@ -402,18 +399,16 @@ module Enumerable
   # @return [String] concatenated string
   #
   # @see Array#join
-
+  #
   def join(*op)
    to_a.join(*op)
   end
 
-
   ########################################################################
   #
   #  set math
-  #  
+  #
   ########################################################################
-
 
   # @return [Boolean] true if this  _enum_ intersects another _enum_.
   #
@@ -429,7 +424,6 @@ module Enumerable
     return enum.any?{|item| self.include?(item)}
   end
 
-
   # @return [Array] the cartesian product of the enumerations.
   #
   # @see http://en.wikipedia.org/wiki/Cartesian_product
@@ -443,7 +437,7 @@ module Enumerable
   # For our benchmarks, we also compared these:
   # - By William James, http://www.ruby-forum.com/topic/95519
   # - By Brian Schröäer, http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857
- 
+  #
   def self.cartesian_product(*enums)
     result = [[]]
     while [] != enums
@@ -458,11 +452,11 @@ module Enumerable
     result
   end
 
-
+  # Calculate the cartesian product.
+  #
   def cartesian_product(*enums)
     Enumerable.cartesian_product(self,*enums)
   end
-
 
   # Calculate the power set.
   #
@@ -475,7 +469,7 @@ module Enumerable
   # @example
   #   [1,2,3].power_set.sort
   #   =>  [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]
-
+  #
   def power_set
     inject([[]]){|c,y|r=[];c.each{|i|r<<i;r<<i+[y]};r}
   end

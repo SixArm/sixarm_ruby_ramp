@@ -19,13 +19,23 @@ class EnumerableTest < Minitest::Test
 
 
   def test_to_h_with_unique_keys
-    a=[[:a,:b],[:c,:d],[:e,:f]] 
+    a=[[:a,:b],[:c,:d],[:e,:f]]
     assert_equal({:a=>:b, :c=>:d, :e=>:f}, a.to_h)
   end
 
   def test_to_h_with_duplicate_keys
-    a=[[:a,:b],[:a,:c],[:a,:d]] 
-    assert_equal({:a=>[:b, :c, :d]}, a.to_h)
+    a=[[:a,:b],[:a,:c],[:a,:d]]
+    assert_equal({:a=>:d}, a.to_h)
+  end
+
+  def test_to_h_merge_with_unique_keys
+    a=[[:a,:b],[:c,:d],[:e,:f]]
+    assert_equal({:a=>:b, :c=>:d, :e=>:f}, a.to_h_merge)
+  end
+
+  def test_to_h_merge_with_duplicate_keys
+    a=[[:a,:b],[:a,:c],[:a,:d]]
+    assert_equal({:a=>[:b, :c, :d]}, a.to_h_merge)
   end
 
   def test_index_by
@@ -36,7 +46,7 @@ class EnumerableTest < Minitest::Test
     assert_equal({3=>"RED",4=>"BLUE",5=>"GREEN"},RGB.hash_by{|x| [x.size,x.upcase]})
   end
 
-    
+
   ########################################################################
   #
   #  map
@@ -58,11 +68,11 @@ class EnumerableTest < Minitest::Test
   end
 
 
-  A = Mock.new('a') 
-  B = Mock.new('b') 
-  C = Mock.new('c') 
+  A = Mock.new('a')
+  B = Mock.new('b')
+  C = Mock.new('c')
 
-  
+
   def test_map_id
     assert_equal(['a','b','c'],[A,B,C].map_id)
   end
@@ -173,7 +183,7 @@ class EnumerableTest < Minitest::Test
   end
 
 
-  def test_nitems_while  
+  def test_nitems_while
     assert_equal(0,ITEMS.nitems_while{|x| x < 'a' },'< a')
     assert_equal(1,ITEMS.nitems_while{|x| x < 'b' },'< b')
     assert_equal(2,ITEMS.nitems_while{|x| x < 'c' },'< c')
@@ -190,7 +200,7 @@ class EnumerableTest < Minitest::Test
     assert_equal(3,ITEMS.nitems_until{|x| x == 'e' },'e')
   end
 
-  
+
   def test_nitems_with_index
     assert_equal(0,ITEMS.nitems_with_index{|x,i| i < 0 },'i < 0')
     assert_equal(1,ITEMS.nitems_with_index{|x,i| i < 1 },'i < 1')
@@ -297,7 +307,3 @@ class EnumerableTest < Minitest::Test
   end
 
 end
-
-
-
-
