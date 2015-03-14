@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 require 'csv'
- 
+
 # Array extensions
 
 class Array
@@ -92,7 +92,7 @@ class Array
   #   [].rotate! => []
   #
   # @return [Array] self
-  
+
   def rotate!
     if size>0
       push item=shift
@@ -100,7 +100,7 @@ class Array
     self
   end
 
-  
+
   # @return [Object] a random item from the array
   #
   # @example
@@ -109,7 +109,7 @@ class Array
   #   [1,2,3,4].choice => 3
   #
   # Implemented in Ruby 1.9
-  
+
   def choice
     self[Kernel.rand(size)]
   end
@@ -120,7 +120,7 @@ class Array
   # @example
   #   [1,2,3,4].choices(2) => [3,1]
   #   [1,2,3,4].choices(3) => [4,2,3]
-  
+
   def choices(count)
     arr = Array.new
     count.times { arr << self.choice }
@@ -139,13 +139,13 @@ class Array
   # This is identical to calling foo.zip(values).to_h
 
   def onto(values)
-    size==values.size or raise ArgumentError, "Array size #{size} must match values size #{size}" 
+    size==values.size or raise ArgumentError, "Array size #{size} must match values size #{size}"
     zip(values).to_h
   end
 
 
   ##############################################################
-  # 
+  #
   # GROUPINGS
   #
   ##############################################################
@@ -166,12 +166,12 @@ class Array
 
 
   ##############################################################
-  # 
+  #
   # COMBINATIONS
   #
   ##############################################################
 
-  
+
   # @return [Array] the union of the array's items.
   #
   # In typical use, each item is an array.
@@ -212,10 +212,10 @@ class Array
     inject{|inj,item| inj & item.to_a } || []
   end
 
-  
+
 
   ##############################################################
-  # 
+  #
   # LIST PROCESSING
   #
   ##############################################################
@@ -256,7 +256,7 @@ class Array
   # Delete the first _number_of_items_ items.
   #
   # @return [Array] the array, minus the deleted items.
-  # 
+  #
   # @example
   #   list=['a','b','c']
   #   list.shifted!
@@ -280,45 +280,8 @@ class Array
   alias :rest! :shifted!
 
 
-  # Randomly arrange the array items.
-  #
-  # @return [Array] the array, with its items shuffled.
-  #
-  # This implementation is optimized for speed, not for memory use.
-  # See http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array/
-  #
-  # @example
-  #   list=
-  #   list=['a','b','c']
-  #   list.shuffle!
-  #   list => ['c','a','b']
-
-  def shuffle!  
-    each_index do |i| 
-      j = rand(length-i) + i
-      self[j], self[i] = self[i], self[j]  
-    end
-  end
-
-
-  # @return [Array] a new array with the items shuffled.
-  #
-  # This implementation is optimized for speed, not for memory use.
-  # See http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array/
-  #
-  # @example
-  #   list=
-  #   list=['a','b','c']
-  #   list.shuffle!
-  #   list => ['c','a','b']
-
-  def shuffle  
-    dup.shuffle!  
-  end
-
-
   ##############################################################
-  # 
+  #
   # CASTS
   #
   ##############################################################
@@ -334,7 +297,7 @@ class Array
   #   [[1,2,3],[4,5,6]] => "1,2,3\n4,5,6\n"
   #
   # @example of a blank array
-  #   
+  #
   #   [].to_csv => ""
   #
   # N.b. this method uses the multi-dimensional if the
@@ -368,7 +331,7 @@ class Array
   # Each subarray becomes one 'line' in the output.
   #
   # @example of a blank array
-  #   
+  #
   #   [].to_csv => ""
 
   def to_tsv(ops={})

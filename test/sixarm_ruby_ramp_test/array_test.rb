@@ -28,7 +28,7 @@ class ArrayTest < Minitest::Test
   def test_join_with_too_many_ops_raises
     assert_raises(ArgumentError){ A.join('','','','') }
   end
-  
+
   def test_join_prefix_suffix
     assert_equal('[a][b][c][d]', A.join_prefix_suffix('[',']'))
   end
@@ -56,7 +56,7 @@ class ArrayTest < Minitest::Test
   def test_size_with_one_empty
     assert_equal(true,[[]].size?)
   end
-  
+
  def test_rotate
    a=A.dup
    a.rotate!
@@ -157,7 +157,7 @@ class ArrayTest < Minitest::Test
   end
 
   # alias: test_cdr must be idential to test_shifted
-  def test_cdr_with_negative_count    
+  def test_cdr_with_negative_count
     assert_raises(ArgumentError){ [].cdr(-1) }
   end
 
@@ -206,15 +206,15 @@ class ArrayTest < Minitest::Test
     a=['a','b','c']; a.shifted!(4); assert_equal([           ],a)
   end
 
-  def test_shifted_bang_with_negative_count    
+  def test_shifted_bang_with_negative_count
     assert_raises(ArgumentError){ [].shifted!(-1) }
   end
 
-  def test_shifted_bang_with_non_integer_count    
+  def test_shifted_bang_with_non_integer_count
     assert_raises(ArgumentError){ [].shifted!(0.123) }
   end
 
-  def test_shifted_bang_with_non_numeric_count    
+  def test_shifted_bang_with_non_numeric_count
     assert_raises(ArgumentError){ [].shifted!("") }
   end
 
@@ -242,7 +242,7 @@ class ArrayTest < Minitest::Test
   def test_cdr_bang_with_non_numeric_count
     assert_raises(ArgumentError){ [].cdr!("") }
   end
-  
+
   # alias: test_rest_bang must be identical to test_shifted_bang
   def test_rest_bang
     a=['a','b','c']; a.rest!;    assert_equal([    'b','c'],a)
@@ -252,7 +252,7 @@ class ArrayTest < Minitest::Test
     a=['a','b','c']; a.rest!(3); assert_equal([           ],a)
     a=['a','b','c']; a.rest!(4); assert_equal([           ],a)
   end
-    
+
   # alias: test_rest_bang must be identical to test_shifted_bang
   def test_rest_bang_with_negative_count
     assert_raises(ArgumentError){ [].rest!(-1) }
@@ -273,31 +273,12 @@ class ArrayTest < Minitest::Test
     assert_equal('a',a.car)
   end
 
-  def test_shuffle
-    a=[1,2,3,4]
-    5.times {
-      b=a.shuffle
-      assert_equal(a.size,b.size)
-      a.each{|item| assert(b.include?(item)) }
-    }
-  end
-
-  def test_shuffle_bang
-    a=[1,2,3,4]
-    b=a.dup
-    5.times {
-      b.shuffle!
-      assert_equal(a.size,b.size)
-      a.each{|item| assert(b.include?(item)) }
-    }
-  end
-
   def test_to_csv_one_dimensional
     assert_equal("a,b,c,d\n",A.to_csv)
   end
 
   def test_to_csv_with_empty
-    assert_equal("",[].to_csv)    
+    assert_equal("",[].to_csv)
   end
 
   def test_to_csv_multi_dimensional
@@ -311,7 +292,7 @@ class ArrayTest < Minitest::Test
   end
 
   def test_to_tsv_with_empty
-    assert_equal("",[].to_tsv)    
+    assert_equal("",[].to_tsv)
   end
 
   # alias: test_to_tdf must be identical to test_to_tsv
@@ -322,9 +303,7 @@ class ArrayTest < Minitest::Test
 
   # alias: test_to_tdf must be identical to test_to_tsv
   def test_to_tdf_with_empty
-    assert_equal("",[].to_tdf)    
+    assert_equal("",[].to_tdf)
   end
 
 end
-
-

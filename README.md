@@ -28,7 +28,7 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_ramp", ">=4.1.0", "<5"
+    gem "sixarm_ruby_ramp", ">=4.2.1", "<5"
 
 Require:
 
@@ -230,6 +230,7 @@ Extensions that help debug Ruby programs.
 
 ## Changes
 
+* 2015-03-14 4.2.1 Conditionally load `Array#shuffle*`
 * 2015-03-14 4.2.0 Add `Integer#rbit`
 * 2015-01-13 4.1.0 Fix Enumerable `to_h` and add `to_h_merge`
 * 2015-01-13 4.0.1 Fix for Process.ps keys

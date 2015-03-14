@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_ramp"
   s.summary        = "SixArm.com » Ruby » Ramp provides base extensions to ruby classes."
   s.description    = "Adds extensions to Array, Date, File, Hash, IO, String, Time, etc."
-  s.version        = "4.2.0"
+  s.version        = "4.2.1"
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
   s.homepage       = "http://sixarm.com/"
