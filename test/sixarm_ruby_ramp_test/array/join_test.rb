@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'sixarm_ruby_ramp/array/join''
+require "minitest/autorun"
+require "sixarm_ruby_ramp/array/join"
 
-class ArrayTest < Minitest::Test
+class ArrayJoinTest < Minitest::Test
 
   A=['a','b','c']
 

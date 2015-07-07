@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'sixarm_ruby_ramp/enumerable/select'
+require "minitest/autorun"
+require "sixarm_ruby_ramp/enumerable/select"
 
 class EnumerableSelectTest < Minitest::Test
 

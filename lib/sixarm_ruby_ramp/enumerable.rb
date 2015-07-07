@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Enumerable extensions
 
-require 'set'
+require "set"
 module Enumerable
 
   ########################################################################

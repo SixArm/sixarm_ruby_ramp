@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'sixarm_ruby_ramp/enumbar/map'
-require 'openstruct'
+require "minitest/autorun"
+require "sixarm_ruby_ramp/enumerable/map"
+require "ostruct"
 
 class EnumerableMapTest < Minitest::Test
 
   def test_map_id
-    x = [OpenStruct(id: 1), OpenStruct(id: 2), OpenStruct(id: 3)]
+    x = [OpenStruct.new(id: 1), OpenStruct.new(id: 2), OpenStruct.new(id: 3)]
     assert_equal(x.map(&:id), x.map_id)
   end
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'csv'
-require 'sixarm_ruby_ramp'
+require "minitest/autorun"
+require "csv"
+require "sixarm_ruby_ramp"
 
 
 class ArrayTest < Minitest::Test

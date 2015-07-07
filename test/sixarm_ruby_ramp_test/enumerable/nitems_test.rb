@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'sixarm_ruby_ramp/enumerable/nitems'
+require "minitest/autorun"
+require "sixarm_ruby_ramp/enumerable/nitems"
 
 class EnumerableNItemsTest < Minitest::Test
+
+  ITEMS = ['a','b','c']
 
   def test_nitems?
     assert_equal(true,  ITEMS.nitems?(0){|x| x < 'a'})

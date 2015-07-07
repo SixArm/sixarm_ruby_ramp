@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-require 'date'
+require "date"
 
 # Date extensions
 

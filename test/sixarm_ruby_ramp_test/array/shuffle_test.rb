@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'sixarm_ruby_ramp/array/shuffle'
+require "minitest/autorun"
+require "sixarm_ruby_ramp/array/shuffle"
 
 class ArrayTest < Minitest::Test
 

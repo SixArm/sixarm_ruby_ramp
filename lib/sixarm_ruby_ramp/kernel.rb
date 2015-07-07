@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-require 'pp'
-require 'stringio'  
+require "pp"
+require "stringio"  
 
 # Kernel extensions
 

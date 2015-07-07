@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'sixarm_ruby_ramp'
-require 'set'
+require "minitest/autorun"
+require "sixarm_ruby_ramp"
+require "set"
 
 
 class EnumerableTest < Minitest::Test
 
   ITEMS = ['a','b','c']
-  MAPTEST = [123,"456"] # to test typecasts-- one is numeric and one is string
   RGB = ["red","green","blue"]  # to test case changes
 
 

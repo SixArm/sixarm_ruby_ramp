@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'sixarm_ruby_ramp/integer/rbit'
+require "minitest/autorun"
+require "sixarm_ruby_ramp/integer/rbit"
 
 class IntegerTest < Minitest::Test
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-require 'yaml'
+require "yaml"
 require_relative 'pairable'
 
 # Hash extensions
