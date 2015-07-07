@@ -2,13 +2,42 @@
 
 Gem::Specification.new do |s|
 
-  SOURCES          = ['array','class','csv','date','enumerable','file','fixnum','hash','integer','io','kernel','math','nil','numeric','object','pairable','process','string','symbol','time','xml','yaml']
+  SOURCES          = [
+    'array',
+    'array/join',
+    'array/shuffle',
+    'class',
+    'csv',
+    'date',
+    'enumerable',
+    'enumerable/map',
+    'enumerable/nitems',
+    'enumerable/select',
+    'file',
+    'fixnum',
+    'hash',
+    'integer',
+    'integer/rbit',
+    'io',
+    'kernel',
+    'math',
+    'nil',
+    'numeric',
+    'object',
+    'pairable',
+    'process',
+    'string',
+    'symbol',
+    'time',
+    'xml',
+    'yaml'
+  ]
   TESTERS          = ['io_test.txt']
 
   s.name           = "sixarm_ruby_ramp"
   s.summary        = "SixArm.com » Ruby » Ramp provides base extensions to ruby classes."
-  s.description    = "Adds extensions to Array, Date, File, Hash, IO, String, Time, etc."
-  s.version        = "4.2.1"
+  s.description    = "Adds extensions to Array, Date, Enumerable, File, Hash, IO, String, Time, etc."
+  s.version        = "4.2.2"
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
   s.homepage       = "http://sixarm.com/"
