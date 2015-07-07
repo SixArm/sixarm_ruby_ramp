@@ -1,4 +1,4 @@
-# Ruby » <br> Ramp is a toolkit of Ruby base class extensions
+# SixArm.com » Ruby » <br> Ramp is a toolkit of Ruby base class extensions
 
 [![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_ramp.png)](https://travis-ci.org/SixArm/sixarm_ruby_ramp)
@@ -28,7 +28,7 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_ramp", ">=4.2.1", "<5"
+    gem "sixarm_ruby_ramp", ">=4.2.2", "<5"
 
 Require:
 
@@ -54,7 +54,6 @@ To install with high security:
 * choice, choices: one or more random elements from an array
 * cross: return the cross pairings of an array with another array
 * divvy: divides an array, like a pie, into a specified number of slices (deprecated - see method rdoc)
-* join, join_prefix_suffix, join_prefix_suffix_infix: like Array#join with improvements
 * onto: return a hash that maps an array's keys on to another array's values
 * rotate: moves the first element of an array to the end
 * rest: return the rest of the items of the array (aka cdr, aka shifted)
@@ -65,6 +64,13 @@ To install with high security:
 * to_tdf: join a multidimensional array into a string in TDF (Tab Delimited Format); this is an alias for #to_tsv
 * to_tsv: join a multidimensional array into a string in TSV (Tab Separated Values), with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
+
+
+### Array join
+
+* join: enhances #join with optional prefix, suffix, and infix.
+* join_prefix_suffix: join with a prefix and suffix.
+* join_prefix_suffix_infix: join with a prefix, suffix, and infix.
 
 
 ## Class
@@ -93,13 +99,28 @@ To install with high security:
 * join: forwards to self.to_a.join
 * to_h: convert the object to a hash by mapping each item to a key=>value pair.
 * to_h_merge: convert the object to a hash by mapping each item to a key=>value pair, merging any duplicate keys.
+* power_set: return an array with all subsets of the enum's elements
+
+
+### Enumerable map
+
 * map_id: return the id of an Enumerable object; *requires* that the object respond to an 'id' message
 * map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym: convert each object to a specific type by calling its respective method to_a, to_i, to_f, to_s, to_sym
 * map_with_index: for each item, yield to a block with the item and its incrementing index
-* nitems_until, select_until: return the number of, or an array containing, the leading elements for which block is false or nil.
-* nitems_while, select_while: return the number of items, or an array containing the leading elements, for which block is not false or nil.
-* nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Return the number of, or an array containing, the leading elements for which block is not false or nil.
-* power_set: return an array with all subsets of the enum's elements
+
+
+### Enumerable nitems
+
+* nitems_while: the number of leading elements for which block is truthy.
+* nitems_until: the number of leading elements for which block is falsey.
+* nitems_with_index: the number of leading elements for which block with index is truthy.
+
+
+### Enumerable select
+
+* select_while: return an array of the leading elements for which block is truthy.
+* select_until: return an array of the leading elements for which block is falsey.
+* select_with_index: return an array of the leading elements for which block with index is truthy.
 
 
 ## File
@@ -251,32 +272,3 @@ Extensions that help debug Ruby programs.
 * 1.6.x Upgrades for Ruby 1.9.1; improve structure; add methods
 * 1.5.0 Combined all Ruby extension files into one gem
 * 1.0.0 Original
-
-
-## License
-
-You may choose any of these open source licenses:
-
-  * Apache License
-  * BSD License
-  * CreativeCommons License, Non-commercial Share Alike
-  * GNU General Public License Version 2 (GPL 2)
-  * GNU Lesser General Public License (LGPL)
-  * MIT License
-  * Perl Artistic License
-  * Ruby License
-
-The software is provided "as is", without warranty of any kind,
-express or implied, including but not limited to the warranties of
-merchantability, fitness for a particular purpose and noninfringement.
-
-In no event shall the authors or copyright holders be liable for any
-claim, damages or other liability, whether in an action of contract,
-tort or otherwise, arising from, out of or in connection with the
-software or the use or other dealings in the software.
-
-This license is for the included software that is created by SixArm;
-some of the included software may have its own licenses, copyrights,
-authors, etc. and these do take precedence over the SixArm license.
-
-Copyright (c) 2005-2015 Joel Parker Henderson
