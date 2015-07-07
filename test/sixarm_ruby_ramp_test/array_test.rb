@@ -9,34 +9,6 @@ class ArrayTest < Minitest::Test
   A=['a','b','c','d']
   B=['w','x','y','z']
 
-  def test_join_with_no_ops
-    assert_equal('abcd',A.join())
-  end
-
-  def test_join_with_1_op_does_infix
-    assert_equal('a*b*c*d', A.join('*'))
-  end
-
-  def test_join_with_2_ops_does_prefix_suffix
-    assert_equal('[a][b][c][d]', A.join('[',']'))
-  end
-
-  def test_join_with_3_opes_does_prefix_suffix_infix
-    assert_equal('[a]*[b]*[c]*[d]', A.join('[',']','*'))
-  end
-
-  def test_join_with_too_many_ops_raises
-    assert_raises(ArgumentError){ A.join('','','','') }
-  end
-
-  def test_join_prefix_suffix
-    assert_equal('[a][b][c][d]', A.join_prefix_suffix('[',']'))
-  end
-
-  def test_join_prefix_suffix_infix
-    assert_equal('[a]*[b]*[c]*[d]', A.join_prefix_suffix_infix('[',']','*'))
-  end
-
   def test_size_with_one_item
     assert_equal(true,[1].size?)
   end
