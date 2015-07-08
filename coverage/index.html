@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-07T22:33:41-06:00">2015-07-07T22:33:41-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-08T13:05:27-06:00">2015-07-08T13:05:27-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -283,11 +283,11 @@
       <tr>
         <td class="strong"><a href="#ddd0fe3a5682e58e203e05c97959c64af079d606" class="src_link" title="lib/sixarm_ruby_ramp/process.rb">lib/sixarm_ruby_ramp/process.rb</a></td>
         <td class="red strong">55.56 %</td>
-        <td>219</td>
+        <td>223</td>
         <td>27</td>
         <td>15</td>
         <td>12</td>
-        <td>3.8</td>
+        <td>3.5</td>
       </tr>
       
       <tr>
@@ -13199,25 +13199,25 @@
         <li class="never" data-hits="" data-linenumber="138">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="139">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="139">
           
-          <code class="ruby">  PS_KEYS_DEFAULT=%w&#39;%cpu %mem acflag acflg args blocked comm command cpu cputime etime f flags gid group inblk inblock jobc ktrace ktracep lim login logname lstart majflt minflt msgrcv msgsnd ni nice nivcsw nsignals nsigs nswap nvcsw nwchan oublk oublock p_ru paddr pagein pcpu pending pgid pid pmem ppid pri pstime putime re rgid rgroup rss ruid ruser sess sig sigmask sl start stat state stime svgid svuid tdev time tpgid tsess tsiz tt tty ucomm uid upr user usrpri utime vsize vsz wchan wq wqb wql wqr xstat&#39;</code>
+          
+          <code class="ruby">  # Omit:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="140">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="141">
           
           
-          <code class="ruby">  # Get the list of process keywords.</code>
+          <code class="ruby">  #  * pstime, putime, wq, wqb, wql, wqr: not available on travis-ci.org</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="142">
@@ -13226,22 +13226,22 @@
           <code class="ruby">  #</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="143">
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # @example</code>
+          <code class="ruby">  PS_KEYS_DEFAULT=%w&#39;%cpu %mem acflag acflg args blocked comm command cpu cputime etime f flags gid group inblk inblock jobc ktrace ktracep lim login logname lstart majflt minflt msgrcv msgsnd ni nice nivcsw nsignals nsigs nswap nvcsw nwchan oublk oublock p_ru paddr pagein pcpu pending pgid pid pmem ppid pri rgid rgroup rss ruid ruser sess sig sigmask sl start stat state stime svgid svuid tdev time tpgid tsess tsiz tt tty ucomm uid upr user usrpri utime vsize vsz wchan xstat&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="144">
           
           
-          <code class="ruby">  #   Process.ps_keys</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="145">
           
           
-          <code class="ruby">  #   =&gt; [&quot;blocked&quot;,&quot;group&quot;,&quot;pending&quot;,&quot;size&quot;]</code>
+          <code class="ruby">  # Get the list of process keywords.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="146">
@@ -13253,157 +13253,157 @@
         <li class="never" data-hits="" data-linenumber="147">
           
           
-          <code class="ruby">  # @return [Array&lt;String&gt;] the list of process keywords.</code>
+          <code class="ruby">  # @example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="148">
           
           
+          <code class="ruby">  #   Process.ps_keys</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">  #   =&gt; [&quot;blocked&quot;,&quot;group&quot;,&quot;pending&quot;,&quot;size&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
           <code class="ruby">  #</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="149">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.ps_keys</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="150">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @@ps_keys||=PS_KEYS_DEFAULT</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="151">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # @return [Array&lt;String&gt;] the list of process keywords.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="152">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="153">
-          
-          
-          <code class="ruby">  # Set the list of process keywords.</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="154">
-          
-          
           <code class="ruby">  #</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.ps_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="154">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @@ps_keys||=PS_KEYS_DEFAULT</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="155">
           
           
-          <code class="ruby">  # @example</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="156">
           
           
-          <code class="ruby">  #   Process.ps_keys = [&quot;blocked&quot;,&quot;group&quot;,&quot;pending&quot;,&quot;size&quot;]</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="157">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # Set the list of process keywords.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="158">
           
           
-          <code class="ruby">  # @param [Array&lt;String&gt;] keywords</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="159">
           
           
-          <code class="ruby">  # @return [Array&lt;String&gt;] keywords</code>
+          <code class="ruby">  # @example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="160">
           
           
+          <code class="ruby">  #   Process.ps_keys = [&quot;blocked&quot;,&quot;group&quot;,&quot;pending&quot;,&quot;size&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
+          
+          
           <code class="ruby">  #</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="161">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.ps_keys=(keys)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="162">
+        <li class="never" data-hits="" data-linenumber="162">
           
           
-          <code class="ruby">    @@ps_keys=keys</code>
+          <code class="ruby">  # @param [Array&lt;String&gt;] keywords</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="163">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # @return [Array&lt;String&gt;] keywords</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="164">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="165">
-          
-          
-          <code class="ruby">  # The process command, i.e. what the sytem will call for the &quot;ps&quot; command.</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="166">
-          
-          
           <code class="ruby">  #</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.ps_keys=(keys)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="166">
+          
+          
+          <code class="ruby">    @@ps_keys=keys</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="167">
           
           
-          <code class="ruby">  # The goal is to use command that works on all platforms,</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="168">
           
           
-          <code class="ruby">  # that gets data without headers and with the widest output.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="169">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # The process command, i.e. what the sytem will call for the &quot;ps&quot; command.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="170">
           
           
-          <code class="ruby">  # Linux can use e.g.:</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="171">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # The goal is to use command that works on all platforms,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="172">
           
           
-          <code class="ruby">  #     ps hww -o pid,%cpu</code>
+          <code class="ruby">  # that gets data without headers and with the widest output.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="173">
@@ -13415,7 +13415,7 @@
         <li class="never" data-hits="" data-linenumber="174">
           
           
-          <code class="ruby">  # Note the &quot;h&quot; is less portable; we prefer &quot;--no-headers&quot;.</code>
+          <code class="ruby">  # Linux can use e.g.:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="175">
@@ -13427,7 +13427,7 @@
         <li class="never" data-hits="" data-linenumber="176">
           
           
-          <code class="ruby">  # Note the &quot;ww&quot; is less portable; we prefer &quot;-w -w&quot;.</code>
+          <code class="ruby">  #     ps hww -o pid,%cpu</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="177">
@@ -13439,85 +13439,85 @@
         <li class="never" data-hits="" data-linenumber="178">
           
           
-          <code class="ruby">  # OSX doesn&#39;t have &quot;h&quot; or &quot;--no-headers&quot;. Instead, OSX uses a format</code>
+          <code class="ruby">  # Note the &quot;h&quot; is less portable; we prefer &quot;--no-headers&quot;.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="179">
           
           
-          <code class="ruby">  # string to set each column header to blank, e.g. `ps -o &#39;pid=,%cpu=&#39;`.</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="180">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # Note the &quot;ww&quot; is less portable; we prefer &quot;-w -w&quot;.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="181">
           
           
-          <code class="ruby">  # A workaroud is to delete the header row by using `sed 1d`;</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="182">
           
           
-          <code class="ruby">  # we prefer a pure `ps` solution so we don&#39;t depend on `sed`.</code>
+          <code class="ruby">  # OSX doesn&#39;t have &quot;h&quot; or &quot;--no-headers&quot;. Instead, OSX uses a format</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="183">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # string to set each column header to blank, e.g. `ps -o &#39;pid=,%cpu=&#39;`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="184">
           
           
-          <code class="ruby">  # The solution we use seems to work in practice:</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="185">
           
           
-          <code class="ruby">  # we use multiple `-o` output fields, and set each</code>
+          <code class="ruby">  # A workaroud is to delete the header row by using `sed 1d`;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="186">
           
           
-          <code class="ruby">  # output field to use a blank string as a header.</code>
+          <code class="ruby">  # we prefer a pure `ps` solution so we don&#39;t depend on `sed`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="187">
           
           
-          <code class="ruby">  # This makes the `ps` command skip the header row.</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="188">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # The solution we use seems to work in practice:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="189">
           
           
-          <code class="ruby">  # Example that succeeds on all our known systems:</code>
+          <code class="ruby">  # we use multiple `-o` output fields, and set each</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="190">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # output field to use a blank string as a header.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="191">
           
           
-          <code class="ruby">  #     ps -o pid=&#39;&#39; -o %cpu=&#39;&#39; -o %mem=&#39;&#39;</code>
+          <code class="ruby">  # This makes the `ps` command skip the header row.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="192">
@@ -13526,22 +13526,22 @@
           <code class="ruby">  #</code>
         </li>
       
-        <li class="covered" data-hits="88" data-linenumber="193">
-          <span class="hits">88</span>
+        <li class="never" data-hits="" data-linenumber="193">
           
-          <code class="ruby">  PS_COMMAND_DEFAULT=&quot;ps &quot; + ps_keys.map{|k| &quot;-o #{k}=&#39;&#39;&quot;}.join(&quot; &quot;)</code>
+          
+          <code class="ruby">  # Example that succeeds on all our known systems:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="194">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="195">
           
           
-          <code class="ruby">  # Get the process command, i.e. what the sytem will call for the &quot;ps&quot; command.</code>
+          <code class="ruby">  #     ps -o pid=&#39;&#39; -o %cpu=&#39;&#39; -o %mem=&#39;&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="196">
@@ -13550,22 +13550,22 @@
           <code class="ruby">  #</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="197">
+        <li class="covered" data-hits="81" data-linenumber="197">
+          <span class="hits">81</span>
           
-          
-          <code class="ruby">  # @example</code>
+          <code class="ruby">  PS_COMMAND_DEFAULT=&quot;ps &quot; + ps_keys.map{|k| &quot;-o #{k}=&#39;&#39;&quot;}.join(&quot; &quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="198">
           
           
-          <code class="ruby">  #   Process.ps_command</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="199">
           
           
-          <code class="ruby">  #   =&gt; &quot;ps -o blocked=&#39;&#39; -o group=&#39;&#39; -o pending=&#39;&#39; -o size=&#39;&#39;&quot;</code>
+          <code class="ruby">  # Get the process command, i.e. what the sytem will call for the &quot;ps&quot; command.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="200">
@@ -13577,112 +13577,136 @@
         <li class="never" data-hits="" data-linenumber="201">
           
           
-          <code class="ruby">  # @return [String] the process command</code>
+          <code class="ruby">  # @example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="202">
           
           
+          <code class="ruby">  #   Process.ps_command</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="203">
+          
+          
+          <code class="ruby">  #   =&gt; &quot;ps -o blocked=&#39;&#39; -o group=&#39;&#39; -o pending=&#39;&#39; -o size=&#39;&#39;&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="204">
+          
+          
           <code class="ruby">  #</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="203">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.ps_command</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="204">
-          
-          
-          <code class="ruby">    @@ps_command||=PS_COMMAND_DEFAULT</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="205">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # @return [String] the process command</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="206">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="207">
-          
-          
-          <code class="ruby">  # Set the process command, i.e. what the sytem will call for the &quot;ps&quot; command.</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="208">
-          
-          
           <code class="ruby">  #</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="207">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.ps_command</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="208">
+          
+          
+          <code class="ruby">    @@ps_command||=PS_COMMAND_DEFAULT</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="209">
           
           
-          <code class="ruby">  # @example</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="210">
           
           
-          <code class="ruby">  #   Process.ps_command = &quot;ps h ww -o blocked,group,pending,size&quot;</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="211">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # Set the process command, i.e. what the sytem will call for the &quot;ps&quot; command.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="212">
           
           
-          <code class="ruby">  # @param [String] the process command</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="213">
           
           
-          <code class="ruby">  # @return [String] the process command</code>
+          <code class="ruby">  # @example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="214">
           
           
+          <code class="ruby">  #   Process.ps_command = &quot;ps h ww -o blocked,group,pending,size&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="215">
+          
+          
           <code class="ruby">  #</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="215">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.ps_command=(command)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="216">
+        <li class="never" data-hits="" data-linenumber="216">
           
           
-          <code class="ruby">    @@ps_command=command</code>
+          <code class="ruby">  # @param [String] the process command</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="217">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # @return [String] the process command</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="218">
           
           
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="219">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.ps_command=(command)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="220">
+          
+          
+          <code class="ruby">    @@ps_command=command</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="221">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="222">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="219">
+        <li class="never" data-hits="" data-linenumber="223">
           
           
           <code class="ruby">end</code>
