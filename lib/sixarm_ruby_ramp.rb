@@ -30,7 +30,6 @@ Please see README
   'string',
   'symbol',
   'time',
-  'xml',
   'yaml'
 ].map{|x|
   require File.dirname(__FILE__) + "/sixarm_ruby_ramp/#{x}.rb"

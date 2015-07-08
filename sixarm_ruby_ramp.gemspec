@@ -54,7 +54,6 @@ Gem::Specification.new do |s|
     "lib/sixarm_ruby_ramp/string.rb",
     "lib/sixarm_ruby_ramp/symbol.rb",
     "lib/sixarm_ruby_ramp/time.rb",
-    "lib/sixarm_ruby_ramp/xml.rb",
     "lib/sixarm_ruby_ramp/yaml.rb",
   ]
 
@@ -86,7 +85,6 @@ Gem::Specification.new do |s|
     "test/sixarm_ruby_ramp_test/string_test.rb",
     "test/sixarm_ruby_ramp_test/symbol_test.rb",
     "test/sixarm_ruby_ramp_test/time_test.rb",
-    "test/sixarm_ruby_ramp_test/xml_test.rb",
     "test/sixarm_ruby_ramp_test/yaml_test.rb",
     "test/sixarm_ruby_ramp_test/io_test.txt",
   ]

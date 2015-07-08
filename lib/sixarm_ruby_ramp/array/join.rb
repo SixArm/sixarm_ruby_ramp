@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class Array
 
   # Alias join because we're going to override it

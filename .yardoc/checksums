@@ -18,5 +18,4 @@ lib/sixarm_ruby_ramp/process.rb 549cf154b37b5c43b287938b430aaf5140ce2e2a
 lib/sixarm_ruby_ramp/string.rb 97e8a33cb6732ba3a88a41e596457273f8f5f8f7
 lib/sixarm_ruby_ramp/symbol.rb f722b18907734444c6632b028e29a62edebf116f
 lib/sixarm_ruby_ramp/time.rb cf1da969f5ffa74396de003261a97efdee00be3a
-lib/sixarm_ruby_ramp/xml.rb da39a3ee5e6b4b0d3255bfef95601890afd80709
 lib/sixarm_ruby_ramp/yaml.rb a84e8a7fda126972d904e35d3d60f89d03593d33
