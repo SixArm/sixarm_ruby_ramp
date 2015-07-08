@@ -5,7 +5,7 @@ module Enumerable
   #   enum.select_while {|obj| block }
   #    => array
   #
-  # @return [Array<Object>] the leading elements for which block is not false or nil.
+  # @return [Array<Object>] the leading elements for which block is truthy.
   #
   def select_while
     arr = []
@@ -17,7 +17,7 @@ module Enumerable
   #   enum.select_until {|obj| block }
   #    => array
   #
-  # @return [Array<Object>] the leading elements for which block is false or nil.
+  # @return [Array<Object>] the leading elements for which block is falsey.
   #
   def select_until
     arr = []
@@ -31,7 +31,7 @@ module Enumerable
   #   enum.select_with_index {|obj,i| block }
   #   => array
   #
-  # @return [Array<Object> the leading elements for which block is not false or nil.
+  # @return [Array<Object> the leading elements for which block is truthy.
   #
   def select_with_index
     index = 0
