@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 require "minitest/autorun"
+require "simplecov"
+SimpleCov.start
+
 require "sixarm_ruby_ramp"
 
 class KernelTest < Minitest::Test
 
   class TestMyMethodName
     def a
-      my_method_name  
+      my_method_name
     end
   end
 
@@ -18,7 +21,7 @@ class KernelTest < Minitest::Test
 
   class TestCallerMethodNameWithIndex0
     def a
-      caller_method_name(0)  
+      caller_method_name(0)
     end
   end
 
@@ -27,7 +30,7 @@ class KernelTest < Minitest::Test
       b
     end
     def b
-      caller_method_name(1) 
+      caller_method_name(1)
     end
   end
 
@@ -52,4 +55,3 @@ class KernelTest < Minitest::Test
   end
 
 end
-

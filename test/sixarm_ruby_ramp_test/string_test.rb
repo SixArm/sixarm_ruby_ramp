@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 require "minitest/autorun"
+require "simplecov"
+SimpleCov.start
+
 require "sixarm_ruby_ramp"
 
 
@@ -35,7 +38,7 @@ class StringTest < Minitest::Test
     assert_equal('foo_goo_hoo',"Foo GOO**_**Hoo".lowcase)
   end
 
-  
+
   def test_to_class
     assert_equal(String,'String'.to_class)
   end
@@ -118,14 +121,3 @@ module FooModule #:nodoc: all
   class FooClass
   end
 end
-
-
-
-
-
-
-
-
-
-
-

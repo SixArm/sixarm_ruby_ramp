@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 require "minitest/autorun"
-require "sixarm_ruby_ramp"
+require "simplecov"
+SimpleCov.start
 
+require "sixarm_ruby_ramp"
 
 class IntegerTest < Minitest::Test
 

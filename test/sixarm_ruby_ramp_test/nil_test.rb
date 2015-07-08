@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 require "minitest/autorun"
+require "simplecov"
+SimpleCov.start
+
 require "sixarm_ruby_ramp"
 
 class NilTest < Minitest::Test
@@ -13,4 +16,3 @@ class NilTest < Minitest::Test
  end
 
 end
-

@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 require "minitest/autorun"
-require "sixarm_ruby_ramp"
+require "simplecov"
+SimpleCov.start
 
+require "sixarm_ruby_ramp"
 
 class CSVTest < Minitest::Test
 
@@ -42,6 +44,5 @@ class MockRequest
   def env
     @env
   end
-       
+
 end
- 
