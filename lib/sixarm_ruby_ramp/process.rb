@@ -163,14 +163,40 @@ module Process
   end
 
   # The process command, i.e. what the sytem will call for the "ps" command.
-
-  PS_COMMAND_DEFAULT="ps hww -o #{ps_keys.join(',')}"
+  #
+  # The goal is to use command that works on all platforms,
+  # that gets data without headers and with the widest output.
+  #
+  # Linux can use e.g.:
+  #
+  #     ps hww -o pid,%cpu
+  #
+  # Note the "h" is less portable; we prefer "--no-headers".
+  #
+  # Note the "ww" is less portable; we prefer "-w -w".
+  #
+  # OSX doesn't have "h" or "--no-headers". Instead, OSX uses a format
+  # string to set each column header to blank, e.g. `ps -o 'pid=,%cpu='`.
+  #
+  # A workaroud is to delete the header row by using `sed 1d`;
+  # we prefer a pure `ps` solution so we don't depend on `sed`.
+  #
+  # The solution we use seems to work in practice:
+  # we use multiple `-o` output fields, and set each
+  # output field to use a blank string as a header.
+  # This makes the `ps` command skip the header row.
+  #
+  # Example that succeeds on all our known systems:
+  #
+  #     ps -o pid='' -o %cpu='' -o %mem=''
+  #
+  PS_COMMAND_DEFAULT="ps " + ps_keys.map{|k| "-o #{k}=''"}.join(" ")
 
   # Get the process command, i.e. what the sytem will call for the "ps" command.
   #
   # @example
   #   Process.ps_command
-  #   => "ps h ww -o blocked,group,pending,size"
+  #   => "ps -o blocked='' -o group='' -o pending='' -o size=''"
   #
   # @return [String] the process command
   #
