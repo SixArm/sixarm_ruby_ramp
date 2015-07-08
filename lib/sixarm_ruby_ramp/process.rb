@@ -138,9 +138,9 @@ module Process
   #
   # Omit:
   #
-  #  * pstime, putime, wq, wqb: not available on travis-ci.org
+  #  * pstime, putime, wq, wqb, wql: not available on travis-ci.org
   #
-  PS_KEYS_DEFAULT=%w'%cpu %mem acflag acflg args blocked comm command cpu cputime etime f flags gid group inblk inblock jobc ktrace ktracep lim login logname lstart majflt minflt msgrcv msgsnd ni nice nivcsw nsignals nsigs nswap nvcsw nwchan oublk oublock p_ru paddr pagein pcpu pending pgid pid pmem ppid pri rgid rgroup rss ruid ruser sess sig sigmask sl start stat state stime svgid svuid tdev time tpgid tsess tsiz tt tty ucomm uid upr user usrpri utime vsize vsz wchan wql wqr xstat'
+  PS_KEYS_DEFAULT=%w'%cpu %mem acflag acflg args blocked comm command cpu cputime etime f flags gid group inblk inblock jobc ktrace ktracep lim login logname lstart majflt minflt msgrcv msgsnd ni nice nivcsw nsignals nsigs nswap nvcsw nwchan oublk oublock p_ru paddr pagein pcpu pending pgid pid pmem ppid pri rgid rgroup rss ruid ruser sess sig sigmask sl start stat state stime svgid svuid tdev time tpgid tsess tsiz tt tty ucomm uid upr user usrpri utime vsize vsz wchan wqr xstat'
 
   # Get the list of process keywords.
   #
