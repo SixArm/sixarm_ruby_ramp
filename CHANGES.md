@@ -12,7 +12,7 @@
 * 2012-03-14 2.1.6 Update docs, tests
 * 2.1.6 Refactor XML#strip* methods to new sixarm_ruby_xml_strip gem
 * 2.1.5 Refactor XML#load* methods to new sixarm_ruby_xml_load gem
-* 2.1.4 Refactor REXML extensions to new sixarm_ruby_rexml gem.
+* 2.1.4 Refactor REXML extensions to new sixarm_ruby_rexml gem
 * 2.1.3 Remove dependency on sixarm_ruby_array_slice
 * 2.1.2 Refactor Array#slices and #divvy to sixarm_ruby_array_slice gem with better method names
 * 2.1.0 Upgrades for Ruby 1.9.3; better README, new CHANGELOG, less YAML, etc.
