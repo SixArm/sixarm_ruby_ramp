@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> Ramp is a toolkit of Ruby base class extensions
+# SixArm.com » Ruby » <br> Ramp is a toolkit of Ruby extensions
 
 [![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_ramp.png)](https://travis-ci.org/SixArm/sixarm_ruby_ramp)
