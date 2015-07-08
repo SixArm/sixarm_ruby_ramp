@@ -28,7 +28,7 @@ Install:
 
 Bundler:
 
-    gem "sixarm_ruby_ramp", ">=4.2.2", "<5"
+    gem "sixarm_ruby_ramp", ">=4.2.3", "<5"
 
 Require:
 

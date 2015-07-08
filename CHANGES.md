@@ -1,6 +1,6 @@
 # Changes
 
-* 2015-07-07 4.2.2 Update gemspec to use file manifest
+* 2015-07-07 4.2.3 Update gemspec to use file manifest
 * 2015-03-14 4.2.1 Conditionally load `Array#shuffle*`
 * 2015-03-14 4.2.0 Add `Integer#rbit`
 * 2015-01-13 4.1.0 Fix Enumerable `to_h` and add `to_h_merge`
