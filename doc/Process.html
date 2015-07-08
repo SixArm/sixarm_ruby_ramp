@@ -6,18 +6,20 @@
 <title>
   Module: Process
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  if (relpath != '') relpath += '/';
+  framesUrl = "frames.html#!Process.html";
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -26,36 +28,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index (P)</a> &raquo; 
+    <a href="_index.html">Index (P)</a> &raquo;
     
     
     <span class="title">Process</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Module: Process
   
   
@@ -80,21 +87,21 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<h1>Process extensions to help debug Ruby programs.</h1>
+<h1 id="label-Process+extensions+to+help+debug+Ruby+programs.">Process extensions to help debug Ruby programs.</h1>
 
-<h2>Examples</h2>
+<h2 id="label-Examples">Examples</h2>
 
-<pre class="code">p = Process.ps
+<pre class="code ruby"><code class="ruby">p = Process.ps
 puts p
-=&gt; the results of the 'ps' command for the current process id
+=&gt; the results of the &#39;ps&#39; command for the current process id
 
 p = Process.ps(1234)
 puts p
-=&gt; the results of the 'ps' command for process id 1234
+=&gt; the results of the &#39;ps&#39; command for process id 1234
 
 p = Process.pss
-p['%cpu'] =&gt; percentage of cpu use, as a float
-p['%mem'] =&gt; percentage of memory use, as a float</pre>
+p[&#39;%cpu&#39;] =&gt; percentage of cpu use, as a float
+p[&#39;%mem&#39;] =&gt; percentage of memory use, as a float</code></pre>
 
 
   </div>
@@ -107,13 +114,13 @@ p['%mem'] =&gt; percentage of memory use, as a float</pre>
   
     <dl class="constants">
       
-        <dt id="PS_ALIASES_DEFAULT-constant" class="">PS_ALIASES_DEFAULT =
+        <dt id="PS_TO_I-constant" class="">PS_TO_I =
           <div class="docstring">
   <div class="discussion">
     
-<p>Get the list of process alias keywords as typically defined by the shell.</p>
+<p>Get the &#39;ps&#39; command as a hash of keys and values.</p>
 
-<p>For example, a shell may consider "%cpu" and "pcpu" to be identical.</p>
+<p>- OPTIMIZE: add dates, times</p>
 
 
   </div>
@@ -121,15 +128,66 @@ p['%mem'] =&gt; percentage of memory use, as a float</pre>
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
-      <pre class="example code">Process::PS_ALIASES_DEFAULT
-=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;, ... }</pre>
+      
+      <pre class="example code"><code>pid = 100
+Process.pss(pid)
+=&gt; {&quot;cp&quot;=&gt;0.0, &quot;esp&quot;=&gt;&quot;bfd86194&quot;, &quot;etime&quot;=&gt;&quot;21:14:51&quot;, ...  }</code></pre>
     
   </div>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the ps command options as keys and values</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w(</span><span class='tstring_content'>c</span><span class='words_sep'> </span><span class='tstring_content'>egid</span><span class='words_sep'> </span><span class='tstring_content'>egroup</span><span class='words_sep'> </span><span class='tstring_content'>uid</span><span class='words_sep'> </span><span class='tstring_content'>fgid</span><span class='words_sep'> </span><span class='tstring_content'>lwp</span><span class='words_sep'> </span><span class='tstring_content'>ni</span><span class='words_sep'> </span><span class='tstring_content'>nlwp</span><span class='words_sep'> </span><span class='tstring_content'>pgid</span><span class='words_sep'> </span><span class='tstring_content'>pid</span><span class='words_sep'> </span><span class='tstring_content'>ppid</span><span class='words_sep'> </span><span class='tstring_content'>rgid</span><span class='words_sep'> </span><span class='tstring_content'>rss</span><span class='words_sep'> </span><span class='tstring_content'>ruid</span><span class='words_sep'> </span><span class='tstring_content'>sid</span><span class='words_sep'> </span><span class='tstring_content'>sgid</span><span class='words_sep'> </span><span class='tstring_content'>suid</span><span class='words_sep'>)</span></pre></dd>
+      
+        <dt id="PS_TO_F-constant" class="">PS_TO_F =
+          
+        </dt>
+        <dd><pre class="code"><span class='qwords_beg'>%w(</span><span class='tstring_content'>cp</span><span class='words_sep'> </span><span class='tstring_content'>pcpu</span><span class='words_sep'> </span><span class='tstring_content'>pmem</span><span class='words_sep'>)</span></pre></dd>
+      
+        <dt id="PS_ALIASES_DEFAULT-constant" class="">PS_ALIASES_DEFAULT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Get the list of process alias keywords as typically defined by the shell.</p>
+
+<p>For example, a shell may consider “%cpu” and “pcpu” to be identical.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>Process::PS_ALIASES_DEFAULT
+=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;class&quot;=&gt;&quot;cls&quot;, ... }</code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -151,41 +209,41 @@ p['%mem'] =&gt; percentage of memory use, as a float</pre>
 </div>
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%cpu</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pcpu</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%mem</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pmem</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig_block</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>blocked</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sigmask</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>blocked</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig_catch</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>caught</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sigcatch</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>caught</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cls</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>class</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cls</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>policy</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cputime</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>time</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>gid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>group</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egroup</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>uid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>euid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>uname</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>euser</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>user</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>euser</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>flag</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>f</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>flags</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>f</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fsuid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fuid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig_ignore</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ignored</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sigignore</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ignored</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>spid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lwp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lwp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nice</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ni</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>thcount</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nlwp</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pending</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sig_pend</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pending</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgrp</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rssize</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rsz</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>state</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>s</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sess</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>session</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>svgid</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sgid</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tt</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tname</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tty</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tname</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> 
-  <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vsz</span><span class='tstring_end'>'</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>vsize</span><span class='tstring_end'>'</span></span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%cpu</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pcpu</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>%mem</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pmem</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sig_block</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blocked</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigmask</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blocked</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sig_catch</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>caught</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigcatch</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>caught</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>class</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cls</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>policy</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pol</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cputime</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>time</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>gid</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>egid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>group</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>egroup</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>uid</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>euid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>uname</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>euser</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>user</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>euser</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>flag</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>f</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>flags</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>f</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>fsuid</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>fuid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sig_ignore</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ignored</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigignore</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ignored</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spid</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lwp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tid</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lwp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nice</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ni</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>thcount</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nlwp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sig</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pending</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sig_pend</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pending</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pgrp</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pgid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rssize</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rss</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rsz</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rss</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>state</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>s</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sess</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>session</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>svgid</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sgid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tt</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tname</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tty</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tname</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vsz</span><span class='tstring_end'>&#39;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vsize</span><span class='tstring_end'>&#39;</span></span>
 <span class='rbrace'>}</span></pre></dd>
       
         <dt id="PS_KEYS_DEFAULT-constant" class="">PS_KEYS_DEFAULT =
@@ -194,6 +252,10 @@ p['%mem'] =&gt; percentage of memory use, as a float</pre>
     
 <p>The list of process keywords.</p>
 
+<p>Omit:</p>
+
+<pre class="code ruby"><code class="ruby">* pstime, putime, wq, wqb, wql, wqr: not available on travis-ci.org</code></pre>
+
 
   </div>
 </div>
@@ -202,100 +264,39 @@ p['%mem'] =&gt; percentage of memory use, as a float</pre>
 
 </div>
         </dt>
-        <dd><pre class="code">[val]}
-  return h
-end
-
-
-# Get the list of process alias keywords as typically defined by the shell.
-#
-# For example, a shell may consider &quot;%cpu&quot; and &quot;pcpu&quot; to be identical.
-#
-# @example
-#   Process::PS_ALIASES_DEFAULT
-#   =&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;, ... }
-#
-# @return [Hash&lt;String,String&gt;] process keyword aliases
-
-PS_ALIASES_DEFAULT={
-  '%cpu'=&gt;'pcpu',
-  '%mem'=&gt;'pmem',
-  'sig_block'=&gt;'blocked',
-  'sigmask'=&gt;'blocked',
-  'sig_catch'=&gt;'caught',
-  'sigcatch'=&gt;'caught',
-  'cls'=&gt;'class',
-  'cls'=&gt;'policy',
-  'cputime'=&gt;'time',
-  'gid'=&gt;'egid',
-  'group'=&gt;'egroup',
-  'uid'=&gt;'euid',
-  'uname'=&gt;'euser',
-  'user'=&gt;'euser',
-  'flag'=&gt;'f',
-  'flags'=&gt;'f',
-  'fsuid'=&gt;'fuid',
-  'sig_ignore'=&gt;'ignored',
-  'sigignore'=&gt;'ignored',
-  'spid'=&gt;'lwp',
-  'tid'=&gt;'lwp',
-  'nice'=&gt;'ni',
-  'thcount'=&gt;'nlwp',
-  'sig'=&gt;'pending',
-  'sig_pend'=&gt;'pending',
-  'pgrp'=&gt;'pgid',
-  'rssize'=&gt;'rss',
-  'rsz'=&gt;'rss',
-  'state'=&gt;'s',
-  'sess'=&gt;'sid',
-  'session'=&gt;'sid',
-  'svgid'=&gt;'sgid',
-  'tt'=&gt;'tname',
-  'tty'=&gt;'tname', 
-  'vsz'=&gt;'vsize'
-}
-
-
-# Get the list of process alias keywords as typically defined by the shell.
-#
-# For example, a shell may consider &quot;%cpu&quot; and &quot;pcpu&quot; to be identical.
-#
-# @example                                                                          
-#   Process.ps_aliases
-#   =&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;, ... }                                   
-#                                                                                                                
-# @return [Hash&lt;String,String&gt;] process keyword aliases 
-
-def self.ps_aliases
-  @@ps_aliases||=PS_ALIASES_DEFAULT
-end
-
-
-# Set the list of process alias keywords.
-#
-# For example, a shell may consider &quot;%cpu&quot; and &quot;pcpu&quot; to be identical.
-#
-# @example                                                                          
-#   Process::ps_aliases={ {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot; }
-#   =&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;}     
-#        
-# @param [Hash&lt;String,String&gt;] aliases                                 
-# @return [Hash&lt;String,String&gt;] aliases
-
-def self.ps_aliases=(aliases)
-  @@ps_aliases=aliases
-end
-
-
-# The list of process keywords.
-
-PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'</pre></dd>
+        <dd><pre class="code"><span class='qwords_beg'>%w&#39;</span><span class='tstring_content'>%cpu</span><span class='words_sep'> </span><span class='tstring_content'>%mem</span><span class='words_sep'> </span><span class='tstring_content'>acflag</span><span class='words_sep'> </span><span class='tstring_content'>acflg</span><span class='words_sep'> </span><span class='tstring_content'>args</span><span class='words_sep'> </span><span class='tstring_content'>blocked</span><span class='words_sep'> </span><span class='tstring_content'>comm</span><span class='words_sep'> </span><span class='tstring_content'>command</span><span class='words_sep'> </span><span class='tstring_content'>cpu</span><span class='words_sep'> </span><span class='tstring_content'>cputime</span><span class='words_sep'> </span><span class='tstring_content'>etime</span><span class='words_sep'> </span><span class='tstring_content'>f</span><span class='words_sep'> </span><span class='tstring_content'>flags</span><span class='words_sep'> </span><span class='tstring_content'>gid</span><span class='words_sep'> </span><span class='tstring_content'>group</span><span class='words_sep'> </span><span class='tstring_content'>inblk</span><span class='words_sep'> </span><span class='tstring_content'>inblock</span><span class='words_sep'> </span><span class='tstring_content'>jobc</span><span class='words_sep'> </span><span class='tstring_content'>ktrace</span><span class='words_sep'> </span><span class='tstring_content'>ktracep</span><span class='words_sep'> </span><span class='tstring_content'>lim</span><span class='words_sep'> </span><span class='tstring_content'>login</span><span class='words_sep'> </span><span class='tstring_content'>logname</span><span class='words_sep'> </span><span class='tstring_content'>lstart</span><span class='words_sep'> </span><span class='tstring_content'>majflt</span><span class='words_sep'> </span><span class='tstring_content'>minflt</span><span class='words_sep'> </span><span class='tstring_content'>msgrcv</span><span class='words_sep'> </span><span class='tstring_content'>msgsnd</span><span class='words_sep'> </span><span class='tstring_content'>ni</span><span class='words_sep'> </span><span class='tstring_content'>nice</span><span class='words_sep'> </span><span class='tstring_content'>nivcsw</span><span class='words_sep'> </span><span class='tstring_content'>nsignals</span><span class='words_sep'> </span><span class='tstring_content'>nsigs</span><span class='words_sep'> </span><span class='tstring_content'>nswap</span><span class='words_sep'> </span><span class='tstring_content'>nvcsw</span><span class='words_sep'> </span><span class='tstring_content'>nwchan</span><span class='words_sep'> </span><span class='tstring_content'>oublk</span><span class='words_sep'> </span><span class='tstring_content'>oublock</span><span class='words_sep'> </span><span class='tstring_content'>p_ru</span><span class='words_sep'> </span><span class='tstring_content'>paddr</span><span class='words_sep'> </span><span class='tstring_content'>pagein</span><span class='words_sep'> </span><span class='tstring_content'>pcpu</span><span class='words_sep'> </span><span class='tstring_content'>pending</span><span class='words_sep'> </span><span class='tstring_content'>pgid</span><span class='words_sep'> </span><span class='tstring_content'>pid</span><span class='words_sep'> </span><span class='tstring_content'>pmem</span><span class='words_sep'> </span><span class='tstring_content'>ppid</span><span class='words_sep'> </span><span class='tstring_content'>pri</span><span class='words_sep'> </span><span class='tstring_content'>rgid</span><span class='words_sep'> </span><span class='tstring_content'>rgroup</span><span class='words_sep'> </span><span class='tstring_content'>rss</span><span class='words_sep'> </span><span class='tstring_content'>ruid</span><span class='words_sep'> </span><span class='tstring_content'>ruser</span><span class='words_sep'> </span><span class='tstring_content'>sess</span><span class='words_sep'> </span><span class='tstring_content'>sig</span><span class='words_sep'> </span><span class='tstring_content'>sigmask</span><span class='words_sep'> </span><span class='tstring_content'>sl</span><span class='words_sep'> </span><span class='tstring_content'>start</span><span class='words_sep'> </span><span class='tstring_content'>stat</span><span class='words_sep'> </span><span class='tstring_content'>state</span><span class='words_sep'> </span><span class='tstring_content'>stime</span><span class='words_sep'> </span><span class='tstring_content'>svgid</span><span class='words_sep'> </span><span class='tstring_content'>svuid</span><span class='words_sep'> </span><span class='tstring_content'>tdev</span><span class='words_sep'> </span><span class='tstring_content'>time</span><span class='words_sep'> </span><span class='tstring_content'>tpgid</span><span class='words_sep'> </span><span class='tstring_content'>tsess</span><span class='words_sep'> </span><span class='tstring_content'>tsiz</span><span class='words_sep'> </span><span class='tstring_content'>tt</span><span class='words_sep'> </span><span class='tstring_content'>tty</span><span class='words_sep'> </span><span class='tstring_content'>ucomm</span><span class='words_sep'> </span><span class='tstring_content'>uid</span><span class='words_sep'> </span><span class='tstring_content'>upr</span><span class='words_sep'> </span><span class='tstring_content'>user</span><span class='words_sep'> </span><span class='tstring_content'>usrpri</span><span class='words_sep'> </span><span class='tstring_content'>utime</span><span class='words_sep'> </span><span class='tstring_content'>vsize</span><span class='words_sep'> </span><span class='tstring_content'>vsz</span><span class='words_sep'> </span><span class='tstring_content'>wchan</span><span class='words_sep'> </span><span class='tstring_content'>xstat</span><span class='words_sep'>&#39;</span></pre></dd>
       
         <dt id="PS_COMMAND_DEFAULT-constant" class="">PS_COMMAND_DEFAULT =
           <div class="docstring">
   <div class="discussion">
     
-<p>The process command, i.e. what the sytem will call for the "ps" command.</p>
+<p>The process command, i.e. what the sytem will call for the “ps” command.</p>
+
+<p>The goal is to use command that works on all platforms, that gets data
+without headers and with the widest output.</p>
+
+<p>Linux can use e.g.:</p>
+
+<pre class="code ruby"><code class="ruby">ps hww -o pid,%cpu</code></pre>
+
+<p>Note the “h” is less portable; we prefer “–no-headers”.</p>
+
+<p>Note the “ww” is less portable; we prefer “-w -w”.</p>
+
+<p>OSX doesn&#39;t have “h” or “–no-headers”. Instead, OSX uses a format
+string to set each column header to blank, e.g. `ps -o
+&#39;pid=,%cpu=&#39;`.</p>
+
+<p>A workaroud is to delete the header row by using `sed 1d`; we prefer a pure
+`ps` solution so we don&#39;t depend on `sed`.</p>
+
+<p>The solution we use seems to work in practice: we use multiple `-o` output
+fields, and set each output field to use a blank string as a header. This
+makes the `ps` command skip the header row.</p>
+
+<p>Example that succeeds on all our known systems:</p>
+
+<pre class="code ruby"><code class="ruby">ps -o pid=&#39;&#39; -o %cpu=&#39;&#39; -o %mem=&#39;&#39;</code></pre>
 
 
   </div>
@@ -305,10 +306,12 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ps h ww -o &quot;</span><span class='tstring_end'>'</span></span><span class='op'>+</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_keys'>ps_keys</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>,</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>'</span></span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ps </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_ps_keys'>ps_keys</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-o </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_content'>=&#39;&#39;</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
       
     </dl>
   
+
+
 
 
 
@@ -336,10 +339,11 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Get the 'ps' command as one long text string.</p>
+<p>Get the &#39;ps&#39; command as one long text string.</p>
 </div></span>
   
 </li>
@@ -353,6 +357,7 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
 
     
   </span>
+  
   
   
   
@@ -382,6 +387,7 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'>
@@ -399,6 +405,7 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
 
     
   </span>
+  
   
   
   
@@ -428,6 +435,7 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'>
@@ -440,7 +448,7 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#ps_keys-class_method" title="ps_keys (class method)">+ (Object) <strong>ps_keys</strong> </a>
+      <a href="#ps_keys-class_method" title="ps_keys (class method)">+ (Array&lt;String&gt;) <strong>ps_keys</strong> </a>
     
 
     
@@ -451,9 +459,12 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Get the list of process keywords.</p>
+</div></span>
   
 </li>
 
@@ -472,6 +483,7 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'>
@@ -484,7 +496,7 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pss-class_method" title="pss (class method)">+ (Hash&lt;String,String&gt;) <strong>pss</strong>(pid = Process.pid) </a>
+      <a href="#pss-class_method" title="pss (class method)">+ (Object) <strong>pss</strong>(pid = Process.pid) </a>
     
 
     
@@ -495,11 +507,10 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
   
   
   
+  
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Get the 'ps' command as a hash of keys and values.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -511,19 +522,21 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="ps-class_method">
+  <h3 class="signature first" id="ps-class_method">
   
     + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>ps</strong>(pid = Process.pid) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
-<p>Get the 'ps' command as one long text string.</p>
+<p>Get the &#39;ps&#39; command as one long text string.</p>
 
 <p>This is typically useful for logging to a text file.</p>
 
@@ -533,16 +546,16 @@ PS_KEYS_DEFAULT=%w'blocked bsdtime c caught class cp egid egroup eip esp etime e
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
-      <pre class="example code">pid = 100
+      
+      <pre class="example code"><code>pid = 100
 Process.ps(pid)
-=&gt; &quot;0.0 bfd86194 21:14:51 ...&quot;</pre>
+=&gt; &quot;0.0 bfd86194 21:14:51 ...&quot;</code></pre>
     
   </div>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -567,15 +580,15 @@ Process.ps(pid)
       <pre class="lines">
 
 
+33
 34
-35
-36</pre>
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps'>ps</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='op'>=</span><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
-  <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_command'>ps_command</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pid'>pid</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rbrace'>}</span><span class='tstring_end'>`</span></span>
+  <span class='backtick'>`</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_command'>ps_command</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pid'>pid</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='embexpr_end'>}</span><span class='tstring_end'>`</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -583,18 +596,20 @@ Process.ps(pid)
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="ps_aliases-class_method">
+  <h3 class="signature " id="ps_aliases-class_method">
   
     + (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>ps_aliases</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Get the list of process alias keywords as typically defined by the shell.</p>
 
-<p>For example, a shell may consider "%cpu" and "pcpu" to be identical.</p>
+<p>For example, a shell may consider “%cpu” and “pcpu” to be identical.</p>
 
 
   </div>
@@ -602,15 +617,15 @@ Process.ps(pid)
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
-      <pre class="example code">Process.ps_aliases
-=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;, ... }                                   </pre>
+      
+      <pre class="example code"><code>Process.ps_aliases
+=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;class&quot;=&gt;&quot;cls&quot;, ... }</code></pre>
     
   </div>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -635,12 +650,12 @@ Process.ps(pid)
       <pre class="lines">
 
 
-137
-138
-139</pre>
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 137</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 118</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_aliases'>ps_aliases</span>
   <span class='cvar'>@@ps_aliases</span><span class='op'>||=</span><span class='const'>PS_ALIASES_DEFAULT</span>
@@ -651,18 +666,20 @@ Process.ps(pid)
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="ps_aliases=-class_method">
+  <h3 class="signature " id="ps_aliases=-class_method">
   
     + (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>ps_aliases=</strong>(aliases) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Set the list of process alias keywords.</p>
 
-<p>For example, a shell may consider "%cpu" and "pcpu" to be identical.</p>
+<p>For example, a shell may consider “%cpu” and “pcpu” to be identical.</p>
 
 
   </div>
@@ -670,14 +687,14 @@ Process.ps(pid)
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
-      <pre class="example code">Process::ps_aliases={ {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot; }
-=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;cls&quot;=&gt;&quot;policy&quot;}     </pre>
+      
+      <pre class="example code"><code>Process::ps_aliases={ {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;class&quot;=&gt;&quot;cls&quot; }
+=&gt; {&quot;%cpu&quot;=&gt;&quot;pcpu&quot;, &quot;sigmask&quot;=&gt;&quot;blocked&quot;, &quot;class&quot;=&gt;&quot;cls&quot;}</code></pre>
     
   </div>
-<h3>Parameters:</h3>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -693,7 +710,7 @@ Process.ps(pid)
   
 </ul>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -718,12 +735,12 @@ Process.ps(pid)
       <pre class="lines">
 
 
-153
-154
-155</pre>
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_aliases='>ps_aliases=</span><span class='lparen'>(</span><span class='id identifier rubyid_aliases'>aliases</span><span class='rparen'>)</span>
   <span class='cvar'>@@ps_aliases</span><span class='op'>=</span><span class='id identifier rubyid_aliases'>aliases</span>
@@ -734,16 +751,18 @@ Process.ps(pid)
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="ps_command-class_method">
+  <h3 class="signature " id="ps_command-class_method">
   
     + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>ps_command</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
-<p>Get the process command, i.e. what the sytem will call for the "ps"
+<p>Get the process command, i.e. what the sytem will call for the “ps”
 command.</p>
 
 
@@ -752,15 +771,15 @@ command.</p>
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
-      <pre class="example code">Process.ps_command
-=&gt; &quot;ps h ww -o blocked,group,pending,size&quot;</pre>
+      
+      <pre class="example code"><code>Process.ps_command
+=&gt; &quot;ps -o blocked=&#39;&#39; -o group=&#39;&#39; -o pending=&#39;&#39; -o size=&#39;&#39;&quot;</code></pre>
     
   </div>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -785,12 +804,12 @@ command.</p>
       <pre class="lines">
 
 
-203
-204
-205</pre>
+207
+208
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 203</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_command'>ps_command</span>
   <span class='cvar'>@@ps_command</span><span class='op'>||=</span><span class='const'>PS_COMMAND_DEFAULT</span>
@@ -801,16 +820,18 @@ command.</p>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="ps_command=-class_method">
+  <h3 class="signature " id="ps_command=-class_method">
   
     + (<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>) <strong>ps_command=</strong>(command) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
-<p>Set the process command, i.e. what the sytem will call for the "ps"
+<p>Set the process command, i.e. what the sytem will call for the “ps”
 command.</p>
 
 
@@ -819,13 +840,13 @@ command.</p>
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
-      <pre class="example code"><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_ps_command'>ps_command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ps h ww -o blocked,group,pending,size</span><span class='tstring_end'>&quot;</span></span></pre>
+      
+      <pre class="example code"><code><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_ps_command'>ps_command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ps h ww -o blocked,group,pending,size</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
-<h3>Parameters:</h3>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -846,7 +867,7 @@ command.</p>
   
 </ul>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -871,12 +892,12 @@ command.</p>
       <pre class="lines">
 
 
-216
-217
-218</pre>
+219
+220
+221</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 216</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 219</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_command='>ps_command=</span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
   <span class='cvar'>@@ps_command</span><span class='op'>=</span><span class='id identifier rubyid_command'>command</span>
@@ -887,24 +908,64 @@ command.</p>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="ps_keys-class_method">
+  <h3 class="signature " id="ps_keys-class_method">
   
-    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>ps_keys</strong> 
+    + (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>ps_keys</strong> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get the list of process keywords.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>Process.ps_keys
+=&gt; [&quot;blocked&quot;,&quot;group&quot;,&quot;pending&quot;,&quot;size&quot;]</code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the list of process keywords.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-172
-173
-174</pre>
+153
+154
+155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 172</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_keys'>ps_keys</span>
   <span class='cvar'>@@ps_keys</span><span class='op'>||=</span><span class='const'>PS_KEYS_DEFAULT</span>
@@ -915,13 +976,15 @@ command.</p>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="ps_keys=-class_method">
+  <h3 class="signature " id="ps_keys=-class_method">
   
     + (<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>ps_keys=</strong>(keys) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Set the list of process keywords.</p>
@@ -932,13 +995,13 @@ command.</p>
 <div class="tags">
   
   <div class="examples">
-    <h3>Examples:</h3>
+    <p class="tag_title">Examples:</p>
     
-      <h4><div class='inline'></div></h4>
-      <pre class="example code"><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_ps_keys'>ps_keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>blocked</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>group</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>size</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></pre>
+      
+      <pre class="example code"><code><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_ps_keys'>ps_keys</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>blocked</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>group</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pending</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>size</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
-<h3>Parameters:</h3>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -954,7 +1017,7 @@ command.</p>
   
 </ul>
 
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -979,12 +1042,12 @@ command.</p>
       <pre class="lines">
 
 
-185
-186
-187</pre>
+165
+166
+167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 185</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_keys='>ps_keys=</span><span class='lparen'>(</span><span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span>
   <span class='cvar'>@@ps_keys</span><span class='op'>=</span><span class='id identifier rubyid_keys'>keys</span>
@@ -995,60 +1058,20 @@ command.</p>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="pss-class_method">
+  <h3 class="signature " id="pss-class_method">
   
-    + (<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>) <strong>pss</strong>(pid = Process.pid) 
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>pss</strong>(pid = Process.pid) 
   
 
   
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>Get the 'ps' command as a hash of keys and values.</p>
 
-<p>- OPTIMIZE: add dates, times</p>
-
-
-  </div>
-</div>
-<div class="tags">
   
-  <div class="examples">
-    <h3>Examples:</h3>
-    
-      <h4><div class='inline'></div></h4>
-      <pre class="example code">pid = 100
-Process.pss(pid)
-=&gt; {&quot;cp&quot;=&gt;0.0, &quot;esp&quot;=&gt;&quot;bfd86194&quot;, &quot;etime&quot;=&gt;&quot;21:14:51&quot;, ...  }</pre>
-    
-  </div>
-
-<h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="String.html" title="String (class)">String</a></span>,<span class='object_link'><a href="String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>the ps command options as keys and values</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-50
 51
 52
 53
@@ -1056,51 +1079,16 @@ Process.pss(pid)
 55
 56
 57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75</pre>
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/process.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pss'>pss</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='op'>=</span><span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_ps'>ps</span><span class='op'>=</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps'>ps</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_h'>h</span><span class='op'>=</span><span class='const'>Hash</span><span class='lbracket'>[</span><span class='op'>*</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_keys'>ps_keys</span><span class='period'>.</span><span class='id identifier rubyid_zip'>zip</span><span class='lparen'>(</span><span class='id identifier rubyid_ps'>ps</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>c</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>      <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>c</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>     <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egroup</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>egroup</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>uid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>uid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>fgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lwp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lwp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ni</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>     <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ni</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nlwp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>nlwp</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pcpu</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pcpu</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pmem</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>pmem</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ppid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ppid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rss</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ruid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ruid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>  
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>    <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>  
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sgid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>  
-  <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>suid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>suid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>  
+  <span class='const'>PS_TO_I</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_x'>x</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_x'>x</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rbrace'>}</span>
+  <span class='const'>PS_TO_F</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_x'>x</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_x'>x</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rbrace'>}</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ps_aliases'>ps_aliases</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span><span class='id identifier rubyid_val'>val</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_val'>val</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_h'>h</span>
 <span class='kw'>end</span></pre>
@@ -1112,11 +1100,11 @@ Process.pss(pid)
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Fri Dec 16 19:30:04 2011 by 
+  Generated on Wed Jul  8 00:34:36 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.4 (ruby-1.9.3).
+  0.8.7.6 (ruby-2.2.2).
 </div>
 
   </body>
