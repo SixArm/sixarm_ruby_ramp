@@ -57,17 +57,17 @@ To require the gem in your code:
 * car, cdr: aka first, rest (see shifted)
 * choice, choices: one or more random elements from an array
 * cross: return the cross pairings of an array with another array
-* divvy: divides an array, like a pie, into a specified number of slices (deprecated - see method rdoc)
+* divvy: divides an array, like a pie, into a specified number of slices (deprecated)
 * onto: return a hash that maps an array's keys on to another array's values
 * rotate: moves the first element of an array to the end
 * rest: return the rest of the items of the array (aka cdr, aka shifted)
 * shifted, shifted!: return an array with the first n items shifted (aka cdr, aka rest)
-* shuffle, shuffle!: randomly sort an array efficiently; each of these methods are loaded only if needed (Ruby 1.8.7+ already defines shuffle)
-* slices: divide an array into specified number of equal size sub-arrays (deprecated - see method rdoc)
-* to_csv: join a multidimensional array into a string in CSV (Comma Separated Values), with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
-* to_tdf: join a multidimensional array into a string in TDF (Tab Delimited Format); this is an alias for #to_tsv
-* to_tsv: join a multidimensional array into a string in TSV (Tab Separated Values), with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
-* union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
+* shuffle, shuffle!: randomly sort an array efficiently (backport)
+* slices: divide an array into specified number of equal size sub-arrays (deprecated)
+* to_csv: join a 2D array to a string as CSV (Comma Separated Values)
+* to_tdf: join a 2D array to a string as TDF (Tab Delimited Format)
+* to_tsv: join a 2D array to a string as TSV (Tab Separated Values)
+* union: set union of the sub-arrays.
 
 
 ### Array join
@@ -102,7 +102,7 @@ To require the gem in your code:
 * index_by: convert the object to a hash by mapping each item to a key=>item pair.
 * join: forwards to self.to_a.join
 * to_h: convert the object to a hash by mapping each item to a key=>value pair.
-* to_h_merge: convert the object to a hash by mapping each item to a key=>value pair, merging any duplicate keys.
+* to_h_merge: `to_h` and merge any duplicate keys.
 * power_set: return an array with all subsets of the enum's elements
 
 
@@ -143,9 +143,9 @@ To require the gem in your code:
 * size?: return true if hash has any keys
 * sort_by_keys: return a new Hash sorted by keys
 * each_sort: sort the keys then call each
-* each_key!: passes each key to a specified block and updates hash in place if the key changes
-* each_pair!: passes each key value pair to a specified block and updates the hash in place if the key or value change.
-* each_value!: passes each value to a specified block and updates the hash in place if the value changes.
+* each_key!: pass each key to a block; update hash in place with changes.
+* each_pair!: pass each key value pair to a block; update hash in place with changes.
+* each_value!: pass each value to a block; update hash in place with changes.
 * map_key: map each key-value pair's key by calling a a block
 * map_pair: map each key-value pair by calling a a block
 * map_value: map each key-value pair by calling a a block
@@ -164,13 +164,13 @@ To require the gem in your code:
 ## IO
 
 * readrow: reads a row line as with IO#readline, and return the row split it into fields
-* IO.readrows: reads the entire file specified by name as individual row lines, and return those rows split into fields, in an array of arrays.
+* IO.readrows: reads a file and splits text to rows and fields as a 2D array.
 
 
 ## Kernel
 
 * my_method_name: return the name of the current method
-* caller_method_name: return the name of the caller method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
+* caller_method_name: return the name of the caller method, or the Nth parent up the call stack.
 
 
 ## Math
@@ -223,8 +223,8 @@ Extensions that help debug Ruby programs.
 ## String
 
 * capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
-* decrement: decrease the rightmost natural number, defaults to one value lower or by the optional step parameter value.
-* increment: increase the rightmost natural number, defaults to one value higher or by the optional step parameter value.
+* decrement: decrease the rightmost natural number, with step option.
+* increment: increase the rightmost natural number, with step option.
 * lorem: return a short random string, good for use in "lorem ipsum" sample text.
 * lowcase: translate a string to lowercase, digits and single underscores (e.g. to a method name)
 * prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
