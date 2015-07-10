@@ -33,13 +33,13 @@ Want to help? We're happy to get pull requests.
 
 To install using a Gemfile, add this:
 
-    gem "sixarm_ruby_ramp", ">= 4.2.3, < 5"
+    gem "sixarm_ruby_ramp", ">= 4.2.3", "< 5"
 
 To install using the command line, run this:
 
     gem install sixarm_ruby_ramp -v ">= 4.2.3, < 5"
 
-To install using the command with high security, run this:
+To install using the command line with high security, run this:
 
     wget http://sixarm.com/sixarm.pem
     gem cert --add sixarm.pem && gem sources --add http://sixarm.com
