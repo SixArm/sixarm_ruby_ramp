@@ -20,13 +20,7 @@ Gem::Specification.new do |s|
   s.has_rdoc       = true
 
   s.files = [
-    ".gemtest",
-    "CHANGES.md",
-    "CONTRIBUTING.md",
-    "LICENSE.md",
     "Rakefile",
-    "README.md",
-    "VERSION",
     "lib/sixarm_ruby_ramp.rb",
     "lib/sixarm_ruby_ramp/array.rb",
     "lib/sixarm_ruby_ramp/array/join.rb",
