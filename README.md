@@ -1,12 +1,19 @@
 # SixArm.com » Ruby » <br> Ramp is a toolkit of Ruby extensions
 
+<!--HEADER-OPEN-->
+
 [![Code Climate](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp.png)](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_ramp.png)](https://travis-ci.org/SixArm/sixarm_ruby_ramp)
 
+* Git: <https://github.com/sixarm/sixarm_ruby_ramp>
 * Doc: <http://sixarm.com/sixarm_ruby_ramp/doc>
-* Gem: <http://rubygems.org/gems/sixarm_ruby_ramp>
-* Repo: <http://github.com/sixarm/sixarm_ruby_ramp>
-* Email: Joel Parker Henderson, <joel@sixarm.com>
+* Gem: <https://rubygems.org/gems/sixarm_ruby_ramp>
+* Contact: Joel Parker Henderson, <joel@sixarm.com>
+* Changes: See CHANGES.md file.
+* License: See LICENSE.md file.
+* Helping: See CONTRIBUTING.md file.
+
+<!--HEADER-SHUT-->
 
 
 ## Introduction
@@ -20,32 +27,29 @@ For docs go to <http://sixarm.com/sixarm_ruby_ramp/doc>
 Want to help? We're happy to get pull requests.
 
 
-## Install quickstart
+<!--INSTALL-OPEN-->
 
-Install:
+## Install
 
-    gem install sixarm_ruby_ramp
+To install using a Gemfile, add this:
 
-Bundler:
+    gem "sixarm_ruby_ramp", ">= 4.2.3, < 5"
 
-    gem "sixarm_ruby_ramp", ">=4.2.3", "<5"
+To install using the command line, run this:
 
-Require:
+    gem install sixarm_ruby_ramp -v ">= 4.2.3, < 5"
+
+To install using the command with high security, run this:
+
+    wget http://sixarm.com/sixarm.pem
+    gem cert --add sixarm.pem && gem sources --add http://sixarm.com
+    gem install sixarm_ruby_ramp -v ">= 4.2.3, < 5" --trust-policy HighSecurity
+
+To require the gem in your code:
 
     require "sixarm_ruby_ramp"
 
-
-## Install with security (optional)
-
-To enable high security for all our gems:
-
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem
-    gem sources --add http://sixarm.com
-
-To install with high security:
-
-    gem install sixarm_ruby_ramp --trust-policy HighSecurity
+<!--INSTALL-SHUT-->
 
 
 ## Array
