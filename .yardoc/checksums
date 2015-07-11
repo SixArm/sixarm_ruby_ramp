@@ -1,3 +1,4 @@
+lib/sixarm_ruby_ramp.rb a2f1af96c54febf0cb71a6e46039c0e01e2708c4
 lib/sixarm_ruby_ramp/array.rb cea4e2575f7f9414b3c66a1d763d438d1df76957
 lib/sixarm_ruby_ramp/class.rb e5b42b2d7f24b3c048092e17f2863cd52d5c67e0
 lib/sixarm_ruby_ramp/csv.rb b342fce0bf8d15c5a300a546accd48a1f2b165e2
