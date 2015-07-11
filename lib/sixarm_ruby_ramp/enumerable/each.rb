@@ -50,21 +50,84 @@ module Enumerable
     #
     if self.respond_to?(:at) && filter.respond_to?(:each)
       if optimize_for_whole_numbers
-        each_at_impl_with_self_at_and_filter_each_and_whole_numbers(filter)
+        # each_at_strategy_with_self_at_and_filter_each_and_whole_numbers(filter)
+        filter.each{|i|
+          yield(at(i))
+        }
       else
-        each_at_impl_with_self_at_and_filter_each(filter)
+        # each_at_strategy_with_self_at_and_filter_each(filter)
+        filter.each{|i|
+          yield(at(i >= 0 ? i : i + self.size))
+        }
       end
     elsif filter.respond_to?(:include?)
-      each_at_impl_with_worst_case(filter)
+      # each_at_strategy_with_count(filter)
+      i = 0
+      s = respond_to?(:size) ? size : nil
+      each{|e|
+        yield(e) if (filter.include?(i) || (size && filter.include(i - size)))
+        i += 1
+      }
     else
       raise ArgumentError
     end
   end
 
-  protected
+  # Implement #each_at by using a strategy with no optimization.
+  #
+  # When #each_at tests that either self#at is unavailable or filter#each
+  # is unavailable, then #each_at calls this strategy.
+  #
+  # This strategy uses a loop counter and iteration on the self elements,
+  # and each iteration, test whether the counter is in the filter.
+  #
+  # This strategy is the slowest, and for the worst-case need.
+  # This strategy is rarely needed in the wild.
+  #
+  def each_at_strategy_with_optimization_off(filter)
+    i = 0
+    if respond_to?(:size)
+      each{|e|
+        yield(e) if (filter.include?(i) || (size && filter.include?(i - size)))
+        i += 1
+      }
+    else
+      each{|e|
+        yield(e) if (filter.include?(i))
+        i += 1
+      }
+    end
+  end
+
+  # Implement #each_at by using a strategy with some optimization.
+  #
+  # When #each_at tests that both self#at is available and filter#each
+  # is available, yet cannot test that all indexes are whole numbers,
+  # then #each_at calls this strategy.
+  #
+  def each_at_strategy_with_optimization_min(filter)
+    filter.each{|i|
+      yield(at(i >= 0 ? i : i + self.size))
+    }
+  end
+
+  # Implement #each_at by using a strategy with full optimization.
+  #
+  # When #each_at tests that both self#at is available and filter#each
+  # is available, and can test that all indexes are whole numbers,
+  # then #each_at calls this strategy.
+  #
+  def each_at_strategy_with_optimization_max(filter)
+    filter.each{|i|
+      yield(at(i))
+    }
+  end
 
   # Normalize the filter to make it respond to #each and #include?.
-  # If we can guarantee the filter is all whole numbers, then optimize.
+  #
+  # If we can guarantee the filter is all whole numbers,
+  # then subsequent method calls can optimize the index lookup,
+  # by looking for the whole numbers instead of negative numbers.
   #
   def each_at_normalize_filter(filter)
     case filter
@@ -81,41 +144,6 @@ module Enumerable
     else
       return filter, false
     end
-  end
-
-  # The #each_at method calls this method when we can use the
-  # best fast implementation, i.e. using self#at, filter#each,
-  # and knowing that all the filter elements are >= 0.
-  #
-  def each_at_impl_with_self_at_and_filter_each_and_whole_numbers(filter)
-    filter.each{|i|
-      yield(at(i))
-    }
-  end
-
-  # The #each_at method calls this method when we can use the
-  # second-best implementation, i.e. using self#at, filter#each,
-  # yet having to test each filter elements for negative indexing.
-  #
-  def each_at_impl_with_self_at_and_filter_each(filter)
-    filter.each{|i|
-      yield(at(i >= 0 ? i : i + self.size))
-    }
-  end
-
-  # The #each_at method calls this method when we cannot use self#at
-  # and filter#each, thus we must use a loop counter and iteration
-  # on the self elements, and test whether the counter is in the filter.
-  #
-  # This is the worst case solution, and is rarely needed in the wild.
-  #
-  def each_at_impl_with_worst_case(filter)
-    i = 0
-    s = respond_to?(:size) ? size : nil
-    each{|e|
-      yield(e) if (filter.include?(i) || (size ? filter.include(i - size)))
-      i += 1
-    }
   end
 
 end

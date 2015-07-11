@@ -11,6 +11,7 @@ Please see README
   'csv',
   'date',
   'enumerable',
+  'enumerable/each',
   'enumerable/map',
   'enumerable/nitems',
   'enumerable/select',
