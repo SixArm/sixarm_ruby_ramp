@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
-require "minitest/autorun"
-require "simplecov"
-SimpleCov.start
-
-require "sixarm_ruby_ramp"
+require "sixarm_ruby_ramp_test"
+require "sixarm_ruby_ramp/class"
 
 class ClassTest < Minitest::Test
-
 
   METHOD_REGEXP = /^[abc]\W*$/
   def test_publicize_methods

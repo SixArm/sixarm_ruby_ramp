@@ -221,7 +221,7 @@ class String
  # This method defaults to length = self.lorem_length.
  
  def self.lorem(length=self.lorem_length)
-  ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'].choices(length).join
+  ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'].sample(length).join
  end
 
 

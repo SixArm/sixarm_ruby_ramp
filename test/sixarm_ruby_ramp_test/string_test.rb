@@ -1,53 +1,40 @@
 # -*- coding: utf-8 -*-
-require "minitest/autorun"
-require "simplecov"
-SimpleCov.start
-
-require "sixarm_ruby_ramp"
-
+require "sixarm_ruby_ramp_test"
+require "sixarm_ruby_ramp/string"
 
 class StringTest < Minitest::Test
-
 
   def test_capitalize_words
     assert_equal("Foo Goo Hoo","foo goo hoo".capitalize_words)
   end
 
-
   def test_words
     assert_equal(['foo','goo','hoo'],"foo goo hoo".words)
   end
-
 
   def test_split_tab
     assert_equal(['foo','goo','hoo'],"foo\tgoo\thoo".split_tab)
   end
 
-
   def test_split_tsv
     assert_equal([['a','b','c'],['d','e','f'],['g','h','i']],"a\tb\tc\nd\te\tf\ng\th\ti".split_tsv)
   end
-
 
   def test_xid
     assert_equal('foo_goo_hoo',"Foo GOO**_**Hoo".to_xid)
   end
 
-
   def test_lowcase
     assert_equal('foo_goo_hoo',"Foo GOO**_**Hoo".lowcase)
   end
-
 
   def test_to_class
     assert_equal(String,'String'.to_class)
   end
 
-
   def test_to_class_nested
     assert_equal(FooModule::FooClass,'FooModule::FooClass'.to_class)
   end
-
 
   def test_increment
     assert_equal('5','4'.increment,               'number is entire string')
@@ -58,7 +45,6 @@ class StringTest < Minitest::Test
     assert_equal('foobar','foobar'.increment,     'no number, so should be unchanged')
   end
 
-
   def test_decrement
     assert_equal('3','4'.decrement,               'number is entire string')
     assert_equal('3foo','4foo'.decrement,         'number is leftmost')
@@ -67,7 +53,6 @@ class StringTest < Minitest::Test
     assert_equal('foo3bar','foo4bar'.decrement,   'number is in then middle')
     assert_equal('foobar','foobar'.decrement,     'no number, so should be unchanged')
   end
-
 
   def test_prev_char
     assert_equal(["-",false,false] ,String.prev_char("-"))  #unchanged
@@ -78,7 +63,6 @@ class StringTest < Minitest::Test
     assert_equal(["M",true,false]  ,String.prev_char("N"))  #uppercase typical
     assert_equal(["Z",true,true]   ,String.prev_char("A"))  #uppercase carry
   end
-
 
   def test_prev
     assert_equal('n-','n-'.prev)     # unchanged
@@ -114,7 +98,6 @@ class StringTest < Minitest::Test
   end
 
 end
-
 
 # For testing #to_class
 module FooModule #:nodoc: all

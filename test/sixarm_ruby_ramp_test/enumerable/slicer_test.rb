@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-require "minitest/autorun"
-require "simplecov"
-SimpleCov.start
+require "sixarm_ruby_ramp_test"
 
-require "sixarm_ruby_ramp/enumerable/map"
-require "ostruct"
+# TODO: decide to implement or delete this
+=begin
+require "sixarm_ruby_ramp/enumerable/slicer"
 
 class EnumerableSlicerTest < Minitest::Test
 
@@ -19,3 +18,4 @@ class EnumerableSlicerTest < Minitest::Test
   end
 
 end
+=end

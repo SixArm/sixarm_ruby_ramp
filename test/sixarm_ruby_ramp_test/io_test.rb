@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-require "minitest/autorun"
-require "simplecov"
-SimpleCov.start
-
-require "sixarm_ruby_ramp"
+require "sixarm_ruby_ramp_test"
+require "sixarm_ruby_ramp/io"
 
 class IOTest < Minitest::Test
 
