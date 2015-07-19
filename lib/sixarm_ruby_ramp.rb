@@ -33,5 +33,5 @@ Please see README
   'time',
   'yaml'
 ].map{|x|
-  require File.dirname(__FILE__) + "/sixarm_ruby_ramp/#{x}.rb"
+  require_relative "sixarm_ruby_ramp/#{x}"
 }
