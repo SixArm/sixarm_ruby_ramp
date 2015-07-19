@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-require "minitest/autorun"
-require "simplecov"
-SimpleCov.start
-
-require "sixarm_ruby_ramp"
+require "sixarm_ruby_ramp_test"
+require "sixarm_ruby_ramp/integer"
 
 class IntegerTest < Minitest::Test
 
@@ -14,8 +11,8 @@ class IntegerTest < Minitest::Test
   end
 
   def test_maps_with_index
-    expect=[0,1,2]
-    actual=3.maps{|i| i}
+    expect=[0,2,4]
+    actual=3.maps{|i| i * 2}
     assert_equal(expect,actual)
   end
 
