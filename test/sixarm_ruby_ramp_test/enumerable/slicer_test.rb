@@ -3,7 +3,6 @@ require "sixarm_ruby_ramp_test"
 
 # TODO: decide to implement or delete this
 =begin
-require "sixarm_ruby_ramp/enumerable/slicer"
 
 class EnumerableSlicerTest < Minitest::Test
 

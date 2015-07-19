@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 require "sixarm_ruby_ramp_test"
-require "sixarm_ruby_ramp/array"
 require "csv"
 
 class ArrayTest < Minitest::Test
