@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+if RUBY_VERSION < "2.4.0"
+
 # Fixnum extensions
 
 class Fixnum
@@ -30,5 +32,7 @@ class Fixnum
     return self & 1 != 0
   end
 
+
+end
 
 end

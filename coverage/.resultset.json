@@ -340,12 +340,12 @@
         null,
         null,
         1,
-        205,
-        205,
+        1,
+        1,
         null,
         0,
         null,
-        205,
+        1,
         null,
         0,
         null,
@@ -1359,12 +1359,11 @@
       "/Users/joel/git/sixarm/sixarm_ruby_ramp/lib/sixarm_ruby_ramp/fixnum.rb": [
         null,
         null,
-        null,
-        null,
         1,
         null,
         null,
         null,
+        0,
         null,
         null,
         null,
@@ -1372,7 +1371,10 @@
         null,
         null,
         null,
-        1,
+        null,
+        null,
+        null,
+        0,
         0,
         null,
         null,
@@ -1385,8 +1387,10 @@
         null,
         null,
         null,
-        1,
         0,
+        0,
+        null,
+        null,
         null,
         null,
         null,
@@ -2653,6 +2657,6 @@
         null
       ]
     },
-    "timestamp": 1437271289
+    "timestamp": 1496029332
   }
 }

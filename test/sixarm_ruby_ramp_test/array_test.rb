@@ -100,7 +100,7 @@ class ArrayTest < Minitest::Test
     assert_equal([    'b','c'],a.shifted(1))
     assert_equal([        'c'],a.shifted(2))
     assert_equal([           ],a.shifted(3))
-    assert_equal(nil          ,a.shifted(4))
+    assert_nil(                a.shifted(4))
   end
 
   def test_shifted_with_negative_count
@@ -123,7 +123,7 @@ class ArrayTest < Minitest::Test
     assert_equal([    'b','c'],a.cdr(1))
     assert_equal([        'c'],a.cdr(2))
     assert_equal([           ],a.cdr(3))
-    assert_equal(nil          ,a.cdr(4))
+    assert_nil(                a.cdr(4))
   end
 
   # alias: test_cdr must be idential to test_shifted
@@ -149,7 +149,7 @@ class ArrayTest < Minitest::Test
     assert_equal([    'b','c'],a.rest(1))
     assert_equal([        'c'],a.rest(2))
     assert_equal([           ],a.rest(3))
-    assert_equal(nil          ,a.rest(4))
+    assert_nil(                a.rest(4))
   end
 
   # alias: test_rest must be idential to test_shifted
