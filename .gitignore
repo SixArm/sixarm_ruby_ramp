@@ -4,3 +4,5 @@
 /coverage/
 /coverage.data
 .DS_Store
+/vendor/
+/Gemfile.lock
