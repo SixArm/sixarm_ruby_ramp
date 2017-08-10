@@ -1,8 +1,18 @@
 .bundle
 .coveralls.yml
+<<<<<<< HEAD
 /vendor/
 /coverage/
 /coverage.data
 .DS_Store
 /vendor/
 /Gemfile.lock
+||||||| merged common ancestors
+vendor
+Gemfile.lock
+=======
+vendor
+Gemfile.lock
+/coverage/
+/coverage.data
+>>>>>>> Ignore coverage
