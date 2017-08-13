@@ -3,7 +3,7 @@
 Gem::Specification.new do |s|
 
   s.name           = "sixarm_ruby_ramp"
-  s.summary        = "SixArm.com » Ruby » Ramp provides base extensions to ruby classes."
+  s.summary        = "SixArm.com → Ruby → Ramp provides base extensions to ruby classes."
   s.description    = "Adds extensions to Array, Date, Enumerable, File, Hash, IO, String, Time, etc."
   s.version        = "4.2.4"
 
