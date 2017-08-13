@@ -1,6 +1,6 @@
 # Changes
 
-* 2017-08-13 1.0.7 Update to Ruby 2.4, spdx licenses, rake test, etc.
+* 2017-08-13 4.2.5 Update to Ruby 2.4, spdx licenses, rake test, etc.
 * 2015-07-18 4.2.4 Improve quality assurance, tests, and coverage
 * 2015-07-07 4.2.3 Update gemspec to use file manifest
 * 2015-03-14 4.2.1 Conditionally load `Array#shuffle*`
