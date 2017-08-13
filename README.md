@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> Ramp is a toolkit of Ruby extensions
+# SixArm.com → Ruby → <br> Ramp is a toolkit of Ruby extensions
 
 <!--HEADER-OPEN-->
 
@@ -11,9 +11,7 @@
 * Doc: <http://sixarm.com/sixarm_ruby_ramp/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_ramp>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
-* Changes: See CHANGES.md file.
-* License: See LICENSE.md file.
-* Helping: See CONTRIBUTING.md file.
+* Project: [Changes](CHANGES.md), [License](LICENSE.md), [Contributing](CONTRIBUTING.md).
 
 <!--HEADER-SHUT-->
 
@@ -33,23 +31,21 @@ Want to help? We're happy to get pull requests.
 
 ## Install
 
-To install using a Gemfile, add this:
+### Gem
 
-    gem "sixarm_ruby_ramp", ">= 4.2.4", "< 5"
+Run this command in your shell or terminal:
 
-To install using the command line, run this:
+    gem install sixarm_ruby_ramp
 
-    gem install sixarm_ruby_ramp -v ">= 4.2.4, < 5"
+Or add this to your Gemfile:
 
-To install using the command line with high security, run this:
+    gem 'sixarm_ruby_ramp'
 
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem && gem sources --add http://sixarm.com
-    gem install sixarm_ruby_ramp -v ">= 4.2.4, < 5" --trust-policy HighSecurity
+### Require
 
 To require the gem in your code:
 
-    require "sixarm_ruby_ramp"
+    require 'sixarm_ruby_ramp'
 
 <!--INSTALL-SHUT-->
 

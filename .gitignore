@@ -1,3 +1,6 @@
 .bundle
 .coveralls.yml
 /vendor/
+/coverage/
+/coverage.data
+.DS_Store
