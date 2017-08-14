@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_ramp"
   s.summary        = "SixArm.com → Ruby → Ramp provides base extensions to ruby classes."
   s.description    = "Adds extensions to Array, Date, Enumerable, File, Hash, IO, String, Time, etc."
-  s.version        = "4.2.5"
+  s.version        = "4.2.7"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
@@ -90,7 +90,7 @@ Gem::Specification.new do |s|
   s.add_dependency('sixarm_ruby_xml_strip', '~> 2.1', '>= 2.1.0')
 
   s.add_development_dependency('minitest', '>= 5.7.0', '< 6')
-  s.add_development_dependency('sixarm_ruby_minitest_extensions', '= 1.0.5')
+  s.add_development_dependency('sixarm_ruby_minitest_extensions', '>= 1.0.8', '< 2')
   s.add_development_dependency('rake', '> 10.4.2', '< 11')
   s.add_development_dependency('simplecov', '>= 0.10.0', '< 2')
   s.add_development_dependency('coveralls', '>= 0.8.2', '< 2')

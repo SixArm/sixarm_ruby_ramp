@@ -18,8 +18,8 @@ class CSVTest < Minitest::Test
  def test_http_headers_adjust_for_broken_msie_with_request_as_firefox
    headers = {:request => MockRequest.new('HTTP_USER_AGENT' => 'firefox')}
    headers = CSV.http_headers_adjust_for_broken_msie(headers)
-   assert_equal(nil,headers[:content_type])
-   assert_equal(nil,headers[:cache])
+   assert_nil headers[:content_type]
+   assert_nil headers[:cache]
  end
 
  def test_http_headers_adjust_for_broken_msie_with_request_as_msie

@@ -1,5 +1,7 @@
 # Changes
 
+* 2017-08-15 4.2.7 Fix deprecation by using assert_nil
+* 2017-08-14 4.2.6 Bump minitest expections
 * 2017-08-13 4.2.5 Update to Ruby 2.4, spdx licenses, rake test, etc.
 * 2015-07-18 4.2.4 Improve quality assurance, tests, and coverage
 * 2015-07-07 4.2.3 Update gemspec to use file manifest
