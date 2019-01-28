@@ -6,7 +6,7 @@
 <title>
   Module: Enumerable
   
-    &mdash; Documentation by YARD 0.9.14
+    &mdash; Documentation by YARD 0.9.16
   
 </title>
 
@@ -149,9 +149,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Array&lt;Array&lt;Object&gt;] an array of two arrays: the first array is
-the elements for which block is true, the second array is the elements for
-which block is false or nil.</p>
+<p>Array&lt;Array&lt;Object&gt;] an array of two arrays: the first array is the elements for which block is true, the second array is the elements for which block is false or nil.</p>
 </div></span>
   
 </li>
@@ -199,8 +197,7 @@ which block is false or nil.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Convert the enumerable to a hash by mapping each item to a pair [item, new
-item].</p>
+<p>Convert the enumerable to a hash by mapping each item to a pair [item, new item].</p>
 </div></span>
   
 </li>
@@ -224,8 +221,7 @@ item].</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Convert the enumerable to a hash by mapping each item to a pair [index
-,item].</p>
+<p>Convert the enumerable to a hash by mapping each item to a pair [index ,item].</p>
 </div></span>
   
 </li>
@@ -249,9 +245,7 @@ item].</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>A developer may want to optimize this implementation for other classes,
-such as detecting whether a range intersects another range simply by
-comparing the ranges&#39; min/max values.</p>
+<p>A developer may want to optimize this implementation for other classes, such as detecting whether a range intersects another range simply by comparing the ranges&#39; min/max values.</p>
 </div></span>
   
 </li>
@@ -308,103 +302,6 @@ comparing the ranges&#39; min/max values.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#nitems%3F-instance_method" title="#nitems? (instance method)">#<strong>nitems?</strong>(n)  &#x21d2; Boolean </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>True iff the block is not false or nil num times.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#nitems_until-instance_method" title="#nitems_until (instance method)">#<strong>nitems_until</strong>  &#x21d2; Integer </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>The number of leading elements for which block is false.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#nitems_while-instance_method" title="#nitems_while (instance method)">#<strong>nitems_while</strong>  &#x21d2; Integer </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>The number of leading elements for which block is not false or nil.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#nitems_with_index-instance_method" title="#nitems_with_index (instance method)">#<strong>nitems_with_index</strong>  &#x21d2; Integer </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Calls block with two arguments, the item and its index, for each item in
-enum.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#power_set-instance_method" title="#power_set (instance method)">#<strong>power_set</strong>  &#x21d2; Array&lt;Array&lt;Object&gt;&gt; </a>
     
 
@@ -421,79 +318,6 @@ enum.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>Calculate the power set.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#select_until-instance_method" title="#select_until (instance method)">#<strong>select_until</strong>  &#x21d2; Array&lt;Object&gt; </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>The leading elements for which block is false or nil.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#select_while-instance_method" title="#select_while (instance method)">#<strong>select_while</strong>  &#x21d2; Array&lt;Object&gt; </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>The leading elements for which block is not false or nil.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#select_with_index-instance_method" title="#select_with_index (instance method)">#<strong>select_with_index</strong>  &#x21d2; Array&lt;Object&gt; the leading elements for which block is not false or nil. </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Calls block with two arguments, the item and its index, for each item in
-enum.</p>
 </div></span>
   
 </li>
@@ -566,16 +390,13 @@ enum.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>This is the fastest implementation we have found. It returns results in
-typical order.</p>
+<p>This is the fastest implementation we have found. It returns results in typical order.</p>
 
 <p>For our benchmarks, we also compared these:</p>
 <ul><li>
-<p>By William James, <a
-href="http://www.ruby-forum.com/topic/95519">www.ruby-forum.com/topic/95519</a></p>
+<p>By William James, <a href="http://www.ruby-forum.com/topic/95519">www.ruby-forum.com/topic/95519</a></p>
 </li><li>
-<p>By Brian Schröäer, <a
-href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857</a></p>
+<p>By Brian Schröäer, <a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857</a></p>
 </li></ul>
 
 
@@ -633,22 +454,22 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.
       <pre class="lines">
 
 
-318
-319
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330</pre>
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 318</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_cartesian_product'>cartesian_product</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_enums'>enums</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
@@ -687,9 +508,7 @@ the first array is the elements for which block is true</tt>, <tt>the second arr
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns Array&lt;Array&lt;Object&gt;] an array of two arrays: the first
-array is the elements for which block is true, the second array is the
-elements for which block is false or nil.</p>
+<p>Returns Array&lt;Array&lt;Object&gt;] an array of two arrays: the first array is the elements for which block is true, the second array is the elements for which block is false or nil.</p>
 
 
   </div>
@@ -718,9 +537,7 @@ the first array is the elements for which block is true</tt>, <tt>the second arr
       
         &mdash;
         <div class='inline'>
-<p>Array&lt;Array&lt;Object&gt;] an array of two arrays: the first array is
-the elements for which block is true, the second array is the elements for
-which block is false or nil.</p>
+<p>Array&lt;Array&lt;Object&gt;] an array of two arrays: the first array is the elements for which block is true, the second array is the elements for which block is false or nil.</p>
 </div>
       
     </li>
@@ -733,21 +550,21 @@ which block is false or nil.</p>
       <pre class="lines">
 
 
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176</pre>
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 165</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bisect'>bisect</span>
   <span class='id identifier rubyid_accept'>accept</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -792,12 +609,12 @@ which block is false or nil.</p>
       <pre class="lines">
 
 
-334
-335
-336</pre>
+215
+216
+217</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 334</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cartesian_product'>cartesian_product</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_enums'>enums</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="" title="Enumerable (module)">Enumerable</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cartesian_product'><span class='object_link'><a href="#cartesian_product-class_method" title="Enumerable.cartesian_product (method)">cartesian_product</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span><span class='op'>*</span><span class='id identifier rubyid_enums'>enums</span><span class='rparen'>)</span>
@@ -819,8 +636,7 @@ which block is false or nil.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Convert the enumerable to a hash by mapping each item to a pair [item, new
-item]</p>
+<p>Convert the enumerable to a hash by mapping each item to a pair [item, new item]</p>
 
 
   </div>
@@ -896,13 +712,11 @@ strings.hash_by{|a| [a.size, a.upcase]}
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Convert the enumerable to a hash by mapping each item to a pair [index
-,item]</p>
+<p>Convert the enumerable to a hash by mapping each item to a pair [index ,item]</p>
 
 <p>Rails has this method.</p>
 
-<p>From <a
-href="http://stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array">stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array</a></p>
+<p>From <a href="http://stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array">stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array</a></p>
 
 
   </div>
@@ -978,9 +792,7 @@ strings.index_by{|a| a.size]}
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>A developer may want to optimize this implementation for other classes,
-such as detecting whether a range intersects another range simply by
-comparing the ranges&#39; min/max values.</p>
+<p>A developer may want to optimize this implementation for other classes, such as detecting whether a range intersects another range simply by comparing the ranges&#39; min/max values.</p>
 
 
   </div>
@@ -1021,12 +833,12 @@ comparing the ranges&#39; min/max values.</p>
       <pre class="lines">
 
 
-300
-301
-302</pre>
+181
+182
+183</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 300</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 181</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_intersect?'>intersect?</span><span class='lparen'>(</span><span class='id identifier rubyid_enum'>enum</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_enum'>enum</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span><span class='rbrace'>}</span>
@@ -1096,12 +908,12 @@ comparing the ranges&#39; min/max values.</p>
       <pre class="lines">
 
 
-280
-281
-282</pre>
+161
+162
+163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 280</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_op'>op</span><span class='rparen'>)</span>
  <span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_op'>op</span><span class='rparen'>)</span>
@@ -1164,19 +976,19 @@ comparing the ranges&#39; min/max values.</p>
       <pre class="lines">
 
 
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199</pre>
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 190</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 138</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_mutex?'>mutex?</span>
   <span class='id identifier rubyid_num'>num</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -1187,317 +999,6 @@ comparing the ranges&#39; min/max values.</p>
     <span class='kw'>end</span>
   <span class='rbrace'>}</span>
   <span class='kw'>return</span> <span class='kw'>true</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="nitems?-instance_method">
-  
-    #<strong>nitems?</strong>(n)  &#x21d2; <tt>Boolean</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns true iff the block is not false or nil num times</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>enum.nitems?(n) {| obj | block }
- =&gt; true iff the block is not false or nil num times</code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>true iff the block is not false or nil num times</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 213</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_nitems?'>nitems?</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_num'>num</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
-    <span class='kw'>if</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_num'>num</span><span class='op'>+=</span><span class='int'>1</span>
-      <span class='kw'>if</span> <span class='id identifier rubyid_num'>num</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_n'>n</span> <span class='kw'>then</span> <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>end</span>
-    <span class='kw'>end</span>
-  <span class='rbrace'>}</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_num'>num</span><span class='op'>==</span><span class='id identifier rubyid_n'>n</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="nitems_until-instance_method">
-  
-    #<strong>nitems_until</strong>  &#x21d2; <tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the number of leading elements for which block is false.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>enum.nitems_until {| obj | block }
-=&gt; number of items</code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>the number of leading elements for which block is false.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 242</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_nitems_until'>nitems_until</span>
-  <span class='id identifier rubyid_num'>num</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
-    <span class='kw'>if</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
-      <span class='kw'>break</span>
-    <span class='kw'>else</span>
-      <span class='id identifier rubyid_num'>num</span><span class='op'>+=</span><span class='int'>1</span>
-    <span class='kw'>end</span>
-  <span class='rbrace'>}</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_num'>num</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="nitems_while-instance_method">
-  
-    #<strong>nitems_while</strong>  &#x21d2; <tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the number of leading elements for which block is not false or nil.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>enum.nitems_while {| obj | block }
- =&gt; number of items</code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>the number of leading elements for which block is not false or nil.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-230
-231
-232
-233
-234</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 230</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_nitems_while'>nitems_while</span>
-  <span class='id identifier rubyid_num'>num</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='op'>+=</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>break</span><span class='rbrace'>}</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_num'>num</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="nitems_with_index-instance_method">
-  
-    #<strong>nitems_with_index</strong>  &#x21d2; <tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Calls block with two arguments, the item and its index, for each item in
-enum.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>enum.nitems_with_index {|obj,i| block }
- =&gt; number of items</code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Integer.html" title="Integer (class)">Integer</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>the number of leading elements for which block is true.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-263
-264
-265
-266
-267</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 263</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_nitems_with_index'>nitems_with_index</span>
-  <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='op'>+=</span><span class='int'>1</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>break</span><span class='rbrace'>}</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_index'>index</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1568,249 +1069,15 @@ enum.</p>
       <pre class="lines">
 
 
-350
-351
-352</pre>
+231
+232
+233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 350</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 231</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_power_set'>power_set</span>
   <span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='comma'>,</span><span class='id identifier rubyid_y'>y</span><span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='semicolon'>;</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>&lt;&lt;</span><span class='id identifier rubyid_i'>i</span><span class='semicolon'>;</span><span class='id identifier rubyid_r'>r</span><span class='op'>&lt;&lt;</span><span class='id identifier rubyid_i'>i</span><span class='op'>+</span><span class='lbracket'>[</span><span class='id identifier rubyid_y'>y</span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='semicolon'>;</span><span class='id identifier rubyid_r'>r</span><span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="select_until-instance_method">
-  
-    #<strong>select_until</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the leading elements for which block is false or nil.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>enum.select_until {|obj| block }
- =&gt; array</code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>the leading elements for which block is false or nil.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-123
-124
-125
-126
-127</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 123</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_select_until'>select_until</span>
-  <span class='id identifier rubyid_arr'>arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>break</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_arr'>arr</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span><span class='rbrace'>}</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_arr'>arr</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="select_while-instance_method">
-  
-    #<strong>select_while</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the leading elements for which block is not false or nil.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>enum.select_while {|obj| block }
- =&gt; array</code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>the leading elements for which block is not false or nil.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-111
-112
-113
-114
-115</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 111</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_select_while'>select_while</span>
-  <span class='id identifier rubyid_arr'>arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id identifier rubyid_arr'>arr</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>break</span><span class='rbrace'>}</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_arr'>arr</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="select_with_index-instance_method">
-  
-    #<strong>select_with_index</strong>  &#x21d2; <tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt; the leading elements for which block is not false or nil.</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Calls block with two arguments, the item and its index, for each item in
-enum.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <p class="tag_title">Examples:</p>
-    
-      
-      <pre class="example code"><code>enum.select_with_index {|obj,i| block }
-=&gt; array</code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="Array.html" title="Array (class)">Array</a></span>&lt;<span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span>&gt; the leading elements for which block is not false or nil.</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Array&lt;Object&gt; the leading elements for which block is not false or
-nil.</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_ramp/enumerable.rb', line 137</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_select_with_index'>select_with_index</span>
-  <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_arr'>arr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
-    <span class='kw'>if</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span><span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_arr'>arr</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_item'>item</span>
-      <span class='id identifier rubyid_index'>index</span><span class='op'>+=</span><span class='int'>1</span>
-    <span class='kw'>else</span>
-      <span class='kw'>break</span>
-    <span class='kw'>end</span>
-  <span class='rbrace'>}</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_arr'>arr</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1869,8 +1136,7 @@ nil.</p>
     
 <p>Convert an enumerable to a hash and merge values.</p>
 
-<p>If a key occurs more than once, then this will automatically merge the
-values to an array of the keys&#39; values.</p>
+<p>If a key occurs more than once, then this will automatically merge the values to an array of the keys&#39; values.</p>
 
 
   </div>
@@ -1965,9 +1231,9 @@ array.to_h =&gt; {:a=&gt;[:b, :c, :d]}</code></pre>
 </div>
 
       <div id="footer">
-  Generated on Fri Jun 22 10:33:47 2018 by
+  Generated on Sun Jan 27 17:29:51 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.14 (ruby-2.5.1).
+  0.9.16 (ruby-2.5.1).
 </div>
 
     </div>
