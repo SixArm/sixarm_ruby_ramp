@@ -4,14 +4,13 @@
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_ramp.svg)](http://badge.fury.io/rb/sixarm_ruby_ramp)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_ramp.png)](https://travis-ci.org/SixArm/sixarm_ruby_ramp)
-[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/750d63199bda82888002/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp/maintainability)
-[![Coverage Status](https://coveralls.io/repos/SixArm/sixarm_ruby_ramp/badge.svg?branch=master&service=github)](https://coveralls.io/github/SixArm/sixarm_ruby_ramp?branch=master)
+[![Code Climate](https://api.codeclimate.com/v1/badges/750d63199bda82888002/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_ramp/maintainability)
 
-* Git: <https://github.com/sixarm/sixarm_ruby_ramp>
+* Git: <https://github.com/SixArm/sixarm_ruby_ramp>
 * Doc: <http://sixarm.com/sixarm_ruby_ramp/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_ramp>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
-* Project: [Changes](CHANGES.md), [License](LICENSE.md), [Contributing](CONTRIBUTING.md).
+* Project: [changes](CHANGES.md), [license](LICENSE.md), [contributing](CONTRIBUTING.md).
 
 <!--header-shut-->
 
@@ -27,17 +26,19 @@ For docs go to <http://sixarm.com/sixarm_ruby_ramp/doc>
 Want to help? We're happy to get pull requests.
 
 
-<!--install-opent-->
+<!--install-open-->
 
 ## Install
 
 ### Gem
 
-Run this command in your shell or terminal:
+To install this gem in your shell or terminal:
 
     gem install sixarm_ruby_ramp
 
-Or add this to your Gemfile:
+### Gemfile
+
+To add this gem to your Gemfile:
 
     gem 'sixarm_ruby_ramp'
 
