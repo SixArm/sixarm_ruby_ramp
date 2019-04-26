@@ -63,9 +63,9 @@ module Enumerable
     elsif filter.respond_to?(:include?)
       # each_at_strategy_with_count(filter)
       i = 0
-      s = respond_to?(:size) ? size : nil
+      _size = respond_to?(:size) ? size : nil
       each{|e|
-        yield(e) if (filter.include?(i) || (size && filter.include(i - size)))
+        yield(e) if (filter.include?(i) || (_size && filter.include(i - _size)))
         i += 1
       }
     else

@@ -1,5 +1,7 @@
 # Changes
 
+* 2019-01-27 5.0.1 Fix testing bugs and warnings
+* 2018-06-22 5.0.0 Update to Ruby 2.5, testing gems, etc.
 * 2017-08-15 4.2.7 Fix deprecation by using assert_nil
 * 2017-08-14 4.2.6 Bump minitest expections
 * 2017-08-13 4.2.5 Update to Ruby 2.4, spdx licenses, rake test, etc.

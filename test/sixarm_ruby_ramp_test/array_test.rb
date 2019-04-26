@@ -4,8 +4,10 @@ require "csv"
 
 class ArrayTest < Minitest::Test
 
-  A=['a','b','c','d']
-  B=['w','x','y','z']
+  A=["a", "b", "c", "d"]
+  B=["w", "x", "y", "z"]
+  GRID = [["a", "b", "c"], ["d", "e", "f"], ["g", "h", "i"]]
+
 
   def test_size_with_one_item
     assert_equal(true,[1].size?)
@@ -30,13 +32,13 @@ class ArrayTest < Minitest::Test
  def test_rotate
    a=A.dup
    a.rotate!
-   assert_equal(['b','c','d','a'],a)
+   assert_equal(["b", "c", "d", "a"],a)
    a.rotate!
-   assert_equal(['c','d','a','b'],a)
+   assert_equal(["c", "d", "a", "b"],a)
    a.rotate!
-   assert_equal(['d','a','b','c'],a)
+   assert_equal(["d", "a", "b", "c"],a)
    a.rotate!
-   assert_equal(['a','b','c','d'],a)
+   assert_equal(["a", "b", "c", "d"],a)
  end
 
  def test_rotate_with_empty
@@ -68,7 +70,7 @@ class ArrayTest < Minitest::Test
  end
 
  def test_onto
-   assert_equal({'a'=>'w', 'b'=>'x', 'c'=>'y', 'd'=>'z'},A.onto(B))
+   assert_equal({"a"=>"w", "b"=>"x", "c"=>"y", "d"=>"z"},A.onto(B))
  end
 
  def test_onto_with_empty
@@ -94,11 +96,11 @@ class ArrayTest < Minitest::Test
  end
 
   def test_shifted
-    a=['a','b','c']
-    assert_equal([    'b','c'],a.shifted)
-    assert_equal(['a','b','c'],a.shifted(0))
-    assert_equal([    'b','c'],a.shifted(1))
-    assert_equal([        'c'],a.shifted(2))
+    a=["a", "b", "c"]
+    assert_equal([    "b", "c"],a.shifted)
+    assert_equal(["a", "b", "c"],a.shifted(0))
+    assert_equal([    "b", "c"],a.shifted(1))
+    assert_equal([        "c"],a.shifted(2))
     assert_equal([           ],a.shifted(3))
     assert_nil(                a.shifted(4))
   end
@@ -117,11 +119,11 @@ class ArrayTest < Minitest::Test
 
   # alias: test_cdr must be idential to test_shifted
   def test_cdr
-    a=['a','b','c']
-    assert_equal([    'b','c'],a.cdr)
-    assert_equal(['a','b','c'],a.cdr(0))
-    assert_equal([    'b','c'],a.cdr(1))
-    assert_equal([        'c'],a.cdr(2))
+    a=["a", "b", "c"]
+    assert_equal([    "b", "c"],a.cdr)
+    assert_equal(["a", "b", "c"],a.cdr(0))
+    assert_equal([    "b", "c"],a.cdr(1))
+    assert_equal([        "c"],a.cdr(2))
     assert_equal([           ],a.cdr(3))
     assert_nil(                a.cdr(4))
   end
@@ -143,11 +145,11 @@ class ArrayTest < Minitest::Test
 
   # alias: test_rest must be idential to test_shifted
   def test_rest
-    a=['a','b','c']
-    assert_equal([    'b','c'],a.rest)
-    assert_equal(['a','b','c'],a.rest(0))
-    assert_equal([    'b','c'],a.rest(1))
-    assert_equal([        'c'],a.rest(2))
+    a=["a", "b", "c"]
+    assert_equal([    "b", "c"],a.rest)
+    assert_equal(["a", "b", "c"],a.rest(0))
+    assert_equal([    "b", "c"],a.rest(1))
+    assert_equal([        "c"],a.rest(2))
     assert_equal([           ],a.rest(3))
     assert_nil(                a.rest(4))
   end
@@ -168,12 +170,12 @@ class ArrayTest < Minitest::Test
   end
 
   def test_shifted_bang
-    a=['a','b','c']; a.shifted!;    assert_equal([    'b','c'],a)
-    a=['a','b','c']; a.shifted!(0); assert_equal(['a','b','c'],a)
-    a=['a','b','c']; a.shifted!(1); assert_equal([    'b','c'],a)
-    a=['a','b','c']; a.shifted!(2); assert_equal([        'c'],a)
-    a=['a','b','c']; a.shifted!(3); assert_equal([           ],a)
-    a=['a','b','c']; a.shifted!(4); assert_equal([           ],a)
+    a=["a", "b", "c"]; a.shifted!;    assert_equal([    "b", "c"],a)
+    a=["a", "b", "c"]; a.shifted!(0); assert_equal(["a", "b", "c"],a)
+    a=["a", "b", "c"]; a.shifted!(1); assert_equal([    "b", "c"],a)
+    a=["a", "b", "c"]; a.shifted!(2); assert_equal([        "c"],a)
+    a=["a", "b", "c"]; a.shifted!(3); assert_equal([           ],a)
+    a=["a", "b", "c"]; a.shifted!(4); assert_equal([           ],a)
   end
 
   def test_shifted_bang_with_negative_count
@@ -190,12 +192,12 @@ class ArrayTest < Minitest::Test
 
   # alias: test_cdr_bang must be identical to test_shifted_bang
   def test_cdr_bang
-    a=['a','b','c']; a.cdr!;    assert_equal([    'b','c'],a)
-    a=['a','b','c']; a.cdr!(0); assert_equal(['a','b','c'],a)
-    a=['a','b','c']; a.cdr!(1); assert_equal([    'b','c'],a)
-    a=['a','b','c']; a.cdr!(2); assert_equal([        'c'],a)
-    a=['a','b','c']; a.cdr!(3); assert_equal([           ],a)
-    a=['a','b','c']; a.cdr!(4); assert_equal([           ],a)
+    a=["a", "b", "c"]; a.cdr!;    assert_equal([    "b", "c"],a)
+    a=["a", "b", "c"]; a.cdr!(0); assert_equal(["a", "b", "c"],a)
+    a=["a", "b", "c"]; a.cdr!(1); assert_equal([    "b", "c"],a)
+    a=["a", "b", "c"]; a.cdr!(2); assert_equal([        "c"],a)
+    a=["a", "b", "c"]; a.cdr!(3); assert_equal([           ],a)
+    a=["a", "b", "c"]; a.cdr!(4); assert_equal([           ],a)
   end
 
   # alias: test_cdr_bang must be identical to test_shifted_bang
@@ -215,12 +217,12 @@ class ArrayTest < Minitest::Test
 
   # alias: test_rest_bang must be identical to test_shifted_bang
   def test_rest_bang
-    a=['a','b','c']; a.rest!;    assert_equal([    'b','c'],a)
-    a=['a','b','c']; a.rest!(0); assert_equal(['a','b','c'],a)
-    a=['a','b','c']; a.rest!(1); assert_equal([    'b','c'],a)
-    a=['a','b','c']; a.rest!(2); assert_equal([        'c'],a)
-    a=['a','b','c']; a.rest!(3); assert_equal([           ],a)
-    a=['a','b','c']; a.rest!(4); assert_equal([           ],a)
+    a=["a", "b", "c"]; a.rest!;    assert_equal([    "b", "c"],a)
+    a=["a", "b", "c"]; a.rest!(0); assert_equal(["a", "b", "c"],a)
+    a=["a", "b", "c"]; a.rest!(1); assert_equal([    "b", "c"],a)
+    a=["a", "b", "c"]; a.rest!(2); assert_equal([        "c"],a)
+    a=["a", "b", "c"]; a.rest!(3); assert_equal([           ],a)
+    a=["a", "b", "c"]; a.rest!(4); assert_equal([           ],a)
   end
 
   # alias: test_rest_bang must be identical to test_shifted_bang
@@ -239,41 +241,24 @@ class ArrayTest < Minitest::Test
   end
 
   def test_car
-    a=['a','b','c']
-    assert_equal('a',a.car)
+    a=["a", "b", "c"]
+    assert_equal("a",a.car)
   end
 
-  def test_to_csv_one_dimensional
-    assert_equal("a,b,c,d\n",A.to_csv)
+  def test_to_csv_lines
+    assert_equal(["a,b,c\n", "d,e,f\n", "g,h,i\n"], GRID.to_csv_lines)
   end
 
-  def test_to_csv_with_empty
-    assert_equal("",[].to_csv)
+  def test_to_csv_text
+    assert_equal("a,b,c\nd,e,f\ng,h,i\n", GRID.to_csv_text)
   end
 
-  def test_to_csv_multi_dimensional
-    a=[["a","b","c"], ["d","e","f"],["g","h","i"]]
-    assert_equal("a,b,c\nd,e,f\ng,h,i\n",a.to_csv)
+  def test_to_tsv_lines
+    assert_equal(["a\tb\tc\n", "d\te\tf\n", "g\th\ti\n"], GRID.to_tsv_lines)
   end
 
-  def test_to_tsv
-    a=[["a", "b"], ["c", "d"], ["e", "f"]]
-    assert_equal("a\tb\nc\td\ne\tf\n",a.to_tsv)
-  end
-
-  def test_to_tsv_with_empty
-    assert_equal("",[].to_tsv)
-  end
-
-  # alias: test_to_tdf must be identical to test_to_tsv
-  def test_to_tdf
-    a=[["a", "b"], ["c", "d"], ["e", "f"]]
-    assert_equal("a\tb\nc\td\ne\tf\n",a.to_tdf)
-  end
-
-  # alias: test_to_tdf must be identical to test_to_tsv
-  def test_to_tdf_with_empty
-    assert_equal("",[].to_tdf)
+  def test_to_tsv_text
+    assert_equal("a\tb\tc\nd\te\tf\ng\th\ti\n", GRID.to_tsv_text)
   end
 
 end

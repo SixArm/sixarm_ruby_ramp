@@ -29,7 +29,6 @@ Please see README
   'pairable',
   'process',
   'string',
-  'symbol',
   'time',
   'yaml'
 ].map{|x|

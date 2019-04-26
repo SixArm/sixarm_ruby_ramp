@@ -34,7 +34,7 @@ class CSV
        'Pragma' => 'no-cache',
        'Content-Disposition' => "attachment; filename=\"#{filename}\"",
       }
-    end
+  end
 
 
   # Helper to try to "do the right thing" for the common case of Rails & MS IE.

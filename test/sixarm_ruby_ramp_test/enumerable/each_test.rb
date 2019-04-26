@@ -55,7 +55,7 @@ class EnumerableEachTest < Minitest::Test
     assert_equal(expect, actual)
   end
 
-  def test_each_at_strategy_with_optimization_max_with_range_positives_ascending
+  def test_each_at_with_range_positives_ascending
     filter = 1..2
     expect = ["b", "c"]
     actual = []

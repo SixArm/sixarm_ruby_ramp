@@ -21,13 +21,18 @@ class Array
   #   ['a','b','c'].rotate! => ['b','c','a']
   #   [].rotate! => []
   #
+  # This implementation checks to see if the method name is already in use,
+  # because some Ruby versions have this method in the standard library.
+  #
   # @return [Array] self
 
-  def rotate!
-    if size>0
-      push item=shift
+  if !([].respond_to? :rotate!)
+    def rotate!
+      if size>0
+        push item=shift
+      end
+      self
     end
-    self
   end
 
 
@@ -216,42 +221,48 @@ class Array
   #
   ##############################################################
 
-  # @return [String] a CSV (Comma Separated Value) string of this array.
+  require 'csv'
+
+  # @return [String] a CSV (Comma Separated Value) lines
+  #   representation of a multi-dimensional array.
   #
-  # @example of a one-dimensional array
-  #
-  #   [1,2,3].to_csv => "1,2,3\n"
+  # Each subarray becomes one line in the output.
   #
   # @example of a multi-dimensional array
   #
-  #   [[1,2,3],[4,5,6]] => "1,2,3\n4,5,6\n"
+  #     [[1,2,3],[4,5,6]] => ["1,2,3\n", "4,5,6\n"]
+  #
+
+
+  def to_csv_lines(ops={})
+    map{|row| row.to_csv}
+  end
+
+  # @return [String] a CSV (Comma Separated Value) string
+  #   representation of a multi-dimensional array.
+  #
+  # Each subarray becomes one line in the output.
+  #
+  # @example of a multi-dimensional array
+  #
+  #     [[1,2,3],[4,5,6]] => "1,2,3\n4,5,6\n"
+  #
+  def to_csv_text(ops={})
+    to_csv_lines.join
+  end
+
+
+  # @return [String] a TSV (Tab Separated Value) lines
+  #   representation of a multi-dimensional array.
+  #
+  # Each subarray becomes one line in the output.
   #
   # @example of a blank array
   #
-  #   [].to_csv => ""
-  #
-  # N.b. this method uses the multi-dimensional if the
-  # array's first item is also an array.
+  #     [[1,2,3],[4,5,6]] => ["1\t2\t3\n", "4\t5\t6\n"]
 
-  def to_csv(ops={})
-
-    return "" if size==0
-
-    generator = RUBY_VERSION >= "1.9" ? CSV : CSV::Writer
-
-    str=''
-    if size>0 and self[0].is_a?Array
-      generator.generate(str) do |csv|
-        self.each do |row|
-          csv << row
-        end
-      end
-    else
-      generator.generate(str) do |csv|
-        csv << self.map{|item| item.to_s}
-      end
-    end
-    return str
+  def to_tsv_lines(ops={})
+    map{|row| row.join("\t")+"\n"}
   end
 
 
@@ -262,12 +273,10 @@ class Array
   #
   # @example of a blank array
   #
-  #   [].to_csv => ""
+  #     [[1,2,3],[4,5,6]] => "1\t2\t3\n4\t5\t6\n"
 
-  def to_tsv(ops={})
-    self.map{|row| row.join("\t")+"\n"}.join
+  def to_tsv_text(ops={})
+    to_tsv_lines.join
   end
-
-  alias to_tdf to_tsv
 
 end
