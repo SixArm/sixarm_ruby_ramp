@@ -6,7 +6,7 @@
 <title>
   Class: Class
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.19
   
 </title>
 
@@ -226,13 +226,13 @@ end</code></pre>
   <span class='id identifier rubyid_saved_private_instance_methods'>saved_private_instance_methods</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_private_instance_methods'>private_instance_methods</span>
   <span class='id identifier rubyid_saved_protected_instance_methods'>saved_protected_instance_methods</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_protected_instance_methods'>protected_instance_methods</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class_eval'>class_eval</span> <span class='lbrace'>{</span>
-    <span class='id identifier rubyid_public'>public</span> <span class='op'>*</span><span class='id identifier rubyid_saved_private_instance_methods'>saved_private_instance_methods</span> 
-    <span class='id identifier rubyid_public'>public</span> <span class='op'>*</span><span class='id identifier rubyid_saved_protected_instance_methods'>saved_protected_instance_methods</span> 
+    <span class='id identifier rubyid_public'>public</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_saved_private_instance_methods'>saved_private_instance_methods</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_public'>public</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_saved_protected_instance_methods'>saved_protected_instance_methods</span><span class='rparen'>)</span>
   <span class='rbrace'>}</span>
   <span class='kw'>yield</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class_eval'>class_eval</span> <span class='lbrace'>{</span>
-    <span class='id identifier rubyid_private'>private</span> <span class='op'>*</span><span class='id identifier rubyid_saved_private_instance_methods'>saved_private_instance_methods</span>
-    <span class='id identifier rubyid_protected'>protected</span> <span class='op'>*</span><span class='id identifier rubyid_saved_protected_instance_methods'>saved_protected_instance_methods</span> 
+    <span class='id identifier rubyid_private'>private</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_saved_private_instance_methods'>saved_private_instance_methods</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_protected'>protected</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_saved_protected_instance_methods'>saved_protected_instance_methods</span><span class='rparen'>)</span>
   <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -245,9 +245,9 @@ end</code></pre>
 </div>
 
       <div id="footer">
-  Generated on Sun Jan 27 17:29:51 2019 by
+  Generated on Thu Apr 25 22:30:54 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.1).
+  0.9.19 (ruby-2.6.3).
 </div>
 
     </div>
