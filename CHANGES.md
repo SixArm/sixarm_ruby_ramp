@@ -1,5 +1,6 @@
 # Changes
 
+* 2019-04-30 5.0.2 Fix testing of removed method
 * 2019-01-27 5.0.1 Fix testing bugs and warnings
 * 2018-06-22 5.0.0 Update to Ruby 2.5, testing gems, etc.
 * 2017-08-15 4.2.7 Fix deprecation by using assert_nil
