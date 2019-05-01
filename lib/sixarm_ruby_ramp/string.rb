@@ -6,7 +6,7 @@ class String
 
 
  # @return [String] self, with words capitalized
- # @example 
+ # @example
  #   "foo goo hoo".capitalize_words
  #    => "Foo Goo Hoo"
 
@@ -76,14 +76,14 @@ class String
  #
  # From Mirage at http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-from-a-string-containing-that-classes-name/
  #
- # @return [Class] the string converted to a class 
+ # @return [Class] the string converted to a class
 
  def to_class
   split('::').inject(Kernel) {|scope, const_name| scope.const_get(const_name)}
  end
 
 
- # Increment the rightmost natural number 
+ # Increment the rightmost natural number
  #
  # @return [String] the string with an incremented rightmost number
  #
@@ -100,7 +100,7 @@ class String
 
 
  # Decrement the rightmost natural number
- # 
+ #
  # @return [String] the string with a decremented rightmost number
  #
  # @example
@@ -118,25 +118,25 @@ class String
  # @return [String] the previous character, with a changed flag and carry flag
  #
  # @example
- #   String.prev_char('n') => 'm', true, false   # change 
+ #   String.prev_char('n') => 'm', true, false   # change
  #   String.prev_char('a') => 'z', true, true    # change & carry
  #   String.prev_char('6') => '5', true, false   # change
  #   String.prev_char('0') => '9', true, true    # change & carry
  #   String.prev_char('-') => '-', false, false  # unchanged
 
  def self.prev_char(chr) #=> prev_char, changed_flag, carry_flag
-  case chr
+  return case chr
   when '1'..'9', 'B'..'Z', 'b'..'z'
     pos=(chr.respond_to?(:ord) ? chr.ord : chr[0])
-    return (pos-1).chr, true, false
+    [(pos-1).chr, true, false]
   when '0'
-    return '9', true, true
+    ['9', true, true]
   when 'A'
-    return 'Z', true, true
+    ['Z', true, true]
   when 'a'
-    return 'z', true, true
+    ['z', true, true]
   else
-    return chr, false, false
+    [chr, false, false]
   end
  end
 
@@ -154,7 +154,7 @@ class String
  #   'nna'.prev => 'nmz'
  #   'NNA'.prev => 'NMZ'
  #   'nn0aA'.prev => 'nm9zZ'
- 
+
  def prev
   self.clone.prev!
  end
@@ -181,7 +181,7 @@ class String
 
  alias pred  prev   # String#pred : predecessor :: String#succ : successor
  alias pred! prev!
- 
+
  class << self
   alias_method :pred_char, :prev_char
  end
@@ -196,7 +196,7 @@ class String
  #  Lorem Ipsum random text generator
  #
  ##
- 
+
  # @return [Integer[ a random length suitable for a "lorem ipsum" string.
  #
  # This method uses 1+rand(10)
@@ -219,11 +219,10 @@ class String
  # This method chooses from lowercase letters a-z.
  #
  # This method defaults to length = self.lorem_length.
- 
+
  def self.lorem(length=self.lorem_length)
   ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'].sample(length).join
  end
 
 
 end
-
