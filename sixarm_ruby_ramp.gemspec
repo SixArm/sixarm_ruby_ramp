@@ -97,6 +97,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency("rubycritic", ">= 3.3.0", "< 4")
   s.add_development_dependency("rubocop", ">= 0.52.1", "< 1")
 
-  s.required_ruby_version = ">= 2.5"
+  s.required_ruby_version = ">= 2.3"
 
 end
