@@ -95,9 +95,7 @@ module Pairable
       value=self[key]
       key2,value2=yield(key,value)
       if key===key2
-        if value===value2
-          #nop
-        else
+        if value!=value2
           self[key]=value2
         end
       else
