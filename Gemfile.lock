@@ -102,7 +102,7 @@ DEPENDENCIES
   reek (>= 4.7.3, < 5)
   rubocop (>= 0.52.1, < 1)
   rubycritic (>= 3.3.0, < 4)
-  simplecov (>= 0.14.1, < 2)
+  simplecov (>= 0.18.0, < 2)
   sixarm_ruby_minitest_extensions (>= 1.0.8, < 2)
   sixarm_ruby_ramp!
 
